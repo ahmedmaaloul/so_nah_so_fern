@@ -1,0 +1,18 @@
+commune,line_key,agency_id,mode,line_name,route_ids,stations,departures_day,departures_window
+Garches,IDFM:1046|rail|L,IDFM:1046,rail,L,IDFM:C01740,1,152,17
+Kronberg im Taunus,437|rail|S4,437,rail,S4,20705,2,126,9
+Oberursel (Taunus),162|rail|RB15,162,rail,RB15,4718,2,22,4
+Oberursel (Taunus),437|rail|S5,437,rail,S5,1787,2,284,24
+Oberursel (Taunus),144|metro|U3,144,metro,U3,17315,6,770,61
+Bad Soden am Taunus,437|rail|S3,437,rail,S3,12587,2,129,9
+Bad Homburg v.d.Höhe,162|rail|RB15,162,rail,RB15,4718,1,44,5
+Bad Homburg v.d.Höhe,437|rail|S5,437,rail,S5,1787,1,113,9
+Bad Vilbel,437|rail|RB34,437,rail,RB34,19391,1,45,5
+Bad Vilbel,272|rail|RB37,272,rail,RB37,19378,1,30,2
+Bad Vilbel,272|rail|RB40,272,rail,RB40,16732,1,2,0
+Bad Vilbel,272|rail|RB41,272,rail,RB41,22213,1,3,0
+Bad Vilbel,437|rail|RE30,437,rail,RE30,14855,1,8,0
+Bad Vilbel,272|rail|RE99,272,rail,RE99,19489,1,2,1
+Bad Vilbel,437|rail|S6,437,rail,S6,4231,2,317,24
+Eschborn,437|rail|S3,437,rail,S3,12587,2,172,12
+Eschborn,437|rail|S4,437,rail,S4,20705,2,168,12

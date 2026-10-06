@@ -1,0 +1,27 @@
+feed,route_id,route_short_name,route_long_name,agency_id,route_type,n_trips_in_zone
+de_gtfs,13969,ECE 20,,82,2,2
+de_gtfs,14669,FLX10,,445,2,34
+de_gtfs,18178,IC 24,,82,2,3
+de_gtfs,3378,IC 33,,82,2,1
+de_gtfs,23936,IC 55,,82,2,14
+de_gtfs,24037,ICE 1,,82,2,46
+de_gtfs,9258,ICE 11,,82,2,32
+de_gtfs,10386,ICE 12,,82,2,192
+de_gtfs,2546,ICE 13,,82,2,20
+de_gtfs,3585,ICE 15,,82,2,15
+de_gtfs,8185,ICE 20,,82,2,26
+de_gtfs,6615,ICE 22,,82,2,4
+de_gtfs,4890,ICE 24,,82,2,5
+de_gtfs,11521,ICE 26,,82,2,44
+de_gtfs,19250,ICE 3,,82,2,3
+de_gtfs,21777,ICE 4,,82,2,19
+de_gtfs,19919,ICE 41,,82,2,305
+de_gtfs,17664,ICE 42,,82,2,82
+de_gtfs,16064,ICE 45,,82,2,8
+de_gtfs,9205,ICE 49,,82,2,23
+de_gtfs,14709,ICE 50,,82,2,49
+de_gtfs,6106,ICE 62,,82,2,49
+de_gtfs,12543,ICE 78,,82,2,112
+de_gtfs,22568,ICE 79,,82,2,81
+de_gtfs,16483,ICE 82,,82,2,1
+de_gtfs,18536,ICE 91,,82,2,115

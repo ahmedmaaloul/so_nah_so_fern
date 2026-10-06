@@ -1,0 +1,56 @@
+# =============================================================================
+# So nah, so fern — Ursprung Kronberg im Taunus / Origine Kronberg im Taunus
+# -----------------------------------------------------------------------------
+# DE: Deutsche Vergleichsgemeinde zu Garches (Begründung:
+#     outputs/twin_selection/twin_candidates.md). Gleiche Parameter wie Garches
+#     (config/default.yaml); nur Stichtag, Ferien und Quellen sind regional.
+# FR: Commune allemande de comparaison (justification :
+#     outputs/twin_selection/twin_candidates.md). Mêmes paramètres que Garches ;
+#     seuls la date, les vacances et les sources sont régionaux.
+# =============================================================================
+
+region:
+  id: rhein_main
+  country: DE
+  label_de: Rhein-Main
+  label_fr: Rhin-Main
+  metric_crs: "EPSG:25832"
+
+analysis:
+  # Dienstag in der Schulzeit (hessische Herbstferien 05.–17.10.2026).
+  # Der GTFS-Feed (gtfs.de, Stand 03.10.2026) reicht bis 02.11.2026.
+  date: 2026-10-20
+  school_holidays:                    # Hessen
+    - [2026-10-05, 2026-10-17]
+    - [2026-12-23, 2027-01-12]
+  public_holidays: [2026-10-03, 2026-12-25, 2026-12-26]
+
+origin:
+  slug: kronberg
+  name: Kronberg im Taunus
+  commune_code: "06434006"            # AGS ; das Skript prüft den Namen
+  points:
+    - id: gare
+      label_de: "Bahnhof Kronberg (Taunus)"
+      label_fr: "Gare de Kronberg (Taunus)"
+      source: gtfs_stop
+      # Haltestellenbereich (location_type=1): S4-Bahnsteig + Busse am Bahnhof
+      gtfs_stop_id: "375888"
+      gtfs_stop_name_regex: "(?i)kronberg.*bahnhof"
+    - id: centre
+      label_de: "Ortsmitte Kronberg (Kern der Gemeinde, BKG)"
+      label_fr: "Centre de Kronberg (point « Kern der Gemeinde », BKG)"
+      source: commune_point
+
+core_city:
+  name: Frankfurt am Main
+  commune_code: "06412000"
+  # 45 Stadtteile (Melderegister 31.12.2024; Flughafen in Sachsenhausen-Süd)
+  split_into_districts: true
+
+inputs:
+  gtfs: [de_gtfs]
+  osm: [de_osm_hessen, de_osm_rlp, de_osm_unterfranken]
+  communes: de_vg250_ew
+  districts: de_frankfurt_stadtteile
+  district_population: de_frankfurt_population

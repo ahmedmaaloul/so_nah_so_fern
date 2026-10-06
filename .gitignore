@@ -1,0 +1,17 @@
+# Données volumineuses / große Daten
+data/raw/*
+data/interim/
+data/processed/
+!data/raw/MANIFEST.json
+
+# Outils et environnements
+.tools/
+.tools_*.log
+.venv/
+__pycache__/
+*.pyc
+.DS_Store
+
+# Caches r5py / OSRM
+.cache/
+osrm/

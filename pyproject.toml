@@ -1,0 +1,23 @@
+[project]
+name = "so-nah-so-fern"
+version = "0.1.0"
+description = "So nah, so fern – Was Kilometer über den Nahverkehr verschweigen"
+requires-python = ">=3.12,<3.14"
+dependencies = [
+    "r5py>=1.0",
+    "geopandas>=1.0",
+    "pyogrio>=0.9",
+    "pyarrow>=16",
+    "pandas>=2.2",
+    "numpy>=1.26",
+    "shapely>=2.0",
+    "pyproj>=3.6",
+    "scipy>=1.13",
+    "pyyaml>=6.0",
+    "requests>=2.32",
+    "tqdm>=4.66",
+    "matplotlib>=3.9",
+]
+
+[tool.uv]
+package = false

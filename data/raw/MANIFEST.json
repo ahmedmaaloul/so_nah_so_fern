@@ -1,0 +1,302 @@
+{
+  "fr_gtfs_idfm": {
+    "url": "https://eu.ftp.opendatasoft.com/stif/GTFS/IDFM-gtfs.zip",
+    "final_url": "https://eu.ftp.opendatasoft.com/stif/GTFS/IDFM-gtfs.zip",
+    "dest": "data/raw/fr/IDFM-gtfs.zip",
+    "bytes": 148423660,
+    "sha256": "08598ea8ef668bfee0722022c0901ec44de58d741fc181670c5a9c6d54d1c7f7",
+    "http_last_modified": "Tue, 06 Oct 2026 14:53:54 GMT",
+    "http_etag": "\"6ac50b82-8d8c3ec\"",
+    "downloaded_at_utc": "2026-10-06T19:09:32+00:00",
+    "licence": "ODbL 1.0",
+    "attribution": "Île-de-France Mobilités — Offre horaires TC GTFS IDFM",
+    "check": "ok",
+    "gtfs_files": [
+      "transfers.txt",
+      "ticketing_deep_links.txt",
+      "agency.txt",
+      "calendar_dates.txt",
+      "calendar.txt",
+      "stops.txt",
+      "trips.txt",
+      "attributions.txt",
+      "routes.txt",
+      "stop_times.txt",
+      "booking_rules.txt",
+      "shapes.txt",
+      "pathways.txt",
+      "object_codes_extension.txt"
+    ]
+  },
+  "fr_chef_lieu_arrondissement_municipal": {
+    "url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/chef_lieu_d_arrondissement_municipal.parquet",
+    "final_url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/chef_lieu_d_arrondissement_municipal.parquet",
+    "dest": "data/raw/fr/admin_express_2026/chef_lieu_d_arrondissement_municipal.parquet",
+    "bytes": 13051,
+    "sha256": "6f116926e3a9bc04f3f14d9d35b341876a2999303a7ead357cf13fbcf4775764",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:12:15+00:00",
+    "licence": "Licence Ouverte 2.0",
+    "attribution": "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026",
+    "check": "ok",
+    "num_rows": 45
+  },
+  "fr_osm": {
+    "url": "https://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf",
+    "final_url": "https://download.geofabrik.de/europe/france/ile-de-france-261005.osm.pbf",
+    "dest": "data/raw/fr/ile-de-france-latest.osm.pbf",
+    "bytes": 339077922,
+    "sha256": "39d31de3c883621a495273015e49a125a93fedca2e9dea6baad568fde8d00485",
+    "http_last_modified": "Tue, 06 Oct 2026 18:17:55 GMT",
+    "http_etag": "\"1435eb22-65d300477430a\"",
+    "downloaded_at_utc": "2026-10-06T19:18:33+00:00",
+    "licence": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors (extrait Geofabrik)",
+    "check": "ok",
+    "osm_info": {
+      "boxes": [
+        [
+          1.445097,
+          48.11918,
+          3.560409,
+          49.24271
+        ]
+      ],
+      "with_history": false,
+      "option": {
+        "generator": "osmium/1.16.0",
+        "osmosis_replication_base_url": "https://download.geofabrik.de/europe/france/ile-de-france-updates",
+        "osmosis_replication_sequence_number": "4930",
+        "osmosis_replication_timestamp": "2026-10-05T20:21:35Z",
+        "pbf_dense_nodes": "true",
+        "pbf_optional_feature_0": "Sort.Type_then_ID",
+        "sorting": "Type_then_ID",
+        "timestamp": "2026-10-05T20:21:35Z"
+      }
+    }
+  },
+  "fr_communes": {
+    "url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/commune.parquet",
+    "final_url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/commune.parquet",
+    "dest": "data/raw/fr/admin_express_2026/commune.parquet",
+    "bytes": 119586702,
+    "sha256": "f4746f2e0612009c41ae404b00ce989f197ada0a720f492a62e5c4df74e3d60d",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:18:38+00:00",
+    "licence": "Licence Ouverte 2.0",
+    "attribution": "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026",
+    "check": "ok",
+    "num_rows": 34877
+  },
+  "fr_chef_lieu_commune": {
+    "url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/chef_lieu_de_commune.parquet",
+    "final_url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/chef_lieu_de_commune.parquet",
+    "dest": "data/raw/fr/admin_express_2026/chef_lieu_de_commune.parquet",
+    "bytes": 4779592,
+    "sha256": "45146647842e2041efab6af6fe230ccb48d7d6c31ba218d004e5d1b59efc556d",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:18:39+00:00",
+    "licence": "Licence Ouverte 2.0",
+    "attribution": "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026",
+    "check": "ok",
+    "num_rows": 34871
+  },
+  "fr_arrondissement_municipal": {
+    "url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/arrondissement_municipal.parquet",
+    "final_url": "https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/arrondissement_municipal.parquet",
+    "dest": "data/raw/fr/admin_express_2026/arrondissement_municipal.parquet",
+    "bytes": 163446,
+    "sha256": "a2b3ab83c759bca39c5711d839a8fff3e4bad6952ce9ec5bb9eb52fa89e5f504",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:18:39+00:00",
+    "licence": "Licence Ouverte 2.0",
+    "attribution": "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026",
+    "check": "ok",
+    "num_rows": 45
+  },
+  "fr_population": {
+    "url": "https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.zip",
+    "final_url": "https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.zip",
+    "dest": "data/raw/fr/insee_populations_2023_ensemble.zip",
+    "bytes": 1032385,
+    "sha256": "5174fc225398a4c072fb8bb5298b7ccf30c017834c7a4171f44787379d83b3f5",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:18:39+00:00",
+    "licence": "Licence Ouverte 2.0",
+    "attribution": "INSEE — Populations de référence 2023 (publiées le 18/12/2025)",
+    "check": "ok"
+  },
+  "de_gtfs": {
+    "url": "https://download.gtfs.de/germany/free/latest.zip",
+    "final_url": "https://download.gtfs.de/germany/free/latest.zip",
+    "dest": "data/raw/de/gtfs_de_full.zip",
+    "bytes": 297546931,
+    "sha256": "7e87eada686981e43c9c41ffe7042806ae71d16c39941d5a8eda23b957a90614",
+    "http_last_modified": "Sat, 03 Oct 2026 08:30:51 GMT",
+    "http_etag": "\"11bc34b3-65ceb777a4e4f\"",
+    "downloaded_at_utc": "2026-10-06T19:18:45+00:00",
+    "licence": "CC BY 4.0",
+    "attribution": "DELFI e.V. (NeTEx), GTFS-Konvertierung gtfs.de",
+    "check": "ok",
+    "gtfs_files": [
+      "agency.txt",
+      "feed_info.txt",
+      "stops.txt",
+      "routes.txt",
+      "calendar.txt",
+      "calendar_dates.txt",
+      "trips.txt",
+      "stop_times.txt",
+      "attributions.txt"
+    ]
+  },
+  "de_osm_hessen": {
+    "url": "https://download.geofabrik.de/europe/germany/hessen-latest.osm.pbf",
+    "final_url": "https://download.geofabrik.de/europe/germany/hessen-261004.osm.pbf",
+    "dest": "data/raw/de/hessen-latest.osm.pbf",
+    "bytes": 346156038,
+    "sha256": "dbe09c5a75564d7d77b60b06cb91dc63e37a0b22d56225577797fe2eda8e3d63",
+    "http_last_modified": "Mon, 05 Oct 2026 15:14:59 GMT",
+    "http_etag": "\"14a1ec06-65d19586bf21a\"",
+    "downloaded_at_utc": "2026-10-06T19:18:54+00:00",
+    "licence": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors (Geofabrik-Extrakt)",
+    "check": "ok",
+    "osm_info": {
+      "boxes": [
+        [
+          7.768021,
+          49.393212,
+          10.245952,
+          51.659158
+        ]
+      ],
+      "with_history": false,
+      "option": {
+        "generator": "osmium/1.16.0",
+        "osmosis_replication_base_url": "https://download.geofabrik.de/europe/germany/hessen-updates",
+        "osmosis_replication_sequence_number": "4922",
+        "osmosis_replication_timestamp": "2026-10-04T20:20:21Z",
+        "pbf_dense_nodes": "true",
+        "pbf_optional_feature_0": "Sort.Type_then_ID",
+        "sorting": "Type_then_ID",
+        "timestamp": "2026-10-04T20:20:21Z"
+      }
+    }
+  },
+  "de_osm_rlp": {
+    "url": "https://download.geofabrik.de/europe/germany/rheinland-pfalz-latest.osm.pbf",
+    "final_url": "https://download.geofabrik.de/europe/germany/rheinland-pfalz-261004.osm.pbf",
+    "dest": "data/raw/de/rheinland-pfalz-latest.osm.pbf",
+    "bytes": 271177613,
+    "sha256": "e5096f8d0c29dede695f4529a066a2524a32351a02da217e564607457cf93d61",
+    "http_last_modified": "Mon, 05 Oct 2026 15:17:51 GMT",
+    "http_etag": "\"1029d78d-65d1962b16d70\"",
+    "downloaded_at_utc": "2026-10-06T19:19:05+00:00",
+    "licence": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors (Geofabrik-Extrakt)",
+    "check": "ok",
+    "osm_info": {
+      "boxes": [
+        [
+          6.108849,
+          48.963765,
+          8.5112279,
+          50.944044
+        ]
+      ],
+      "with_history": false,
+      "option": {
+        "generator": "osmium/1.16.0",
+        "osmosis_replication_base_url": "https://download.geofabrik.de/europe/germany/rheinland-pfalz-updates",
+        "osmosis_replication_sequence_number": "4923",
+        "osmosis_replication_timestamp": "2026-10-04T20:20:21Z",
+        "pbf_dense_nodes": "true",
+        "pbf_optional_feature_0": "Sort.Type_then_ID",
+        "sorting": "Type_then_ID",
+        "timestamp": "2026-10-04T20:20:21Z"
+      }
+    }
+  },
+  "de_vg250_ew": {
+    "url": "https://daten.gdz.bkg.bund.de/produkte/vg/vg250-ew_ebenen_1231/aktuell/vg250-ew_12-31.utm32s.gpkg.ebenen.zip",
+    "final_url": "https://daten.gdz.bkg.bund.de/produkte/vg/vg250-ew_ebenen_1231/aktuell/vg250-ew_12-31.utm32s.gpkg.ebenen.zip",
+    "dest": "data/raw/de/vg250-ew_12-31.utm32s.gpkg.ebenen.zip",
+    "bytes": 72201300,
+    "sha256": "51a31279653edc1488c98484ddbc346dcd9f77cf0b1d6a75cd2179da57ed962f",
+    "http_last_modified": "Fri, 21 Nov 2025 07:07:16 GMT",
+    "http_etag": "\"69200fa4-44db454\"",
+    "downloaded_at_utc": "2026-10-06T19:19:10+00:00",
+    "licence": "Datenlizenz Deutschland – Namensnennung – Version 2.0",
+    "attribution": "© GeoBasis-DE / BKG (2025), VG250-EW; Einwohnerzahlen: Statistisches Bundesamt (Destatis)",
+    "check": "ok"
+  },
+  "de_frankfurt_stadtteile": {
+    "url": "https://geowebdienste.frankfurt.de/WFS_Stadtgebietsgliederung?service=WFS&version=2.0.0&request=GetFeature&typeNames=Stadtgebietsgliederung:Stadtteile&outputFormat=GEOJSON",
+    "final_url": "https://geowebdienste.frankfurt.de/WFS_Stadtgebietsgliederung?service=WFS&version=2.0.0&request=GetFeature&typeNames=Stadtgebietsgliederung:Stadtteile&outputFormat=GEOJSON",
+    "dest": "data/raw/de/frankfurt_stadtteile.geojson",
+    "bytes": 683583,
+    "sha256": "9aae4ff32499472c6e412e2949ba00498ade28d9cecc1699fa3cbf5604a354f3",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:19:10+00:00",
+    "licence": "dl-de/by-2-0 (Annahme, im WFS nicht angegeben)",
+    "attribution": "Stadt Frankfurt am Main, Bürgeramt Statistik und Wahlen — WFS Stadtgebietsgliederung",
+    "check": "ok",
+    "num_rows": 46
+  },
+  "de_frankfurt_population": {
+    "url": "https://offenedaten.frankfurt.de/dcat/dataset/de-he-frankfurtam-demographische_kennzahlen_stadtteile/content.csv",
+    "final_url": "https://offenedaten.frankfurt.de/dcat/dataset/de-he-frankfurtam-demographische_kennzahlen_stadtteile/content.csv",
+    "dest": "data/raw/de/frankfurt_demographische_kennzahlen_stadtteile.csv",
+    "bytes": 23696,
+    "sha256": "f34097b93928b51d19b31fcb5ef0140b875b4e06904784ca83971c8d3995a10d",
+    "http_last_modified": null,
+    "http_etag": null,
+    "downloaded_at_utc": "2026-10-06T19:19:10+00:00",
+    "licence": "dl-de/by-2-0",
+    "attribution": "Stadt Frankfurt am Main, Bürgeramt Statistik und Wahlen — Demographische Kennzahlen Stadtteile",
+    "check": "ok",
+    "num_rows": 690,
+    "header": "Stadtteil;Jahr;weiblich;männlich;Einwohner_insg"
+  },
+  "de_osm_unterfranken": {
+    "url": "https://download.geofabrik.de/europe/germany/bayern/unterfranken-latest.osm.pbf",
+    "final_url": "https://download.geofabrik.de/europe/germany/bayern/unterfranken-261004.osm.pbf",
+    "dest": "data/raw/de/unterfranken-latest.osm.pbf",
+    "bytes": 104399211,
+    "sha256": "2a2e93c294c3d9fbd6aa73e5a64c760f56d450bb518965c8e715b3df2a3020e7",
+    "http_last_modified": "Mon, 05 Oct 2026 15:20:25 GMT",
+    "http_etag": "\"639016b-65d196bd83d50\"",
+    "downloaded_at_utc": "2026-10-06T19:37:43+00:00",
+    "licence": "ODbL 1.0",
+    "attribution": "© OpenStreetMap contributors (Geofabrik-Extrakt)",
+    "check": "ok",
+    "osm_info": {
+      "boxes": [
+        [
+          8.637758,
+          49.251008,
+          10.887194,
+          50.62426
+        ]
+      ],
+      "with_history": false,
+      "option": {
+        "generator": "osmium/1.16.0",
+        "osmosis_replication_base_url": "https://download.geofabrik.de/europe/germany/bayern/unterfranken-updates",
+        "osmosis_replication_sequence_number": "4916",
+        "osmosis_replication_timestamp": "2026-10-04T20:20:21Z",
+        "pbf_dense_nodes": "true",
+        "pbf_optional_feature_0": "Sort.Type_then_ID",
+        "sorting": "Type_then_ID",
+        "timestamp": "2026-10-04T20:20:21Z"
+      }
+    }
+  }
+}

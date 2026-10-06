@@ -1,0 +1,51 @@
+# =============================================================================
+# So nah, so fern — Ursprung Bad Soden am Taunus (Robustheitsprüfung)
+#                   Origine Bad Soden am Taunus (contrôle de robustesse)
+# -----------------------------------------------------------------------------
+# DE: Zweitbeste Kandidatin (S3-Endpunkt, 13,4 km vom Zentrum). Dient dazu zu
+#     prüfen, ob die Ergebnisse von der Wahl der Vergleichsgemeinde abhängen.
+# FR: Deuxième candidate (terminus S3, 13,4 km du centre). Sert à vérifier que
+#     les conclusions ne dépendent pas du choix de la commune jumelle.
+# =============================================================================
+
+region:
+  id: rhein_main
+  country: DE
+  label_de: Rhein-Main
+  label_fr: Rhin-Main
+  metric_crs: "EPSG:25832"
+
+analysis:
+  date: 2026-10-20
+  school_holidays:
+    - [2026-10-05, 2026-10-17]
+    - [2026-12-23, 2027-01-12]
+  public_holidays: [2026-10-03, 2026-12-25, 2026-12-26]
+
+origin:
+  slug: bad_soden
+  name: Bad Soden am Taunus
+  commune_code: "06436001"
+  points:
+    - id: gare
+      label_de: "Bahnhof Bad Soden (Taunus)"
+      label_fr: "Gare de Bad Soden (Taunus)"
+      source: gtfs_stop
+      gtfs_stop_id: "31646"
+      gtfs_stop_name_regex: "(?i)bad soden.*bahnhof"
+    - id: centre
+      label_de: "Ortsmitte Bad Soden (Kern der Gemeinde, BKG)"
+      label_fr: "Centre de Bad Soden (point « Kern der Gemeinde », BKG)"
+      source: commune_point
+
+core_city:
+  name: Frankfurt am Main
+  commune_code: "06412000"
+  split_into_districts: true
+
+inputs:
+  gtfs: [de_gtfs]
+  osm: [de_osm_hessen, de_osm_rlp, de_osm_unterfranken]
+  communes: de_vg250_ew
+  districts: de_frankfurt_stadtteile
+  district_population: de_frankfurt_population

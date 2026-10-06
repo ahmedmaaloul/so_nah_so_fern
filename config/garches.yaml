@@ -1,0 +1,66 @@
+# =============================================================================
+# So nah, so fern — Ursprung Garches (92) / Origine Garches (92)
+# -----------------------------------------------------------------------------
+# DE: Kopieren Sie diese Datei, um die Analyse von Ihrer eigenen Gemeinde aus
+#     zu wiederholen: `origin`, `core_city` und ggf. `inputs` anpassen.
+# FR: Copiez ce fichier pour refaire l'analyse depuis votre commune :
+#     adaptez `origin`, `core_city` et si besoin `inputs`.
+# =============================================================================
+
+region:
+  id: idf
+  country: FR
+  label_de: Île-de-France
+  label_fr: Île-de-France
+  metric_crs: "EPSG:2154"
+
+analysis:
+  # Mardi en période scolaire. Le GTFS IDFM téléchargé le 06/10/2026 couvre le
+  # 03/10 → 04/11/2026 ; la fin du fichier est incomplète (lignes de bus à 0
+  # trajet le 03/11), les 20 et 27/10 sont en vacances (−9 % de trajets).
+  date: 2026-10-13
+  school_holidays:                    # zone C (académies Paris, Créteil, Versailles)
+    - [2026-10-17, 2026-11-01]
+    - [2026-12-19, 2027-01-03]
+  public_holidays: [2026-11-01, 2026-11-11, 2026-12-25]
+
+origin:
+  slug: garches
+  name: Garches
+  commune_code: "92033"               # Code INSEE ; le script vérifie le nom
+  points:
+    - id: gare
+      label_de: "Bahnhof Garches – Marnes-la-Coquette"
+      label_fr: "Gare de Garches – Marnes-la-Coquette"
+      source: gtfs_stop               # Koordinaten der GTFS-Haltestelle
+      # Zone d'arrêt (location_type=1) qui regroupe le quai Transilien L et
+      # les arrêts de bus « Gare de Garches – Marnes-la-Coquette ».
+      gtfs_stop_id: "IDFM:70713"
+      gtfs_stop_name_regex: "(?i)garches.*marnes"   # contrôle de cohérence
+    - id: centre
+      label_de: "Ortsmitte Garches (Rathaus)"
+      label_fr: "Centre-ville de Garches (mairie)"
+      source: commune_point           # chef-lieu IGN
+
+# Kernstadt: Referenz für "Entfernung zum Zentrum" und optionale Unterteilung.
+# Ville-centre : référence « distance au centre » et découpage optionnel.
+core_city:
+  name: Paris
+  commune_code: "75056"
+  split_into_districts: true          # arrondissements (mairie + pop. INSEE)
+  # Depuis 2020, les arrondissements 1 à 4 forment « Paris Centre » avec une
+  # seule mairie (même point IGN) → une seule unité. Paris = 17 unités.
+  merge_districts:
+    - unit_id: "75100"
+      name: "Paris Centre"
+      members: ["75101", "75102", "75103", "75104"]
+
+# Verweise auf config/sources.yaml (id) / renvois vers config/sources.yaml (id)
+inputs:
+  gtfs: [fr_gtfs_idfm]
+  osm: [fr_osm]
+  communes: fr_communes
+  commune_points: fr_chef_lieu_commune
+  districts: fr_arrondissement_municipal
+  district_points: fr_chef_lieu_arrondissement_municipal
+  population: fr_population

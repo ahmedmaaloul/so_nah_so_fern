@@ -1,0 +1,77 @@
+# =============================================================================
+# So nah, so fern — Gemeinsame Parameter / Paramètres communs
+# -----------------------------------------------------------------------------
+# DE: Diese Werte gelten für ALLE Regionen, damit die Vergleiche fair bleiben.
+#     Eine Ursprungsdatei (z. B. config/garches.yaml) kann jeden Wert
+#     überschreiben – dann aber bitte im Methodenpapier vermerken.
+# FR: Ces valeurs s'appliquent à TOUTES les régions pour que les comparaisons
+#     restent équitables. Un fichier d'origine (ex. config/garches.yaml) peut
+#     surcharger n'importe quelle valeur — à signaler dans la note méthodo.
+# =============================================================================
+
+analysis:
+  # Das Stichdatum steht in der Ursprungsdatei (analysis.date), weil Schulferien
+  # und GTFS-Gültigkeit je Region verschieden sind. Regel für beide Regionen:
+  # Dienstag in der Schulzeit, kein Feiertag, im "vollständigen" Teil des GTFS.
+  # La date est dans le fichier d'origine (analysis.date) car vacances et
+  # validité des GTFS diffèrent. Règle commune : mardi en période scolaire,
+  # non férié, dans la partie « complète » du GTFS.
+  # 02_clip_osm_gtfs.py prüft / vérifie : Anzahl Fahrten am Stichtag ≥
+  # min_service_ratio × Median der Schul-Werktage im Feed.
+  min_service_ratio: 0.97
+  window_start: "07:30"               # erste Abfahrt / premier départ
+  window_end: "09:00"                 # letzte Abfahrt / dernier départ
+  departure_step_min: 1               # Reisezeitmatrix: jede Minute / chaque minute
+  # Umstiege: kleinste Zahl an ÖV-Fahrten k, deren Median ≤ Median ohne Limit + Toleranz.
+  # Correspondances : plus petit nombre de trajets k dont la médiane ≤ médiane sans limite + tolérance.
+  transfer_tolerance_min: 1
+  max_rides_tested: 4
+  itinerary_departure: "08:15"        # Detail-Routen nur für hervorgehobene Ziele / itinéraires détaillés (tops, zones mortes)
+  percentiles: [25, 50, 75]           # 50 = Median (Hauptindikator / indicateur principal)
+  radius_km: 30                       # Ziele: Gemeinden im Umkreis / destinations dans le rayon
+  # Zielpunkt / point de destination : "official" (IGN chef-lieu, BKG VG250_PK)
+  # oder "osm_townhall" (Sensitivitätsanalyse / analyse de sensibilité).
+  destination_point: official
+  clip_buffer_km: 10                  # Puffer für OSM/GTFS-Zuschnitt / marge de découpe
+
+routing:
+  engine: r5py
+  jvm_max_memory: "11G"               # IDF: 8G → OutOfMemory, 11G → OK (16 GB RAM)
+  # CPU-Kerne für R5 begrenzen (Wärme/Lüfter). M1 Pro: 6 Performance-Kerne.
+  # Limiter les cœurs utilisés par R5 (chauffe). M1 Pro : 6 cœurs performance.
+  jvm_active_processors: 2           # Lancer avec `taskpolicy -b` (cœurs basse conso)
+  snap_to_network: true               # Punkte auf das Fußwegenetz einrasten
+  walk_speed_kmh: 4.5                 # r5py-Standard 3,6 km/h gilt als langsam / jugé lent
+  max_time_min: 180                   # Abbruch / coupure du calcul
+  max_walk_time_min: 30               # max. Fußweg Zu-/Abgang / marche max accès-rabattement
+  access_modes: [WALK]                # kein Fahrrad, kein P+R / ni vélo ni P+R
+  transit_modes: [TRANSIT]
+  # Fernverkehr ausschließen (nicht mit Nahverkehrsabo nutzbar).
+  # Exclure les trains grandes lignes (non utilisables avec un abonnement local).
+  exclude_long_distance_rail: true
+  long_distance_route_types: [101, 102]
+  # Präfix gefolgt von Nicht-Buchstabe (ICE 4, IC35, FLX10 …) / préfixe suivi d'un non-lettre
+  long_distance_name_prefixes: [ICE, IC, EC, ECE, EN, NJ, RJ, RJX, FLX, TGV]
+
+car:
+  enabled: true
+  engine: osrm                        # lokaler Docker-Container, Profil "car"
+  # ACHTUNG: Freifluss-Fahrzeiten ohne Verkehr → Verhältnis ÖV/Auto ist eine
+  # obere Schranke. ATTENTION : temps sans trafic → ratio TC/voiture majoré.
+
+thresholds:
+  dead_zone_max_km: 8                 # "Tote Zone": näher als … / plus proche que …
+  dead_zone_min_min: 60               # … aber länger als … / … mais plus long que …
+  near_max_km: 15                     # Top "so nah, so fern": nur Ziele ≤ … km
+  far_min_km: 10                      # Top "so fern, so nah": nur Ziele ≥ … km
+  top_n: 10
+
+visuals:
+  isochrones_min: [15, 30, 45, 60]
+  distance_rings_km: [5, 10, 15]
+  isochrone_grid_m: 200               # Rasterweite für Isochronen / pas de grille
+
+crs:
+  metric_fr: "EPSG:2154"              # Lambert-93 (Distanzen / distances)
+  metric_de: "EPSG:25832"             # ETRS89 / UTM 32N
+  web: "EPSG:4326"

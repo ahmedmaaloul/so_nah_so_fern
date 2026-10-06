@@ -1,0 +1,41 @@
+# =============================================================================
+# So nah, so fern — Auswahl der deutschen Vergleichsgemeinde
+#                   Choix de la commune allemande de comparaison
+# -----------------------------------------------------------------------------
+# DE: 03_select_twin_city.py berechnet für Garches und jede Kandidatin dieselben
+#     Kennzahlen aus amtlichen Daten. Die Auswahl selbst wird begründet in
+#     outputs/twin_selection/ dokumentiert – keine Gewichtung ist "objektiv".
+# FR: 03_select_twin_city.py calcule pour Garches et chaque candidate les mêmes
+#     indicateurs à partir des données officielles. Le choix est justifié dans
+#     outputs/twin_selection/ — aucune pondération n'est « objective ».
+# =============================================================================
+
+reference_config: config/garches.yaml   # Garches : date, sources, point centre
+
+# Rayon autour du point de la commune pour compter gares et départs.
+# Les communes françaises sont minuscules (Garches : 2,7 km²) et les gares
+# souvent en limite communale → on compte dans un rayon, pas dans le polygone.
+station_catchment_km: 2.0
+
+de:
+  date: 2026-10-20                      # Dienstag nach den hessischen Herbstferien
+  gtfs: de_gtfs
+  units: de_vg250_ew
+  core_city:
+    name: Frankfurt am Main
+    ags: "06412000"
+  candidates:                           # AGS → Name (VG250, GF = 4)
+    "06434006": Kronberg im Taunus
+    "06434008": Oberursel (Taunus)
+    "06436001": Bad Soden am Taunus
+    "06434001": Bad Homburg v.d.Höhe
+    "06440003": Bad Vilbel
+    "06436003": Eschborn
+
+# Kennzahlen für die Ähnlichkeit zu Garches (|log(Kandidat/Garches)|, Mittel).
+# Indicateurs de similarité à Garches (|log(candidate/Garches)|, moyenne).
+similarity_metrics:
+  - population
+  - dist_core_km
+  - rail_lines_catchment
+  - rail_departures_catchment

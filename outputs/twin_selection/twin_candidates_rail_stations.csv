@@ -1,0 +1,26 @@
+commune,station_id,dist_km,lines,departures_day,departures_window,served_stop_name,station_name
+Garches,IDFM:70713,0.589,L,152,17,Garches - Marnes-la-Coquette,Garches - Marnes-la-Coquette
+Garches,IDFM:70686,2.047,"L, U",243,28,Sèvres - Ville-d'Avray,Sèvres - Ville-d'Avray
+Garches,IDFM:73749,2.212,"L, U",395,44,Saint-Cloud,Saint-Cloud
+Garches,IDFM:70726,2.499,T2,213,26,Parc de Saint-Cloud,Parc de Saint-Cloud
+Kronberg im Taunus,375888,0.444,S4,42,3,Kronberg(Taunus),Kronberg (Taunus) Bahnhof
+Kronberg im Taunus,16637,1.503,S4,84,6,Kronberg Süd,Kronberg (Taunus) Süd
+Oberursel (Taunus),92969,0.321,U3,78,6,Oberursel Stadtmitte,Oberursel Stadtmitte | VOberursel
+Oberursel (Taunus),48460,0.323,U3,78,6,Oberursel Stadtmitte,Oberursel Stadtmitte | NOberursel
+Oberursel (Taunus),21773,0.493,"RB15, S5, U3",307,27,Oberursel(Taunus),Oberursel (Taunus) Bahnhof
+Oberursel (Taunus),249612,0.654,U3,156,12,Oberursel Altstadt,Oberursel (Taunus) Altstadt
+Oberursel (Taunus),607734,1.185,U3,149,12,Oberursel Bommersheim,Oberursel (Taunus)-Bommersheim
+Oberursel (Taunus),70566,1.306,U3,156,12,Oberursel Lahnstraße,Oberursel (Taunus) Lahnstraße
+Oberursel (Taunus),44688,1.666,"RB15, S5",152,14,Oberursel-Stierstadt,Oberursel (Taunus)-Stierstadt Bahnhof
+Oberursel (Taunus),250885,2.073,U3,156,12,Oberursel Glöcknerwiese,Oberursel (Taunus) Glöcknerwiese
+Oberursel (Taunus),658194,2.128,U3,149,12,Weißkirchen Ost BusNStierstadt,Oberursel (Taunus)-Weißkirchen Ost
+Oberursel (Taunus),282539,2.4,U3,156,12,Oberursel Kupferhammer,Oberursel (Taunus) Kupferhammer
+Bad Soden am Taunus,31646,0.209,S3,43,3,Bad Soden(Taunus),Bad Soden (Taunus) Bahnhof
+Bad Soden am Taunus,472720,1.259,S3,86,6,Sulzbach(Taunus)Nord,Sulzbach (Taunus) Nordbahnhof
+Bad Soden am Taunus,171682,2.209,S3,86,7,Schwalbach(Taunus)Limes,Schwalbach (Taunus) Limes Bahnhof
+Bad Homburg v.d.Höhe,475234,1.091,"RB15, S5",157,14,Bad Homburg,Bad Homburg v.d.H. Bahnhof
+Bad Vilbel,449224,0.621,S6,164,12,Bad Vilbel Süd,Bad Vilbel Südbahnhof
+Bad Vilbel,555941,0.865,"RB34, RB37, RB40, RB41, RE30, RE99, S6",243,20,Bad Vilbel,Bad Vilbel Bahnhof
+Eschborn,379612,0.633,"S3, S4",170,12,Eschborn,Eschborn Bahnhof
+Eschborn,372735,1.267,"S3, S4",170,12,Eschborn Süd,Eschborn Südbahnhof
+Eschborn,654118,2.005,"S3, S4",170,12,Niederhöchstadt,Eschborn-Niederhöchstadt Bahnhof

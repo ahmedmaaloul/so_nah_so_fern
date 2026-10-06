@@ -1,0 +1,123 @@
+# =============================================================================
+# So nah, so fern — Datenquellen / Sources de données
+# -----------------------------------------------------------------------------
+# DE: Jede Datei, die die Pipeline verwendet. `dest` ist relativ zum Repo-Root.
+#     00_download.py lädt alles herunter und schreibt data/raw/MANIFEST.json
+#     (Größe, SHA-256, Last-Modified, Download-Zeitpunkt).
+# FR: Chaque fichier utilisé par le pipeline. `dest` est relatif à la racine.
+#     00_download.py télécharge tout et écrit data/raw/MANIFEST.json
+#     (taille, SHA-256, Last-Modified, horodatage du téléchargement).
+#
+# Pour une autre région : ajouter des entrées ici, puis les référencer par leur
+# `id` dans config/<origine>.yaml (bloc `inputs`).
+# =============================================================================
+
+sources:
+
+  # ---------------------------------------------------------------- France ---
+  - id: fr_gtfs_idfm
+    region: fr
+    url: https://eu.ftp.opendatasoft.com/stif/GTFS/IDFM-gtfs.zip
+    dest: data/raw/fr/IDFM-gtfs.zip
+    licence: ODbL 1.0
+    attribution: "Île-de-France Mobilités — Offre horaires TC GTFS IDFM"
+
+  - id: fr_osm
+    region: fr
+    url: https://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
+    dest: data/raw/fr/ile-de-france-latest.osm.pbf
+    licence: ODbL 1.0
+    attribution: "© OpenStreetMap contributors (extrait Geofabrik)"
+
+  - id: fr_communes
+    region: fr
+    url: https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/commune.parquet
+    dest: data/raw/fr/admin_express_2026/commune.parquet
+    licence: Licence Ouverte 2.0
+    attribution: "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026"
+
+  - id: fr_chef_lieu_commune
+    region: fr
+    url: https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/chef_lieu_de_commune.parquet
+    dest: data/raw/fr/admin_express_2026/chef_lieu_de_commune.parquet
+    licence: Licence Ouverte 2.0
+    attribution: "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026"
+
+  - id: fr_arrondissement_municipal
+    region: fr
+    url: https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/arrondissement_municipal.parquet
+    dest: data/raw/fr/admin_express_2026/arrondissement_municipal.parquet
+    licence: Licence Ouverte 2.0
+    attribution: "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026"
+
+  - id: fr_chef_lieu_arrondissement_municipal
+    region: fr
+    url: https://data.geopf.fr/telechargement/download/ADMIN-EXPRESS-COG-CARTO/ADMIN-EXPRESS-COG-CARTO_4-0__GEOPARQUET_WGS84G_FRA_2026-01-01/chef_lieu_d_arrondissement_municipal.parquet
+    dest: data/raw/fr/admin_express_2026/chef_lieu_d_arrondissement_municipal.parquet
+    licence: Licence Ouverte 2.0
+    attribution: "IGN — ADMIN EXPRESS COG CARTO 4.0, édition 2026"
+
+  - id: fr_population
+    region: fr
+    url: https://www.insee.fr/fr/statistiques/fichier/8680726/ensemble.zip
+    dest: data/raw/fr/insee_populations_2023_ensemble.zip
+    licence: Licence Ouverte 2.0
+    attribution: "INSEE — Populations de référence 2023 (publiées le 18/12/2025)"
+
+  # ------------------------------------------------------------ Deutschland ---
+  - id: de_gtfs
+    region: de
+    url: https://download.gtfs.de/germany/free/latest.zip
+    dest: data/raw/de/gtfs_de_full.zip
+    licence: CC BY 4.0
+    attribution: "DELFI e.V. (NeTEx), GTFS-Konvertierung gtfs.de"
+
+  - id: de_osm_hessen
+    region: de
+    url: https://download.geofabrik.de/europe/germany/hessen-latest.osm.pbf
+    dest: data/raw/de/hessen-latest.osm.pbf
+    licence: ODbL 1.0
+    attribution: "© OpenStreetMap contributors (Geofabrik-Extrakt)"
+
+  - id: de_osm_rlp
+    region: de
+    url: https://download.geofabrik.de/europe/germany/rheinland-pfalz-latest.osm.pbf
+    dest: data/raw/de/rheinland-pfalz-latest.osm.pbf
+    licence: ODbL 1.0
+    attribution: "© OpenStreetMap contributors (Geofabrik-Extrakt)"
+
+  # Unterfranken: Kahl a.Main, Karlstein, Alzenau, Kleinostheim liegen
+  # < 30 km vom Frankfurter Zentrum (Phase 2) / à moins de 30 km de Francfort.
+  - id: de_osm_unterfranken
+    region: de
+    url: https://download.geofabrik.de/europe/germany/bayern/unterfranken-latest.osm.pbf
+    dest: data/raw/de/unterfranken-latest.osm.pbf
+    licence: ODbL 1.0
+    attribution: "© OpenStreetMap contributors (Geofabrik-Extrakt)"
+
+  - id: de_vg250_ew
+    region: de
+    url: https://daten.gdz.bkg.bund.de/produkte/vg/vg250-ew_ebenen_1231/aktuell/vg250-ew_12-31.utm32s.gpkg.ebenen.zip
+    dest: data/raw/de/vg250-ew_12-31.utm32s.gpkg.ebenen.zip
+    licence: Datenlizenz Deutschland – Namensnennung – Version 2.0
+    attribution: "© GeoBasis-DE / BKG (2025), VG250-EW; Einwohnerzahlen: Statistisches Bundesamt (Destatis)"
+
+  # Frankfurt am Main, Stadtteile (Unterteilung der Kernstadt, analog zu den
+  # 20 Pariser Arrondissements; mittlere Fläche ~5,5 km² vs. ~5,3 km²).
+  # Hinweis: WFS ohne Lizenzangabe; die Esri-Kopie desselben Dienstes und das
+  # DCAT-Portal nennen dl-de/by-2-0 → als Annahme dokumentiert.
+  - id: de_frankfurt_stadtteile
+    region: de
+    url: "https://geowebdienste.frankfurt.de/WFS_Stadtgebietsgliederung?service=WFS&version=2.0.0&request=GetFeature&typeNames=Stadtgebietsgliederung:Stadtteile&outputFormat=GEOJSON"
+    dest: data/raw/de/frankfurt_stadtteile.geojson
+    licence: "dl-de/by-2-0 (Annahme, im WFS nicht angegeben)"
+    attribution: "Stadt Frankfurt am Main, Bürgeramt Statistik und Wahlen — WFS Stadtgebietsgliederung"
+
+  # Einwohner mit Hauptwohnung laut Melderegister (≠ Destatis-Fortschreibung),
+  # Stand 31.12.2024; 45 Stadtteile (Flughafen in Sachsenhausen-Süd enthalten).
+  - id: de_frankfurt_population
+    region: de
+    url: https://offenedaten.frankfurt.de/dcat/dataset/de-he-frankfurtam-demographische_kennzahlen_stadtteile/content.csv
+    dest: data/raw/de/frankfurt_demographische_kennzahlen_stadtteile.csv
+    licence: dl-de/by-2-0
+    attribution: "Stadt Frankfurt am Main, Bürgeramt Statistik und Wahlen — Demographische Kennzahlen Stadtteile"
