@@ -44,7 +44,7 @@ uv run python pipeline/07_indicators.py --config config/garches.yaml    # indica
 
 Pour une autre commune : copier `config/garches.yaml` et adapter `origin`, `core_city`, `analysis.date`. Les GTFS ne couvrent qu'environ un mois : la date doit être dans le fichier (02 le vérifie).
 
-Charge CPU : `routing.jvm_active_processors` limite les cœurs utilisés par R5 (2 par défaut pour un portable ; à augmenter dans le cloud).
+Charge CPU : `routing.jvm_active_processors` limite les cœurs utilisés par R5 (2 par défaut ; à augmenter sur une machine dédiée ou dans le cloud).
 
 ## État d'avancement (06/10/2026)
 

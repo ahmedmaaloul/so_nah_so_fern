@@ -36,9 +36,9 @@ analysis:
 
 routing:
   engine: r5py
-  jvm_max_memory: "11G"               # IDF: 8G → OutOfMemory, 11G → OK (16 GB RAM)
-  # CPU-Kerne für R5 begrenzen (Wärme/Lüfter). M1 Pro: 6 Performance-Kerne.
-  # Limiter les cœurs utilisés par R5 (chauffe). M1 Pro : 6 cœurs performance.
+  jvm_max_memory: "11G"               # IDF: 8G → OutOfMemory, 11G → OK
+  # CPU-Kerne für R5 begrenzen (Wärmeentwicklung). In der Cloud höher setzen.
+  # Limiter les cœurs utilisés par R5 (échauffement). À augmenter dans le cloud.
   jvm_active_processors: 2           # Lancer avec `taskpolicy -b` (cœurs basse conso)
   snap_to_network: true               # Punkte auf das Fußwegenetz einrasten
   walk_speed_kmh: 4.5                 # r5py-Standard 3,6 km/h gilt als langsam / jugé lent

@@ -12,7 +12,7 @@ dates) des fichiers utilisés lors du premier calcul local.
    d'analyse (13/10 FR, 20/10 DE) doivent rester dans le feed retéléchargé ;
    `02_clip_osm_gtfs.py` le vérifie et s'arrête sinon.
 2. **Mémoire R5** : ≥ 11 Go de tas pour l'IDF (8 Go → OutOfMemoryError). Dans le
-   cloud, relever `routing.jvm_active_processors` (2 sur le portable, pour la chauffe).
+   cloud, relever `routing.jvm_active_processors` (2 par défaut).
 3. **Cache r5py** : r5py crée `~/.cache/r5py/<nom de fichier>` et réutilise un lien
    existant de même nom. Tous les extraits s'appellent `osm_clip.osm.pbf` → 04 passe
    par `stage_inputs()` (liens `data/interim/<slug>/r5_inputs/<slug>__<fichier>`).

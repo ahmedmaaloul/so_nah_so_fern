@@ -44,7 +44,7 @@ uv run python pipeline/07_indicators.py --config config/garches.yaml    # Kennza
 
 Für eine andere Gemeinde: `config/garches.yaml` kopieren und `origin`, `core_city`, `analysis.date` anpassen. Die GTFS-Feeds decken nur ~1 Monat ab – das Stichdatum muss im Feed liegen (02 prüft das).
 
-CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Standard 2 für einen Laptop; in der Cloud höher setzen).
+CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Standard 2; auf einem dedizierten Rechner oder in der Cloud höher setzen).
 
 ## Stand (06.10.2026)
 
