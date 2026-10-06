@@ -39,7 +39,7 @@ routing:
   jvm_max_memory: "11G"               # IDF: 8G → OutOfMemory, 11G → OK
   # CPU-Kerne für R5 begrenzen (Wärmeentwicklung). In der Cloud höher setzen.
   # Limiter les cœurs utilisés par R5 (échauffement). À augmenter dans le cloud.
-  jvm_active_processors: 2           # Lancer avec `taskpolicy -b` (cœurs basse conso)
+  jvm_active_processors: 4           # = nproc du conteneur cloud (2 en local)
   snap_to_network: true               # Punkte auf das Fußwegenetz einrasten
   walk_speed_kmh: 4.5                 # r5py-Standard 3,6 km/h gilt als langsam / jugé lent
   max_time_min: 180                   # Abbruch / coupure du calcul

@@ -47,7 +47,9 @@ import numpy as np
 import pandas as pd
 import shapely
 
-from common import (cli, get_logger, interim_dir, load_config, log_assumption,
+from urllib.parse import urlparse
+
+from common import (ROOT, cli, get_logger, interim_dir, load_config, log_assumption,
                     osmium_bin, outputs_dir, processed_dir, source_path)
 
 LOG = get_logger("02_clip_osm_gtfs")
@@ -220,6 +222,35 @@ def log_osm_info(label: str, info: dict) -> None:
     LOG.info("%s : %s — %s nœuds, %s ways, %s relations (trié : %s, versions multiples : %s)",
              label, human(info["size_bytes"]), f"{info['nodes']:,}", f"{info['ways']:,}",
              f"{info['relations']:,}", info["objects_ordered"], info["multiple_versions"])
+
+
+def log_mirrors(cfg: dict) -> None:
+    """Consigne les sources OSM/GTFS téléchargées depuis un miroir (MANIFEST de 00)."""
+    path = ROOT / "data" / "raw" / "MANIFEST.json"
+    if not path.exists():
+        return
+    manifest = json.loads(path.read_text(encoding="utf-8"))
+    used = {}
+    for sid in [*cfg["inputs"]["osm"], *cfg["inputs"]["gtfs"]]:
+        e = manifest.get(sid) or {}
+        url, final = e.get("url"), e.get("final_url")
+        if url and final and urlparse(url).hostname != urlparse(final).hostname:
+            used[sid] = {"url": url, "final_url": final}
+    if not used:
+        return
+    for sid, v in used.items():
+        LOG.warning("%s téléchargé depuis un miroir : %s", sid, v["final_url"])
+    log_assumption(
+        cfg, "02", "G0_mirror",
+        "Source(s) téléchargée(s) depuis un miroir, l'URL principale étant injoignable : "
+        + " ; ".join(f"{k} ← {urlparse(v['final_url']).hostname}" for k, v in used.items())
+        + ". Mêmes données OSM ; le polygone d'extrait peut différer, sans effet après découpe "
+        "tant que la zone de découpe reste dans l'extrait.",
+        "Quelle(n) von einem Spiegel geladen, da die Haupt-URL nicht erreichbar war: "
+        + "; ".join(f"{k} ← {urlparse(v['final_url']).hostname}" for k, v in used.items())
+        + ". Gleiche OSM-Daten; das Auszugspolygon kann abweichen, ohne Folgen nach dem "
+        "Zuschnitt, solange das Zuschnittsgebiet im Auszug liegt.",
+        value=used)
 
 
 def clip_osm(cfg: dict, clip_path: Path, interim: Path) -> dict:
@@ -813,6 +844,7 @@ def main() -> None:
     if args.skip_osm:
         LOG.info("OSM : étape sautée (--skip-osm)")
     else:
+        log_mirrors(cfg)
         clip_osm(cfg, interim / "clip_area.geojson", interim)
 
     gtfs_dir = interim / "gtfs"

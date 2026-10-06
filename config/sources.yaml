@@ -25,9 +25,13 @@ sources:
   - id: fr_osm
     region: fr
     url: https://download.geofabrik.de/europe/france/ile-de-france-latest.osm.pbf
+    # Miroir si Geofabrik est injoignable : extrait OSM France (autre polygone
+    # de découpe que Geofabrik ; 02 consigne le serveur réellement utilisé).
+    mirrors:
+      - https://download.openstreetmap.fr/extracts/europe/france/ile_de_france-latest.osm.pbf
     dest: data/raw/fr/ile-de-france-latest.osm.pbf
     licence: ODbL 1.0
-    attribution: "© OpenStreetMap contributors (extrait Geofabrik)"
+    attribution: "© OpenStreetMap contributors (extrait Geofabrik ou OSM France)"
 
   - id: fr_communes
     region: fr
@@ -72,26 +76,18 @@ sources:
     licence: CC BY 4.0
     attribution: "DELFI e.V. (NeTEx), GTFS-Konvertierung gtfs.de"
 
-  - id: de_osm_hessen
+  # Ganz Deutschland statt Hessen + Rheinland-Pfalz + Unterfranken: deckt alle
+  # Gebiete ab (Unterfranken: Kahl a.Main, Karlstein, Alzenau, Kleinostheim < 30 km
+  # vom Frankfurter Zentrum, Phase 2) und hat einen Spiegel (GWDG), falls
+  # Geofabrik nicht erreichbar ist. Keine Duplikate beim Zusammenführen.
+  # Allemagne entière au lieu des trois extraits régionaux : couvre tout et a un
+  # miroir (GWDG) si Geofabrik est injoignable ; ~4,9 Go.
+  - id: de_osm_germany
     region: de
-    url: https://download.geofabrik.de/europe/germany/hessen-latest.osm.pbf
-    dest: data/raw/de/hessen-latest.osm.pbf
-    licence: ODbL 1.0
-    attribution: "© OpenStreetMap contributors (Geofabrik-Extrakt)"
-
-  - id: de_osm_rlp
-    region: de
-    url: https://download.geofabrik.de/europe/germany/rheinland-pfalz-latest.osm.pbf
-    dest: data/raw/de/rheinland-pfalz-latest.osm.pbf
-    licence: ODbL 1.0
-    attribution: "© OpenStreetMap contributors (Geofabrik-Extrakt)"
-
-  # Unterfranken: Kahl a.Main, Karlstein, Alzenau, Kleinostheim liegen
-  # < 30 km vom Frankfurter Zentrum (Phase 2) / à moins de 30 km de Francfort.
-  - id: de_osm_unterfranken
-    region: de
-    url: https://download.geofabrik.de/europe/germany/bayern/unterfranken-latest.osm.pbf
-    dest: data/raw/de/unterfranken-latest.osm.pbf
+    url: https://download.geofabrik.de/europe/germany-latest.osm.pbf
+    mirrors:
+      - https://ftp5.gwdg.de/pub/misc/openstreetmap/download.geofabrik.de/germany-latest.osm.pbf
+    dest: data/raw/de/germany-latest.osm.pbf
     licence: ODbL 1.0
     attribution: "© OpenStreetMap contributors (Geofabrik-Extrakt)"
 

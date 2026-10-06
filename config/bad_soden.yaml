@@ -45,7 +45,7 @@ core_city:
 
 inputs:
   gtfs: [de_gtfs]
-  osm: [de_osm_hessen, de_osm_rlp, de_osm_unterfranken]
+  osm: [de_osm_germany]
   communes: de_vg250_ew
   districts: de_frankfurt_stadtteile
   district_population: de_frankfurt_population

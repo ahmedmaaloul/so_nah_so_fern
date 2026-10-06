@@ -100,15 +100,15 @@ def is_up_to_date(dest: Path, entry: dict | None, src: dict) -> bool:
     return sha256_file(dest) == entry.get("sha256")
 
 
-def fetch(session: requests.Session, src: dict, part: Path, log) -> dict:
-    """Une tentative : télécharge (ou reprend) vers `part` et renvoie les métadonnées HTTP."""
+def fetch(session: requests.Session, src: dict, url: str, part: Path, log) -> dict:
+    """Une tentative : télécharge (ou reprend) `url` vers `part` et renvoie les métadonnées HTTP."""
     offset = part.stat().st_size if part.exists() else 0
     for _ in range(2):          # 2e passage seulement si le serveur refuse la reprise (416)
         # identity : pas de compression, pour que les octets reçus = les octets du fichier
         headers = {"Accept-Encoding": "identity"}
         if offset:
             headers["Range"] = f"bytes={offset}-"
-        with session.get(src["url"], headers=headers, stream=True, timeout=TIMEOUT) as r:
+        with session.get(url, headers=headers, stream=True, timeout=TIMEOUT) as r:
             if offset and r.status_code == 416:
                 log.warning("%s : reprise refusée (416), on repart de zéro", src["id"])
                 part.unlink()
@@ -150,29 +150,50 @@ def fetch(session: requests.Session, src: dict, part: Path, log) -> dict:
 
 
 def download(session: requests.Session, src: dict, dest: Path, force: bool, log) -> dict:
-    """Télécharge `src` vers `dest` (3 tentatives, backoff) et renvoie les métadonnées."""
+    """Télécharge `src` vers `dest` et renvoie les métadonnées.
+
+    3 tentatives avec backoff par URL : d'abord `url`, puis chaque entrée de
+    `mirrors` (copie du même fichier sur un autre serveur) si la précédente échoue.
+    """
     dest.parent.mkdir(parents=True, exist_ok=True)
     part = dest.with_name(dest.name + ".part")
     if force:
         part.unlink(missing_ok=True)        # --force : pas de reprise d'un .part ancien
+    urls = [src["url"], *src.get("mirrors", [])]
+    for i, url in enumerate(urls):
+        if i:
+            # Un .part d'un autre serveur ne doit pas être complété par celui ci
+            part.unlink(missing_ok=True)
+            log.warning("%s : essai du miroir %d/%d %s", src["id"], i, len(urls) - 1, url)
+        try:
+            meta = fetch_with_retries(session, src, url, part, log)
+            break
+        except OSError:
+            if i == len(urls) - 1:
+                raise
+    os.replace(part, dest)
+    meta["downloaded_at_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
+    return meta
+
+
+def fetch_with_retries(session: requests.Session, src: dict, url: str, part: Path, log) -> dict:
+    """Jusqu'à TRIES tentatives sur `url` ; lève la dernière erreur."""
     for attempt in range(1, TRIES + 1):
         try:
-            meta = fetch(session, src, part, log)
-            break
+            return fetch(session, src, url, part, log)
         except OSError as e:        # requests.RequestException hérite d'OSError
             # Une erreur 4xx (hors 408/429) ne passera pas en réessayant
             status = e.response.status_code if isinstance(e, requests.HTTPError) \
                 and e.response is not None else None
             definitive = status is not None and 400 <= status < 500 and status not in (408, 429)
             if definitive or attempt == TRIES:
+                log.error("%s : %s en échec (%s)", src["id"], url, e)
                 raise
             wait = BACKOFF_S * 2 ** (attempt - 1)
             log.warning("%s : tentative %d/%d échouée (%s), nouvel essai dans %d s",
                         src["id"], attempt, TRIES, e, wait)
             time.sleep(wait)
-    os.replace(part, dest)
-    meta["downloaded_at_utc"] = datetime.now(timezone.utc).isoformat(timespec="seconds")
-    return meta
+    raise OSError("téléchargement impossible")      # inatteignable
 
 
 # --------------------------------------------------------------------------- #
