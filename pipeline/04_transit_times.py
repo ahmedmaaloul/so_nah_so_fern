@@ -23,7 +23,7 @@ Sorties :
   processed_dir/tt_transit.parquet   from_id, to_id, travel_time_p25/p50/p75 (minutes)
   processed_dir/tt_walk.parquet      from_id, to_id, walk_time (minutes)
   outputs_dir/qa_tt_transit.json     contrôles qualité
-  outputs_dir/assumptions.jsonl      R1_r5_parameters, R2_window_semantics, R3_snapping
+  outputs_dir/assumptions.jsonl      R1_r5_parameters, R2_window_semantics, R3_snapping, R4_islands
 
 Ce module est aussi importé par 05_transfers.py (démarrage de r5py, chargement des
 origines/destinations, construction du réseau, paramètres communs) : tout ce qui
@@ -53,6 +53,16 @@ LOG = get_logger("04_transit_times")
 # --------------------------------------------------------------------------- #
 DEFAULT_WALK_ONLY_MAX_TIME_MIN = 120      # routing.walk_only_max_time_min
 DEFAULT_MAX_PLAUSIBLE_SPEED_KMH = 60      # qa.max_plausible_speed_kmh
+# Îlots piétons (points accrochés à un morceau de réseau déconnecté), routing.islands.* :
+DEFAULT_ISLANDS = {
+    "probe_radius_m": 300,        # sondes sur un cercle de ce rayon autour du point
+    "probe_n": 8,                 # nombre de sondes
+    "probe_walk_min": 15,         # marche max. vers les sondes
+    "isolated_below": 0.25,       # point isolé si part de sondes atteintes < seuil
+    "connected_from": 0.5,        # candidat retenu si part ≥ seuil
+    "search_rings_m": [15, 30, 50, 75, 100, 150, 200, 300, 400, 500],
+    "search_directions": 16,
+}
 
 
 # --------------------------------------------------------------------------- #
@@ -192,6 +202,86 @@ def r5_common_kwargs(cfg: dict, r5py) -> dict:
     )
 
 
+def islands_params(cfg: dict) -> dict:
+    return DEFAULT_ISLANDS | (cfg["routing"].get("islands") or {})
+
+
+def ring(points: gpd.GeoDataFrame, metric_crs: str, radius_m: float, n: int, tag: str) -> gpd.GeoDataFrame:
+    """n points sur un cercle de rayon radius_m autour de chaque point (id = <id>#<tag><j>, parent = id)."""
+    pm = points.to_crs(metric_crs)
+    ang = np.arange(n) * 2 * np.pi / n
+    rows = [(f"{pid}#{tag}{j}", pid, g.x + radius_m * np.cos(a_), g.y + radius_m * np.sin(a_))
+            for pid, g in zip(pm["id"], pm.geometry) for j, a_ in enumerate(ang)]
+    df = pd.DataFrame(rows, columns=["id", "parent", "x", "y"])
+    return gpd.GeoDataFrame(df[["id", "parent"]], geometry=gpd.points_from_xy(df["x"], df["y"]),
+                            crs=metric_crs).to_crs("EPSG:4326")
+
+
+def probe_share(r5py, network, cfg: dict, points: gpd.GeoDataFrame) -> pd.Series:
+    """Part des sondes (cercle autour de chaque point) atteintes à pied depuis le point."""
+    ip = islands_params(cfg)
+    metric = cfg["region"]["metric_crs"]
+    probes = ring(points, metric, ip["probe_radius_m"], ip["probe_n"], "p")
+    kwargs = r5_common_kwargs(cfg, r5py)
+    walk = timedelta(minutes=int(ip["probe_walk_min"]))
+    kwargs.update(transport_modes=[r5py.TransportMode.WALK], max_time=walk, max_time_walking=walk)
+    with warnings.catch_warnings():
+        warnings.simplefilter("ignore")      # sondes non accrochables : comptées non atteintes
+        m = plain(r5py.TravelTimeMatrix(network, origins=points[["id", "geometry"]],
+                                        destinations=probes[["id", "geometry"]],
+                                        snap_to_network=snap_option(cfg), **kwargs))
+    m = m.merge(probes[["id", "parent"]], left_on="to_id", right_on="id")
+    m = m[m["parent"] == m["from_id"]]
+    reached = m.groupby("from_id")["travel_time"].apply(lambda t: int(t.notna().sum()))
+    return (reached.reindex(points["id"]).fillna(0) / ip["probe_n"]).rename("share")
+
+
+def fix_islands(r5py, network, cfg: dict, points: gpd.GeoDataFrame, label: str) -> tuple[gpd.GeoDataFrame, dict]:
+    """Déplace les points accrochés à un îlot piéton vers le candidat connecté le plus proche.
+
+    Test : marche de probe_walk_min min vers probe_n sondes à probe_radius_m ; isolé si
+    part atteinte < isolated_below. Candidats : anneaux search_rings_m × search_directions
+    autour du point d'origine ; on garde le plus proche dont la part ≥ connected_from
+    (à distance égale, la meilleure part). Sans candidat valable, le point est laissé tel quel.
+    """
+    ip = islands_params(cfg)
+    metric = cfg["region"]["metric_crs"]
+    share = probe_share(r5py, network, cfg, points)
+    isolated = share[share < ip["isolated_below"]].index.tolist()
+    info = {"label": label, "n": int(len(points)), "params": ip,
+            "share_distribution": {str(k): int(v) for k, v in share.round(3).value_counts().sort_index().items()},
+            "isolated": []}
+    if not isolated:
+        return points, info
+    points = points.copy()
+    names = points.set_index("id")["name"] if "name" in points.columns else pd.Series(dtype=str)
+    for pid in isolated:
+        p = points[points["id"] == pid][["id", "geometry"]]
+        cands = pd.concat([ring(p, metric, d, ip["search_directions"], f"r{d}_").assign(offset_m=float(d))
+                           for d in ip["search_rings_m"]], ignore_index=True)
+        cands = gpd.GeoDataFrame(cands, geometry="geometry", crs="EPSG:4326")
+        cshare = probe_share(r5py, network, cfg, cands)
+        cands["share"] = cands["id"].map(cshare)
+        ok = cands[cands["share"] >= ip["connected_from"]].sort_values(["offset_m", "share"],
+                                                                        ascending=[True, False], kind="stable")
+        rec = {"id": pid, "name": str(names.get(pid, "")), "share": float(share[pid]),
+               "n_candidates": int(len(cands))}
+        if ok.empty:
+            rec["moved"] = False
+            LOG.warning("%s %s (%s) isolé (part %.2f), aucun candidat connecté à ≤ %d m : laissé tel quel",
+                        label, pid, rec["name"], share[pid], max(ip["search_rings_m"]))
+        else:
+            best = ok.iloc[0]
+            idx = points.index[points["id"] == pid]
+            points.loc[idx, "geometry"] = best.geometry
+            rec.update(moved=True, offset_m=float(best["offset_m"]), new_share=float(best["share"]),
+                       lon=round(best.geometry.x, 6), lat=round(best.geometry.y, 6))
+            LOG.warning("%s %s (%s) isolé (part %.2f) : déplacé de %.0f m (part %.2f)", label, pid,
+                        rec["name"], share[pid], best["offset_m"], best["share"])
+        info["isolated"].append(rec)
+    return points, info
+
+
 def snapping_stats(network, points: gpd.GeoDataFrame, metric_crs: str) -> dict:
     """Écart (m) entre chaque point et sa position après accrochage au réseau piéton."""
     snapped = network.snap_to_network(points.geometry)
@@ -304,6 +394,15 @@ def main() -> None:
     pcts = [int(p) for p in a["percentiles"]]
     walk_max = walk_only_max_time_min(cfg)
 
+    # Îlots piétons : points accrochés à un réseau déconnecté (R4_islands)
+    islands = None
+    if snap:
+        origins, isl_o = fix_islands(r5py, network, cfg, origins, "origine")
+        dest, isl_d = fix_islands(r5py, network, cfg, dest, "destination")
+        islands = {"origins": isl_o, "destinations": isl_d}
+        LOG.info("Îlots : %d origine(s), %d destination(s) isolée(s) ; parts atteintes (destinations) %s",
+                 len(isl_o["isolated"]), len(isl_d["isolated"]), isl_d["share_distribution"])
+
     # Accrochage au réseau : écart par point (pour R3_snapping)
     metric = cfg["region"]["metric_crs"]
     snap_o = snapping_stats(network, origins, metric) if snap else None
@@ -349,7 +448,7 @@ def main() -> None:
     qa.update({
         "origin": cfg["origin"]["slug"], "date": str(a["date"]),
         "window": f"{a['window_start']}-{a['window_end']}", "percentiles": pcts,
-        "jvm": jvm, "snapping": {"origins": snap_o, "destinations": snap_d},
+        "jvm": jvm, "snapping": {"origins": snap_o, "destinations": snap_d}, "islands": islands,
         "r5_warnings": {"transit": warns_tt, "walk": warns_walk},
         "timings_s": {"network": round(t_net, 1), "transit_matrix": round(t_tt, 1),
                       "walk_matrix": round(t_walk, 1), "total": round(time.time() - t_start, 1)},
@@ -416,6 +515,24 @@ def main() -> None:
          f"zwingend auf einer Straße liegen): {snap_d}. Nicht einrastbare Ziele schließt r5py aus."
          if snap else "Kein Einrasten ins Netz: Die Punkte werden unverändert verwendet."),
         {"snap_to_network": snap, "origins": snap_o, "destinations": snap_d})
+    if islands is not None:
+        ip = islands_params(cfg)
+        moved = [r for k in ("origins", "destinations") for r in islands[k]["isolated"]]
+        desc = ", ".join(f"{r['name'] or r['id']} ({r['offset_m']:.0f} m)" if r["moved"]
+                         else f"{r['name'] or r['id']} (non déplacé)" for r in moved) or "aucun"
+        log_assumption(
+            cfg, "04", "R4_islands",
+            (f"Îlots piétons : un point est jugé accroché à un morceau de réseau déconnecté s'il atteint à pied, en "
+             f"{ip['probe_walk_min']} min, moins de {ip['isolated_below']:.0%} de {ip['probe_n']} points sondes placés à "
+             f"{ip['probe_radius_m']} m autour de lui. Il est alors déplacé vers le point le plus proche (anneaux de "
+             f"{min(ip['search_rings_m'])} à {max(ip['search_rings_m'])} m, {ip['search_directions']} directions) qui en "
+             f"atteint au moins {ip['connected_from']:.0%}. Points concernés : {desc}."),
+            (f"Fußweg-Inseln: Ein Punkt gilt als an ein abgetrenntes Netzstück eingerastet, wenn er zu Fuß in "
+             f"{ip['probe_walk_min']} Min. weniger als {ip['isolated_below']:.0%} von {ip['probe_n']} Prüfpunkten im Abstand "
+             f"von {ip['probe_radius_m']} m erreicht. Er wird dann auf den nächstgelegenen Punkt verschoben (Ringe von "
+             f"{min(ip['search_rings_m'])} bis {max(ip['search_rings_m'])} m, {ip['search_directions']} Richtungen), der "
+             f"mindestens {ip['connected_from']:.0%} erreicht. Betroffene Punkte: {desc}."),
+            islands)
     LOG.info("Terminé en %.0f s.", time.time() - t_start)
 
 

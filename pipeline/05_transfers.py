@@ -286,6 +286,9 @@ def main() -> None:
     origins, dest = t04.load_od(cfg)
     r5py, jvm = t04.start_r5(cfg)
     network = t04.build_network(r5py, cfg)
+    if t04.snap_option(cfg):              # mêmes points déplacés qu'en 04 (îlots piétons)
+        origins, _ = t04.fix_islands(r5py, network, cfg, origins, "origine")
+        dest, _ = t04.fix_islands(r5py, network, cfg, dest, "destination")
     pdir, odir = processed_dir(cfg), outputs_dir(cfg)
 
     if args.itineraries:
