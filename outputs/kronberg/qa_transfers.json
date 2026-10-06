@@ -1,0 +1,43 @@
+{
+  "n_od": 238,
+  "n_od_with_time": 238,
+  "max_rides_tested": 4,
+  "tolerance_min": 1.0,
+  "transfers_by_origin": {
+    "centre": {
+      "0": 13,
+      "1": 55,
+      "2": 45,
+      "3": 6
+    },
+    "gare": {
+      "0": 11,
+      "1": 54,
+      "2": 46,
+      "3": 8
+    }
+  },
+  "n_walk_only": {
+    "centre": 1,
+    "gare": 1
+  },
+  "n_censored": 0,
+  "n_non_monotone_steps": 0,
+  "n_kmax_faster_than_unlimited": 0,
+  "censored_examples": [],
+  "timings_s": {
+    "rides_1": 1.7,
+    "rides_2": 0.4,
+    "rides_3": 0.4,
+    "rides_4": 0.6,
+    "total": 12.9
+  },
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  }
+}
