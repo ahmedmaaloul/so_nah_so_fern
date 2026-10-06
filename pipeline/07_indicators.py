@@ -67,9 +67,8 @@ def load_inputs(cfg: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
     # Correspondances (05) : facultatif à ce stade, colonnes NaN sinon
     tr_path = pdir / "transfers.parquet"
     if tr_path.exists():
-        tr = pd.read_parquet(tr_path)[["from_id", "to_id", "median_transfers",
-                                       "share_walk_only", "share_2plus_transfers",
-                                       "typical_chain", "typical_mode_chain"]]
+        tr = pd.read_parquet(tr_path)[["from_id", "to_id", "transfers",
+                                       "transfers_censored", "walk_only"]]
         od = od.merge(tr, on=["from_id", "to_id"], how="left")
     else:
         log.warning("transfers.parquet absent : colonnes de correspondances vides")
@@ -150,8 +149,10 @@ def indicators_for_origin(cfg: dict, origin_id: str, dest: pd.DataFrame,
             "n_candidates_below_dist": int(near.sum()),
             "population": int(df.loc[df["dead_zone"], "population"].sum()),
         },
-        "median_transfers": (float(df.loc[ref, "median_transfers"].median())
-                             if "median_transfers" in df else None),
+        "median_transfers": (float(df.loc[ref, "transfers"].median())
+                             if "transfers" in df else None),
+        "share_2plus_transfers": (float((df.loc[ref, "transfers"] >= 2).mean())
+                                  if "transfers" in df else None),
         "ratio_tc_car_median": (float(df.loc[ref, "ratio_tc_car"].median())
                                 if df["ratio_tc_car"].notna().any() else None),
     }
@@ -216,9 +217,8 @@ def main() -> None:
             "point_source", "lon", "lat", "dist_km", "dist_km_core",
             "travel_time_p25", "t_tc", "travel_time_p75", "t_tc_spread", "walk_time",
             "car_time", "v_eff_kmh", "rank_dist", "rank_time", "paradox_index",
-            "paradox_norm", "time_excess_pct", "ratio_tc_car", "median_transfers",
-            "share_walk_only", "share_2plus_transfers", "typical_chain",
-            "typical_mode_chain", "dead_zone", "top_nah_fern", "top_fern_nah",
+            "paradox_norm", "time_excess_pct", "ratio_tc_car", "transfers",
+            "transfers_censored", "walk_only", "dead_zone", "top_nah_fern", "top_fern_nah",
             "is_origin_commune"]
     res = res[[c for c in cols if c in res.columns]].sort_values(["origin_id", "dist_km"])
     out = outputs_dir(cfg)

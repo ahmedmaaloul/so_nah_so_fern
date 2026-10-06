@@ -30,15 +30,10 @@ dates) des fichiers utilisés lors du premier calcul local.
 
 ## À faire
 
-1. **05 correspondances, nouvelle méthode** (l'actuel `05_transfers.py` avec
-   `DetailedItineraries` pour toutes les OD est trop lent : > 17 min par départ ;
-   OutOfMemoryError avec une fenêtre d'une minute) :
-   - `TravelTimeMatrix` avec `max_public_transport_rides` = 1…`max_rides_tested` ;
-   - correspondances = (plus petit k dont la médiane ≤ médiane sans limite +
-     `transfer_tolerance_min`) − 1 ; marche seule → 0 ;
-   - itinéraires détaillés (`DetailedItineraries`, fenêtre 10 min, départ
-     `itinerary_departure`) seulement pour les destinations mises en avant (tops,
-     zones mortes) → carte web.
+1. **05 correspondances** : réécrit selon la nouvelle méthode (matrices à k véhicules,
+   puis `--itineraries` après 07 pour les tops et zones mortes) ; 07 lit les nouvelles
+   colonnes (`transfers`, `transfers_censored`, `walk_only`). **Jamais lancé** : à tester
+   dès que les données sont téléchargées. Ordre : 04 → 05 → 07 → 05 `--itineraries`.
 2. Andrésy : accrocher le point à la composante connexe principale du réseau piéton.
 3. 04–05–07 pour `kronberg` et `bad_soden` ; tester `07_indicators.py` (écrit, jamais lancé).
 4. 06 voiture (OSRM via Docker), 08 isochrones (`r5py.Isochrones`), 09 cartogramme
