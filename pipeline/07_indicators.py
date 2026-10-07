@@ -22,6 +22,10 @@ destination du rayon :
   top_fern_nah     top N « so fern, so nah » : paradox_index le plus bas
                    parmi les destinations à ≥ far_min_km
 
+Synthèse (synthese_<slug>.json), en plus : ville-centre (unité centrale = celle qui
+contient le point officiel de la ville-centre, et médianes sur tous ses quartiers),
+reste du rayon, population atteinte en 30/45/60/90 min (nombre et part du rayon).
+
 La commune d'origine elle-même est conservée dans le tableau mais exclue des
 rangs, de la régression et des tops (distance quasi nulle).
 
@@ -164,7 +168,50 @@ def indicators_for_origin(cfg: dict, origin_id: str, dest: pd.DataFrame,
         "car_time_peak_median_min": (float(df.loc[ref, "car_time_peak"].median())
                                      if "car_time_peak" in df and df["car_time_peak"].notna().any() else None),
     }
+    summary.update(core_and_access(cfg, df, ref))
     return df, summary
+
+
+ACCESS_MIN = (30, 45, 60, 90)            # seuils d'affichage de la population atteinte (contrôle)
+
+
+def core_and_access(cfg: dict, df: pd.DataFrame, ref: pd.Series) -> dict:
+    """Ville-centre (unité centrale + tous ses quartiers), reste du rayon, population atteinte.
+
+    Unité centrale = celle qui contient le point officiel de la ville-centre (plus petite
+    dist_km_core parmi ses quartiers, ou la commune entière si elle n'est pas découpée).
+    Population atteinte = somme des populations des unités du rayon (hors commune d'origine)
+    dont le temps TC médian est ≤ seuil ; part = rapport à la population de ces unités.
+    """
+    code = str(cfg["core_city"]["commune_code"])
+    parent = df["parent_id"].astype(str) if "parent_id" in df else pd.Series("", index=df.index)
+    in_core = (parent == code) | (df["unit_id"].astype(str) == code)
+    out: dict = {}
+    if in_core.any():
+        c = df[in_core]
+        u = c.loc[c["dist_km_core"].idxmin()]
+        r = lambda v, n=1: None if pd.isna(v) else round(float(v), n)      # noqa: E731
+        out["core"] = {
+            "city": cfg["core_city"]["name"], "centre_unit": u["name"], "centre_unit_id": str(u["unit_id"]),
+            "dist_km": r(u["dist_km"]), "t_tc": r(u["t_tc"]), "t_p25": r(u["travel_time_p25"]),
+            "t_p75": r(u["travel_time_p75"]), "transfers": r(u.get("transfers"), 0),
+            "car_time": r(u.get("car_time")), "car_time_peak": r(u.get("car_time_peak")),
+            "all_units": {"n": int(len(c)), "dist_km_median": r(c["dist_km"].median()),
+                          "t_tc_median": r(c["t_tc"].median()), "v_eff_median_kmh": r(c["v_eff_kmh"].median()),
+                          "transfers_median": r(c["transfers"].median(), 1) if "transfers" in c else None},
+        }
+        o = df[~in_core & ~df["is_origin_commune"]]
+        out["outside_core"] = {"n": int(len(o)), "n_unreachable": int(o["t_tc"].isna().sum()),
+                               "dist_km_median": r(o["dist_km"].median()), "t_tc_median": r(o["t_tc"].median()),
+                               "v_eff_median_kmh": r(o["v_eff_kmh"].median()),
+                               "transfers_median": r(o["transfers"].median(), 1) if "transfers" in o else None}
+    d = df[~df["is_origin_commune"]]
+    tot = float(d["population"].sum())
+    out["population_radius"] = int(tot)
+    out["access_population"] = {str(m): {"population": int(d.loc[d["t_tc"] <= m, "population"].sum()),
+                                         "share": round(float(d.loc[d["t_tc"] <= m, "population"].sum() / tot), 4)}
+                                for m in ACCESS_MIN}
+    return out
 
 
 def weighted_median(values: pd.Series, weights: pd.Series) -> float:

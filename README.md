@@ -4,6 +4,8 @@
 
 Interaktive Karte zur Lücke zwischen Luftlinie und tatsächlicher Tür-zu-Tür-Reisezeit im öffentlichen Verkehr – ausgehend von Garches (Hauts-de-Seine, 12 km westlich von Paris) und im Vergleich mit einer ähnlichen Gemeinde im Rhein-Main-Gebiet (Kronberg im Taunus, Kontrolle: Bad Soden am Taunus).
 
+Paris ist Hauptstadt und Mittelpunkt eines strahlenförmigen Netzes, Frankfurt eine Regionalmetropole: Im Umkreis von 30 km leben 10,13 Mio. gegenüber 2,85 Mio. Menschen. Die Karte zeigt daher neben Zeit je Kilometer auch die Zeit ins Zentrum der Kernstadt und die in 30, 45 und 60 Minuten erreichbare Bevölkerung.
+
 Alle Zahlen stammen aus der Berechnung; jede Annahme wird in `outputs/<ursprung>/assumptions.jsonl` protokolliert.
 
 ## Methode in Kürze

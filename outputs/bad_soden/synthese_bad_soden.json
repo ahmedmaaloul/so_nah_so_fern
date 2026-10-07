@@ -39,7 +39,53 @@
       "share_2plus_transfers": 0.4666666666666667,
       "ratio_tc_car_median": 3.1061672674939755,
       "ratio_tc_car_peak_median": 2.0325908011982943,
-      "car_time_peak_median_min": 38.21114416666667
+      "car_time_peak_median_min": 38.21114416666667,
+      "core": {
+        "city": "Frankfurt am Main",
+        "centre_unit": "Altstadt",
+        "centre_unit_id": "FFM-STT-1",
+        "dist_km": 13.3,
+        "t_tc": 48.0,
+        "t_p25": 42.0,
+        "t_p75": 56.0,
+        "transfers": 2.0,
+        "car_time": 19.6,
+        "car_time_peak": 30.0,
+        "all_units": {
+          "n": 45,
+          "dist_km_median": 12.2,
+          "t_tc_median": 58.0,
+          "v_eff_median_kmh": 12.7,
+          "transfers_median": 1.0
+        }
+      },
+      "outside_core": {
+        "n": 75,
+        "n_unreachable": 0,
+        "dist_km_median": 22.0,
+        "t_tc_median": 86.0,
+        "v_eff_median_kmh": 13.7,
+        "transfers_median": 2.0
+      },
+      "population_radius": 2885427,
+      "access_population": {
+        "30": {
+          "population": 24289,
+          "share": 0.0084
+        },
+        "45": {
+          "population": 328861,
+          "share": 0.114
+        },
+        "60": {
+          "population": 767061,
+          "share": 0.2658
+        },
+        "90": {
+          "population": 2406405,
+          "share": 0.834
+        }
+      }
     },
     {
       "origin_id": "centre",
@@ -65,7 +111,53 @@
       "share_2plus_transfers": 0.4666666666666667,
       "ratio_tc_car_median": 3.323525217898294,
       "ratio_tc_car_peak_median": 2.1549772870739257,
-      "car_time_peak_median_min": 37.56998416666667
+      "car_time_peak_median_min": 37.56998416666667,
+      "core": {
+        "city": "Frankfurt am Main",
+        "centre_unit": "Altstadt",
+        "centre_unit_id": "FFM-STT-1",
+        "dist_km": 13.4,
+        "t_tc": 51.0,
+        "t_p25": 45.0,
+        "t_p75": 59.0,
+        "transfers": 2.0,
+        "car_time": 19.2,
+        "car_time_peak": 29.3,
+        "all_units": {
+          "n": 45,
+          "dist_km_median": 12.3,
+          "t_tc_median": 61.0,
+          "v_eff_median_kmh": 12.3,
+          "transfers_median": 1.0
+        }
+      },
+      "outside_core": {
+        "n": 75,
+        "n_unreachable": 0,
+        "dist_km_median": 22.1,
+        "t_tc_median": 88.0,
+        "v_eff_median_kmh": 13.3,
+        "transfers_median": 2.0
+      },
+      "population_radius": 2885427,
+      "access_population": {
+        "30": {
+          "population": 8846,
+          "share": 0.0031
+        },
+        "45": {
+          "population": 179832,
+          "share": 0.0623
+        },
+        "60": {
+          "population": 644007,
+          "share": 0.2232
+        },
+        "90": {
+          "population": 2336472,
+          "share": 0.8097
+        }
+      }
     }
   ]
 }

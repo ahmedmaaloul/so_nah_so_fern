@@ -39,7 +39,53 @@
       "share_2plus_transfers": 0.8740359897172236,
       "ratio_tc_car_median": 2.5036705045977903,
       "ratio_tc_car_peak_median": 1.5438598497543663,
-      "car_time_peak_median_min": 50.06166333333334
+      "car_time_peak_median_min": 50.06166333333334,
+      "core": {
+        "city": "Paris",
+        "centre_unit": "Paris Centre",
+        "centre_unit_id": "75100",
+        "dist_km": 13.2,
+        "t_tc": 47.0,
+        "t_p25": 44.0,
+        "t_p75": 49.0,
+        "transfers": 2.0,
+        "car_time": 30.5,
+        "car_time_peak": 48.2,
+        "all_units": {
+          "n": 17,
+          "dist_km_median": 12.0,
+          "t_tc_median": 47.0,
+          "v_eff_median_kmh": 16.4,
+          "transfers_median": 2.0
+        }
+      },
+      "outside_core": {
+        "n": 406,
+        "n_unreachable": 34,
+        "dist_km_median": 21.1,
+        "t_tc_median": 77.0,
+        "v_eff_median_kmh": 15.1,
+        "transfers_median": 2.0
+      },
+      "population_radius": 10134555,
+      "access_population": {
+        "30": {
+          "population": 240575,
+          "share": 0.0237
+        },
+        "45": {
+          "population": 2083448,
+          "share": 0.2056
+        },
+        "60": {
+          "population": 5255578,
+          "share": 0.5186
+        },
+        "90": {
+          "population": 9594890,
+          "share": 0.9468
+        }
+      }
     },
     {
       "origin_id": "centre",
@@ -65,7 +111,53 @@
       "share_2plus_transfers": 0.8688946015424165,
       "ratio_tc_car_median": 2.682526661197703,
       "ratio_tc_car_peak_median": 1.6484669388994853,
-      "car_time_peak_median_min": 52.10073166666667
+      "car_time_peak_median_min": 52.10073166666667,
+      "core": {
+        "city": "Paris",
+        "centre_unit": "Paris Centre",
+        "centre_unit_id": "75100",
+        "dist_km": 13.0,
+        "t_tc": 55.0,
+        "t_p25": 53.0,
+        "t_p75": 58.0,
+        "transfers": 2.0,
+        "car_time": 31.6,
+        "car_time_peak": 49.9,
+        "all_units": {
+          "n": 17,
+          "dist_km_median": 11.7,
+          "t_tc_median": 55.0,
+          "v_eff_median_kmh": 13.0,
+          "transfers_median": 2.0
+        }
+      },
+      "outside_core": {
+        "n": 406,
+        "n_unreachable": 34,
+        "dist_km_median": 21.0,
+        "t_tc_median": 86.0,
+        "v_eff_median_kmh": 13.6,
+        "transfers_median": 2.0
+      },
+      "population_radius": 10134555,
+      "access_population": {
+        "30": {
+          "population": 40039,
+          "share": 0.004
+        },
+        "45": {
+          "population": 538628,
+          "share": 0.0531
+        },
+        "60": {
+          "population": 3903905,
+          "share": 0.3852
+        },
+        "90": {
+          "population": 8884950,
+          "share": 0.8767
+        }
+      }
     }
   ]
 }

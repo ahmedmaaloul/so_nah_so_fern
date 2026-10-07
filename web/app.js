@@ -698,13 +698,56 @@
   /* ------------------------------------------------------------------ single view: summary, lists, detail, scatter */
   let cur = null; // {ds, scale, results}
 
+  const mio = (v) => num(v / 1e6, 2) + ' ' + T('unit_mio');
+
+  /** Key facts: core city (centre unit + all units) and population reachable. */
+  function keyFactsHTML(s) {
+    let h = '';
+    if (s.core) {
+      const c = s.core;
+      h += '<div class="kf"><div class="kf-k">' + esc(T('kf_core', { city: c.city })) + '</div>' +
+        '<div class="kf-v">' + esc(num(c.t_tc, 0)) + ' <small>' + T('unit_min') + '</small> · ' + esc(num(c.dist_km, 1)) + ' <small>' + T('unit_km') + '</small></div>' +
+        '<div class="kf-s">' + esc(T('kf_core_sub', { unit: c.centre_unit, p25: num(c.t_p25, 0), p75: num(c.t_p75, 0), tr: num(c.transfers, 0), car: num(c.car_time_peak != null ? c.car_time_peak : c.car_time, 0) })) + '</div>' +
+        '<div class="kf-s">' + esc(T('kf_core_all', { n: num(c.all_units.n, 0), t: num(c.all_units.t_tc_median, 0), d: num(c.all_units.dist_km_median, 1) })) + '</div></div>';
+    }
+    if (s.access_population) {
+      const a = s.access_population;
+      h += '<div class="kf"><div class="kf-k">' + esc(T('kf_access')) + '</div>' +
+        '<div class="kf-v">' + esc(mio(a['60'].population)) + ' <small>(' + esc(pct(a['60'].share, 0)) + ')</small></div>' +
+        '<div class="kf-s">' + esc(T('kf_access_sub', { p30: mio(a['30'].population), p45: mio(a['45'].population), s45: pct(a['45'].share, 0), p90: mio(a['90'].population), s90: pct(a['90'].share, 0) })) + '</div>' +
+        '<div class="kf-s">' + esc(T('kf_radius', { pop: mio(s.population_radius) })) + '</div></div>';
+    }
+    if (s.outside_core) {
+      const o = s.outside_core;
+      h += '<div class="kf"><div class="kf-k">' + esc(T('kf_outside')) + '</div>' +
+        '<div class="kf-v">' + esc(num(o.t_tc_median, 0)) + ' <small>' + T('unit_min') + '</small> · ' + esc(num(o.dist_km_median, 1)) + ' <small>' + T('unit_km') + '</small></div>' +
+        '<div class="kf-s">' + esc(T('kf_outside_sub', { n: num(o.n, 0), tr: num(o.transfers_median, 0), u: num(o.n_unreachable, 0) })) + '</div></div>';
+    }
+    return h ? '<div class="keyfacts">' + h + '</div>' : '';
+  }
+
+  /** Reading guide built from the origin's own figures (capital vs regional metropolis). */
+  function contextHTML(ds, s) {
+    if (!s.core || !s.access_population || !s.outside_core) return '';
+    const a = s.access_population;
+    const p = {
+      city: s.core.city, origin: ds.meta.name, r: num(ds.meta.radius_km, 0), pop: mio(s.population_radius),
+      p60: mio(a['60'].population), s60: pct(a['60'].share, 0), tc: num(s.core.t_tc, 0), dc: num(s.core.dist_km, 1),
+      to: num(s.outside_core.t_tc_median, 0), tm: num(s.t_tc_median_min, 1), sh2: pct(s.share_2plus_transfers, 0),
+      u: num(s.outside_core.n_unreachable, 0)
+    };
+    const kind = ds.meta.country === 'FR' ? 'ctx_capital' : 'ctx_regional';
+    return '<details class="context" open><summary>' + esc(T('ctx_title')) + '</summary>' +
+      '<p>' + esc(T(kind, p)) + '</p><p>' + esc(T('ctx_median', p)) + '</p><p>' + esc(T('ctx_access', p)) + '</p></details>';
+  }
+
   function renderSummary(ds) {
     const s = ds.meta.summary[state.point];
     const o = ds.origin[state.point];
     const stat = (k, v, sub) => '<div class="stat"><div class="k">' + esc(k) + '</div><div class="v">' + v + '</div><div class="s">' + esc(sub || '') + '</div></div>';
     const head = '<div class="sum-head"><h2>' + esc(ds.meta.name) + '</h2><p>' + esc(o[state.lang] || o.de) + ' · ' + esc(T('sum_core')) + ': ' + esc(ds.meta.core_city) + ' · ' + esc(T('sum_core_sub', { r: num(ds.meta.radius_km, 0) })) + '</p></div>';
     const link = INDEX.phase2 ? '<button type="button" class="linkbtn" id="to-all">' + esc(T('link_all')) + '</button>' : '';
-    $('#summary').innerHTML = head.replace(/<\/div>$/, link + '</div>') + '<div class="stats">' +
+    $('#summary').innerHTML = head.replace(/<\/div>$/, link + '</div>') + keyFactsHTML(s) + contextHTML(ds, s) + '<div class="stats">' +
       stat(T('sum_n'), esc(num(s.n_destinations, 0)), T('sum_n_sub', { n: num(s.n_unreachable, 0) })) +
       stat(T('sum_median'), esc(num(s.t_tc_median_min, 1)) + ' <small>' + T('unit_min') + '</small>', '') +
       stat(T('sum_veff'), esc(num(s.v_eff_popweighted_median_kmh, 1)) + ' <small>' + T('unit_kmh') + '</small>', T('sum_veff_sub', { v: num(s.v_eff_median_kmh, 1) })) +
@@ -965,6 +1008,12 @@
     const f = (fn) => [fn(sa), fn(sb)];
     $('#cmp-table').innerHTML = head + '<tbody>' +
       cmpRow(T('cmp_origin'), esc(dsA.origin[state.point][state.lang] || ''), esc(dsB.origin[state.point][state.lang] || '')) +
+      cmpRow(T('cmp_core', { a: sa.core ? sa.core.city : '', b: sb.core ? sb.core.city : '' }), ...f((s) => s.core ? esc(num(s.core.t_tc, 0)) + ' ' + T('unit_min') + ' · ' + esc(num(s.core.dist_km, 1)) + ' ' + T('unit_km') + ' <span class="muted">(' + esc(s.core.centre_unit) + ')</span>' : '–')) +
+      cmpRow(T('cmp_core_all'), ...f((s) => s.core ? esc(num(s.core.all_units.t_tc_median, 0)) + ' ' + T('unit_min') + ' <span class="muted">(' + esc(num(s.core.all_units.n, 0)) + ')</span>' : '–')) +
+      cmpRow(T('cmp_outside'), ...f((s) => s.outside_core ? esc(num(s.outside_core.t_tc_median, 0)) + ' ' + T('unit_min') : '–')) +
+      cmpRow(T('cmp_pop_radius'), ...f((s) => finite(s.population_radius) ? esc(mio(s.population_radius)) : '–')) +
+      cmpRow(T('cmp_access', { m: 45 }), ...f((s) => s.access_population ? esc(mio(s.access_population['45'].population)) + ' (' + esc(pct(s.access_population['45'].share, 0)) + ')' : '–')) +
+      cmpRow(T('cmp_access', { m: 60 }), ...f((s) => s.access_population ? esc(mio(s.access_population['60'].population)) + ' (' + esc(pct(s.access_population['60'].share, 0)) + ')' : '–')) +
       cmpRow(T('cmp_n'), ...f((s) => esc(num(s.n_destinations, 0)))) +
       cmpRow(T('cmp_median'), ...f((s) => esc(num(s.t_tc_median_min, 1)))) +
       cmpRow(T('cmp_veff_pw'), ...f((s) => esc(num(s.v_eff_popweighted_median_kmh, 1)))) +
@@ -974,7 +1023,8 @@
       cmpRow(T('cmp_ratio'), ...f((s) => esc(num(s.ratio_tc_car_median, 1)) + '×')) +
       cmpRow(T('cmp_ratio_peak'), ...f((s) => finite(s.ratio_tc_car_peak_median) ? esc(num(s.ratio_tc_car_peak_median, 1)) + '×' : '–')) +
       cmpRow(T('cmp_dead'), ...f((s) => esc(num(s.dead_zones.n, 0)))) +
-      cmpRow(T('cmp_unreach'), ...f((s) => esc(num(s.n_unreachable, 0)))) + '</tbody>';
+      cmpRow(T('cmp_unreach'), ...f((s) => esc(num(s.n_unreachable, 0)))) + '</tbody>' +
+      (sa.population_radius && sb.population_radius ? '<caption class="cmp-context">' + esc(T('cmp_context', { a: dsA.meta.core_city, b: dsB.meta.core_city, pa: mio(sa.population_radius), pb: mio(sb.population_radius), r: num(dsA.meta.radius_km, 0) })) + '</caption>' : '');
     $('#hint').textContent = T('hint_' + state.ind);
     renderFooter([dsA, dsB]);
     for (const v of [cmpA, cmpB]) v.select(v.sel);

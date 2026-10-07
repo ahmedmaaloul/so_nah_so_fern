@@ -52,6 +52,14 @@ Traffic Index 2025): Paris Autobahnen +84,2 %, übrige +57,9 %; Frankfurt +36,9 
 Rang nach Zeit minus Rang nach Entfernung; Abweichung von der Regression log(Zeit) ~ log(Entfernung);
 tote Zone = näher als 8 km und länger als 60 Min. oder unerreichbar.
 
+**Einordnung.** Paris ist Hauptstadt und Mittelpunkt eines strahlenförmigen Netzes, Frankfurt eine
+Regionalmetropole: Im Umkreis von 30 km leben 10,13 Mio. (Garches) gegenüber 2,85 Mio. Menschen
+(Kronberg). Median-Zeit und effektive Geschwindigkeit zählen jede Gemeinde gleich und messen Zeit je
+Kilometer; sie sind daher ähnlich (75 / 72,5 Min., 16,1 / 16,0 km/h). Die erreichbare Bevölkerung
+unterscheidet sich stark: in 60 Min. 5,26 Mio. (52 %) gegenüber 0,81 Mio. (28 %). Ins Zentrum
+der Kernstadt: 47 Min. für 13,2 km (Paris Centre) gegenüber 46 Min. für 14,2 km (Altstadt); über
+alle Bezirke 47 gegenüber 55 Min.; Ziele außerhalb der Kernstadt 77 gegenüber 85 Min.
+
 **Ergebnisse ab Bahnhof** (`synthese_*.json`): Median 75 / 72,5 / 72 Min. (Garches / Kronberg /
 Bad Soden); bevölkerungsgewichtete effektive Geschwindigkeit 16,1 / 16,0 / 14,4 km/h;
 Rangkorrelation Entfernung/Zeit 0,75 / 0,81 / 0,90; ÖV/Pkw 2,5 / 2,9 / 3,1; in 60 Min.
@@ -131,6 +139,14 @@ TomTom Traffic Index 2025) : Paris autoroutes +84,2 %, autres +57,9 % ; Francfor
 **Indicateurs (I1, I2).** Vitesse effective = distance / temps TC ; indice de paradoxe = rang en
 temps moins rang en distance ; écart à la régression log(temps) ~ log(distance) ; zone morte =
 à moins de 8 km et à plus de 60 min ou inatteignable.
+
+**Mise en contexte.** Paris est la capitale, au centre d'un réseau radial ; Francfort est une
+métropole régionale : dans un rayon de 30 km vivent 10,13 M (Garches) contre 2,85 M d'habitants
+(Kronberg). Le temps médian et la vitesse effective comptent chaque commune à égalité et mesurent un
+temps par kilomètre ; ils sont donc proches (75 / 72,5 min, 16,1 / 16,0 km/h). La population atteinte
+diffère fortement : en 60 min, 5,26 M (52 %) contre 0,81 M (28 %). Vers le centre de la ville
+centre : 47 min pour 13,2 km (Paris Centre) contre 46 min pour 14,2 km (Altstadt) ; sur tous les
+quartiers 47 contre 55 min ; destinations hors ville centre 77 contre 85 min.
 
 **Résultats depuis la gare** (`synthese_*.json`) : médiane 75 / 72,5 / 72 min (Garches /
 Kronberg / Bad Soden) ; vitesse effective médiane pondérée par la population 16,1 / 16,0 /

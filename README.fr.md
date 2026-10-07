@@ -4,6 +4,8 @@
 
 Carte interactive de l'écart entre distance à vol d'oiseau et temps réel porte à porte en transports en commun, au départ de Garches (Hauts-de-Seine, 12 km à l'ouest de Paris), comparé à une commune équivalente de la région Rhin-Main (Kronberg im Taunus ; contrôle : Bad Soden am Taunus).
 
+Paris est la capitale, au centre d'un réseau radial ; Francfort est une métropole régionale : dans un rayon de 30 km vivent 10,13 M contre 2,85 M d'habitants. La carte montre donc, en plus du temps par kilomètre, le temps vers le centre de la ville centre et la population atteinte en 30, 45 et 60 minutes.
+
 Chaque chiffre sort du calcul ; chaque hypothèse est consignée dans `outputs/<origine>/assumptions.jsonl`.
 
 ## La méthode en bref
