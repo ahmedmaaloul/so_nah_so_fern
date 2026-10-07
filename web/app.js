@@ -992,7 +992,7 @@
   }
 
   /* ------------------------------------------------------------------ phase 2: all communes of a region */
-  const P2_INDS = ['v_eff_popweighted_kmh', 't_p50_median', 'ratio_tc_car_median'];
+  const P2_INDS = ['v_eff_popweighted_kmh', 't_p50_median', 'ratio_tc_car_median', 'ratio_tc_car_peak_median'];
   const p2cache = new Map();
   let allView = null;
   let allCur = null; // {p2, sc, o, d}
@@ -1010,7 +1010,7 @@
     return {
       raw, meta: raw.meta, N, ids, feats, props,
       idIdx: new Map(ids.map((id, i) => [id, i])),
-      T: raw.matrix.t_p50, C: raw.matrix.car, D: raw.matrix.dist,
+      T: raw.matrix.t_p50, C: raw.matrix.car, CP: raw.matrix.car_peak || null, D: raw.matrix.dist,
       bbox: [[x0, y0], [x1, y1]],
       maxPop: d3.max(props, (p) => p.population) || 1
     };
@@ -1030,8 +1030,8 @@
   /** matrix values for origin o and destination d (indices); dir 'von' = row o, 'nach' = column o. -1 means no value. */
   function pv(p2, o, d, dir) {
     const k = dir === 'von' ? o * p2.N + d : d * p2.N + o;
-    const t = p2.T[k], c = p2.C[k], dist = p2.D[o * p2.N + d];
-    return { t: t < 0 ? null : t, car: c < 0 ? null : c, dist: dist < 0 ? null : dist };
+    const t = p2.T[k], c = p2.C[k], cp = p2.CP ? p2.CP[k] : -1, dist = p2.D[o * p2.N + d];
+    return { t: t < 0 ? null : t, car: c < 0 ? null : c, carp: cp < 0 ? null : cp, dist: dist < 0 ? null : dist };
   }
 
   function buildAllScale(ind, props) {
@@ -1162,6 +1162,7 @@
         '<div>' + esc(T('tip_time')) + ' ' + esc(T('tc')) + ': ' + esc(v.t == null ? T('a_no_value') : num(v.t, 0) + ' ' + T('unit_min')) + '</div>' +
         '<div>' + esc(T('tip_car')) + ': ' + esc(v.car == null ? '–' : num(v.car, 1) + ' ' + T('unit_min')) + '</div>' +
         '<div>' + esc(T('tip_ratio')) + ' ' + esc(T('tc')) + '/' + esc(T('tip_car')) + ': ' + esc(v.t != null && v.car ? num(v.t / v.car, 1) + '×' : '–') + '</div>' +
+        (v.carp != null ? '<div>' + esc(T('tip_car_peak')) + ': ' + esc(num(v.carp, 1) + ' ' + T('unit_min')) + (v.t != null ? ' · ' + esc(num(v.t / v.carp, 1)) + '×' : '') + '</div>' : '') +
         '<div class="muted">' + esc(dirText(p2.props[o].name)) + '</div>';
     }
     return '<strong>' + esc(p.name) + '</strong>' + lvl + body;
@@ -1177,7 +1178,7 @@
       stat(T('all_sum_t'), esc(num(s.t_p50_median, 1)) + ' <small>' + T('unit_min') + '</small>', '') +
       stat(T('all_sum_v'), esc(num(s.v_eff_median_kmh, 1)) + ' <small>' + T('unit_kmh') + '</small>', '') +
       stat(T('all_sum_spearman'), esc(num(s.spearman_dist_time, 2, 2)), T('sum_spearman_sub')) +
-      stat(T('all_sum_ratio'), esc(num(s.ratio_tc_car_median, 1)) + '<small>×</small>', T('sum_ratio_sub')) +
+      stat(T('all_sum_ratio'), esc(num(s.ratio_tc_car_median, 1)) + '<small>×</small>', finite(s.ratio_tc_car_peak_median) ? T('sum_ratio_sub_peak', { p: num(s.ratio_tc_car_peak_median, 1) }) : T('sum_ratio_sub')) +
       stat(T('all_sum_dead'), esc(pct(s.share_dead_zone_pairs_below_dist, 1)), T('all_sum_dead_sub', { d: num(m.thresholds.dead_zone_max_km, 0) })) +
       '</div>';
   }
@@ -1199,6 +1200,7 @@
         row(T('a_time'), v.t == null ? esc(T('a_no_value')) : '<strong data-k="t">' + esc(num(v.t, 0)) + '</strong> ' + T('unit_min')) +
         row(T('a_car'), v.car == null ? '–' : '<span data-k="car">' + esc(num(v.car, 1)) + '</span> ' + T('unit_min')) +
         row(T('a_ratio_pair'), v.t != null && v.car ? esc(num(v.t / v.car, 1)) + '×' : '–') +
+        (v.carp != null ? row(T('a_car_peak'), '<span data-k="carp">' + esc(num(v.carp, 1)) + '</span> ' + T('unit_min')) + row(T('a_ratio_pair_peak'), v.t != null ? esc(num(v.t / v.carp, 1)) + '×' : '–') : '') +
         row(T('a_veff_pair'), v.t ? esc(num((v.dist / v.t) * 60, 1)) + ' ' + T('unit_kmh') : '–') +
         '</dl><button type="button" class="reset-btn" id="all-clear-dest">' + esc(T('a_clear_dest')) + '</button>';
     }
@@ -1212,6 +1214,7 @@
       row(T('a_v_pw'), esc(num(p.v_eff_popweighted_kmh, 1)) + ' ' + T('unit_kmh')) +
       row(T('a_spearman'), finite(p.spearman_dist_time) ? esc(num(p.spearman_dist_time, 2, 2)) : '–') +
       row(T('a_ratio'), esc(num(p.ratio_tc_car_median, 1)) + '×') +
+      (finite(p.ratio_tc_car_peak_median) ? row(T('a_ratio_peak'), esc(num(p.ratio_tc_car_peak_median, 1)) + '×') : '') +
       row(T('a_dead'), esc(num(p.n_dead_zones, 0))) +
       '</dl>' + pair;
   }
@@ -1270,6 +1273,7 @@
       sumRow(T('all_sum_v') + ' (' + T('unit_kmh') + ')', (s) => esc(num(s.v_eff_median_kmh, 1))) +
       sumRow(T('all_sum_spearman'), (s) => esc(num(s.spearman_dist_time, 2, 2))) +
       sumRow(T('all_sum_ratio'), (s) => esc(num(s.ratio_tc_car_median, 1)) + '×') +
+      sumRow(T('all_sum_ratio_peak'), (s) => finite(s.ratio_tc_car_peak_median) ? esc(num(s.ratio_tc_car_peak_median, 1)) + '×' : '–') +
       sumRow(T('all_sum_dead') + ' (' + T('all_sum_dead_sub', { d: num(list[0].meta.thresholds.dead_zone_max_km, 0) }) + ')', (s) => esc(pct(s.share_dead_zone_pairs_below_dist, 1))) +
       '</tbody></table>';
     // by distance band
@@ -1279,12 +1283,12 @@
     keys.sort((x, y) => lo(x) - lo(y));
     const label = (k) => { const m = /^\[(\d+),\s*(\d+)\)$/.exec(k); return m ? T('all_band_label', { a: m[1], b: m[2] }) : k; };
     h += '<h3>' + esc(T('all_table_bands')) + '</h3><table class="cmp-table bands"><thead><tr><th rowspan="2" scope="col">' + esc(T('all_table_metric')) + '</th>' +
-      list.map((p2) => '<th colspan="4" scope="colgroup" class="grp">' + rn(p2) + '</th>').join('') + '</tr><tr>' +
-      list.map(() => ['n', 't', 'v', 'r'].map((c) => '<th scope="col" class="sub">' + esc(T('all_band_col_' + c)) + '</th>').join('')).join('') + '</tr></thead><tbody>' +
+      list.map((p2) => '<th colspan="5" scope="colgroup" class="grp">' + rn(p2) + '</th>').join('') + '</tr><tr>' +
+      list.map(() => ['n', 't', 'v', 'r', 'rp'].map((c) => '<th scope="col" class="sub">' + esc(T('all_band_col_' + c)) + '</th>').join('')).join('') + '</tr></thead><tbody>' +
       keys.map((k) => '<tr><th scope="row">' + esc(label(k)) + '</th>' + list.map((p2) => {
         const b = p2.raw.by_band[k];
-        if (!b) return '<td>–</td><td>–</td><td>–</td><td>–</td>';
-        return '<td>' + esc(num(b.n, 0)) + '</td><td>' + esc(num(b.t_p50_median, 0)) + '</td><td>' + esc(num(b.v_eff_median, 1)) + '</td><td>' + esc(num(b.ratio_tc_car_median, 1)) + '×</td>';
+        if (!b) return '<td>–</td><td>–</td><td>–</td><td>–</td><td>–</td>';
+        return '<td>' + esc(num(b.n, 0)) + '</td><td>' + esc(num(b.t_p50_median, 0)) + '</td><td>' + esc(num(b.v_eff_median, 1)) + '</td><td>' + esc(num(b.ratio_tc_car_median, 1)) + '×</td><td>' + (finite(b.ratio_tc_car_peak_median) ? esc(num(b.ratio_tc_car_peak_median, 1)) + '×' : '–') + '</td>';
       }).join('') + '</tr>').join('') + '</tbody></table><p class="caption">' + esc(T('all_bands_note')) + '</p>';
     el.innerHTML = h;
     renderFooter(list);

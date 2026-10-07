@@ -139,27 +139,54 @@ def table(port: int, origins, dest) -> tuple[pd.DataFrame, pd.DataFrame]:
     return od, snap
 
 
-def motorway_split(port: int, origins, dest) -> pd.DataFrame:
-    """Par OD : durée de l'itinéraire OSRM (/route) et part passée sur autoroute.
+def _route_motorway(sess, port: int, a, b) -> tuple[float, float]:
+    """(durée /route en s, durée sur autoroute en s) entre deux points (x, y) ; NaN si pas d'itinéraire."""
+    url = (f"http://127.0.0.1:{port}/route/v1/driving/{a[0]:.6f},{a[1]:.6f};{b[0]:.6f},{b[1]:.6f}"
+           f"?steps=true&overview=false")
+    js = sess.get(url, timeout=60).json()
+    if js.get("code") != "Ok" or not js.get("routes"):
+        return np.nan, np.nan
+    r = js["routes"][0]
+    mw = sum(st["duration"] for leg in r["legs"] for st in leg["steps"]
+             if any("motorway" in it.get("classes", []) for it in st["intersections"]))
+    return r["duration"], mw
 
-    Une étape (step) compte comme autoroute si l'une de ses intersections porte la
-    classe « motorway » (highway=motorway et bretelles, profil car d'OSRM).
+
+def motorway_split_pairs(port: int, xy: dict, pairs: list, workers: int = 8) -> pd.DataFrame:
+    """Par paire (from_id, to_id) : durée de l'itinéraire OSRM (/route) et durée sur autoroute.
+
+    Une étape (step) compte comme autoroute si l'une de ses intersections porte la classe
+    « motorway » (highway=motorway et bretelles, profil car d'OSRM). Requêtes en parallèle.
     """
-    rows = []
-    with requests.Session() as sess:
-        for _, o in origins.iterrows():
-            for _, d in dest.iterrows():
-                url = (f"http://127.0.0.1:{port}/route/v1/driving/{o.geometry.x:.6f},{o.geometry.y:.6f};"
-                       f"{d.geometry.x:.6f},{d.geometry.y:.6f}?steps=true&overview=false")
-                js = sess.get(url, timeout=60).json()
-                if js.get("code") != "Ok" or not js.get("routes"):
-                    rows.append((o["id"], d["id"], np.nan, np.nan))
-                    continue
-                r = js["routes"][0]
-                mw = sum(st["duration"] for leg in r["legs"] for st in leg["steps"]
-                         if any("motorway" in it.get("classes", []) for it in st["intersections"]))
-                rows.append((o["id"], d["id"], r["duration"], mw))
-    return pd.DataFrame(rows, columns=["from_id", "to_id", "route_s", "motorway_s"])
+    import threading
+    from concurrent.futures import ThreadPoolExecutor
+    local = threading.local()
+
+    def one(pair):
+        if not hasattr(local, "sess"):
+            local.sess = requests.Session()
+        return _route_motorway(local.sess, port, xy[pair[0]], xy[pair[1]])
+
+    with ThreadPoolExecutor(max_workers=workers) as ex:
+        res = list(ex.map(one, pairs, chunksize=256))
+    return pd.DataFrame({"from_id": [p[0] for p in pairs], "to_id": [p[1] for p in pairs],
+                         "route_s": [r[0] for r in res], "motorway_s": [r[1] for r in res]})
+
+
+def motorway_split(port: int, origins, dest) -> pd.DataFrame:
+    """motorway_split_pairs pour toutes les paires origines × destinations."""
+    xy = {i: (g.x, g.y) for i, g in zip(pd.concat([origins["id"], dest["id"]]),
+                                        pd.concat([origins.geometry, dest.geometry]))}
+    return motorway_split_pairs(port, xy, [(o, d) for o in origins["id"] for d in dest["id"]])
+
+
+def apply_peak(od: pd.DataFrame, peak: tuple) -> pd.DataFrame:
+    """Ajoute motorway_share et car_time_peak (min) à une table avec car_time, route_s, motorway_s."""
+    od = od.copy()
+    od["motorway_share"] = (od["motorway_s"] / od["route_s"]).where(od["route_s"] > 0, 0.0)
+    cm, co = float(peak[1]["motorway"]) / 100, float(peak[1]["other"]) / 100
+    od["car_time_peak"] = od["car_time"] * (od["motorway_share"] * (1 + cm) + (1 - od["motorway_share"]) * (1 + co))
+    return od
 
 
 def peak_params(cfg: dict):
@@ -211,10 +238,7 @@ def main() -> None:
     cols = ["from_id", "to_id", "car_time", "car_distance_km"]
     if peak:
         # Heure de pointe : part autoroute / hors autoroute du temps fluide (/route), appliquée au temps de /table
-        od = od.merge(split, on=["from_id", "to_id"], how="left")
-        od["motorway_share"] = (od["motorway_s"] / od["route_s"]).where(od["route_s"] > 0, 0.0)
-        cm, co = float(peak[1]["motorway"]) / 100, float(peak[1]["other"]) / 100
-        od["car_time_peak"] = od["car_time"] * (od["motorway_share"] * (1 + cm) + (1 - od["motorway_share"]) * (1 + co))
+        od = apply_peak(od.merge(split, on=["from_id", "to_id"], how="left"), peak)
         cols += ["car_time_peak", "motorway_share"]
     out = od[cols]
     pdir = processed_dir(cfg)

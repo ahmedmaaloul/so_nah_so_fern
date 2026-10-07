@@ -14,7 +14,8 @@ outputs/phase2/<région>/*) et les contours de 01 ; écrit web/data/phase2_<rég
               par unité de 12 (t_p50_median, v_eff_popweighted_kmh, …)
   matrix      ids (ordre des lignes/colonnes) et trois tableaux N×N aplatis, ligne =
               origine, colonne = destination : t_p50 (min, entier), car (min, 1 déc.),
-              dist (km, 2 déc.) ; -1 = pas de valeur (non atteint, diagonale)
+              dist (km, 2 déc.), car_peak (voiture en pointe, min, si 12 l'a calculée) ;
+              -1 = pas de valeur (non atteint, diagonale)
   pairs_top   paires remarquables de 12
   by_band     synthèse par classe de distance (12)
 
@@ -96,7 +97,8 @@ def main() -> None:
                               "licence": cfg["sources"][i].get("licence")} for i in dict.fromkeys(src_ids)
                              if i in cfg["sources"]]},
         "units": t10.fc(units, props, dec),
-        "matrix": {"ids": ids, "t_p50": flat("t_p50", 0), "car": flat("car_time", 1), "dist": flat("dist_km", 2)},
+        "matrix": {"ids": ids, "t_p50": flat("t_p50", 0), "car": flat("car_time", 1), "dist": flat("dist_km", 2),
+                   **({"car_peak": flat("car_time_peak", 1)} if "car_time_peak" in pairs else {})},
         "pairs_top": [{k: t10.clean(v) for k, v in r.items()} for r in top.to_dict("records")],
         "by_band": syn["by_distance_band"],
     }
