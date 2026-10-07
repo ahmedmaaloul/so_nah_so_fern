@@ -18,6 +18,8 @@ autonome (pas de serveur, pas d'appel réseau) :
   rings         FeatureCollection (origin_id, km)
   itineraries   {summary: [...], segments: FeatureCollection} (05 --itineraries)
 
+Isochrones : pour l'affichage seulement, morceaux et trous de moins de
+web.isochrone_min_part_km2 (repli : 0,2 km² = 5 cellules de 200 m) supprimés.
 Coordonnées arrondies à web.coord_decimals (repli : 5, ~1 m) ; isochrones et
 itinéraires simplifiés à web.simplify_m (repli : 25 m) dans le CRS métrique.
 Met aussi à jour web/data/index.json (liste des origines exportées).
@@ -39,6 +41,7 @@ LOG = get_logger("10_export_web")
 
 DEFAULT_DECIMALS = 5
 DEFAULT_SIMPLIFY_M = 25
+DEFAULT_ISO_MIN_PART_KM2 = 0.2           # web.isochrone_min_part_km2 (5 cellules de 200 m)
 WEB_DATA = ROOT / "web" / "data"
 
 RESULT_COLS = ["unit_id", "name", "level", "parent_id", "population", "lon", "lat", "dist_km", "dist_km_core",
@@ -74,6 +77,24 @@ def fc(gdf: gpd.GeoDataFrame, props: list[str], decimals: int) -> dict:
 def simplified(gdf: gpd.GeoDataFrame, metric: str, tol: float) -> gpd.GeoDataFrame:
     g = gdf.to_crs(metric)
     g["geometry"] = g.geometry.simplify(tol, preserve_topology=True)
+    return g.to_crs("EPSG:4326")
+
+
+def tidy_isochrones(iso: gpd.GeoDataFrame, metric: str, min_km2: float) -> gpd.GeoDataFrame:
+    """Affichage seulement : retire les morceaux et bouche les trous de moins de min_km2."""
+    g = iso.to_crs(metric)
+    amin = min_km2 * 1e6
+
+    def tidy(geom):
+        parts = []
+        for p in getattr(geom, "geoms", [geom]):
+            if p.is_empty or p.area < amin:
+                continue
+            holes = [h for h in p.interiors if shapely.Polygon(h).area >= amin]
+            parts.append(shapely.Polygon(p.exterior, holes))
+        return shapely.MultiPolygon(parts) if parts else shapely.Polygon()
+
+    g["geometry"] = [tidy(x) for x in g.geometry]
     return g.to_crs("EPSG:4326")
 
 
@@ -117,7 +138,9 @@ def main() -> None:
         ut[oid] = fc(g, ["unit_id"], dec)
 
     iso_path = pdir / "isochrones.gpkg"
-    iso = simplified(gpd.read_file(iso_path, layer="isochrones"), metric, tol)
+    iso = gpd.read_file(iso_path, layer="isochrones")
+    iso = simplified(tidy_isochrones(iso, metric, float(web.get("isochrone_min_part_km2", DEFAULT_ISO_MIN_PART_KM2))),
+                     metric, tol)
     rings = simplified(gpd.read_file(iso_path, layer="rings"), metric, tol)
 
     itin = {"summary": [], "segments": {"type": "FeatureCollection", "features": []}}
