@@ -1,0 +1,156 @@
+{
+  "origin": "garches",
+  "grid_m": 200,
+  "n_cells": 144134,
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  },
+  "by_origin": {
+    "gare": {
+      "isochrones": {
+        "15": {
+          "area_km2": 3.0,
+          "equivalent_radius_km": 0.98,
+          "share_of_disc": {
+            "5km": 0.038,
+            "10km": 0.01,
+            "15km": 0.004
+          },
+          "n_units": 0,
+          "population": 0,
+          "check_04": {
+            "n_units": 1,
+            "population": 29855
+          }
+        },
+        "30": {
+          "area_km2": 31.52,
+          "equivalent_radius_km": 3.17,
+          "share_of_disc": {
+            "5km": 0.328,
+            "10km": 0.1,
+            "15km": 0.045
+          },
+          "n_units": 9,
+          "population": 215829,
+          "check_04": {
+            "n_units": 11,
+            "population": 240575
+          }
+        },
+        "45": {
+          "area_km2": 174.64,
+          "equivalent_radius_km": 7.46,
+          "share_of_disc": {
+            "5km": 0.873,
+            "10km": 0.468,
+            "15km": 0.245
+          },
+          "n_units": 43,
+          "population": 2024363,
+          "check_04": {
+            "n_units": 43,
+            "population": 2083448
+          }
+        },
+        "60": {
+          "area_km2": 431.04,
+          "equivalent_radius_km": 11.71,
+          "share_of_disc": {
+            "5km": 0.987,
+            "10km": 0.807,
+            "15km": 0.526
+          },
+          "n_units": 91,
+          "population": 5032398,
+          "check_04": {
+            "n_units": 100,
+            "population": 5255578
+          }
+        }
+      },
+      "rings_area_km2": {
+        "5km": 78.54,
+        "10km": 314.16,
+        "15km": 706.85
+      }
+    },
+    "centre": {
+      "isochrones": {
+        "15": {
+          "area_km2": 2.2,
+          "equivalent_radius_km": 0.84,
+          "share_of_disc": {
+            "5km": 0.028,
+            "10km": 0.007,
+            "15km": 0.003
+          },
+          "n_units": 0,
+          "population": 0,
+          "check_04": {
+            "n_units": 0,
+            "population": 0
+          }
+        },
+        "30": {
+          "area_km2": 13.8,
+          "equivalent_radius_km": 2.1,
+          "share_of_disc": {
+            "5km": 0.174,
+            "10km": 0.044,
+            "15km": 0.02
+          },
+          "n_units": 4,
+          "population": 51128,
+          "check_04": {
+            "n_units": 3,
+            "population": 40039
+          }
+        },
+        "45": {
+          "area_km2": 75.8,
+          "equivalent_radius_km": 4.91,
+          "share_of_disc": {
+            "5km": 0.627,
+            "10km": 0.236,
+            "15km": 0.107
+          },
+          "n_units": 17,
+          "population": 513073,
+          "check_04": {
+            "n_units": 17,
+            "population": 538628
+          }
+        },
+        "60": {
+          "area_km2": 265.2,
+          "equivalent_radius_km": 9.19,
+          "share_of_disc": {
+            "5km": 0.976,
+            "10km": 0.643,
+            "15km": 0.363
+          },
+          "n_units": 62,
+          "population": 3541909,
+          "check_04": {
+            "n_units": 69,
+            "population": 3903905
+          }
+        }
+      },
+      "rings_area_km2": {
+        "5km": 78.54,
+        "10km": 314.16,
+        "15km": 706.85
+      }
+    }
+  },
+  "timings_s": {
+    "total": 255.1
+  }
+}
