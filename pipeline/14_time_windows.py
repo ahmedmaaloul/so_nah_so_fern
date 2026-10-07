@@ -19,7 +19,7 @@ import json
 import pandas as pd
 import yaml
 
-from common import CONFIG_DIR, ROOT, get_logger, load_config, outputs_dir
+from common import CONFIG_DIR, ROOT, get_logger, load_config, log_assumption, outputs_dir
 
 LOG = get_logger("14_time_windows")
 ORIGINS = ["garches", "kronberg", "bad_soden"]
@@ -81,6 +81,21 @@ def main() -> None:
                                       "dead_zones", "delta_median_min", "spearman_vs_reference"]]
     LOG.info("Depuis la gare :\n%s", show.round(3).to_string(index=False))
     LOG.info("Écrit : %s", out)
+
+    # Hypothèse S2 dans le journal de chaque origine (point gare)
+    for slug in ORIGINS:
+        v = df[(df["origin"] == slug) & (df["point"] == "gare")]
+        if len(v) < 2:
+            continue
+        fr = "; ".join(f"{r.window} médiane {r.t_tc_median_min:g} min, {r.n_unreachable} non atteintes" for r in v.itertuples())
+        de = "; ".join(f"{r.window} Median {r.t_tc_median_min:g} Min., {r.n_unreachable} nicht erreicht" for r in v.itertuples())
+        log_assumption(
+            load_config(CONFIG_DIR / f"{slug}.yaml"), "14", "S2_time_windows",
+            f"Sensibilité à la plage horaire (même jour, seule la fenêtre de départ change) : depuis la gare, {fr}. "
+            f"Médianes calculées sur les destinations atteintes seulement. Détail : outputs/time_windows/.",
+            f"Zeitfenster-Sensitivität (gleicher Tag, nur das Abfahrtsfenster ändert sich): ab Bahnhof {de}. "
+            f"Mediane nur über erreichte Ziele. Details: outputs/time_windows/.",
+            v.drop(columns=["origin"]).to_dict("records"))
 
 
 if __name__ == "__main__":
