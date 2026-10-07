@@ -80,4 +80,8 @@ URL réellement utilisée) des fichiers du dernier calcul.
    jour testé. Contrôle ligne par ligne ajouté à 02 (D2, `analysis.max_missing_route_share` = 1 %,
    `02 --routes-check-only`) : 13/10 FR 0,01 %, 20/10 DE 0,16 % ; il rejette 03/11 FR (3,08 %).
 4. Temps voiture en heure de pointe (données de trafic ouvertes ?) pour un rapport TC/voiture moins majoré.
-5. Bad Soden : écart systématique de +9 min entre l'itinéraire de 08:15 et la médiane (cadencement S-Bahn ?).
+5. ~~Bad Soden, écart de +9 min~~ : expliqué. La S3 part du terminus de Bad Soden à xx:11 et xx:41 ;
+   prêt à 08:15, on attend 26 min (08:41) contre 14,5 min en médiane sur 07:30 à 09:00, soit
+   +11,5 min. Observé : +9,0 min (24 itinéraires commençant par la S3), dont 7,3 min d'attente
+   avant le départ. 08:15 n'est pas changé (pas de choix d'heure par origine) ; le site affiche
+   désormais l'attente avant le départ (`offset_min`, `meta.itinerary_departure`).

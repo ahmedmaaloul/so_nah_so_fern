@@ -165,6 +165,9 @@ def main() -> None:
         "date": str(cfg["analysis"]["date"]), "window": [cfg["analysis"]["window_start"], cfg["analysis"]["window_end"]],
         "radius_km": cfg["analysis"]["radius_km"], "thresholds": cfg["thresholds"],
         "walk_speed_kmh": cfg["routing"]["walk_speed_kmh"],
+        # Beispielrouten / itinéraires d'exemple : heure à laquelle la personne est prête ;
+        # offset_min (itineraries.summary) = minutes entre cette heure et le départ de chez soi
+        "itinerary_departure": cfg["analysis"]["itinerary_departure"],
         "cartogram_speed_kmh": cfg["visuals"]["cartogram_speed_kmh"],
         "isochrones_min": cfg["visuals"]["isochrones_min"], "rings_km": cfg["visuals"]["distance_rings_km"],
         "origins": [{"id": p["id"], "de": p.get("label_de"), "fr": p.get("label_fr"),

@@ -39,7 +39,8 @@ Punkt auf einer abgetrennten „Fußweg-Insel“ wird zum nächsten verbundenen 
 unbeschränkten Median liegt, minus 1. Mit 3 oder 5 Min. Toleranz sinkt der Anteil der Ziele
 mit mindestens 2 Umstiegen von Garches von 87 % auf 81 % bzw. 77 %, von Kronberg von 45 % auf
 35 % bzw. 32 % (`qa_transfers_tolerance.json`): der Abstand bleibt. Beispielrouten auf der
-Karte: eine Abfahrt um 08:15.
+Karte: eine Abfahrt um 08:15; ihre Dauer kann vom Median abweichen (Bad Soden: S3 alle 30 Min.
+ab xx:11 und xx:41, um 08:15 also 26 statt im Median 14,5 Min. Warten).
 
 **Pkw (C1, C2).** OSRM 5.27.1, Profil „car“, **ohne Verkehr** und ohne Parkplatzsuche: die
 Pkw-Zeit ist eine Untergrenze, das Verhältnis ÖV/Pkw also eine Obergrenze.
@@ -114,7 +115,8 @@ proche (seulement Andrésy, 15 m, R4).
 1 min la médiane sans limite, moins 1. Avec 3 ou 5 min de tolérance, la part des destinations à
 2 correspondances ou plus passe de 87 % à 81 % puis 77 % pour Garches, de 45 % à 35 % puis 32 %
 pour Kronberg (`qa_transfers_tolerance.json`) : l'écart demeure. Itinéraires de la carte : un
-départ à 08:15.
+départ à 08:15 ; leur durée peut s'écarter de la médiane (Bad Soden : S3 toutes les 30 min à
+xx:11 et xx:41, donc 26 min d'attente à 08:15 contre 14,5 min en médiane).
 
 **Voiture (C1, C2).** OSRM 5.27.1, profil « car », **sans trafic** ni recherche de stationnement :
 le temps voiture est un minorant, donc le rapport TC/voiture un majorant.

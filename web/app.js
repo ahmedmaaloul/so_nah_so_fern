@@ -778,6 +778,7 @@
       }).join('');
       itin = '<h3>' + esc(T('d_itin')) + '</h3><div class="chain">' + (it.chain ? chips(it) : '<span class="chip" style="background:' + modeColor('WALK') + '">' + esc(T('d_itin_walk')) + '</span>') + '</div>' +
         '<p class="itin-total"><strong>' + esc(T('d_itin_total', { t: num(it.total_min, 0) })) + '</strong>' + (dep ? ' <span class="muted">· ' + esc(T('d_itin_dep', { t: dep })) + '</span>' : '') + '</p>' +
+        (ds.meta.itinerary_departure && finite(it.offset_min) ? '<p class="caption">' + esc(T(it.offset_min >= 1 ? 'd_itin_ready_wait' : 'd_itin_ready', { r: ds.meta.itinerary_departure, w: num(it.offset_min, 0) })) + '</p>' : '') +
         (segHTML ? '<ul class="segs">' + segHTML + '</ul>' : '');
     } else {
       itin = '<h3>' + esc(T('d_itin')) + '</h3><p class="caption">' + esc(T('d_itin_none')) + '</p>';
