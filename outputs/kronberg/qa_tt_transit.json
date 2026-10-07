@@ -74,14 +74,73 @@
       "n_gt_500m": 0
     }
   },
+  "islands": {
+    "origins": {
+      "label": "origine",
+      "n": 2,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "1.0": 2
+      },
+      "isolated": []
+    },
+    "destinations": {
+      "label": "destination",
+      "n": 119,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "0.875": 4,
+        "1.0": 115
+      },
+      "isolated": []
+    }
+  },
   "r5_warnings": {
     "transit": [],
     "walk": []
   },
   "timings_s": {
-    "network": 171.0,
-    "transit_matrix": 1.7,
+    "network": 6.6,
+    "transit_matrix": 0.9,
     "walk_matrix": 0.2,
-    "total": 173.1
+    "total": 10.5
   }
 }

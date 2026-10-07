@@ -3,9 +3,9 @@
   "n_destinations": 424,
   "n_od": 848,
   "n_nan_by_percentile": {
-    "p25": 64,
-    "p50": 70,
-    "p75": 71
+    "p25": 62,
+    "p50": 68,
+    "p75": 69
   },
   "nan_od": [
     {
@@ -13,13 +13,6 @@
       "to_id": "78561",
       "name": "Saint-Lambert",
       "dist_km": 17.55,
-      "walk_time": null
-    },
-    {
-      "from_id": "centre",
-      "to_id": "78015",
-      "name": "Andrésy",
-      "dist_km": 18.02,
       "walk_time": null
     },
     {
@@ -269,13 +262,6 @@
     },
     {
       "from_id": "gare",
-      "to_id": "78015",
-      "name": "Andrésy",
-      "dist_km": 18.48,
-      "walk_time": null
-    },
-    {
-      "from_id": "gare",
       "to_id": "78189",
       "name": "Crespières",
       "dist_km": 19.87,
@@ -501,13 +487,13 @@
   ],
   "p50_by_origin": {
     "centre": {
-      "n_valid": 389,
+      "n_valid": 390,
       "min": 0.0,
       "median": 84.0,
       "max": 156.0
     },
     "gare": {
-      "n_valid": 389,
+      "n_valid": 390,
       "min": 9.0,
       "median": 75.0,
       "max": 148.0
@@ -522,7 +508,7 @@
     "examples": []
   },
   "walk_better_or_equal": 6,
-  "walk_only_nan_where_transit_ok": 719,
+  "walk_only_nan_where_transit_ok": 721,
   "speed_gt_threshold": {
     "threshold_kmh": 60.0,
     "n": 0,
@@ -565,14 +551,89 @@
       "n_gt_500m": 0
     }
   },
+  "islands": {
+    "origins": {
+      "label": "origine",
+      "n": 2,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "1.0": 2
+      },
+      "isolated": []
+    },
+    "destinations": {
+      "label": "destination",
+      "n": 424,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "0.0": 1,
+        "0.5": 1,
+        "0.625": 3,
+        "0.75": 6,
+        "0.875": 17,
+        "1.0": 396
+      },
+      "isolated": [
+        {
+          "id": "78015",
+          "name": "Andrésy",
+          "share": 0.0,
+          "n_candidates": 160,
+          "moved": true,
+          "offset_m": 15.0,
+          "new_share": 0.875,
+          "lon": 2.060436,
+          "lat": 48.982321
+        }
+      ]
+    }
+  },
   "r5_warnings": {
     "transit": [],
     "walk": []
   },
   "timings_s": {
-    "network": 610.6,
-    "transit_matrix": 2.4,
-    "walk_matrix": 0.6,
-    "total": 613.8
+    "network": 37.0,
+    "transit_matrix": 1.8,
+    "walk_matrix": 0.9,
+    "total": 55.7
   }
 }

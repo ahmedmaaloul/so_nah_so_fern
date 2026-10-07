@@ -26,11 +26,11 @@
   "n_kmax_faster_than_unlimited": 0,
   "censored_examples": [],
   "timings_s": {
-    "rides_1": 1.7,
-    "rides_2": 0.4,
+    "rides_1": 0.3,
+    "rides_2": 0.3,
     "rides_3": 0.4,
-    "rides_4": 0.6,
-    "total": 12.9
+    "rides_4": 0.4,
+    "total": 12.1
   },
   "jvm": {
     "r5py": "1.1.7",

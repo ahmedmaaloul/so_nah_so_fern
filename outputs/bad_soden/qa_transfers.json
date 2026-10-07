@@ -71,11 +71,11 @@
     }
   ],
   "timings_s": {
-    "rides_1": 2.1,
-    "rides_2": 0.3,
-    "rides_3": 0.4,
+    "rides_1": 0.3,
+    "rides_2": 0.2,
+    "rides_3": 0.3,
     "rides_4": 0.5,
-    "total": 13.1
+    "total": 10.3
   },
   "jvm": {
     "r5py": "1.1.7",
