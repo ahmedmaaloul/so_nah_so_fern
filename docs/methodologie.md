@@ -67,7 +67,7 @@ stärker: tagsüber Median +4 Min., abends 85 statt 34 Ziele in 180 Min. nicht e
 günstig.
 
 **Andere Tage (S3, `outputs/days/`).** Gleiches Fenster 07:30 bis 09:00. Donnerstag derselben
-Woche: identische Zeiten (Rangkorrelation 1,000). Samstag: Median +5 Min. (Garches), +2,5
+Woche: identische Zeiten (Rangkorrelation 1,000). Samstag: Median +6,5 Min. (Garches), +2,5
 (Kronberg), −1 (Bad Soden); Sonntag +12 / +4,5 / +7 Min. mit bis zu 68 (Garches) unerreichten
 Zielen. Ein Dienstag in den Ferien oder drei Wochen später ändert in Rhein-Main wenig. In
 Île-de-France fehlen im „latest“-Feed ab dem 20.10. Linien, die am Stichtag fahren (149 Linien
@@ -142,7 +142,7 @@ davantage : médiane +4 min en heure creuse, et le soir 85 destinations non atte
 destinations atteintes et sont donc flatteuses.
 
 **Autres jours (S3, `outputs/days/`).** Même fenêtre 07:30 à 09:00. Jeudi de la même semaine :
-temps identiques (corrélation de rang 1,000). Samedi : médiane +5 min (Garches), +2,5
+temps identiques (corrélation de rang 1,000). Samedi : médiane +6,5 min (Garches), +2,5
 (Kronberg), −1 (Bad Soden) ; dimanche +12 / +4,5 / +7 min, avec jusqu'à 68 destinations non
 atteintes (Garches). Un mardi de vacances ou trois semaines plus tard change peu en Rhin-Main.
 En Île-de-France, le flux « latest » ne contient plus, à partir du 20/10, des lignes qui
