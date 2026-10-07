@@ -1,0 +1,776 @@
+unit_id,name,level,in_radius,official_point_source,shift_m,townhall_name,osm_id,point_used
+78497,Poigny-la-Forêt,commune,False,ign_chef_lieu,961.9,Mairie de Poigny-la-Forêt,n4202060598,osm_townhall
+75112,Paris 12e Arrondissement,district,True,ign_chef_lieu_arrondissement,729.5,Mairie provisoire du 12e arrondissement,n12925404620,osm_townhall
+91662,Villeconin,commune,False,ign_chef_lieu,249.7,Mairie de Villeconin,w299078860,osm_townhall
+95308,Hérouville-en-Vexin,commune,True,ign_chef_lieu,232.7,,n499486210,osm_townhall
+91041,Avrainville,commune,False,ign_chef_lieu,217.7,Château du Merle Blanc,w146292068,osm_townhall
+91617,Tigery,commune,False,ign_chef_lieu,162.1,Mairie de Tigery,n365337938,osm_townhall
+91602,Souzy-la-Briche,commune,False,ign_chef_lieu,121.6,Mairie de Souzy-la-Briche,n3500672537,osm_townhall
+78565,Saint-Martin-des-Champs,commune,False,ign_chef_lieu,90.2,Mairie de Saint-Martin-des-Champs,n4595319813,osm_townhall
+95566,Saint-Martin-du-Tertre,commune,False,ign_chef_lieu,83.2,Mairie de Saint-Martin-du-Tertre,n3397462423,osm_townhall
+77407,Saint-Fargeau-Ponthierry,commune,False,ign_chef_lieu,77.5,Mairie de Saint-Fargeau-Ponthierry,n11329509268,osm_townhall
+77175,Évry-Grégy-sur-Yerre,commune,False,ign_chef_lieu,61.2,Mairie d'Évry-Grégy-sur-Yerre,n3811897925,osm_townhall
+91482,Pecqueuse,commune,True,ign_chef_lieu,49.1,Mairie de Pecqueuse,n1833224383,osm_townhall
+92071,Sceaux,commune,True,ign_chef_lieu,46.8,Mairie de Sceaux,n481329493,osm_townhall
+91425,Montlhéry,commune,True,ign_chef_lieu,46.7,Mairie de Monthléry,a292019486,osm_townhall
+93051,Noisy-le-Grand,commune,True,ign_chef_lieu,46.2,Mairie de Noisy-le-Grand,a39604569,osm_townhall
+91027,Athis-Mons,commune,True,ign_chef_lieu,37.6,Hôtel de ville d'Athis-Mons,n632238616,osm_townhall
+91272,Gif-sur-Yvette,commune,True,ign_chef_lieu,37.5,Mairie de Gif-sur-Yvette,w63423908,osm_townhall
+92007,Bagneux,commune,True,ign_chef_lieu,35.0,Hôtel de Ville de Bagneux,a292487622,osm_townhall
+94076,Villejuif,commune,True,ign_chef_lieu,33.0,Mairie de Villejuif,w64425028,osm_townhall
+60500,Le Plessis-Belleville,commune,False,ign_chef_lieu,30.0,Mairie du Plessis-Belleville,w147917806,osm_townhall
+94017,Champigny-sur-Marne,commune,True,ign_chef_lieu,28.8,Hôtel de Ville,n2702498234,osm_townhall
+93057,Les Pavillons-sous-Bois,commune,True,ign_chef_lieu,28.3,Hôtel de ville,w141939195,osm_townhall
+78165,Les Clayes-sous-Bois,commune,True,ign_chef_lieu,27.6,Mairie des Clayes-sous-Bois,n1166838223,osm_townhall
+77282,Mauregard,commune,False,ign_chef_lieu,27.1,,n4798916926,osm_townhall
+95177,Cormeilles-en-Vexin,commune,False,ign_chef_lieu,26.3,Mairie de Cormeilles-en-Vexin,n4502937727,osm_townhall
+91689,Wissous,commune,True,ign_chef_lieu,25.7,Mairie de Wissous,n765963578,osm_townhall
+75108,Paris 8e Arrondissement,district,True,ign_chef_lieu_arrondissement,24.7,Mairie du 8e Arrondissement,a1515376692,osm_townhall
+77350,Ozoir-la-Ferrière,commune,False,ign_chef_lieu,24.3,Mairie d'Ozoir-la-Ferrière,w112294912,osm_townhall
+95023,Arronville,commune,False,ign_chef_lieu,24.0,,w437305612,osm_townhall
+95678,Villiers-Adam,commune,True,ign_chef_lieu,22.3,Mairie de Villiers-Adam,n3515055273,osm_townhall
+78518,Rennemoulin,commune,True,ign_chef_lieu,21.6,Mairie de Rennemoulin,n2382651120,osm_townhall
+94042,Joinville-le-Pont,commune,True,ign_chef_lieu,21.6,Mairie de Joinville-le-Pont,n1749496212,osm_townhall
+77018,Bailly-Romainvilliers,commune,False,ign_chef_lieu,21.5,Mairie de Bailly-Romainvilliers,n4798915887,osm_townhall
+91132,Chamarande,commune,False,ign_chef_lieu,21.1,Mairie de Chamarande,a292148134,osm_townhall
+78120,Bullion,commune,True,ign_chef_lieu,20.4,Mairie de Bullion,n11044001249,osm_townhall
+77251,Lieusaint,commune,False,ign_chef_lieu,20.3,Mairie,a226910174,osm_townhall
+94001,Ablon-sur-Seine,commune,True,ign_chef_lieu,20.3,Mairie d'Ablon-sur-Seine,w62496024,osm_townhall
+78172,Conflans-Sainte-Honorine,commune,True,ign_chef_lieu,19.7,Mairie de Conflans-Sainte-Honorine,a25168013,osm_townhall
+94037,Gentilly,commune,True,ign_chef_lieu,19.5,Mairie de Gentilly,w81088721,osm_townhall
+93063,Romainville,commune,True,ign_chef_lieu,19.3,Mairie de Romainville,a2278343,osm_townhall
+78034,Auteuil,commune,True,ign_chef_lieu,18.3,Mairie d'Auteuil-le-Roi,n2371102157,osm_townhall
+91201,Draveil,commune,True,ign_chef_lieu,17.9,,n4443811097,osm_townhall
+78208,Élancourt,commune,True,ign_chef_lieu,17.8,Mairie d'Élancourt,n2339162720,osm_townhall
+78143,Châteaufort,commune,True,ign_chef_lieu,17.6,Mairie de Châteaufort,n2172231532,osm_townhall
+91434,Morsang-sur-Orge,commune,True,ign_chef_lieu,17.5,Mairie de Morsang-sur-Orge,w431477863,osm_townhall
+78464,Orcemont,commune,False,ign_chef_lieu,17.4,Mairie d'Orcemont,a836983856,osm_townhall
+92023,Clamart,commune,True,ign_chef_lieu,17.1,Mairie de Clamart,n269306155,osm_townhall
+77059,Bussy-Saint-Martin,commune,False,ign_chef_lieu,16.8,,n4798915889,osm_townhall
+60482,Orry-la-Ville,commune,False,ign_chef_lieu,16.3,Mairie d'Orry-la-Ville,w151022657,osm_townhall
+94073,Thiais,commune,True,ign_chef_lieu,16.2,Mairie de Thiais,w143499974,osm_townhall
+77474,Trilbardou,commune,False,ign_chef_lieu,15.9,,w368284576,osm_townhall
+94033,Fontenay-sous-Bois,commune,True,ign_chef_lieu,15.7,Hôtel de Ville de Fontenay-sous-Bois,w105707192,osm_townhall
+95176,Cormeilles-en-Parisis,commune,True,ign_chef_lieu,15.7,Mairie de Cormeilles-en-Parisis,n2947769944,osm_townhall
+78050,Bazoches-sur-Guyonne,commune,True,ign_chef_lieu,15.6,Mairie de Bazoches-sur-Guyonne,n2383709781,osm_townhall
+77111,Chessy,commune,False,ign_chef_lieu,15.1,Mairie de Chessy,n4798915853,osm_townhall
+77352,Ozouer-le-Voulgis,commune,False,ign_chef_lieu,15.1,,n531734797,osm_townhall
+78262,Galluis,commune,True,ign_chef_lieu,14.9,Mairie de Galluis,n1937590523,osm_townhall
+78296,Guitrancourt,commune,False,ign_chef_lieu,14.8,Mairie de,n597174013,osm_townhall
+91568,Saint-Maurice-Montcouronne,commune,True,ign_chef_lieu,14.8,Mairie de Saint-Maurice-Montcouronne,n3500650800,osm_townhall
+93047,Montfermeil,commune,True,ign_chef_lieu,14.6,Mairie de Montfermeil,n6781559119,osm_townhall
+77470,Tournan-en-Brie,commune,False,ign_chef_lieu,14.5,Mairie de Tournan-en-Brie,n8725388169,osm_townhall
+77094,Charmentray,commune,False,ign_chef_lieu,14.4,,n3351967873,osm_townhall
+91191,Crosne,commune,True,ign_chef_lieu,14.4,Mairie de Crosne,w149853348,osm_townhall
+93073,Tremblay-en-France,commune,False,ign_chef_lieu,14.3,,n577554364,osm_townhall
+94055,Ormesson-sur-Marne,commune,True,ign_chef_lieu,14.2,Mairie d'Ormesson-sur-Marne,w884862443,osm_townhall
+91546,Saint-Cyr-sous-Dourdan,commune,False,ign_chef_lieu,14.1,Mairie de Saint-Cyr-sous-Dourdan,n3500641073,osm_townhall
+95257,La Frette-sur-Seine,commune,True,ign_chef_lieu,14.1,Mairie de La Frette-sur-Seine,n600024641,osm_townhall
+95627,Vallangoujard,commune,False,ign_chef_lieu,14.0,Mairie de Vallangoujard,w278571672,osm_townhall
+78397,Le Mesnil-Saint-Denis,commune,True,ign_chef_lieu,13.9,Mairie du Mesnil-Saint-Denis,n2388692636,osm_townhall
+92036,Gennevilliers,commune,True,ign_chef_lieu,13.8,Mairie de Gennevilliers,n4039068552,osm_townhall
+77232,Isles-lès-Villenoy,commune,False,ign_chef_lieu,13.7,Mairie d'Isles-lès-Villenoy,n4798913775,osm_townhall
+91552,Saint-Germain-lès-Arpajon,commune,True,ign_chef_lieu,13.7,Mairie de Saint-Germain-Les-Arpajon,a4167295,osm_townhall
+94069,Saint-Maurice,commune,True,ign_chef_lieu,13.7,Mairie de Saint-Maurice,a298776320,osm_townhall
+75117,Paris 17e Arrondissement,district,True,ign_chef_lieu_arrondissement,13.3,Mairie du 17e arrondissement,w75748751,osm_townhall
+95181,Courcelles-sur-Viosne,commune,True,ign_chef_lieu,13.3,Mairie de Courcelles-sur-Viosne,n3298364363,osm_townhall
+91275,Gometz-le-Châtel,commune,True,ign_chef_lieu,13.0,Mairie de Gometz-le-Châtel,n2902258515,osm_townhall
+78125,La Celle-les-Bordes,commune,True,ign_chef_lieu,12.9,Mairie de la Celle-les-Bordes,a266221420,osm_townhall
+78343,Les Loges-en-Josas,commune,True,ign_chef_lieu,12.9,Mairie des Loges-en-Josas,w253795030,osm_townhall
+95149,Chaumontel,commune,False,ign_chef_lieu,12.8,Mairie de Chaumontel,w147484430,osm_townhall
+77058,Bussy-Saint-Georges,commune,False,ign_chef_lieu,12.7,Mairie de Bussy-Saint-Georges,w113171363,osm_townhall
+91204,Écharcon,commune,False,ign_chef_lieu,12.6,Mairie d'Écharcon,n3486126382,osm_townhall
+91521,Ris-Orangis,commune,True,ign_chef_lieu,12.5,Mairie de Ris-Orangis,w63826865,osm_townhall
+95028,Attainville,commune,True,ign_chef_lieu,12.5,,n3866687487,osm_townhall
+95256,Frépillon,commune,True,ign_chef_lieu,12.4,Mairie de Frépillon,n1800265378,osm_townhall
+91579,Saint-Vrain,commune,False,ign_chef_lieu,12.2,Mairie de Saint-Vrain,n671784736,osm_townhall
+78322,Jouy-en-Josas,commune,True,ign_chef_lieu,12.1,Mairie de Jouy-en-Josas,w70426682,osm_townhall
+91312,Igny,commune,True,ign_chef_lieu,12.1,Mairie d'Igny,n139222605,osm_townhall
+77455,Soignolles-en-Brie,commune,False,ign_chef_lieu,12.0,Mairie de Soignolles-en-Brie,a403660438,osm_townhall
+95019,Arnouville,commune,True,ign_chef_lieu,12.0,Mairie d'Arnouville,n281720908,osm_townhall
+91017,Angervilliers,commune,True,ign_chef_lieu,11.9,Mairie d'Angervilliers,n3484254695,osm_townhall
+91421,Montgeron,commune,True,ign_chef_lieu,11.9,Mairie de Montgeron,n616292519,osm_townhall
+95637,Vauréal,commune,True,ign_chef_lieu,11.9,Maire de Vauréal,n304767246,osm_townhall
+91538,Saint-Aubin,commune,True,ign_chef_lieu,11.8,,n802754513,osm_townhall
+92032,Fontenay-aux-Roses,commune,True,ign_chef_lieu,11.8,Hôtel de ville de Fontenay-aux-Roses,w91808388,osm_townhall
+77150,Cuisy,commune,False,ign_chef_lieu,11.5,,n4798916223,osm_townhall
+95680,Villiers-le-Bel,commune,True,ign_chef_lieu,11.5,Mairie de Villiers-le-Bel,w346301607,osm_townhall
+78236,Flexanville,commune,False,ign_chef_lieu,11.4,Mairie de Flexanville,w210735992,osm_townhall
+78372,Marly-le-Roi,commune,True,ign_chef_lieu,11.4,Hôtel de Ville Marly-le-Roi,a223447996,osm_townhall
+78502,Le Port-Marly,commune,True,ign_chef_lieu,11.4,Hôtel de Ville,n13323902909,osm_townhall
+78158,Le Chesnay-Rocquencourt,commune,True,ign_chef_lieu,11.3,Mairie du Chesnay-Rocquencourt,a147786904,osm_townhall
+77237,Jossigny,commune,False,ign_chef_lieu,11.2,,n4798915856,osm_townhall
+77234,Jablines,commune,False,ign_chef_lieu,11.1,,n3024644382,osm_townhall
+78224,L'Étang-la-Ville,commune,True,ign_chef_lieu,10.9,Mairie de l'Étang-la-Ville,n10694478289,osm_townhall
+93030,Dugny,commune,True,ign_chef_lieu,10.9,,n4590640043,osm_townhall
+95287,Grisy-les-Plâtres,commune,False,ign_chef_lieu,10.8,,n480075535,osm_townhall
+78291,Guerville,commune,False,ign_chef_lieu,10.4,Mairie de Guerville,n10124720763,osm_townhall
+95450,Neuville-sur-Oise,commune,True,ign_chef_lieu,10.4,Mairie de Neuville-sur-Oise,w99307478,osm_townhall
+78401,Meulan-en-Yvelines,commune,True,ign_chef_lieu,10.3,Mairie de Meulan-en-Yvelines,n619155787,osm_townhall
+91225,Étiolles,commune,False,ign_chef_lieu,10.3,Mairie d'Étiolles,a125530730,osm_townhall
+95510,Puiseux-Pontoise,commune,True,ign_chef_lieu,10.3,Mairie de Puiseux-Pontoise,n3234562077,osm_townhall
+78362,Mantes-la-Ville,commune,False,ign_chef_lieu,10.1,Mairie de Mantes-la-Ville,n600110553,osm_townhall
+91038,Auvers-Saint-Georges,commune,False,ign_chef_lieu,10.1,Mairie de Auvers-Saint-Georges,n3499065098,osm_townhall
+95304,Hédouville,commune,False,ign_chef_lieu,10.1,Mairie d'Hédouville,a361230730,osm_townhall
+77258,Lognes,commune,False,ign_chef_lieu,10.0,Mairie de Lognes,n11308276526,osm_townhall
+95445,Nerville-la-Forêt,commune,True,ign_chef_lieu,10.0,Mairie de Nerville-la-Forêt,w396507138,osm_townhall
+91315,Itteville,commune,False,ign_chef_lieu,9.8,Mairie d'Itteville,n3486476755,osm_townhall
+91573,Saint-Pierre-du-Perray,commune,False,ign_chef_lieu,9.8,Hôtel de Ville,w373080804,osm_townhall
+91363,Marcoussis,commune,True,ign_chef_lieu,9.7,Mairie de Marcoussis,w146091052,osm_townhall
+95658,Vigny,commune,False,ign_chef_lieu,9.6,,n3234742735,osm_townhall
+77153,Dammartin-en-Goële,commune,False,ign_chef_lieu,9.3,,w147977620,osm_townhall
+78499,Ponthévrard,commune,False,ign_chef_lieu,9.3,Mairie de Ponthévrard,n1928821771,osm_townhall
+91630,Le Val-Saint-Germain,commune,False,ign_chef_lieu,9.2,Mairie du Val-Saint-Germain,n3486593628,osm_townhall
+95058,Bernes-sur-Oise,commune,False,ign_chef_lieu,9.2,,n8168037599,osm_townhall
+95252,Franconville,commune,True,ign_chef_lieu,9.2,Mairie de Franconville,a151859240,osm_townhall
+91645,Verrières-le-Buisson,commune,True,ign_chef_lieu,9.1,Mairie de Verrières-le-Buisson,a142071036,osm_townhall
+92062,Puteaux,commune,True,ign_chef_lieu,9.1,Mairie de Puteaux,a2165449,osm_townhall
+95127,Cergy,commune,True,ign_chef_lieu,8.8,Hôtel de Ville,a205942240,osm_townhall
+78623,Le Tremblay-sur-Mauldre,commune,True,ign_chef_lieu,8.7,Mairie du Tremblay-sur-Mauldre,n1674752351,osm_townhall
+75116,Paris 16e Arrondissement,district,True,ign_chef_lieu_arrondissement,8.6,Mairie du 16e arrondissement,a163970352,osm_townhall
+77081,Champdeuil,commune,False,ign_chef_lieu,8.6,,w113305753,osm_townhall
+77517,Villevaudé,commune,False,ign_chef_lieu,8.6,,n4798916229,osm_townhall
+77123,Compans,commune,False,ign_chef_lieu,8.5,Mairie de Compans,n4798916230,osm_townhall
+91103,Brétigny-sur-Orge,commune,True,ign_chef_lieu,8.5,Mairie de Brétigny-sur-Orge,a287289490,osm_townhall
+91457,La Norville,commune,True,ign_chef_lieu,8.5,Mairie de La Norville,n2515696384,osm_townhall
+95151,Chauvry,commune,True,ign_chef_lieu,8.5,Mairie de Chauvry,a874327674,osm_townhall
+77427,Saint-Mesmes,commune,False,ign_chef_lieu,8.4,Mairie de Saint-Mesmes,n9309443748,osm_townhall
+78113,Brueil-en-Vexin,commune,False,ign_chef_lieu,8.4,Mairie de Brueil-en-Vexin,n577365011,osm_townhall
+78185,Courgent,commune,False,ign_chef_lieu,8.4,Mairie de Courgent,a264608284,osm_townhall
+91333,Leuville-sur-Orge,commune,True,ign_chef_lieu,8.4,Mairie de Leuville-sur-Orge,n3486586548,osm_townhall
+91581,Saint-Yon,commune,False,ign_chef_lieu,8.4,Mairie de Saint-Yon,n3500659673,osm_townhall
+77215,Gretz-Armainvilliers,commune,False,ign_chef_lieu,8.2,Mairie de Gretz-Armainvilliers,w113407850,osm_townhall
+91064,Bièvres,commune,True,ign_chef_lieu,8.2,Mairie de Bievres,w70456515,osm_townhall
+92035,La Garenne-Colombes,commune,True,ign_chef_lieu,8.2,Hôtel de Ville,a40911953,osm_townhall
+95660,Villaines-sous-Bois,commune,True,ign_chef_lieu,8.2,Mairie de Villaines-sous-Bois,n11042404221,osm_townhall
+77315,Montry,commune,False,ign_chef_lieu,8.1,,n4590698302,osm_townhall
+77384,Réau,commune,False,ign_chef_lieu,8.1,,w114154173,osm_townhall
+95491,Le Plessis-Bouchard,commune,True,ign_chef_lieu,8.1,Mairie du Plessis-Bouchard,a154827052,osm_townhall
+78140,Chapet,commune,True,ign_chef_lieu,8.0,Mairie de Chapet,n509263858,osm_townhall
+78366,Mareil-le-Guyon,commune,True,ign_chef_lieu,8.0,Mairie de Mareil-le-Guyon,a445249514,osm_townhall
+95447,Neuilly-en-Vexin,commune,False,ign_chef_lieu,8.0,Mairie de Neuilly-en-Vexin,n569728338,osm_townhall
+95610,Théméricourt,commune,False,ign_chef_lieu,8.0,,n3234910697,osm_townhall
+78033,Aulnay-sur-Mauldre,commune,True,ign_chef_lieu,7.9,Mairie d'Aulnay-sur-Mauldre,n623022681,osm_townhall
+95353,Maffliers,commune,True,ign_chef_lieu,7.9,Mairie de Maffliers,n4140976177,osm_townhall
+91122,Bures-sur-Yvette,commune,True,ign_chef_lieu,7.8,Mairie de Bures-sur-Yvette,n13816173088,osm_townhall
+95690,Wy-dit-Joli-Village,commune,False,ign_chef_lieu,7.8,Mairie de Wy-dit-Joli-Village,n1599091455,osm_townhall
+77364,Le Plessis-aux-Bois,commune,False,ign_chef_lieu,7.7,,a2859410220,osm_townhall
+93046,Livry-Gargan,commune,True,ign_chef_lieu,7.7,Mairie de Livry-Gargan,a290268964,osm_townhall
+94048,Marolles-en-Brie,commune,True,ign_chef_lieu,7.7,Mairie de Marolles-en-Brie,n4798391265,osm_townhall
+95306,Herblay-sur-Seine,commune,True,ign_chef_lieu,7.6,Mairie d'Herblay-sur-Seine,n665904336,osm_townhall
+95316,Jagny-sous-Bois,commune,False,ign_chef_lieu,7.6,Mairie de Jagny-sous-Bois,n11042390662,osm_townhall
+77122,Combs-la-Ville,commune,False,ign_chef_lieu,7.5,Mairie de Combs-la-Ville,w168058004,osm_townhall
+77132,Coupvray,commune,False,ign_chef_lieu,7.5,Mairie de Coupvray,a747530714,osm_townhall
+78416,Montalet-le-Bois,commune,False,ign_chef_lieu,7.5,Mairie de Montalet-le-Bois,n595415460,osm_townhall
+78686,Viroflay,commune,True,ign_chef_lieu,7.5,Mairie de Viroflay,n7193166471,osm_townhall
+78475,Osmoy,commune,False,ign_chef_lieu,7.4,Mairie d'Osmoy,w224496306,osm_townhall
+78490,Plaisir,commune,True,ign_chef_lieu,7.3,Mairie de Plaisir,a167313448,osm_townhall
+78597,Soindres,commune,False,ign_chef_lieu,7.3,Mairie de Soindres,n11093213802,osm_townhall
+78297,Guyancourt,commune,True,ign_chef_lieu,7.2,Mairie de Guyancourt,n1747622827,osm_townhall
+95493,Le Plessis-Luzarches,commune,False,ign_chef_lieu,7.2,,n4674282192,osm_townhall
+77233,Iverny,commune,False,ign_chef_lieu,7.1,,n4035051195,osm_townhall
+77253,Lissy,commune,False,ign_chef_lieu,7.1,Mairie de Lissy,n9212904293,osm_townhall
+91661,Villebon-sur-Yvette,commune,True,ign_chef_lieu,7.0,Hôtel de Ville de Villebon-sur-Yvette,w299227500,osm_townhall
+95102,Bréançon,commune,False,ign_chef_lieu,7.0,,w401934246,osm_townhall
+95120,Butry-sur-Oise,commune,True,ign_chef_lieu,7.0,,n588669408,osm_townhall
+95480,Parmain,commune,False,ign_chef_lieu,7.0,Mairie de Parmain,n3549015667,osm_townhall
+77514,Villeparisis,commune,False,ign_chef_lieu,6.8,Hôtel de ville de Villeparisis,n2282193050,osm_townhall
+78261,Gaillon-sur-Montcient,commune,True,ign_chef_lieu,6.8,Mairie de Gaillon-sur-Montcient,n11036356264,osm_townhall
+78364,Marcq,commune,True,ign_chef_lieu,6.8,Mairie de Marcq,n11349324956,osm_townhall
+78609,Tessancourt-sur-Aubette,commune,True,ign_chef_lieu,6.8,Mairie de Tessancourt-sur-Aubette,n11036349098,osm_townhall
+91634,Vaugrigneuse,commune,True,ign_chef_lieu,6.8,Mairie de Vaugrigneuse,n3498836564,osm_townhall
+92020,Châtillon,commune,True,ign_chef_lieu,6.7,Mairie de Châtillon,a174789338,osm_townhall
+78233,Feucherolles,commune,True,ign_chef_lieu,6.6,Mairie de Feucherolles,n2133843888,osm_townhall
+78486,Le Perray-en-Yvelines,commune,True,ign_chef_lieu,6.6,Mairie du Perray-en-Yvelines,n1506143575,osm_townhall
+95504,Presles,commune,False,ign_chef_lieu,6.6,Mairie de Presles,n26697176,osm_townhall
+77085,Chanteloup-en-Brie,commune,False,ign_chef_lieu,6.5,,a230743760,osm_townhall
+77128,Couilly-Pont-aux-Dames,commune,False,ign_chef_lieu,6.5,Mairie de Couilly-Pont-aux-Dames,n4005783167,osm_townhall
+91560,Saint-Jean-de-Beauregard,commune,True,ign_chef_lieu,6.5,Mairie de Saint-Jean-de-Beauregard,n3500639709,osm_townhall
+78048,Bazainville,commune,False,ign_chef_lieu,6.4,Mairie de Bazainville,n988712796,osm_townhall
+91471,Orsay,commune,True,ign_chef_lieu,6.4,Mairie d'Orsay,w65648956,osm_townhall
+91095,Bouray-sur-Juine,commune,False,ign_chef_lieu,6.3,Mairie de Bouray-sur-Juine,n3484291363,osm_townhall
+95529,Ronquerolles,commune,False,ign_chef_lieu,6.3,,n1944554341,osm_townhall
+91045,Ballancourt-sur-Essonne,commune,False,ign_chef_lieu,6.1,Mairie de Ballancourt-sur-Essonne,a125995344,osm_townhall
+91411,Les Molières,commune,True,ign_chef_lieu,6.1,Mairie des Molières,n3510148621,osm_townhall
+75119,Paris 19e Arrondissement,district,True,ign_chef_lieu_arrondissement,6.0,Mairie du 19e arrondissement,a26228361,osm_townhall
+77291,Le Mesnil-Amelot,commune,False,ign_chef_lieu,6.0,,n4798915586,osm_townhall
+77413,Saint-Germain-sur-Morin,commune,False,ign_chef_lieu,6.0,Mairie de Saint-Germain-sur-Morin,n1871845647,osm_townhall
+78007,Aigremont,commune,True,ign_chef_lieu,6.0,Mairie d'Aigremont,a207915462,osm_townhall
+95625,Us,commune,False,ign_chef_lieu,6.0,,n3234764249,osm_townhall
+77169,Émerainville,commune,False,ign_chef_lieu,5.9,Mairie d'Émerainville,a230844440,osm_townhall
+75100,Paris Centre,district,True,ign_chef_lieu_arrondissement,5.8,Mairie de Paris Centre,a114761172,osm_townhall
+77155,Dampmart,commune,False,ign_chef_lieu,5.8,,n4798915914,osm_townhall
+78586,Sartrouville,commune,True,ign_chef_lieu,5.7,Mairie de Sartrouville,n242922184,osm_townhall
+91115,Bruyères-le-Châtel,commune,True,ign_chef_lieu,5.7,Mairie de Bruyères-Le-Châtel,n3485960152,osm_townhall
+93008,Bobigny,commune,True,ign_chef_lieu,5.7,Hôtel de Ville de Bobigny,w77744232,osm_townhall
+78264,Gambaiseuil,commune,False,ign_chef_lieu,5.6,Mairie de Gambaiseuil,n11006246021,osm_townhall
+78653,Vicq,commune,True,ign_chef_lieu,5.6,Mairie de Vicq,n11036399765,osm_townhall
+91148,Chauffour-lès-Étréchy,commune,False,ign_chef_lieu,5.6,Mairie de Chauffour-lès-Étréchy,n3499191774,osm_townhall
+94075,Villecresnes,commune,True,ign_chef_lieu,5.6,Mairie de Villecresnes,n2789767915,osm_townhall
+78451,Nézel,commune,True,ign_chef_lieu,5.5,Mairie de Nézel,a987405834,osm_townhall
+78548,Saint-Forget,commune,True,ign_chef_lieu,5.5,Mairie de Saint-Forget,n11046647605,osm_townhall
+91679,Villiers-le-Bâcle,commune,True,ign_chef_lieu,5.5,Mairie de Villiers-Le-Bâcle,n3499035847,osm_townhall
+77114,Chevry-Cossigny,commune,False,ign_chef_lieu,5.4,,a195122798,osm_townhall
+78465,Orgerus,commune,False,ign_chef_lieu,5.3,Mairie d'Orgerus,n1882311181,osm_townhall
+91692,Les Ulis,commune,True,ign_chef_lieu,5.3,Mairie des Ulis,n3486583476,osm_townhall
+78396,Le Mesnil-le-Roi,commune,True,ign_chef_lieu,5.2,Mairie du Mesnil-le-Roi,n9388541754,osm_townhall
+95535,Sagy,commune,True,ign_chef_lieu,5.2,Mairie de Sagy,n3088026750,osm_townhall
+91553,Saint-Germain-lès-Corbeil,commune,False,ign_chef_lieu,5.1,Mairie de Saint-Germain-lès-Corbeil,w33330267,osm_townhall
+77508,Villeneuve-le-Comte,commune,False,ign_chef_lieu,5.0,Mairie de Villeneuve-le-Comte,a745679270,osm_townhall
+78217,Épône,commune,False,ign_chef_lieu,5.0,Mairie d'Épône,n11329492252,osm_townhall
+91286,Grigny,commune,True,ign_chef_lieu,5.0,Mairie de Grigny,n3500536369,osm_townhall
+91319,Janvry,commune,True,ign_chef_lieu,5.0,Mairie de Janvry,n1835463668,osm_townhall
+95170,Condécourt,commune,True,ign_chef_lieu,5.0,,n2846230684,osm_townhall
+95258,Frouville,commune,False,ign_chef_lieu,5.0,Mairie de Frouville,n3406597326,osm_townhall
+78404,Millemont,commune,False,ign_chef_lieu,4.9,Mairie de Millemont,a800861600,osm_townhall
+95351,Louvres,commune,False,ign_chef_lieu,4.9,Mairie de Louvres,n3894158195,osm_townhall
+95392,Mériel,commune,True,ign_chef_lieu,4.9,,w161253357,osm_townhall
+95483,Le Perchay,commune,False,ign_chef_lieu,4.9,,n3741204334,osm_townhall
+60398,Le Mesnil-en-Thelle,commune,False,ign_chef_lieu,4.8,Mairie du Mesnil-en-Thelle,a441014426,osm_townhall
+75109,Paris 9e Arrondissement,district,True,ign_chef_lieu_arrondissement,4.8,Mairie du 9e,a138442150,osm_townhall
+77276,Mareuil-lès-Meaux,commune,False,ign_chef_lieu,4.8,Mairie de Mareuil-lès-Meaux,n1813762830,osm_townhall
+78561,Saint-Lambert,commune,True,ign_chef_lieu,4.8,Mairie de Saint-Lambert-des-Bois,n2390520091,osm_townhall
+94060,La Queue-en-Brie,commune,True,ign_chef_lieu,4.8,,n711951886,osm_townhall
+95211,Ennery,commune,True,ign_chef_lieu,4.8,Mairie d'Ennery,n1769274646,osm_townhall
+95446,Nesles-la-Vallée,commune,False,ign_chef_lieu,4.8,Mairie de Nesles-la-Vallée,a803841212,osm_townhall
+91378,Mauchamps,commune,False,ign_chef_lieu,4.7,Mairie de Mauchamps,w142921147,osm_townhall
+91600,Soisy-sur-Seine,commune,True,ign_chef_lieu,4.7,Mairie de Soisy-sur-Seine,n12248424112,osm_townhall
+95628,Valmondois,commune,True,ign_chef_lieu,4.7,Mairie de Valmondois,n589028020,osm_townhall
+77249,Lésigny,commune,False,ign_chef_lieu,4.6,,n1863067777,osm_townhall
+77336,Neufmoutiers-en-Brie,commune,False,ign_chef_lieu,4.6,Mairie de Neufmoutiers-en-Brie,a300612342,osm_townhall
+78644,La Verrière,commune,True,ign_chef_lieu,4.6,Mairie de La Verrière,a141618146,osm_townhall
+91648,Vert-le-Grand,commune,False,ign_chef_lieu,4.6,Mairie de Vert-le-Grand,n583582413,osm_townhall
+95682,Villiers-le-Sec,commune,True,ign_chef_lieu,4.6,Mairie de Villiers-le-Sec,n11042386512,osm_townhall
+77323,Moussy-le-Vieux,commune,False,ign_chef_lieu,4.5,,n4798913814,osm_townhall
+78354,Magnanville,commune,False,ign_chef_lieu,4.5,Mairie de Magnanville,n3487702644,osm_townhall
+78415,Montainville,commune,True,ign_chef_lieu,4.5,Mairie de Montainville,n3581149256,osm_townhall
+78655,Vieille-Église-en-Yvelines,commune,True,ign_chef_lieu,4.5,Mairie de Vieille-Église-en-Yvelines,n4561703484,osm_townhall
+95241,Fontenay-en-Parisis,commune,False,ign_chef_lieu,4.5,,a264336040,osm_townhall
+77308,Montgé-en-Goële,commune,False,ign_chef_lieu,4.4,Mairie de Montgé-en-Goële,n4551209215,osm_townhall
+77332,Nantouillet,commune,False,ign_chef_lieu,4.4,,a807326296,osm_townhall
+78406,Milon-la-Chapelle,commune,True,ign_chef_lieu,4.4,Mairie de Milon-la-Chapelle,n27362211,osm_townhall
+91106,Breux-Jouy,commune,False,ign_chef_lieu,4.4,Mairie de Breux-Jouy,n3499148838,osm_townhall
+91376,Marolles-en-Hurepoix,commune,False,ign_chef_lieu,4.4,Mairie de Marolles-en-Hurepoix,a820162592,osm_townhall
+93033,Gournay-sur-Marne,commune,True,ign_chef_lieu,4.4,Mairie de Gournay-sur-Marne,n796694179,osm_townhall
+95116,Bruyères-sur-Oise,commune,False,ign_chef_lieu,4.3,,a874622508,osm_townhall
+95144,Châtenay-en-France,commune,False,ign_chef_lieu,4.3,Mairie de Châtenay-en-France,n11042437578,osm_townhall
+77437,Saint-Soupplets,commune,False,ign_chef_lieu,4.2,Mairie de Saint-Soupplets,n4631857292,osm_townhall
+95295,Guiry-en-Vexin,commune,False,ign_chef_lieu,4.2,Mairie de Guiry-en-Vexin,n3244789792,osm_townhall
+60088,Bornel,commune,False,ign_chef_lieu,4.1,Mairie de Bornel,a376443272,osm_townhall
+77241,Juilly,commune,False,ign_chef_lieu,4.1,Mairie de Juilly,a498611488,osm_townhall
+78227,Évecquemont,commune,True,ign_chef_lieu,4.0,Mairie d'Évecquemont,n471012875,osm_townhall
+91578,Saint-Sulpice-de-Favières,commune,False,ign_chef_lieu,4.0,Mairie de Saint-Sulpice-de-Favières,n3500648417,osm_townhall
+92040,Issy-les-Moulineaux,commune,True,ign_chef_lieu,4.0,Hôtel de Ville,a8255507,osm_townhall
+95341,Livilliers,commune,True,ign_chef_lieu,4.0,Mairie de Livilliers,n486611143,osm_townhall
+78073,Bois-d'Arcy,commune,True,ign_chef_lieu,3.9,Mairie de Bois-d'Arcy,a171711672,osm_townhall
+78513,La Queue-les-Yvelines,commune,False,ign_chef_lieu,3.9,Mairie de La Queue-lez-Yvelines,n1257068657,osm_townhall
+91086,Bondoufle,commune,True,ign_chef_lieu,3.9,Mairie de Bondoufle,n3484287742,osm_townhall
+78202,Drocourt,commune,False,ign_chef_lieu,3.8,Mairie de Drocourt,w133435404,osm_townhall
+78289,Grosrouvre,commune,False,ign_chef_lieu,3.8,Mairie de Grosrouvre,n11036393169,osm_townhall
+94077,Villeneuve-le-Roi,commune,True,ign_chef_lieu,3.8,Mairie de Villeneuve-le-Roi,a141735124,osm_townhall
+60346,Lamorlaye,commune,False,ign_chef_lieu,3.7,Mairie de Lamorlaye,a301248342,osm_townhall
+77075,Chalifert,commune,False,ign_chef_lieu,3.7,Mairie de Chalifert,n4798915891,osm_townhall
+77136,Courquetaine,commune,False,ign_chef_lieu,3.7,,a299471954,osm_townhall
+78005,Achères,commune,True,ign_chef_lieu,3.7,Mairie d'Achères,a220676992,osm_townhall
+78133,Chambourcy,commune,True,ign_chef_lieu,3.7,Mairie de Chambourcy,n11036370375,osm_townhall
+78230,La Falaise,commune,True,ign_chef_lieu,3.7,Mairie de la Falaise,n9426406597,osm_townhall
+78455,Noisy-le-Roi,commune,True,ign_chef_lieu,3.7,Mairie de Noisy-le-Roi,w103924271,osm_townhall
+91666,Villejust,commune,True,ign_chef_lieu,3.7,Mairie de Villejust,n2479592842,osm_townhall
+78092,Bougival,commune,True,ign_chef_lieu,3.6,Mairie de Bougival,n1959359057,osm_townhall
+95063,Bezons,commune,True,ign_chef_lieu,3.6,Hôtel de ville de Bezons,w387315533,osm_townhall
+77095,Charny,commune,False,ign_chef_lieu,3.5,,n3351968053,osm_townhall
+77322,Moussy-le-Neuf,commune,False,ign_chef_lieu,3.5,Mairie de Moussy-le-Neuf,n4068724465,osm_townhall
+77376,Précy-sur-Marne,commune,False,ign_chef_lieu,3.5,,a773599790,osm_townhall
+78443,Neauphle-le-Vieux,commune,True,ign_chef_lieu,3.5,Mairie de Neauphle-le-Vieux,n2374211954,osm_townhall
+78590,Senlisse,commune,True,ign_chef_lieu,3.5,Mairie de Senlisse,a809051770,osm_townhall
+91215,Épinay-sous-Sénart,commune,True,ign_chef_lieu,3.5,Mairie d'Épinay-sous-Sénart,n3500522464,osm_townhall
+77377,Presles-en-Brie,commune,False,ign_chef_lieu,3.4,,n525649444,osm_townhall
+78420,Montfort-l'Amaury,commune,True,ign_chef_lieu,3.4,Mairie de Montfort-l'Amaury,w893821292,osm_townhall
+78575,Saint-Rémy-lès-Chevreuse,commune,True,ign_chef_lieu,3.4,Mairie de Saint-Rémy-lés-Chevreuse,a681329426,osm_townhall
+78615,Thiverval-Grignon,commune,True,ign_chef_lieu,3.4,Mairie de Thiverval-Grignon,a126919380,osm_townhall
+95409,Moisselles,commune,True,ign_chef_lieu,3.4,,n4674281578,osm_townhall
+77062,Carnetin,commune,False,ign_chef_lieu,3.3,,n4798916931,osm_townhall
+77457,Solers,commune,False,ign_chef_lieu,3.3,,n4798913816,osm_townhall
+78299,Hardricourt,commune,True,ign_chef_lieu,3.3,Mairie d'Hardricourt,n619349851,osm_townhall
+78460,Oinville-sur-Montcient,commune,False,ign_chef_lieu,3.3,Mairie d'Oinville-sur-Montcient,w218593603,osm_townhall
+78530,Rosay,commune,False,ign_chef_lieu,3.3,Mairie de Rosay,w278783582,osm_townhall
+91339,Linas,commune,True,ign_chef_lieu,3.3,Mairie de Linas,w1195170731,osm_townhall
+91593,Sermaise,commune,False,ign_chef_lieu,3.3,Mairie de Sermaise,n3500664916,osm_townhall
+95348,Longuesse,commune,False,ign_chef_lieu,3.3,Mairie de Longuesse,n4415280073,osm_townhall
+77118,Claye-Souilly,commune,False,ign_chef_lieu,3.2,Hôtel de Ville de Claye-Souilly,n2656471395,osm_townhall
+78049,Bazemont,commune,True,ign_chef_lieu,3.2,Mairie de Bazemont,n11036356623,osm_townhall
+78090,Bouafle,commune,True,ign_chef_lieu,3.2,Mairie de Bouafle,a283161388,osm_townhall
+78108,Les Bréviaires,commune,False,ign_chef_lieu,3.2,Mairie des Bréviaires,n1076887300,osm_townhall
+78576,Saint-Rémy-l'Honoré,commune,True,ign_chef_lieu,3.2,Mairie de Saint-Rémy-l'Honoré,n2116897938,osm_townhall
+91207,Égly,commune,True,ign_chef_lieu,3.2,Mairie d'Égly,n3499203493,osm_townhall
+77125,Condé-Sainte-Libiaire,commune,False,ign_chef_lieu,3.1,Mairie de Condé-Sainte-Libiaire,w252946100,osm_townhall
+78398,Les Mesnuls,commune,True,ign_chef_lieu,3.1,Mairie des Mesnuls,w222777509,osm_townhall
+78588,Saulx-Marchais,commune,True,ign_chef_lieu,3.1,Mairie de Saulx-Marchais,n2389919894,osm_townhall
+91093,Boullay-les-Troux,commune,True,ign_chef_lieu,3.1,Mairie de Boullay-les-Troux,a727895554,osm_townhall
+91659,Villabé,commune,False,ign_chef_lieu,3.1,Mairie de Villabé,a286601226,osm_townhall
+92072,Sèvres,commune,True,ign_chef_lieu,3.1,Hôtel de Ville,w146283515,osm_townhall
+95254,Frémécourt,commune,False,ign_chef_lieu,3.1,,n479939479,osm_townhall
+95487,Persan,commune,False,ign_chef_lieu,3.1,Mairie de Persan,a790359372,osm_townhall
+77525,Vinantes,commune,False,ign_chef_lieu,3.0,,w140654794,osm_townhall
+78269,Gazeran,commune,False,ign_chef_lieu,3.0,Mairie de Gazeran,n359915608,osm_townhall
+78418,Montesson,commune,True,ign_chef_lieu,3.0,Mairie de Montesson,a217987462,osm_townhall
+91200,Dourdan,commune,False,ign_chef_lieu,3.0,Mairie de Dourdan,a160974582,osm_townhall
+92033,Garches,commune,True,ign_chef_lieu,3.0,Mairie de Garches,a36758711,osm_townhall
+94028,Créteil,commune,True,ign_chef_lieu,3.0,Hôtel de Ville,a124827814,osm_townhall
+77083,Champs-sur-Marne,commune,False,ign_chef_lieu,2.9,Mairie de Champs-sur-Marne,a5346139,osm_townhall
+77449,Serris,commune,False,ign_chef_lieu,2.9,Hôtel de Ville,a232378492,osm_townhall
+78031,Auffreville-Brasseuil,commune,False,ign_chef_lieu,2.9,Mairie d'Auffreville-Brasseuil,n700770060,osm_townhall
+95387,Menouville,commune,False,ign_chef_lieu,2.9,Mairie de Menouville,n11043962233,osm_townhall
+77221,Guermantes,commune,False,ign_chef_lieu,2.8,,a232181104,osm_townhall
+77479,Vaires-sur-Marne,commune,False,ign_chef_lieu,2.8,Mairie de Vaires-sur-Marne,a755711076,osm_townhall
+77534,Yèbles,commune,False,ign_chef_lieu,2.8,,w219082062,osm_townhall
+78123,Carrières-sous-Poissy,commune,True,ign_chef_lieu,2.8,Hôtel de ville de Carrières-sous-Poissy,a184237730,osm_townhall
+78193,Dampierre-en-Yvelines,commune,True,ign_chef_lieu,2.8,Mairie de Dampierre-en-Yvelines,a758658136,osm_townhall
+78238,Flins-sur-Seine,commune,True,ign_chef_lieu,2.8,Mairie de Flins-sur-Seine,w132338459,osm_townhall
+78367,Mareil-Marly,commune,True,ign_chef_lieu,2.8,Mairie de Mareil-Marly,a294427264,osm_townhall
+78423,Montigny-le-Bretonneux,commune,True,ign_chef_lieu,2.8,Mairie de Montigny-Le-Bretonneux,a3180995,osm_townhall
+78621,Trappes,commune,True,ign_chef_lieu,2.8,Mairie de Trappes,a126315358,osm_townhall
+91435,Morsang-sur-Seine,commune,False,ign_chef_lieu,2.8,Mairie de Morsang-sur-Seine,w62918316,osm_townhall
+77254,Liverdy-en-Brie,commune,False,ign_chef_lieu,2.7,,n4798915561,osm_townhall
+77510,Villeneuve-Saint-Denis,commune,False,ign_chef_lieu,2.7,,w369263925,osm_townhall
+78168,Coignières,commune,True,ign_chef_lieu,2.7,Mairie de Coignières,a744913550,osm_townhall
+78265,Garancières,commune,False,ign_chef_lieu,2.7,Mairie de Garancières,n3584145428,osm_townhall
+78317,Jambville,commune,False,ign_chef_lieu,2.7,Mairie de Jambville,n11036364350,osm_townhall
+94038,L'Haÿ-les-Roses,commune,True,ign_chef_lieu,2.7,Mairie de l'Haÿ-les-Roses,w124362093,osm_townhall
+78036,Autouillet,commune,True,ign_chef_lieu,2.6,Mairie d'Autouillet,a799095712,osm_townhall
+78070,Boinville-en-Mantois,commune,False,ign_chef_lieu,2.6,,a481238216,osm_townhall
+78126,La Celle-Saint-Cloud,commune,True,ign_chef_lieu,2.6,Hôtel de Ville,a6858063,osm_townhall
+92047,Marnes-la-Coquette,commune,True,ign_chef_lieu,2.6,Mairie de Marnes-la-Coquette,a1170855884,osm_townhall
+95288,Groslay,commune,True,ign_chef_lieu,2.6,,n8171008890,osm_townhall
+77374,Pontcarré,commune,False,ign_chef_lieu,2.5,Mairie de Pontcarré,n1802297613,osm_townhall
+77450,Servon,commune,False,ign_chef_lieu,2.5,Mairie de Servon,w114195727,osm_townhall
+78096,Bourdonné,commune,False,ign_chef_lieu,2.5,Mairie de Bourdonné,n7272225381,osm_townhall
+78440,Les Mureaux,commune,True,ign_chef_lieu,2.5,Mairie des Mureaux,a264984970,osm_townhall
+78505,Prunay-le-Temple,commune,False,ign_chef_lieu,2.5,Mairie de Prunay-le-Temple,a264592492,osm_townhall
+78537,Saint-Arnoult-en-Yvelines,commune,False,ign_chef_lieu,2.5,Mairie de Saint-Arnoult-en-Yvelines,n4590488889,osm_townhall
+78620,Toussus-le-Noble,commune,True,ign_chef_lieu,2.5,Mairie de Toussus-le-Noble,w112141061,osm_townhall
+93074,Vaujours,commune,True,ign_chef_lieu,2.5,Mairie de Vaujours,a2939479522,osm_townhall
+95110,Brignancourt,commune,False,ign_chef_lieu,2.5,Mairie de Brignancourt,n11522368550,osm_townhall
+78551,Saint-Germain-en-Laye,commune,True,ign_chef_lieu,2.4,Hôtel de ville,a264488384,osm_townhall
+91105,Breuillet,commune,False,ign_chef_lieu,2.4,,n7043969162,osm_townhall
+95059,Berville,commune,False,ign_chef_lieu,2.4,Mairie de Berville,n11043965810,osm_townhall
+95213,Épiais-Rhus,commune,False,ign_chef_lieu,2.4,Mairie d'Épiais-Rhus,n480039403,osm_townhall
+95271,Génicourt,commune,True,ign_chef_lieu,2.4,,n480090370,osm_townhall
+60142,La Chapelle-en-Serval,commune,False,ign_chef_lieu,2.3,Mairie de la Chapelle-en-Serval,a302053814,osm_townhall
+77214,Gressy,commune,False,ign_chef_lieu,2.3,Mairie de Gressy,w138133077,osm_townhall
+77366,Le Plessis-l'Évêque,commune,False,ign_chef_lieu,2.3,Mairie du Plessis-l'Évêque,n4052535829,osm_townhall
+77513,Villenoy,commune,False,ign_chef_lieu,2.3,Mairie de Villenoy,n6585253205,osm_townhall
+78643,Vernouillet,commune,True,ign_chef_lieu,2.3,Mairie de Vernouillet,n4156350045,osm_townhall
+95142,Chars,commune,False,ign_chef_lieu,2.3,Mairie de Chars,n500854535,osm_townhall
+95268,Garges-lès-Gonesse,commune,True,ign_chef_lieu,2.3,Hôtel de Ville de Garges-lès-Gonesse,w269289083,osm_townhall
+95328,Labbeville,commune,False,ign_chef_lieu,2.3,Mairie de Labbeville,n4196739057,osm_townhall
+60429,Morangles,commune,False,ign_chef_lieu,2.2,Mairie de Morangles,w250959512,osm_townhall
+75118,Paris 18e Arrondissement,district,True,ign_chef_lieu_arrondissement,2.2,Mairie du 18e,a57764174,osm_townhall
+77307,Montévrain,commune,False,ign_chef_lieu,2.2,,n8242915097,osm_townhall
+77349,Othis,commune,False,ign_chef_lieu,2.2,,a339059998,osm_townhall
+78263,Gambais,commune,False,ign_chef_lieu,2.2,Mairie de Gambais,a540589186,osm_townhall
+78305,Herbeville,commune,True,ign_chef_lieu,2.2,Mairie d'Herbeville,n10287777231,osm_townhall
+78384,Médan,commune,True,ign_chef_lieu,2.2,Mairie de Médan,a351866670,osm_townhall
+91649,Vert-le-Petit,commune,False,ign_chef_lieu,2.2,Mairie de Vert-le-Petit,a216773142,osm_townhall
+95014,Andilly,commune,True,ign_chef_lieu,2.2,,n7973094397,osm_townhall
+95527,Roissy-en-France,commune,False,ign_chef_lieu,2.2,Mairie de Roissy-en-France,w104936963,osm_townhall
+77171,Esbly,commune,False,ign_chef_lieu,2.1,,n4798916936,osm_townhall
+78138,Chanteloup-les-Vignes,commune,True,ign_chef_lieu,2.1,Hôtel de ville de Chanteloup-les-Vignes,w224423684,osm_townhall
+78349,Longvilliers,commune,False,ign_chef_lieu,2.1,Mairie de Longvilliers,w133076869,osm_townhall
+91037,Auvernaux,commune,False,ign_chef_lieu,2.1,Mairie d'Auvernaux,n3510158104,osm_townhall
+91631,Varennes-Jarcy,commune,False,ign_chef_lieu,2.1,Mairie de Varennes-Jarcy,n3500676576,osm_townhall
+92019,Châtenay-Malabry,commune,True,ign_chef_lieu,2.1,Mairie de Châtenay-Malabry,a179343944,osm_townhall
+95394,Méry-sur-Oise,commune,True,ign_chef_lieu,2.1,,a460518788,osm_townhall
+77141,Coutevroult,commune,False,ign_chef_lieu,2.0,,n4798915894,osm_townhall
+77180,Férolles-Attilly,commune,False,ign_chef_lieu,2.0,Mairie de Férolles-Attilly,n1863066949,osm_townhall
+77372,Pomponne,commune,False,ign_chef_lieu,2.0,Mairie de Pomponne,n1936537145,osm_townhall
+78029,Aubergenville,commune,True,ign_chef_lieu,2.0,Mairie d'Aubergenville,a264724806,osm_townhall
+78498,Poissy,commune,True,ign_chef_lieu,2.0,Hôtel de Ville,a79072860,osm_townhall
+78674,Villepreux,commune,True,ign_chef_lieu,2.0,Mairie de Villepreux,a208013408,osm_townhall
+91159,Chevannes,commune,False,ign_chef_lieu,2.0,Mairie de Chevannes,n9309413563,osm_townhall
+91179,Le Coudray-Montceaux,commune,False,ign_chef_lieu,2.0,Mairie du Coudray-Montceaux,n3486566570,osm_townhall
+91377,Massy,commune,True,ign_chef_lieu,2.0,Mairie de Massy,w70670162,osm_townhall
+92078,Villeneuve-la-Garenne,commune,True,ign_chef_lieu,2.0,Mairie de Villeneuve-la-Garenne,a124795524,osm_townhall
+93010,Bondy,commune,True,ign_chef_lieu,2.0,Mairie de Bondy,a168354974,osm_townhall
+93013,Le Bourget,commune,True,ign_chef_lieu,2.0,Mairie du Bourget,a158620872,osm_townhall
+95039,Auvers-sur-Oise,commune,True,ign_chef_lieu,2.0,Hôtel de ville,a295048878,osm_townhall
+95218,Éragny-sur-Oise,commune,True,ign_chef_lieu,2.0,Mairie d'Éragny-sur-Oise,w64951941,osm_townhall
+95395,Le Mesnil-Aubry,commune,True,ign_chef_lieu,2.0,,n3870432573,osm_townhall
+78522,Rochefort-en-Yvelines,commune,False,ign_chef_lieu,1.9,Bailliage de Rochefort-en-Yvelines,a1374827498,osm_townhall
+78688,Voisins-le-Bretonneux,commune,True,ign_chef_lieu,1.9,Mairie de Voisins-le-Bretonneux,w84416843,osm_townhall
+94047,Mandres-les-Roses,commune,False,ign_chef_lieu,1.9,Mairie de Mandres-les-Roses,n11242075248,osm_townhall
+95008,Aincourt,commune,False,ign_chef_lieu,1.9,Mairie d'Aincourt,n1590040632,osm_townhall
+95456,Noisy-sur-Oise,commune,False,ign_chef_lieu,1.9,,n8171973270,osm_townhall
+95592,Seraincourt,commune,False,ign_chef_lieu,1.9,Mairie de Seraincourt,n11036375067,osm_townhall
+95633,Vaudherland,commune,True,ign_chef_lieu,1.9,Mairie de Vaudherland,n8119508755,osm_townhall
+95675,Villeron,commune,False,ign_chef_lieu,1.9,Mairie de Villeron,a263571016,osm_townhall
+77104,Châtres,commune,False,ign_chef_lieu,1.8,Mairie de Châtres,w148531556,osm_townhall
+77292,Messy,commune,False,ign_chef_lieu,1.8,Mairie de Messy,n1813700731,osm_townhall
+78246,Fontenay-Saint-Père,commune,False,ign_chef_lieu,1.8,Mairie de Fontenay-Saint-Père,w360581229,osm_townhall
+78267,Gargenville,commune,False,ign_chef_lieu,1.8,Mairie de Gargenville,w335677359,osm_townhall
+78361,Mantes-la-Jolie,commune,False,ign_chef_lieu,1.8,Mairie de Mantes-la-Jolie,a434426824,osm_townhall
+78389,Méré,commune,True,ign_chef_lieu,1.8,Mairie de Méré,n2395437286,osm_townhall
+78569,Sainte-Mesme,commune,False,ign_chef_lieu,1.8,Mairie de Sainte-Mesme,a557551818,osm_townhall
+78601,Sonchamp,commune,False,ign_chef_lieu,1.8,Mairie de Sonchamp,a155173516,osm_townhall
+78616,Thoiry,commune,True,ign_chef_lieu,1.8,Mairie de Thoiry,a800558478,osm_townhall
+91135,Champcueil,commune,False,ign_chef_lieu,1.8,Mairie de Champcueil,a306072506,osm_townhall
+91243,Fontenay-lès-Briis,commune,True,ign_chef_lieu,1.8,Mairie de Fontenay-lès-Briis,a496164910,osm_townhall
+92026,Courbevoie,commune,True,ign_chef_lieu,1.8,Hôtel de Ville de Courbevoie,a164645896,osm_townhall
+95594,Seugy,commune,False,ign_chef_lieu,1.8,Mairie de Seugy,w131809917,osm_townhall
+77358,Penchard,commune,False,ign_chef_lieu,1.7,Mairie de Penchard,a3221667,osm_townhall
+78164,Clairefontaine-en-Yvelines,commune,False,ign_chef_lieu,1.7,Mairie de Clairefontaine-en-Yvelines,a220184396,osm_townhall
+78242,Fontenay-le-Fleury,commune,True,ign_chef_lieu,1.7,Hôtel de Ville,w124548577,osm_townhall
+78335,Limay,commune,False,ign_chef_lieu,1.7,Hôtel de ville de Limay,a752369986,osm_townhall
+78439,Mulcent,commune,False,ign_chef_lieu,1.7,Mairie de Mulcent,w157182594,osm_townhall
+78672,Villennes-sur-Seine,commune,True,ign_chef_lieu,1.7,Mairie de Villennes-sur-Seine,w1484552580,osm_townhall
+91432,Morangis,commune,True,ign_chef_lieu,1.7,Mairie de Morangis,a184554904,osm_townhall
+91479,Paray-Vieille-Poste,commune,True,ign_chef_lieu,1.7,Mairie de Paray-Vieille-Poste,w63846234,osm_townhall
+91514,Quincy-sous-Sénart,commune,False,ign_chef_lieu,1.7,Mairie de Quincy-sous-Sénart,w150023970,osm_townhall
+95169,Commeny,commune,False,ign_chef_lieu,1.7,Mairie de Commeny,a41397487,osm_townhall
+95212,Épiais-lès-Louvres,commune,False,ign_chef_lieu,1.7,,n11042466132,osm_townhall
+95438,Moussy,commune,False,ign_chef_lieu,1.7,,a888318030,osm_townhall
+75111,Paris 11e Arrondissement,district,True,ign_chef_lieu_arrondissement,1.6,Mairie du 11e arrondissement,a2004949,osm_townhall
+77091,Les Chapelles-Bourbon,commune,False,ign_chef_lieu,1.6,,n9309443764,osm_townhall
+77196,Fresnes-sur-Marne,commune,False,ign_chef_lieu,1.6,Mairie de Fresnes-sur-Marne,w386806084,osm_townhall
+77259,Longperrier,commune,False,ign_chef_lieu,1.6,,n4798913771,osm_townhall
+78010,Les Alluets-le-Roi,commune,True,ign_chef_lieu,1.6,Mairie des Alluets-le-Roi,n1905675335,osm_townhall
+78013,Andelu,commune,True,ign_chef_lieu,1.6,Mairie d'Andelu,n7745328250,osm_townhall
+78030,Auffargis,commune,True,ign_chef_lieu,1.6,Mairie d'Aufargis,n7235630125,osm_townhall
+78350,Louveciennes,commune,True,ign_chef_lieu,1.6,Mairie de Louveciennes,a230780812,osm_townhall
+78403,Mézy-sur-Seine,commune,True,ign_chef_lieu,1.6,Mairie de Mézy-sur-Seine,a790075314,osm_townhall
+78681,Villiers-le-Mahieu,commune,False,ign_chef_lieu,1.6,Mairie de Villiers-le-Mahieu,a1286293684,osm_townhall
+91186,Courson-Monteloup,commune,True,ign_chef_lieu,1.6,,n1935226126,osm_townhall
+92076,Vaucresson,commune,True,ign_chef_lieu,1.6,Mairie de Vaucresson,a128737072,osm_townhall
+94054,Orly,commune,True,ign_chef_lieu,1.6,Mairie d'Orly,a286633268,osm_townhall
+95154,Chennevières-lès-Louvres,commune,False,ign_chef_lieu,1.6,Mairie de Chennevières-lès-Louvres,n11042465952,osm_townhall
+95205,Écouen,commune,True,ign_chef_lieu,1.6,Mairie d'Écouen,w355274027,osm_townhall
+95280,Goussainville,commune,True,ign_chef_lieu,1.6,Hôtel de Ville de Goussainville,w211000452,osm_townhall
+78677,Villette,commune,False,ign_chef_lieu,1.5,Mairie de Villette,w77490310,osm_townhall
+91667,Villemoisson-sur-Orge,commune,True,ign_chef_lieu,1.5,Mairie de Villemoisson-sur-Orge,a342606546,osm_townhall
+92050,Nanterre,commune,True,ign_chef_lieu,1.5,Hôtel de ville,a6701487,osm_townhall
+93078,Villepinte,commune,True,ign_chef_lieu,1.5,Mairie de Villepinte,a293035858,osm_townhall
+94080,Vincennes,commune,True,ign_chef_lieu,1.5,Mairie de Vincennes,a167633632,osm_townhall
+95040,Avernes,commune,False,ign_chef_lieu,1.5,Mairie d'Avernes,n3180965636,osm_townhall
+95430,Montsoult,commune,True,ign_chef_lieu,1.5,,n8171880061,osm_townhall
+95652,Viarmes,commune,False,ign_chef_lieu,1.5,Mairie de Viarmes,a294836554,osm_townhall
+75115,Paris 15e Arrondissement,district,True,ign_chef_lieu_arrondissement,1.4,Mairie du 15e Arrondissement,a28669938,osm_townhall
+77005,Annet-sur-Marne,commune,False,ign_chef_lieu,1.4,,n4798915912,osm_townhall
+77177,Favières,commune,False,ign_chef_lieu,1.4,Mairie de Favières,a299545592,osm_townhall
+77306,Montereau-sur-le-Jard,commune,False,ign_chef_lieu,1.4,Mairie de Montereau-sur-le-Jard,w113471960,osm_townhall
+77392,Rouvres,commune,False,ign_chef_lieu,1.4,,n3731471228,osm_townhall
+77515,Villeroy,commune,False,ign_chef_lieu,1.4,,a813126092,osm_townhall
+78239,Follainville-Dennemont,commune,False,ign_chef_lieu,1.4,Mairie de Follainville-Dennemont,a322533672,osm_townhall
+78327,Juziers,commune,False,ign_chef_lieu,1.4,Mairie de Juziers,a778392878,osm_townhall
+91161,Chilly-Mazarin,commune,True,ign_chef_lieu,1.4,Hôtel de Ville,a322429378,osm_townhall
+91228,Évry-Courcouronnes,commune,False,ign_chef_lieu,1.4,Hôtel de Ville d’Évry-Courcouronnes,a564114126,osm_townhall
+91326,Juvisy-sur-Orge,commune,True,ign_chef_lieu,1.4,Mairie de Juvisy-sur-Orge,w148076530,osm_townhall
+91458,Nozay,commune,True,ign_chef_lieu,1.4,Mairie de Nozay,a264951602,osm_townhall
+91525,Roinville,commune,False,ign_chef_lieu,1.4,Mairie de Roinville-sous-Dourdan,w365256277,osm_townhall
+92009,Bois-Colombes,commune,True,ign_chef_lieu,1.4,Mairie de Bois-Colombes,a159545622,osm_townhall
+92048,Meudon,commune,True,ign_chef_lieu,1.4,Hôtel de Ville de Meudon,w136292617,osm_townhall
+92073,Suresnes,commune,True,ign_chef_lieu,1.4,Mairie de Suresnes,w70962337,osm_townhall
+93029,Drancy,commune,True,ign_chef_lieu,1.4,,a13733081,osm_townhall
+94043,Le Kremlin-Bicêtre,commune,True,ign_chef_lieu,1.4,Mairie du Kremlin-Bicêtre,a134568640,osm_townhall
+94056,Périgny,commune,False,ign_chef_lieu,1.4,Mairie de Périgny-sur-Yerres,n4124636705,osm_townhall
+94070,Santeny,commune,False,ign_chef_lieu,1.4,,n4798391264,osm_townhall
+95026,Asnières-sur-Oise,commune,False,ign_chef_lieu,1.4,Mairie d'Asnières-sur-Oise,n7266748503,osm_townhall
+95094,Bouqueval,commune,True,ign_chef_lieu,1.4,,a652313440,osm_townhall
+95134,Champagne-sur-Oise,commune,False,ign_chef_lieu,1.4,Mairie de Champagne-sur-Oise,a294800982,osm_townhall
+95210,Enghien-les-Bains,commune,True,ign_chef_lieu,1.4,Hôtel de ville d'Enghien,w146887392,osm_townhall
+95214,Épinay-Champlâtreux,commune,False,ign_chef_lieu,1.4,Mairie d'Épinay-Champlâtreux,w1292892104,osm_townhall
+95250,Fosses,commune,False,ign_chef_lieu,1.4,Hôtel de ville de Fosses,a511110598,osm_townhall
+95352,Luzarches,commune,False,ign_chef_lieu,1.4,,w147421526,osm_townhall
+95424,Montigny-lès-Cormeilles,commune,True,ign_chef_lieu,1.4,Mairie de Montigny-lès-Cormeilles,a453314690,osm_townhall
+95436,Mours,commune,False,ign_chef_lieu,1.4,,a294813898,osm_townhall
+95492,Le Plessis-Gassot,commune,True,ign_chef_lieu,1.4,Mairie du Plessis-Gassot,n11032181354,osm_townhall
+95607,Taverny,commune,True,ign_chef_lieu,1.4,Hôtel de Ville de Taverny,a207436186,osm_townhall
+78206,Ecquevilly,commune,True,ign_chef_lieu,1.3,Mairie d'Ecquevilly,n1867285424,osm_townhall
+78368,Mareil-sur-Mauldre,commune,True,ign_chef_lieu,1.3,Mairie de Mareil-sur-Mauldre,n2397716263,osm_townhall
+91111,Briis-sous-Forges,commune,True,ign_chef_lieu,1.3,Mairie de Briis-sous-Forges,w361165464,osm_townhall
+93006,Bagnolet,commune,True,ign_chef_lieu,1.3,Mairie de Bagnolet,a23500381,osm_townhall
+93032,Gagny,commune,True,ign_chef_lieu,1.3,Mairie de Gagny,a290210436,osm_townhall
+95052,Beaumont-sur-Oise,commune,False,ign_chef_lieu,1.3,Mairie de Beaumont-sur-Oise,w167629659,osm_townhall
+95427,Montmagny,commune,True,ign_chef_lieu,1.3,,a3540389,osm_townhall
+95585,Sarcelles,commune,True,ign_chef_lieu,1.3,Mairie de Sarcelles,a710634264,osm_townhall
+77124,Conches-sur-Gondoire,commune,False,ign_chef_lieu,1.2,Mairie de Conches-sur-Gondoire,a1773975964,osm_townhall
+77248,Lesches,commune,False,ign_chef_lieu,1.2,Mairie de Lesches,w116107938,osm_townhall
+77363,Le Pin,commune,False,ign_chef_lieu,1.2,,n2639777856,osm_townhall
+78020,Arnouville-lès-Mantes,commune,False,ign_chef_lieu,1.2,Mairie d'Arnouville-lès-Mantes,w217921590,osm_townhall
+78196,Davron,commune,True,ign_chef_lieu,1.2,Mairie de Davron,w379681070,osm_townhall
+78334,Lévis-Saint-Nom,commune,True,ign_chef_lieu,1.2,Mairie de Lévis-Saint-Nom,n1094698945,osm_townhall
+78442,Neauphle-le-Château,commune,True,ign_chef_lieu,1.2,Mairie de Neauphle-le-Château,a586605870,osm_townhall
+78517,Rambouillet,commune,False,ign_chef_lieu,1.2,Mairie de Rambouillet,a292284766,osm_townhall
+78545,Saint-Cyr-l'École,commune,True,ign_chef_lieu,1.2,Mairie de Saint-Cyr l'École,a252299800,osm_townhall
+78640,Vélizy-Villacoublay,commune,True,ign_chef_lieu,1.2,Hôtel de ville de Vélizy-Villacoublay,a300756956,osm_townhall
+91244,Fontenay-le-Vicomte,commune,False,ign_chef_lieu,1.2,Mairie de Fontenay-le-Vicomte,w108257812,osm_townhall
+91249,Forges-les-Bains,commune,True,ign_chef_lieu,1.2,,a685799538,osm_townhall
+91477,Palaiseau,commune,True,ign_chef_lieu,1.2,Hôtel de ville de Palaiseau,w71356430,osm_townhall
+93072,Stains,commune,True,ign_chef_lieu,1.2,Mairie de Stains,w77631184,osm_townhall
+94015,Bry-sur-Marne,commune,True,ign_chef_lieu,1.2,Hôtel de Ville,a240801550,osm_townhall
+95056,Belloy-en-France,commune,False,ign_chef_lieu,1.2,,n3529756130,osm_townhall
+95091,Bouffémont,commune,True,ign_chef_lieu,1.2,Mairie de Bouffémont,n2287682234,osm_townhall
+95229,Ézanville,commune,True,ign_chef_lieu,1.2,Mairie d'Ézanville,a263866346,osm_townhall
+95388,Menucourt,commune,True,ign_chef_lieu,1.2,,n8171713576,osm_townhall
+60494,Plailly,commune,False,ign_chef_lieu,1.1,Mairie de Plailly,w618281011,osm_townhall
+77146,Croissy-Beaubourg,commune,False,ign_chef_lieu,1.1,Mairie de Croissy-Beaubourg,w115417625,osm_townhall
+77268,Magny-le-Hongre,commune,False,ign_chef_lieu,1.1,,a406006712,osm_townhall
+77296,Moissy-Cramayel,commune,False,ign_chef_lieu,1.1,Mairie de Moissy-Cramayel,a228295594,osm_townhall
+77462,Thieux,commune,False,ign_chef_lieu,1.1,,a805876248,osm_townhall
+77511,Villeneuve-sous-Dammartin,commune,False,ign_chef_lieu,1.1,,n4798913794,osm_townhall
+78314,Issou,commune,False,ign_chef_lieu,1.1,Mairie d'Issou,a801253502,osm_townhall
+78481,Le Pecq,commune,True,ign_chef_lieu,1.1,Mairie du Pecq,a540270864,osm_townhall
+78605,Tacoignières,commune,False,ign_chef_lieu,1.1,Mairie de Tacoignières,n935323066,osm_townhall
+91284,Les Granges-le-Roi,commune,False,ign_chef_lieu,1.1,Mairie des Granges-le-Roi,n3486572687,osm_townhall
+91540,Saint-Chéron,commune,False,ign_chef_lieu,1.1,Mairie de Saint-Chéron,a160962020,osm_townhall
+94046,Maisons-Alfort,commune,True,ign_chef_lieu,1.1,Mairie de Maisons-Alfort,w63675330,osm_townhall
+95313,L'Isle-Adam,commune,True,ign_chef_lieu,1.1,Mairie de L'Isle-Adam,a144527252,osm_townhall
+95331,Lassy,commune,False,ign_chef_lieu,1.1,,a547514072,osm_townhall
+95422,Montgeroult,commune,True,ign_chef_lieu,1.1,Mairie de Montgeroult,w1473666932,osm_townhall
+95500,Pontoise,commune,True,ign_chef_lieu,1.1,Hôtel de Ville,a88003220,osm_townhall
+60086,Boran-sur-Oise,commune,False,ign_chef_lieu,1.0,Mairie de Boran-sur-Oise,a376485322,osm_townhall
+60226,Ève,commune,False,ign_chef_lieu,1.0,Mairie d'Ève,w313901984,osm_townhall
+60666,Ver-sur-Launette,commune,False,ign_chef_lieu,1.0,Mairie de Ver-sur-Launette,a495982286,osm_townhall
+77040,Boissise-le-Roi,commune,False,ign_chef_lieu,1.0,Mairie de Boissise-le-Roi,a226602416,osm_townhall
+77121,Collégien,commune,False,ign_chef_lieu,1.0,,w115405802,osm_townhall
+77127,Coubert,commune,False,ign_chef_lieu,1.0,,a352522842,osm_townhall
+77181,Ferrières-en-Brie,commune,False,ign_chef_lieu,1.0,Mairie de Ferrières-en-Brie,w116082084,osm_townhall
+77209,Gouvernes,commune,False,ign_chef_lieu,1.0,Mairie de Gouvernes,a1773474770,osm_townhall
+77420,Saint-Mard,commune,False,ign_chef_lieu,1.0,Mairie de Saint-Mard,a401070658,osm_townhall
+77447,Seine-Port,commune,False,ign_chef_lieu,1.0,La Baronnie,a228367212,osm_townhall
+77498,Vignely,commune,False,ign_chef_lieu,1.0,,a219007256,osm_townhall
+78278,Goupillières,commune,False,ign_chef_lieu,1.0,Mairie de Goupillières,w397846331,osm_townhall
+78329,Lainville-en-Vexin,commune,False,ign_chef_lieu,1.0,Mairie de Lainville-en-Vexin,n596121585,osm_townhall
+78380,Maule,commune,True,ign_chef_lieu,1.0,Hôtel de ville de Maule,a264536798,osm_townhall
+78383,Maurepas,commune,True,ign_chef_lieu,1.0,Mairie de Maurepas,a266139730,osm_townhall
+78466,Orgeval,commune,True,ign_chef_lieu,1.0,Mairie d'Orgeval,a205115808,osm_townhall
+78536,Sailly,commune,False,ign_chef_lieu,1.0,Mairie de Sailly,n588420608,osm_townhall
+78562,Saint-Léger-en-Yvelines,commune,False,ign_chef_lieu,1.0,Mairie de Saint-Léger-en-Yvelines,a758700064,osm_townhall
+78650,Le Vésinet,commune,True,ign_chef_lieu,1.0,Mairie du Vésinet,a218391210,osm_townhall
+91021,Arpajon,commune,True,ign_chef_lieu,1.0,Mairie d'Arpajon,a272272632,osm_townhall
+91318,Janville-sur-Juine,commune,False,ign_chef_lieu,1.0,Mairie de Janville-sur-Juine,a205463136,osm_townhall
+91340,Lisses,commune,False,ign_chef_lieu,1.0,Mairie de Lisses,a258462752,osm_townhall
+91345,Longjumeau,commune,True,ign_chef_lieu,1.0,Mairie de Longjumeau,a170916690,osm_townhall
+91577,Saintry-sur-Seine,commune,False,ign_chef_lieu,1.0,Mairie de Saintry-sur-Seine,a124940998,osm_townhall
+91589,Savigny-sur-Orge,commune,True,ign_chef_lieu,1.0,Mairie de Savigny-sur-Orge,a3956645,osm_townhall
+91619,Torfou,commune,False,ign_chef_lieu,1.0,Mairie de Torfou,a661238020,osm_townhall
+92004,Asnières-sur-Seine,commune,True,ign_chef_lieu,1.0,Hôtel-de-Ville,w70784250,osm_townhall
+92012,Boulogne-Billancourt,commune,True,ign_chef_lieu,1.0,Hôtel de ville de Boulogne-Billancourt,w63996758,osm_townhall
+92025,Colombes,commune,True,ign_chef_lieu,1.0,Mairie de Colombes,a159147628,osm_townhall
+92044,Levallois-Perret,commune,True,ign_chef_lieu,1.0,Hôtel de Ville,a4425445,osm_townhall
+92049,Montrouge,commune,True,ign_chef_lieu,1.0,Mairie de Montrouge,w83237614,osm_townhall
+93014,Clichy-sous-Bois,commune,True,ign_chef_lieu,1.0,,a155463932,osm_townhall
+93045,Les Lilas,commune,True,ign_chef_lieu,1.0,Mairie des Lilas,a146857038,osm_townhall
+93061,Le Pré-Saint-Gervais,commune,True,ign_chef_lieu,1.0,Mairie du Pré-Saint-Gervais,a146497716,osm_townhall
+93062,Le Raincy,commune,True,ign_chef_lieu,1.0,Mairie du Raincy,w144236246,osm_townhall
+93066,Saint-Denis,commune,True,ign_chef_lieu,1.0,Hôtel de ville de Saint-Denis,a127961236,osm_townhall
+93071,Sevran,commune,True,ign_chef_lieu,1.0,Mairie de Sevran,a1808502790,osm_townhall
+93079,Villetaneuse,commune,True,ign_chef_lieu,1.0,Hôtel de Ville,a38317767,osm_townhall
+94004,Boissy-Saint-Léger,commune,True,ign_chef_lieu,1.0,Mairie de Boissy-Saint-Léger,a207029868,osm_townhall
+94016,Cachan,commune,True,ign_chef_lieu,1.0,Hôtel de Ville de Cachan,a2006585,osm_townhall
+94021,Chevilly-Larue,commune,True,ign_chef_lieu,1.0,Mairie de Chevilly-Larue,a311092716,osm_townhall
+94044,Limeil-Brévannes,commune,True,ign_chef_lieu,1.0,Mairie de Limeil-Brévannes,a3095521,osm_townhall
+94067,Saint-Mandé,commune,True,ign_chef_lieu,1.0,Mairie de Saint-Mandé,w147360889,osm_townhall
+94074,Valenton,commune,True,ign_chef_lieu,1.0,Hôtel de ville de Valenton,a170657194,osm_townhall
+95018,Argenteuil,commune,True,ign_chef_lieu,1.0,Hôtel de Ville d'Argenteuil,a140684652,osm_townhall
+95183,Courdimanche,commune,True,ign_chef_lieu,1.0,Mairie de Courdimanche,n8168685681,osm_townhall
+95203,Eaubonne,commune,True,ign_chef_lieu,1.0,Hôtel de Ville,a155249118,osm_townhall
+95426,Montlignon,commune,True,ign_chef_lieu,1.0,,a295825254,osm_townhall
+95476,Osny,commune,True,ign_chef_lieu,1.0,Château de Grouchy,a202336396,osm_townhall
+95489,Piscop,commune,True,ign_chef_lieu,1.0,,w406308483,osm_townhall
+95509,Puiseux-en-France,commune,False,ign_chef_lieu,1.0,Mairie de Puiseux-en-France,w131913716,osm_townhall
+95555,Saint-Gratien,commune,True,ign_chef_lieu,1.0,Mairie de Saint-Gratien,a158787612,osm_townhall
+95604,Survilliers,commune,False,ign_chef_lieu,1.0,Hôtel de Ville de Survilliers,w131931167,osm_townhall
+60060,Belle-Église,commune,False,ign_chef_lieu,0.9,Mairie de Belle-Église,a376319284,osm_townhall
+60139,Chambly,commune,False,ign_chef_lieu,0.9,Hôtel de Ville de Chambly,a300895824,osm_townhall
+60172,Coye-la-Forêt,commune,False,ign_chef_lieu,0.9,Mairie de Coye-la-Forêt,w150808200,osm_townhall
+77335,Chauconin-Neufmontiers,commune,False,ign_chef_lieu,0.9,,w116129531,osm_townhall
+77495,Vert-Saint-Denis,commune,False,ign_chef_lieu,0.9,Mairie de Vert-Saint-Denis,a3206201,osm_townhall
+78043,Bailly,commune,True,ign_chef_lieu,0.9,Mairie de Bailly,w103879025,osm_townhall
+78124,Carrières-sur-Seine,commune,True,ign_chef_lieu,0.9,Mairie de Carrières-sur-Seine,a262793894,osm_townhall
+78190,Croissy-sur-Seine,commune,True,ign_chef_lieu,0.9,Hôtel de ville de Croissy-sur-seine,a300491972,osm_townhall
+78642,Verneuil-sur-Seine,commune,True,ign_chef_lieu,0.9,Mairie de Verneuil-sur-Seine,n1596035484,osm_townhall
+91549,Sainte-Geneviève-des-Bois,commune,True,ign_chef_lieu,0.9,Mairie de Sainte-Geneviève-des-Bois,w135598060,osm_townhall
+91570,Saint-Michel-sur-Orge,commune,True,ign_chef_lieu,0.9,Mairie de Saint-Michel-sur-Orge,w143694505,osm_townhall
+91685,Villiers-sur-Orge,commune,True,ign_chef_lieu,0.9,Mairie de Villiers-sur-Orge,w146205719,osm_townhall
+91691,Yerres,commune,True,ign_chef_lieu,0.9,Mairie de Yerres,w133510474,osm_townhall
+92024,Clichy,commune,True,ign_chef_lieu,0.9,Mairie de Clichy-la-Garenne,w74471585,osm_townhall
+94078,Villeneuve-Saint-Georges,commune,True,ign_chef_lieu,0.9,Hôtel de ville de Villeneuve-Saint-Georges,a274347502,osm_townhall
+95002,Ableiges,commune,False,ign_chef_lieu,0.9,,a626115958,osm_townhall
+95060,Bessancourt,commune,True,ign_chef_lieu,0.9,Mairie de Bessancourt,a206711004,osm_townhall
+95298,Haravilliers,commune,False,ign_chef_lieu,0.9,,a889243254,osm_townhall
+95365,Mareil-en-France,commune,False,ign_chef_lieu,0.9,Mairie de Mareil-en-France,w132250244,osm_townhall
+77108,Chelles,commune,True,ign_chef_lieu,0.8,Mairie de Chelles,a222077440,osm_townhall
+77382,Quincy-Voisins,commune,False,ign_chef_lieu,0.8,Mairie de Quincy-Voisins,w116158619,osm_townhall
+78402,Mézières-sur-Seine,commune,False,ign_chef_lieu,0.8,Hôtel de ville de Mézières-sur-Seine,a264544536,osm_townhall
+91114,Brunoy,commune,True,ign_chef_lieu,0.8,Mairie de Brunoy,w1422158606,osm_townhall
+91635,Vauhallan,commune,True,ign_chef_lieu,0.8,Mairie de Vauhallan,a126244056,osm_townhall
+92063,Rueil-Malmaison,commune,True,ign_chef_lieu,0.8,Mairie de Rueil-Malmaison,w72468698,osm_townhall
+93039,L'Île-Saint-Denis,commune,True,ign_chef_lieu,0.8,Mairie de l'Île-Saint-Denis,a126459594,osm_townhall
+94059,Le Plessis-Trévise,commune,True,ign_chef_lieu,0.8,Hôtel de Ville,n2901068912,osm_townhall
+95078,Boissy-l'Aillerie,commune,True,ign_chef_lieu,0.8,Mairie de Boissy-l'Aillerie,a871839886,osm_townhall
+95219,Ermont,commune,True,ign_chef_lieu,0.8,Mairie d'Ermont,w43691936,osm_townhall
+95371,Marly-la-Ville,commune,False,ign_chef_lieu,0.8,,w131917414,osm_townhall
+77139,Courtry,commune,False,ign_chef_lieu,0.7,Mairie de Courtry,a208131000,osm_townhall
+77464,Thorigny-sur-Marne,commune,False,ign_chef_lieu,0.7,Mairie de Thorigny-sur-Marne,a232440186,osm_townhall
+77528,Voisenon,commune,False,ign_chef_lieu,0.7,Mairie de Voisenon,a230269284,osm_townhall
+78084,Boissy-sans-Avoir,commune,True,ign_chef_lieu,0.7,Mairie de Boissy-sans-Avoir,w400433964,osm_townhall
+78117,Buc,commune,True,ign_chef_lieu,0.7,Mairie de Buc,w637927969,osm_townhall
+78128,Cernay-la-Ville,commune,True,ign_chef_lieu,0.7,Mairie de Cernay-la-Ville,a573842076,osm_townhall
+78162,Choisel,commune,True,ign_chef_lieu,0.7,Mairie de Choisel,a798247334,osm_townhall
+78189,Crespières,commune,True,ign_chef_lieu,0.7,Mairie de Crespières,a457495158,osm_townhall
+78501,Porcheville,commune,False,ign_chef_lieu,0.7,Hôtel de ville de Porcheville,a264674708,osm_townhall
+78624,Triel-sur-Seine,commune,True,ign_chef_lieu,0.7,Hôtel de ville,a341594670,osm_townhall
+78683,Villiers-Saint-Frédéric,commune,True,ign_chef_lieu,0.7,Mairie de Villiers Saint-Frédéric,a121567928,osm_townhall
+91386,Mennecy,commune,False,ign_chef_lieu,0.7,Mairie de Mennecy,w118087290,osm_townhall
+91494,Le Plessis-Pâté,commune,True,ign_chef_lieu,0.7,Mairie du Plessis-Pâté,n3500552273,osm_townhall
+94003,Arcueil,commune,True,ign_chef_lieu,0.7,Hôtel de Ville d'Arcueil,a1917083,osm_townhall
+94022,Choisy-le-Roi,commune,True,ign_chef_lieu,0.7,Mairie de Choisy-le-Roi,a132265474,osm_townhall
+94079,Villiers-sur-Marne,commune,True,ign_chef_lieu,0.7,Mairie de Villiers-sur-Marne,w25278391,osm_townhall
+75105,Paris 5e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.6,Mairie du 5e arrondissement,a1321315,osm_townhall
+75106,Paris 6e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.6,Mairie du 6e arrondissement,a1952805,osm_townhall
+77294,Mitry-Mory,commune,False,ign_chef_lieu,0.6,Mairie de Mitry-Mory,w112217116,osm_townhall
+77521,Villiers-sur-Morin,commune,False,ign_chef_lieu,0.6,,n9309443760,osm_townhall
+78053,Béhoust,commune,False,ign_chef_lieu,0.6,Mairie de Béhoust,a802915296,osm_townhall
+78220,Les Essarts-le-Roi,commune,True,ign_chef_lieu,0.6,Mairie des Essarts-le-Roi,a266215648,osm_townhall
+78550,Saint-Germain-de-la-Grange,commune,True,ign_chef_lieu,0.6,Mairie de Saint-Germain-de-la-Grange,a798674916,osm_townhall
+91044,Ballainvilliers,commune,True,ign_chef_lieu,0.6,Mairie de Ballainvilliers,a292436722,osm_townhall
+91332,Leudeville,commune,False,ign_chef_lieu,0.6,Mairie de Leudeville,n3500561835,osm_townhall
+92022,Chaville,commune,True,ign_chef_lieu,0.6,Mairie de Chaville,a264324956,osm_townhall
+92064,Saint-Cloud,commune,True,ign_chef_lieu,0.6,Mairie de Saint-Cloud,w132284692,osm_townhall
+93027,La Courneuve,commune,True,ign_chef_lieu,0.6,Hôtel de ville de La Courneuve,w67177553,osm_townhall
+93050,Neuilly-sur-Marne,commune,True,ign_chef_lieu,0.6,Mairie de Neuilly-sur-Marne,w145440091,osm_townhall
+95042,Baillet-en-France,commune,True,ign_chef_lieu,0.6,Mairie de Baillet-en-France,a806927476,osm_townhall
+95061,Béthemont-la-Forêt,commune,True,ign_chef_lieu,0.6,Mairie de Béthemont-la-Forêt,w696665023,osm_townhall
+75114,Paris 14e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.5,Mairie du 14ème arrondissement,w13625516,osm_townhall
+78300,Hargeville,commune,False,ign_chef_lieu,0.5,Mairie d'Hargeville,w241756846,osm_townhall
+78325,Jumeauville,commune,False,ign_chef_lieu,0.5,Mairie de Jumeauville,w310594838,osm_townhall
+78647,Vert,commune,False,ign_chef_lieu,0.5,Mairie de Vert,a154983504,osm_townhall
+91235,Fleury-Mérogis,commune,True,ign_chef_lieu,0.5,Mairie de Fleury-Merogis,w115379943,osm_townhall
+93015,Coubron,commune,True,ign_chef_lieu,0.5,,w145232333,osm_townhall
+95199,Domont,commune,True,ign_chef_lieu,0.5,Mairie de Domont,w71163036,osm_townhall
+95303,Le Heaulme,commune,False,ign_chef_lieu,0.5,,n8171353223,osm_townhall
+95452,Nointel,commune,False,ign_chef_lieu,0.5,,n8171972390,osm_townhall
+95488,Pierrelaye,commune,True,ign_chef_lieu,0.5,Mairie de Pierrelaye,a294176628,osm_townhall
+95582,Sannois,commune,True,ign_chef_lieu,0.5,Hôtel de ville de Sannois,a137998132,osm_townhall
+95584,Santeuil,commune,False,ign_chef_lieu,0.5,Mairie de Santeuil,a41247079,osm_townhall
+75113,Paris 13e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.4,Mairie du 13e arrondissement,a2375009,osm_townhall
+75120,Paris 20e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.4,Mairie du 20e arrondissement,a2206541,osm_townhall
+77053,Brie-Comte-Robert,commune,False,ign_chef_lieu,0.4,Mairie de Brie-Comte-Robert,w113064466,osm_townhall
+77055,Brou-sur-Chantereine,commune,False,ign_chef_lieu,0.4,Mairie de Brou-sur-Chantereine,n8228934441,osm_townhall
+78356,Magny-les-Hameaux,commune,True,ign_chef_lieu,0.4,Mairie de Magny-les-Hameaux,a240020646,osm_townhall
+91136,Champlan,commune,True,ign_chef_lieu,0.4,Mairie de Champlan,a292606028,osm_townhall
+91226,Étréchy,commune,False,ign_chef_lieu,0.4,Mairie d'Étréchy,w145488916,osm_townhall
+91292,Guibeville,commune,False,ign_chef_lieu,0.4,Mairie de Guibeville,a292590032,osm_townhall
+92002,Antony,commune,True,ign_chef_lieu,0.4,Hôtel de ville d'Antony,a161771214,osm_townhall
+92060,Le Plessis-Robinson,commune,True,ign_chef_lieu,0.4,Mairie du Plessis-Robinson,a140414394,osm_townhall
+92077,Ville-d'Avray,commune,True,ign_chef_lieu,0.4,Mairie de Ville-d'Avray,a258908420,osm_townhall
+93007,Le Blanc-Mesnil,commune,True,ign_chef_lieu,0.4,Mairie du Blanc-Mesnil,a168578914,osm_townhall
+93031,Épinay-sur-Seine,commune,True,ign_chef_lieu,0.4,Hôtel de Ville,a140344600,osm_townhall
+94081,Vitry-sur-Seine,commune,True,ign_chef_lieu,0.4,Hôtel de Ville de Vitry-sur-Seine,a3756609,osm_townhall
+77309,Monthyon,commune,False,ign_chef_lieu,0.3,Mairie de Monthyon,w116123517,osm_townhall
+77326,Nandy,commune,False,ign_chef_lieu,0.3,Mairie de Nandy,w113489074,osm_townhall
+78072,Boinvilliers,commune,False,ign_chef_lieu,0.3,Mairie de Boinvilliers,w133498921,osm_townhall
+78321,Jouars-Pontchartrain,commune,True,ign_chef_lieu,0.3,Mairie de Jouars-Pontchartrain,w558909334,osm_townhall
+78431,Morainvilliers,commune,True,ign_chef_lieu,0.3,Marie de Morainvilliers,a330506254,osm_townhall
+78638,Vaux-sur-Seine,commune,True,ign_chef_lieu,0.3,Mairie de Vaux-sur-Seine,w959755207,osm_townhall
+91534,Saclay,commune,True,ign_chef_lieu,0.3,Mairie de Saclay,a137599294,osm_townhall
+95088,Bonneuil-en-France,commune,True,ign_chef_lieu,0.3,,n10728672371,osm_townhall
+95253,Frémainville,commune,False,ign_chef_lieu,0.3,Mairie de Frémainville,a128438072,osm_townhall
+95572,Saint-Ouen-l'Aumône,commune,True,ign_chef_lieu,0.3,Mairie de Saint-Ouen-l'Aumône,w102465085,osm_townhall
+77243,Lagny-sur-Marne,commune,False,ign_chef_lieu,0.2,Mairie de Lagny-sur-Marne,a3171999,osm_townhall
+77337,Noisiel,commune,False,ign_chef_lieu,0.2,Mairie de Noisiel,a232274546,osm_townhall
+78104,Breuil-Bois-Robert,commune,False,ign_chef_lieu,0.2,Mairie de Breuil-Bois-Robert,n700914955,osm_townhall
+91274,Gometz-la-Ville,commune,True,ign_chef_lieu,0.2,Mairie de Gometz-la-Ville,w362695009,osm_townhall
+91338,Limours,commune,True,ign_chef_lieu,0.2,Mairie de Limours,a23494285,osm_townhall
+92046,Malakoff,commune,True,ign_chef_lieu,0.2,Mairie de Malakoff,a167586574,osm_townhall
+93001,Aubervilliers,commune,True,ign_chef_lieu,0.2,Mairie d'Aubervilliers,a2263525,osm_townhall
+94019,Chennevières-sur-Marne,commune,True,ign_chef_lieu,0.2,Hotel de ville,a218513388,osm_townhall
+95074,Boisemont,commune,True,ign_chef_lieu,0.2,Mairie de Boisemont,a198723666,osm_townhall
+95323,Jouy-le-Moutier,commune,True,ign_chef_lieu,0.2,Mairie de Jouy-le-Moutier,a2875163,osm_townhall
+95574,Saint-Prix,commune,True,ign_chef_lieu,0.2,Hôtel de Ville,a160989722,osm_townhall
+95611,Theuville,commune,False,ign_chef_lieu,0.2,,n8172550578,osm_townhall
+75107,Paris 7e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.1,Mairie du 7e Arrondissement,a208893526,osm_townhall
+77217,Grisy-Suisnes,commune,False,ign_chef_lieu,0.1,Mairie de Grisy-Suisnes,a226798510,osm_townhall
+77273,Marchémoret,commune,False,ign_chef_lieu,0.1,,w151275738,osm_townhall
+77373,Pontault-Combault,commune,False,ign_chef_lieu,0.1,Mairie de Pontault-Combault,a224051546,osm_townhall
+77445,Savigny-le-Temple,commune,False,ign_chef_lieu,0.1,Mairie de Savigny-le-Temple,a224510006,osm_townhall
+78015,Andrésy,commune,True,ign_chef_lieu,0.1,Hôtel de ville d'Andrésy,w132581986,osm_townhall
+78062,Beynes,commune,True,ign_chef_lieu,0.1,Mairie de Beynes,a126130136,osm_townhall
+78146,Chatou,commune,True,ign_chef_lieu,0.1,Hôtel de ville de Chatou,w49158537,osm_townhall
+78160,Chevreuse,commune,True,ign_chef_lieu,0.1,Mairie de Chevreuse,a810774542,osm_townhall
+78358,Maisons-Laffitte,commune,True,ign_chef_lieu,0.1,Mairie de Maisons-Laffitte,a264875030,osm_townhall
+78382,Maurecourt,commune,True,ign_chef_lieu,0.1,Mairie de Maurecourt,a1136757946,osm_townhall
+91097,Boussy-Saint-Antoine,commune,False,ign_chef_lieu,0.1,Mairie de Boussy-Saint-Antoine,a299331280,osm_townhall
+91216,Épinay-sur-Orge,commune,True,ign_chef_lieu,0.1,Hôtel de Ville,a311034788,osm_townhall
+91330,Lardy,commune,False,ign_chef_lieu,0.1,Mairie de Lardy,a206424410,osm_townhall
+91347,Longpont-sur-Orge,commune,True,ign_chef_lieu,0.1,Mairie de Longpont-sur-Orge,a291965526,osm_townhall
+91657,Vigneux-sur-Seine,commune,True,ign_chef_lieu,0.1,Mairie de Vigneux-sur-Seine,a291468668,osm_townhall
+91687,Viry-Châtillon,commune,True,ign_chef_lieu,0.1,Mairie de Viry-Châtillon,a195161296,osm_townhall
+93049,Neuilly-Plaisance,commune,True,ign_chef_lieu,0.1,Mairie de Neuilly-Plaisance,w120657881,osm_townhall
+93064,Rosny-sous-Bois,commune,True,ign_chef_lieu,0.1,Mairie de Rosny-sous-Bois,a288326926,osm_townhall
+93070,Saint-Ouen-sur-Seine,commune,True,ign_chef_lieu,0.1,Hôtel de ville de Saint-Ouen,a147684086,osm_townhall
+93077,Villemomble,commune,True,ign_chef_lieu,0.1,Mairie de Villemomble,a288565534,osm_townhall
+94002,Alfortville,commune,True,ign_chef_lieu,0.1,Mairie d'Alfortville,a125117966,osm_townhall
+94011,Bonneuil-sur-Marne,commune,True,ign_chef_lieu,0.1,Hôtel de ville de Bonneuil-sur-Marne,a213763958,osm_townhall
+94052,Nogent-sur-Marne,commune,True,ign_chef_lieu,0.1,Hôtel de ville,a945730162,osm_townhall
+94068,Saint-Maur-des-Fossés,commune,True,ign_chef_lieu,0.1,Hôtel de ville de Saint-Maur-des-Fossés,a350830216,osm_townhall
+95055,Bellefontaine,commune,False,ign_chef_lieu,0.1,Mairie de Bellefontaine,w131930801,osm_townhall
+95197,Deuil-la-Barre,commune,True,ign_chef_lieu,0.1,,a293891922,osm_townhall
+95369,Margency,commune,True,ign_chef_lieu,0.1,Mairie de Margency,a216266876,osm_townhall
+95370,Marines,commune,False,ign_chef_lieu,0.1,Mairie de Marines,a803884590,osm_townhall
+95539,Saint-Brice-sous-Forêt,commune,True,ign_chef_lieu,0.1,,a631723782,osm_townhall
+95580,Saint-Witz,commune,False,ign_chef_lieu,0.1,Mairie de Saint-Witz,a160976516,osm_townhall
+75110,Paris 10e Arrondissement,district,True,ign_chef_lieu_arrondissement,0.0,Mairie du 10e arrondissement,a126406594,osm_townhall
+77067,Cesson,commune,False,ign_chef_lieu,0.0,Mairie de Cesson,a226446436,osm_townhall
+77252,Limoges-Fourches,commune,False,ign_chef_lieu,0.0,Mairie de Limoges-Fourches,a301429394,osm_townhall
+77390,Roissy-en-Brie,commune,False,ign_chef_lieu,0.0,Mairie de Roissy-en-Brie,a226054118,osm_townhall
+77438,Saint-Thibault-des-Vignes,commune,False,ign_chef_lieu,0.0,,a232367922,osm_townhall
+77468,Torcy,commune,False,ign_chef_lieu,0.0,Mairie de Torcy,a39207713,osm_townhall
+78087,Bonnelles,commune,True,ign_chef_lieu,0.0,Mairie de Bonnelles,a808690632,osm_townhall
+78152,Chavenay,commune,True,ign_chef_lieu,0.0,Mairie de Chavenay,a126932724,osm_townhall
+78281,Goussonville,commune,False,ign_chef_lieu,0.0,Mairie de Goussonville,a650607850,osm_townhall
+78311,Houilles,commune,True,ign_chef_lieu,0.0,Mairie de Houilles,w131524106,osm_townhall
+78571,Saint-Nom-la-Bretèche,commune,True,ign_chef_lieu,0.0,Mairie de Saint-Nom-la-Bretèche,a295375328,osm_townhall
+78591,Septeuil,commune,False,ign_chef_lieu,0.0,Mairie de Septeuil,a264596438,osm_townhall
+78646,Versailles,commune,True,ign_chef_lieu,0.0,Hôtel de Ville,a149260362,osm_townhall
+91085,Boissy-sous-Saint-Yon,commune,False,ign_chef_lieu,0.0,Mairie de Boissy-sous-Saint-Yon,a322311898,osm_townhall
+91156,Cheptainville,commune,False,ign_chef_lieu,0.0,Mairie de Cheptainville,w107365740,osm_townhall
+91174,Corbeil-Essonnes,commune,False,ign_chef_lieu,0.0,Mairie de Corbeil-Essonnes,a127169860,osm_townhall
+91461,Ollainville,commune,True,ign_chef_lieu,0.0,Mairie d'Ollainville,a197031448,osm_townhall
+91468,Ormoy,commune,False,ign_chef_lieu,0.0,Mairie d'Ormoy,a2443111694,osm_townhall
+91587,Saulx-les-Chartreux,commune,True,ign_chef_lieu,0.0,Mairie de Saulx-les-Chartreux,a292597708,osm_townhall
+91665,La Ville-du-Bois,commune,True,ign_chef_lieu,0.0,Mairie de La Ville-du-Bois,a322367406,osm_townhall
+92014,Bourg-la-Reine,commune,True,ign_chef_lieu,0.0,Mairie de Bourg-la-Reine,a157305230,osm_townhall
+92051,Neuilly-sur-Seine,commune,True,ign_chef_lieu,0.0,Hôtel de Ville,a162497252,osm_townhall
+92075,Vanves,commune,True,ign_chef_lieu,0.0,Hôtel de Ville de Vanves,a174753598,osm_townhall
+93005,Aulnay-sous-Bois,commune,True,ign_chef_lieu,0.0,Mairie d'Aulnay-sous-Bois,a283465566,osm_townhall
+93048,Montreuil,commune,True,ign_chef_lieu,0.0,Hôtel de Ville,a163692642,osm_townhall
+93053,Noisy-le-Sec,commune,True,ign_chef_lieu,0.0,Mairie de Noisy-le-Sec,a168212492,osm_townhall
+93055,Pantin,commune,True,ign_chef_lieu,0.0,Mairie de Pantin,a146224450,osm_townhall
+94018,Charenton-le-Pont,commune,True,ign_chef_lieu,0.0,Mairie de Charenton-le-Pont,a298552456,osm_townhall
+94034,Fresnes,commune,True,ign_chef_lieu,0.0,Mairie de Fresnes,a172695426,osm_townhall
+94041,Ivry-sur-Seine,commune,True,ign_chef_lieu,0.0,Mairie d'Ivry-sur-Seine,a526139594,osm_townhall
+94053,Noiseau,commune,True,ign_chef_lieu,0.0,,a124960300,osm_townhall
+94058,Le Perreux-sur-Marne,commune,True,ign_chef_lieu,0.0,Mairie du Perreux-sur-Marne,a298866114,osm_townhall
+94065,Rungis,commune,True,ign_chef_lieu,0.0,Mairie de Rungis,a252285226,osm_townhall
+94071,Sucy-en-Brie,commune,True,ign_chef_lieu,0.0,Hôtel de ville de Sucy-en-Brie,a127006158,osm_townhall
+95051,Beauchamp,commune,True,ign_chef_lieu,0.0,Mairie de Beauchamp,a738786456,osm_townhall
+95277,Gonesse,commune,True,ign_chef_lieu,0.0,Hôtel de Ville de Gonesse,a210069340,osm_townhall
+95428,Montmorency,commune,True,ign_chef_lieu,0.0,Mairie de Montmorency,a293469308,osm_townhall
+95563,Saint-Leu-la-Forêt,commune,True,ign_chef_lieu,0.0,Hôtel de Ville,a231590298,osm_townhall
+95598,Soisy-sous-Montmorency,commune,True,ign_chef_lieu,0.0,Hôtel de ville de Soisy-Sous-Montmorency,a293555526,osm_townhall
+95612,Le Thillay,commune,True,ign_chef_lieu,0.0,,w147846341,osm_townhall
+95641,Vémars,commune,False,ign_chef_lieu,0.0,Mairie de Vémars,w131781263,osm_townhall
+60033,Avilly-Saint-Léonard,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60141,Chantilly,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60185,Crouy-en-Thelle,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60213,Ermenonville,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60259,Fresnoy-en-Thelle,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60282,Gouvieux,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60341,Lagny-le-Sec,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60432,Mortefontaine,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60505,Pontarmé,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60513,Précy-sur-Oise,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60631,Thiers-sur-Thève,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60686,Villers-sous-Saint-Leu,commune,False,ign_chef_lieu,,,,ign_chef_lieu
+60695,Vineuil-Saint-Firmin,commune,False,ign_chef_lieu,,,,ign_chef_lieu

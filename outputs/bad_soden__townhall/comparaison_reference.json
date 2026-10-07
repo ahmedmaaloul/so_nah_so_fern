@@ -1,0 +1,223 @@
+{
+  "variant": "townhall",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_townhall.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.51,
+        "p90_abs": 5.0,
+        "max_abs": 20.0
+      },
+      "n_changed_gt_5min": 10,
+      "largest_changes": [
+        {
+          "name": "Grävenwiesbach",
+          "ref": 133.0,
+          "variant": 153.0
+        },
+        {
+          "name": "Glashütten",
+          "ref": 55.0,
+          "variant": 66.0
+        },
+        {
+          "name": "Maintal",
+          "ref": 85.0,
+          "variant": 95.0
+        },
+        {
+          "name": "Schwalbach am Taunus",
+          "ref": 30.0,
+          "variant": 22.0
+        },
+        {
+          "name": "Walluf",
+          "ref": 105.0,
+          "variant": 112.0
+        },
+        {
+          "name": "Groß-Gerau",
+          "ref": 102.0,
+          "variant": 109.0
+        },
+        {
+          "name": "Eppstein",
+          "ref": 67.0,
+          "variant": 73.0
+        },
+        {
+          "name": "Nieder-Eschbach",
+          "ref": 72.0,
+          "variant": 66.0
+        }
+      ],
+      "spearman_ref_variant": 0.9936,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 71.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 14.477
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.898
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.124
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 0
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Raunheim"
+          ],
+          "in": [
+            "Bonames"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Dietzenbach",
+            "Heusenstamm"
+          ],
+          "in": [
+            "Bahnhofsviertel",
+            "Innenstadt"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.49,
+        "p90_abs": 4.1,
+        "max_abs": 21.0
+      },
+      "n_changed_gt_5min": 8,
+      "largest_changes": [
+        {
+          "name": "Grävenwiesbach",
+          "ref": 135.0,
+          "variant": 156.0
+        },
+        {
+          "name": "Glashütten",
+          "ref": 55.0,
+          "variant": 66.0
+        },
+        {
+          "name": "Maintal",
+          "ref": 88.0,
+          "variant": 98.0
+        },
+        {
+          "name": "Schwalbach am Taunus",
+          "ref": 31.0,
+          "variant": 23.0
+        },
+        {
+          "name": "Walluf",
+          "ref": 108.0,
+          "variant": 115.0
+        },
+        {
+          "name": "Groß-Gerau",
+          "ref": 105.0,
+          "variant": 112.0
+        },
+        {
+          "name": "Nieder-Eschbach",
+          "ref": 75.0,
+          "variant": 69.0
+        },
+        {
+          "name": "Friedberg (Hessen)",
+          "ref": 80.0,
+          "variant": 74.0
+        }
+      ],
+      "spearman_ref_variant": 0.9941,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 14.072
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.897
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.327
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 0
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Raunheim"
+          ],
+          "in": [
+            "Kriftel"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Heusenstamm"
+          ],
+          "in": [
+            "Ostend"
+          ]
+        }
+      }
+    }
+  }
+}

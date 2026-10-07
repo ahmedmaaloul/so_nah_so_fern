@@ -1,0 +1,213 @@
+{
+  "variant": "townhall",
+  "origin": "kronberg",
+  "config": "config/sensitivity/kronberg_townhall.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 113,
+      "n_reached_ref": 113,
+      "n_reached_variant": 113,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.41,
+        "p90_abs": 4.0,
+        "max_abs": 15.0
+      },
+      "n_changed_gt_5min": 7,
+      "largest_changes": [
+        {
+          "name": "Glashütten",
+          "ref": 45.0,
+          "variant": 60.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 114.0,
+          "variant": 128.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 121.0,
+          "variant": 131.0
+        },
+        {
+          "name": "Karben",
+          "ref": 80.0,
+          "variant": 71.0
+        },
+        {
+          "name": "Maintal",
+          "ref": 78.0,
+          "variant": 87.0
+        },
+        {
+          "name": "Langen (Hessen)",
+          "ref": 82.0,
+          "variant": 73.0
+        },
+        {
+          "name": "Friedberg (Hessen)",
+          "ref": 86.0,
+          "variant": 80.0
+        }
+      ],
+      "spearman_ref_variant": 0.9899,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.5,
+          "variant": 69.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 15.987,
+          "variant": 15.983
+        },
+        "spearman_dist_time": {
+          "ref": 0.813,
+          "variant": 0.797
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.458,
+          "variant": 0.442
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.899,
+          "variant": 2.908
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Sulzbach (Taunus)"
+          ],
+          "in": [
+            "Schwanheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Mainz",
+            "Mörfelden-Walldorf"
+          ],
+          "in": [
+            "Langen (Hessen)",
+            "Nordend-Ost"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 113,
+      "n_reached_ref": 113,
+      "n_reached_variant": 113,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.49,
+        "p90_abs": 4.0,
+        "max_abs": 19.0
+      },
+      "n_changed_gt_5min": 7,
+      "largest_changes": [
+        {
+          "name": "Hünstetten",
+          "ref": 117.0,
+          "variant": 136.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 119.0,
+          "variant": 136.0
+        },
+        {
+          "name": "Glashütten",
+          "ref": 40.0,
+          "variant": 56.0
+        },
+        {
+          "name": "Karben",
+          "ref": 86.0,
+          "variant": 77.0
+        },
+        {
+          "name": "Maintal",
+          "ref": 84.0,
+          "variant": 93.0
+        },
+        {
+          "name": "Langen (Hessen)",
+          "ref": 88.0,
+          "variant": 79.0
+        },
+        {
+          "name": "Friedberg (Hessen)",
+          "ref": 91.0,
+          "variant": 85.0
+        }
+      ],
+      "spearman_ref_variant": 0.9937,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 74.0,
+          "variant": 73.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.844,
+          "variant": 14.893
+        },
+        "spearman_dist_time": {
+          "ref": 0.84,
+          "variant": 0.829
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.432,
+          "variant": 0.407
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.152,
+          "variant": 3.103
+        }
+      },
+      "dead_zones": {
+        "ref": 3,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Kelkheim (Taunus)"
+          ],
+          "in": [
+            "Kriftel"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Mainz"
+          ],
+          "in": [
+            "Langen (Hessen)"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,247 @@
+unit_id,name,level,in_radius,official_point_source,shift_m,townhall_name,osm_id,point_used
+06434004,Grävenwiesbach,commune,True,bkg_vg250_pk,4009.8,Dorfgemeinschaftshaus,n2282398389,osm_townhall
+06533008,Hünfelden,commune,False,bkg_vg250_pk,3717.0,Rathaus Heringen,n12612430657,osm_townhall
+06440015,Münzenberg,commune,False,bkg_vg250_pk,3636.4,Stadtverwaltung,w425375142,osm_townhall
+06439007,Hünstetten,commune,True,bkg_vg250_pk,3357.9,Gemeindeverwaltung Hünstetten,w24703513,osm_townhall
+06432018,Pfungstadt,commune,False,bkg_vg250_pk,2901.6,Rathaus,n293548730,osm_townhall
+06433006,Groß-Gerau,commune,False,bkg_vg250_pk,2446.7,Altes Rathaus,w52098914,osm_townhall
+06434003,Glashütten,commune,True,bkg_vg250_pk,2347.7,Altes Rathaus,a82378458,osm_townhall
+06440017,Niddatal,commune,True,bkg_vg250_pk,2169.2,Stadtverwaltung Niddatal,w26774083,osm_townhall
+06432023,Weiterstadt,commune,False,bkg_vg250_pk,2062.7,Rathaus,a20435874,osm_townhall
+06438004,Hainburg,commune,False,bkg_vg250_pk,1930.2,Gemeindeverwaltung Hainburg,n10596308524,osm_townhall
+06436002,Eppstein,commune,True,bkg_vg250_pk,1796.2,Rathaus I,n1979019936,osm_townhall
+06435019,Maintal,commune,True,bkg_vg250_pk,1623.1,Stadtverwaltung Maintal,a386769006,osm_townhall
+06436003,Eschborn,commune,True,bkg_vg250_pk,1419.5,Stadtverwaltung Eschborn,n13091962842,osm_townhall
+06439012,Oestrich-Winkel,commune,False,bkg_vg250_pk,1416.5,Bürgerzentrum / Rathaus / Ordnungspolizei,a447694096,osm_townhall
+06438001,Dietzenbach,commune,True,bkg_vg250_pk,1132.5,Rathaus Dietzenbach,a55665374,osm_townhall
+09671159,Westerngrund,commune,False,bkg_vg250_pk,1087.8,Rathaus,a2204757852,osm_townhall
+09671114,Karlstein a.Main,commune,False,bkg_vg250_pk,1080.5,Rathaus Karlstein,w28125630,osm_townhall
+09671136,Kleinostheim,commune,False,bkg_vg250_pk,1073.4,Rathaus Kleinostheim,a187977300,osm_townhall
+06440014,Limeshain,commune,False,bkg_vg250_pk,1047.7,Gemeindeverwaltung Limeshain,n4177865081,osm_townhall
+06435013,Hammersbach,commune,False,bkg_vg250_pk,980.5,Gemeindeverwaltung Hammersbach,n3515377967,osm_townhall
+06438006,Langen (Hessen),commune,True,bkg_vg250_pk,936.3,Stadtverwaltung Langen,a47711252,osm_townhall
+06432008,Griesheim,commune,False,bkg_vg250_pk,890.4,Rathaus Griesheim,w20470064,osm_townhall
+06434001,Bad Homburg v.d.Höhe,commune,True,bkg_vg250_pk,840.2,Stadtverwaltung Bad Homburg,a223779,osm_townhall
+06436011,Schwalbach am Taunus,commune,True,bkg_vg250_pk,835.0,,n1462095501,osm_townhall
+06440012,Karben,commune,True,bkg_vg250_pk,824.1,Bürgerzentrum,n96074487,osm_townhall
+06436008,Kelkheim (Taunus),commune,True,bkg_vg250_pk,807.6,Rathaus Kelkheim,a95406134,osm_townhall
+06435021,Nidderau,commune,True,bkg_vg250_pk,774.9,Rathaus Nidderau,w99018685,osm_townhall
+07339037,Mommenheim,commune,False,bkg_vg250_pk,749.4,Rathaus Mommenheim,n6938467748,osm_townhall
+06432016,Ober-Ramstadt,commune,False,bkg_vg250_pk,725.0,Rathaus Ober-Ramstadt,n449178056,osm_townhall
+06440007,Florstadt,commune,False,bkg_vg250_pk,719.8,Rathaus Florstadt,a752284970,osm_townhall
+09671133,Johannesberg,commune,False,bkg_vg250_pk,689.7,Gemeindeverwaltung Johannesberg,a228944196,osm_townhall
+06440023,Rosbach v.d.Höhe,commune,True,bkg_vg250_pk,684.8,Rathaus Rosbach vor der Höhe,n1287709198,osm_townhall
+06532021,Solms,commune,False,bkg_vg250_pk,681.7,Stadtverwaltung Solms,n6937747810,osm_townhall
+06435023,Rodenbach,commune,False,bkg_vg250_pk,649.0,Gemeindeverwaltung Rodenbach,n10601741513,osm_townhall
+06433010,Raunheim,commune,True,bkg_vg250_pk,589.9,Rathaus und Bürgerbüro,w195454994,osm_townhall
+06440008,Friedberg (Hessen),commune,True,bkg_vg250_pk,576.1,Rathaus,a636722386,osm_townhall
+06531009,Langgöns,commune,False,bkg_vg250_pk,571.1,Rathaus Langgöns,a252451344,osm_townhall
+07339009,Budenheim,commune,False,bkg_vg250_pk,538.0,Gemeindeverwaltung Budenheim,a176239124,osm_townhall
+06438003,Egelsbach,commune,True,bkg_vg250_pk,531.5,Rathaus Gemeinde Egelsbach,w158257081,osm_townhall
+06440004,Büdingen,commune,False,bkg_vg250_pk,526.5,Rathaus,a52379976,osm_townhall
+09671138,Krombach,commune,False,bkg_vg250_pk,518.5,,a1397405480,osm_townhall
+06532003,Braunfels,commune,False,bkg_vg250_pk,514.4,Stadtverwaltung Braunfels,n2495625861,osm_townhall
+06439017,Walluf,commune,False,bkg_vg250_pk,513.4,Rathaus Walluf,a587875058,osm_townhall
+06436010,Liederbach am Taunus,commune,True,bkg_vg250_pk,489.6,Gemeindeverwaltung Liederbach,w205627272,osm_townhall
+06432015,Münster (Hessen),commune,False,bkg_vg250_pk,474.9,Gemeinde Münster (Hessen),n353497296,osm_townhall
+09676144,Niedernberg,commune,False,bkg_vg250_pk,453.9,Rathaus,n276911863,osm_townhall
+06435015,Hasselroth,commune,False,bkg_vg250_pk,443.7,Rathaus Hasselroth,n2613266468,osm_townhall
+07339049,Oppenheim,commune,False,bkg_vg250_pk,441.5,,a438570654,osm_townhall
+06533003,Bad Camberg,commune,True,bkg_vg250_pk,427.9,Rathaus Verwaltungsgebäude I,w137352792,osm_townhall
+06432005,Eppertshausen,commune,False,bkg_vg250_pk,421.0,Gemeinde von Eppertshausen,n1442476555,osm_townhall
+09671140,Mainaschaff,commune,False,bkg_vg250_pk,419.5,,n560938387,osm_townhall
+06434013,Weilrod,commune,True,bkg_vg250_pk,410.5,Gemeindeverwaltung Weilrod,w265583409,osm_townhall
+06436007,Hofheim am Taunus,commune,True,bkg_vg250_pk,407.8,Rathaus Hofheim,a61628356,osm_townhall
+06438008,Mühlheim am Main,commune,True,bkg_vg250_pk,402.7,Stadtverwaltung Mühlheim am Main,w189086467,osm_townhall
+FFM-STT-45,Nieder-Eschbach,district,True,osm_place,402.0,Bürgeramt Niedereschbach,n1469025823,osm_townhall
+06433007,Kelsterbach,commune,True,bkg_vg250_pk,396.0,Rathaus,w89187766,osm_townhall
+06432012,Messel,commune,False,bkg_vg250_pk,376.2,Gemeindeverwaltung Messel,n353497282,osm_townhall
+06440003,Bad Vilbel,commune,True,bkg_vg250_pk,373.8,Standesamt,n278544482,osm_townhall
+06432017,Otzberg,commune,False,bkg_vg250_pk,370.1,Rathaus Otzberg,a344720726,osm_townhall
+06438005,Heusenstamm,commune,True,bkg_vg250_pk,368.1,Rathaus Heusenstamm,a7849875,osm_townhall
+06533018,Weilmünster,commune,True,bkg_vg250_pk,352.7,Gemeinde Weilmünster,a439400244,osm_townhall
+06440001,Altenstadt,commune,False,bkg_vg250_pk,350.3,Rathaus Altenstadt,w342956299,osm_townhall
+06533017,Weilburg,commune,False,bkg_vg250_pk,348.4,,w319861776,osm_townhall
+07339034,Lörzweiler,commune,False,bkg_vg250_pk,347.3,Rathaus,n673793302,osm_townhall
+06439001,Aarbergen,commune,False,bkg_vg250_pk,341.7,Rathaus Aarbergen (Altes),a477670646,osm_townhall
+06435012,Gründau,commune,False,bkg_vg250_pk,340.5,,a241919756,osm_townhall
+06438010,Obertshausen,commune,True,bkg_vg250_pk,336.4,Rathaus Obertshausen,n1607536736,osm_townhall
+06436005,Hattersheim am Main,commune,True,bkg_vg250_pk,328.0,Rathaus Hattersheim,n5002862872,osm_townhall
+06438007,Mainhausen,commune,False,bkg_vg250_pk,327.1,Rathaus Mainhausen,a2844604966,osm_townhall
+06436009,Kriftel,commune,True,bkg_vg250_pk,322.0,Rat- und Bürgerhaus Kriftel,w157992338,osm_townhall
+07339067,Zornheim,commune,False,bkg_vg250_pk,313.4,Gemeindeverwaltung,n330256290,osm_townhall
+06432006,Erzhausen,commune,True,bkg_vg250_pk,300.7,Rathaus,w193386360,osm_townhall
+07315000,Mainz,commune,True,bkg_vg250_pk,295.9,Stadthaus Große Bleiche,a449411,osm_townhall
+06435024,Ronneburg,commune,False,bkg_vg250_pk,293.8,Gemeindeverwaltung Ronneburg,n10575710798,osm_townhall
+07141102,Oberneisen,commune,False,bkg_vg250_pk,293.0,Dorftreff,w1471437459,osm_townhall
+06435020,Neuberg,commune,False,bkg_vg250_pk,292.2,Gemeindeverwaltung Neuberg,n11277361435,osm_townhall
+06440018,Ober-Mörlen,commune,True,bkg_vg250_pk,292.1,,n2450676971,osm_townhall
+FFM-STT-36,Höchst,district,True,osm_place,291.6,Bürgeramt Höchst,w105178086,osm_townhall
+06435014,Hanau,commune,True,bkg_vg250_pk,290.2,Stadtverwaltung Hanau,n8250167160,osm_townhall
+06434010,Steinbach (Taunus),commune,True,bkg_vg250_pk,290.0,Rathaus,a103530058,osm_townhall
+06432009,Groß-Bieberau,commune,False,bkg_vg250_pk,286.3,Rathaus Groß-Bieberau,n6412004824,osm_townhall
+06439016,Waldems,commune,True,bkg_vg250_pk,283.2,Rathaus Waldems,w137061345,osm_townhall
+06434002,Friedrichsdorf,commune,True,bkg_vg250_pk,282.7,Rathaus Friedrichsdorf,a76916654,osm_townhall
+06432011,Groß-Zimmern,commune,False,bkg_vg250_pk,277.7,Rathaus,w337481485,osm_townhall
+06440025,Wöllstadt,commune,True,bkg_vg250_pk,269.8,Rathaus Wöllstadt,w408841300,osm_townhall
+06435022,Niederdorfelden,commune,True,bkg_vg250_pk,269.1,Gemeindeverwaltung Niederdorfelden,n1157422481,osm_townhall
+09671134,Kahl a.Main,commune,False,bkg_vg250_pk,269.1,Rathaus Kahl am Main,a478100470,osm_townhall
+06433005,Ginsheim-Gustavsburg,commune,True,bkg_vg250_pk,264.8,,w148081896,osm_townhall
+06435017,Langenselbold,commune,False,bkg_vg250_pk,263.7,Stadtverwaltung Langenselbold,n10603243474,osm_townhall
+06532018,Schöffengrund,commune,False,bkg_vg250_pk,263.2,Gemeindeverwaltung Schöffengrund,n6225750386,osm_townhall
+06434007,Neu-Anspach,commune,True,bkg_vg250_pk,261.9,,n12878915962,osm_townhall
+06433002,Bischofsheim,commune,True,bkg_vg250_pk,259.7,Rathaus I,w143727913,osm_townhall
+06434006,Kronberg im Taunus,commune,True,bkg_vg250_pk,245.8,Rathaus Kronberg,a173775328,osm_townhall
+07339047,Ober-Olm,commune,False,bkg_vg250_pk,244.9,Rathaus Ober-Olm,w389169286,osm_townhall
+06436006,Hochheim am Main,commune,True,bkg_vg250_pk,233.9,Standesamt,n473769645,osm_townhall
+06413000,Offenbach am Main,commune,True,bkg_vg250_pk,233.2,Rathaus Offenbach,a83447162,osm_townhall
+07339043,Nierstein,commune,False,bkg_vg250_pk,230.5,Stadtverwaltung,a47201538,osm_townhall
+06439003,Eltville am Rhein,commune,False,bkg_vg250_pk,228.7,Magistrat der Stadt Eltville am Rhein,w235270565,osm_townhall
+FFM-STT-42,Nieder-Erlenbach,district,True,osm_place,226.7,Bürgeramt Nieder-Erlenbach,n1493460749,osm_townhall
+06432010,Groß-Umstadt,commune,False,bkg_vg250_pk,221.8,Renaissance-Rathaus,a490595614,osm_townhall
+06439002,Bad Schwalbach,commune,False,bkg_vg250_pk,220.9,Stadtverwaltung,w89551404,osm_townhall
+06440002,Bad Nauheim,commune,True,bkg_vg250_pk,220.9,Rathaus,n343563244,osm_townhall
+06438013,Seligenstadt,commune,False,bkg_vg250_pk,217.9,Rathaus,a387168236,osm_townhall
+06533002,Brechen,commune,False,bkg_vg250_pk,216.0,Sport- und Kulturzentrum,n1578073231,osm_townhall
+06439014,Schlangenbad,commune,False,bkg_vg250_pk,214.2,Rathaus,a112362986,osm_townhall
+06433009,Nauheim,commune,True,bkg_vg250_pk,208.1,Historisches Rathaus,a447901852,osm_townhall
+06440010,Glauburg,commune,False,bkg_vg250_pk,207.2,Rathaus,n4343919068,osm_townhall
+09671113,Blankenbach,commune,False,bkg_vg250_pk,205.0,Gemeindehaus,a486216106,osm_townhall
+07339032,Klein-Winternheim,commune,False,bkg_vg250_pk,203.4,Rathaus Klein-Winternheim,w943924069,osm_townhall
+07339026,Harxheim,commune,False,bkg_vg250_pk,202.7,Rathaus Harxheim,n2957683433,osm_townhall
+06432022,Seeheim-Jugenheim,commune,False,bkg_vg250_pk,202.6,Neues Rathaus,a99428852,osm_townhall
+06533014,Selters (Taunus),commune,True,bkg_vg250_pk,197.1,Rathaus,w264586352,osm_townhall
+06439006,Hohenstein,commune,True,bkg_vg250_pk,188.6,Rathaus,a858680934,osm_townhall
+09671122,Großostheim,commune,False,bkg_vg250_pk,186.6,Altes Rathaus,n446012100,osm_townhall
+07339039,Nackenheim,commune,False,bkg_vg250_pk,182.8,Rathaus,w23563862,osm_townhall
+06533009,Limburg a.d.Lahn,commune,False,bkg_vg250_pk,181.4,,w59313725,osm_townhall
+06435009,Freigericht,commune,False,bkg_vg250_pk,180.7,Gemeinde Freigericht,a201263998,osm_townhall
+09661000,Aschaffenburg,commune,False,bkg_vg250_pk,178.6,Rathaus,a32591,osm_townhall
+06438012,Rödermark,commune,False,bkg_vg250_pk,171.1,Rathaus Ober-Roden,n270194387,osm_townhall
+07339006,Bodenheim,commune,False,bkg_vg250_pk,170.3,Historisches Rathaus,w26711412,osm_townhall
+06432019,Reinheim,commune,False,bkg_vg250_pk,169.8,Rathaus Reinheim,n346361290,osm_townhall
+06433014,Trebur,commune,True,bkg_vg250_pk,168.5,Gemeinde Trebur,n259237515,osm_townhall
+06440021,Reichelsheim (Wetterau),commune,False,bkg_vg250_pk,168.5,Neues Rathaus,a2297305278,osm_townhall
+07339054,Sörgenloch,commune,False,bkg_vg250_pk,165.5,Gemeindeverwaltung Rathaus,n7734114777,osm_townhall
+06435026,Schöneck,commune,True,bkg_vg250_pk,158.2,Gemeindeverwaltung Schöneck,n10575893484,osm_townhall
+07339011,Dexheim,commune,False,bkg_vg250_pk,157.6,Gemeindeverwaltung,w400537946,osm_townhall
+FFM-STT-35,Fechenheim,district,True,osm_place,153.6,"Bürgeramt, Außenstelle Fechenheim",n8199002906,osm_townhall
+06533013,Runkel,commune,False,bkg_vg250_pk,152.8,Rathaus Runkel,n371177075,osm_townhall
+06438011,Rodgau,commune,False,bkg_vg250_pk,152.2,Rathaus Rodgau,a192699758,osm_townhall
+06533015,Villmar,commune,False,bkg_vg250_pk,152.1,Rathaus,n359177452,osm_townhall
+06434009,Schmitten im Taunus,commune,True,bkg_vg250_pk,149.3,Rathaus Schmitten,a1007421596,osm_townhall
+06435006,Bruchköbel,commune,True,bkg_vg250_pk,145.3,Stadthaus Bruchköbel,a1992609752,osm_townhall
+07339012,Dienheim,commune,False,bkg_vg250_pk,143.5,Ortsgemeindeverwaltung,n5981129180,osm_townhall
+06432007,Fischbachtal,commune,False,bkg_vg250_pk,141.7,Rathaus der Gemeinde Fischbachtal,a509047616,osm_townhall
+09671121,Goldbach,commune,False,bkg_vg250_pk,140.0,Rathaus Goldbach,a776209948,osm_townhall
+06411000,Darmstadt,commune,False,bkg_vg250_pk,139.6,Neues Rathaus,n1529390468,osm_townhall
+09671119,Geiselbach,commune,False,bkg_vg250_pk,139.4,Gemeindeverwaltung,n2132091874,osm_townhall
+07141068,Katzenelnbogen,commune,False,bkg_vg250_pk,138.5,Verbandsgemeinde Verwaltung Katzenelnbogen,a124268992,osm_townhall
+06414000,Wiesbaden,commune,True,bkg_vg250_pk,138.3,Altes Rathaus (Standesamt),a289778550,osm_townhall
+06434008,Oberursel (Taunus),commune,True,bkg_vg250_pk,136.9,Rathaus Oberursel,n1107986463,osm_townhall
+09671143,Mömbris,commune,False,bkg_vg250_pk,134.1,Rathaus Markt Mömbris,w108512341,osm_townhall
+07339020,Gau-Bischofsheim,commune,False,bkg_vg250_pk,132.4,,n2966389713,osm_townhall
+06436012,Sulzbach (Taunus),commune,True,bkg_vg250_pk,130.5,Rathaus,n2291042725,osm_townhall
+06435011,Großkrotzenburg,commune,False,bkg_vg250_pk,129.7,Gemeindeverwaltung Großkrotzenburg,a386855066,osm_townhall
+06433003,Büttelborn,commune,False,bkg_vg250_pk,129.0,Rathaus,a159011866,osm_townhall
+09671111,Alzenau,commune,False,bkg_vg250_pk,129.0,Rathaus Alzenau,w186382711,osm_townhall
+06532022,Waldsolms,commune,True,bkg_vg250_pk,122.6,Rathaus Waldsolms,w129308029,osm_townhall
+06440020,Ranstadt,commune,False,bkg_vg250_pk,121.7,Rathaus,n1578720966,osm_townhall
+06434012,Wehrheim,commune,True,bkg_vg250_pk,114.7,Rathaus,n1340471376,osm_townhall
+07339030,Ingelheim am Rhein,commune,False,bkg_vg250_pk,114.7,Stadtverwaltung Ingelheim,w59178348,osm_townhall
+07141095,Niederneisen,commune,False,bkg_vg250_pk,109.8,Rathaus Niederneisen,a1277421638,osm_townhall
+06439008,Idstein,commune,True,bkg_vg250_pk,108.8,Rathaus,a103920556,osm_townhall
+09671130,Hösbach,commune,False,bkg_vg250_pk,108.7,Rathaus Hösbach,a58354098,osm_townhall
+07141051,Hahnstätten,commune,False,bkg_vg250_pk,105.7,Verbandsgemeindeverwaltung Aar-Einrich Standort Hahnstätten,a1518105562,osm_townhall
+06436004,Flörsheim am Main,commune,True,bkg_vg250_pk,104.2,Stadtbüro Flörsheim am Main,n10789792583,osm_townhall
+06439015,Taunusstein,commune,True,bkg_vg250_pk,102.2,Rathaus Taunusstein,w40778078,osm_townhall
+06440005,Butzbach,commune,False,bkg_vg250_pk,101.5,Rathaus,n3368960833,osm_townhall
+06438002,Dreieich,commune,True,bkg_vg250_pk,99.1,Dienstleistungszentrum,a63266152,osm_townhall
+06439005,Heidenrod,commune,False,bkg_vg250_pk,97.5,Gemeindeverwaltung Heidenrod,w364430220,osm_townhall
+06440006,Echzell,commune,False,bkg_vg250_pk,92.9,Gemeindeverwaltung Echzell,n530129967,osm_townhall
+06435010,Gelnhausen,commune,False,bkg_vg250_pk,91.2,Rathaus,w139760558,osm_townhall
+06436001,Bad Soden am Taunus,commune,True,bkg_vg250_pk,83.6,Rathaus,w306418890,osm_townhall
+07339042,Nieder-Olm,commune,False,bkg_vg250_pk,83.5,Rathaus Nieder-Olm,n1486352558,osm_townhall
+06432004,Dieburg,commune,False,bkg_vg250_pk,83.2,Rathaus,a299759178,osm_townhall
+06439009,Kiedrich,commune,False,bkg_vg250_pk,81.4,Rathaus,a718754488,osm_townhall
+06434011,Usingen,commune,True,bkg_vg250_pk,79.1,Rathaus Usingen,n5176837993,osm_townhall
+06440022,Rockenberg,commune,False,bkg_vg250_pk,68.6,Rathaus,w206377246,osm_townhall
+06433011,Riedstadt,commune,False,bkg_vg250_pk,67.7,Riedstädter Rathaus,a776549966,osm_townhall
+06434005,Königstein im Taunus,commune,True,bkg_vg250_pk,64.0,Rathaus,a356177620,osm_townhall
+06432002,Babenhausen,commune,False,bkg_vg250_pk,61.1,Rathaus,a530110824,osm_townhall
+06439011,Niedernhausen,commune,True,bkg_vg250_pk,59.2,Rathaus Niedernhausen,a76733078,osm_townhall
+06533019,Weinbach,commune,False,bkg_vg250_pk,56.5,Gemeindeverwaltung Weinbach,n10111441965,osm_townhall
+06432020,Roßdorf,commune,False,bkg_vg250_pk,54.1,Historisches Rathaus,a290240448,osm_townhall
+06532014,Hüttenberg,commune,False,bkg_vg250_pk,51.6,Gemeindeverwaltung Hüttenberg,n423585433,osm_townhall
+06432014,Mühltal,commune,False,bkg_vg250_pk,51.2,Rathaus Mühltal,a76575204,osm_townhall
+FFM-STT-44,Harheim,district,True,osm_place,51.2,Rathaus Harheim,n1051416002,osm_townhall
+FFM-STT-1,Altstadt,district,True,osm_place,49.6,Römer,n34223060,osm_townhall
+09671120,Glattbach,commune,False,bkg_vg250_pk,47.6,Rathaus,w487188950,osm_townhall
+06440024,Wölfersheim,commune,False,bkg_vg250_pk,46.9,,a1099605536,osm_townhall
+06438009,Neu-Isenburg,commune,True,bkg_vg250_pk,44.6,Bürgeramt Neu-Isenburg (Hauptstelle),w139469726,osm_townhall
+09671155,Stockstadt a.Main,commune,False,bkg_vg250_pk,37.6,Rathaus,w87740863,osm_townhall
+06433008,Mörfelden-Walldorf,commune,True,bkg_vg250_pk,36.8,Rathaus Mörfelden,n618588627,osm_townhall
+06435018,Linsengericht,commune,False,bkg_vg250_pk,35.4,Rathaus Linsengericht,w122653772,osm_townhall
+06433012,Rüsselsheim am Main,commune,True,bkg_vg250_pk,33.9,Rathaus,a821507404,osm_townhall
+07339017,Essenheim,commune,False,bkg_vg250_pk,33.1,Stadthalle,n271312180,osm_townhall
+07141093,Netzbach,commune,False,bkg_vg250_pk,26.8,Rathaus,w911166803,osm_townhall
+06432021,Schaafheim,commune,False,bkg_vg250_pk,26.5,,n7474307484,osm_townhall
+06440019,Ortenberg,commune,False,bkg_vg250_pk,16.2,Stadtverwaltung Ortenberg,w71378267,osm_townhall
+06433013,Stockstadt am Rhein,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+06435007,Erlensee,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141001,Allendorf,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141010,Berghausen,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141011,Berndroth,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141020,Burgschwalbach,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141032,Dörsdorf,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141034,Ebertshausen,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141036,Eisighofen,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141043,Flacht,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141061,Holzheim,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141065,Kaltenholzhausen,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141073,Klingelbach,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141081,Lohrheim,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141089,Mudershausen,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141113,Reckenroth,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141125,Schiesheim,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07141126,Schönborn,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+07339053,Selzen,commune,False,bkg_vg250_pk,,,,bkg_vg250_pk
+FFM-STT-10,Gutleutviertel,district,True,osm_place,,,,osm_place
+FFM-STT-11,Gallus,district,True,osm_place,,,,osm_place
+FFM-STT-12,Bockenheim,district,True,osm_place,,,,osm_place
+FFM-STT-13,Sachsenhausen-Nord,district,True,representative_point,,,,representative_point
+FFM-STT-14,Sachsenhausen-Süd (inkl. Flughafen),district,True,representative_point,,,,representative_point
+FFM-STT-16,Oberrad,district,True,osm_place,,,,osm_place
+FFM-STT-17,Niederrad,district,True,osm_place,,,,osm_place
+FFM-STT-18,Schwanheim,district,True,osm_place,,,,osm_place
+FFM-STT-19,Griesheim,district,True,osm_place,,,,osm_place
+FFM-STT-2,Innenstadt,district,True,osm_place,,,,osm_place
+FFM-STT-20,Rödelheim,district,True,osm_place,,,,osm_place
+FFM-STT-21,Hausen,district,True,osm_place,,,,osm_place
+FFM-STT-22,Praunheim,district,True,osm_place,,,,osm_place
+FFM-STT-24,Heddernheim,district,True,osm_place,,,,osm_place
+FFM-STT-25,Niederursel,district,True,osm_place,,,,osm_place
+FFM-STT-26,Ginnheim,district,True,osm_place,,,,osm_place
+FFM-STT-27,Dornbusch,district,True,osm_place,,,,osm_place
+FFM-STT-28,Eschersheim,district,True,osm_place,,,,osm_place
+FFM-STT-29,Eckenheim,district,True,osm_place,,,,osm_place
+FFM-STT-3,Bahnhofsviertel,district,True,osm_place,,,,osm_place
+FFM-STT-30,Preungesheim,district,True,osm_place,,,,osm_place
+FFM-STT-31,Bonames,district,True,osm_place,,,,osm_place
+FFM-STT-32,Berkersheim,district,True,osm_place,,,,osm_place
+FFM-STT-33,Riederwald,district,True,osm_place,,,,osm_place
+FFM-STT-34,Seckbach,district,True,osm_place,,,,osm_place
+FFM-STT-37,Nied,district,True,osm_place,,,,osm_place
+FFM-STT-38,Sindlingen,district,True,osm_place,,,,osm_place
+FFM-STT-39,Zeilsheim,district,True,osm_place,,,,osm_place
+FFM-STT-4,Westend-Süd,district,True,osm_place,,,,osm_place
+FFM-STT-40,Unterliederbach,district,True,osm_place,,,,osm_place
+FFM-STT-41,Sossenheim,district,True,osm_place,,,,osm_place
+FFM-STT-43,Kalbach-Riedberg,district,True,representative_point,,,,representative_point
+FFM-STT-46,Bergen-Enkheim,district,True,osm_place,,,,osm_place
+FFM-STT-47,Frankfurter Berg,district,True,osm_place,,,,osm_place
+FFM-STT-5,Westend-Nord,district,True,osm_place,,,,osm_place
+FFM-STT-6,Nordend-West,district,True,osm_place,,,,osm_place
+FFM-STT-7,Nordend-Ost,district,True,osm_place,,,,osm_place
+FFM-STT-8,Ostend,district,True,osm_place,,,,osm_place
+FFM-STT-9,Bornheim,district,True,osm_place,,,,osm_place

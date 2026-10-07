@@ -1,0 +1,243 @@
+origin_id,unit_id,name,level,parent_id,population,point_source,lon,lat,dist_km,dist_km_core,travel_time_p25,t_tc,travel_time_p75,t_tc_spread,walk_time,car_time,v_eff_kmh,rank_dist,rank_time,paradox_index,paradox_norm,time_excess_pct,ratio_tc_car,transfers,transfers_censored,walk_only,dead_zone,top_nah_fern,top_fern_nah,is_origin_commune
+centre,06436001,Bad Soden am Taunus,commune,,23103,osm_townhall,8.501,50.144,0.084,13.502,1,1,1,0,1.000,0.662,5.018,,,,,,1.511,0.000,False,True,False,,,True
+centre,06436011,Schwalbach am Taunus,commune,,15443,osm_townhall,8.529,50.154,2.216,12.000,19,23,29,10,37.000,5.512,5.781,1.000,1.000,0.000,0.000,-14.305,4.173,0.000,False,False,False,,,False
+centre,06436012,Sulzbach (Taunus),commune,,8846,osm_townhall,8.528,50.132,2.242,11.320,23,27,32,9,33.000,5.410,4.983,2.000,2.000,0.000,0.000,-0.033,4.991,0.000,False,False,False,,,False
+centre,06436010,Liederbach am Taunus,commune,,8887,osm_townhall,8.491,50.121,2.668,13.750,34,44,50,16,47.000,9.073,3.638,3.000,9.000,6.000,0.050,48.435,4.849,0.000,False,False,False,,,False
+centre,06436003,Eschborn,commune,,22403,osm_townhall,8.551,50.147,3.526,10.242,35,38,44,9,71.000,8.965,5.567,4.000,6.000,2.000,0.017,10.413,4.239,1.000,False,False,False,,,False
+centre,06436008,Kelkheim (Taunus),commune,,28175,osm_townhall,8.449,50.141,3.778,17.014,33,45,56,23,65.000,10.010,5.037,5.000,10.000,5.000,0.042,26.005,4.496,1.000,False,False,False,,,False
+centre,06434006,Kronberg im Taunus,commune,,18671,osm_townhall,8.508,50.178,3.881,14.570,42,47,54,12,63.000,10.325,4.954,6.000,13.000,7.000,0.058,29.722,4.552,1.000,False,False,False,,,False
+centre,FFM-STT-40,Unterliederbach,district,06412000,17284,osm_place,8.532,50.110,4.305,10.743,30,36,41,11,65.000,7.893,7.175,7.000,3.000,-4.000,-0.033,-6.006,4.561,0.000,False,False,False,,,False
+centre,06434005,Königstein im Taunus,commune,,16680,osm_townhall,8.465,50.182,5.035,17.479,30,37,43,13,72.000,10.393,8.164,8.000,4.500,-3.500,-0.029,-11.164,3.560,0.000,False,False,False,,,False
+centre,FFM-STT-41,Sossenheim,district,06412000,16498,osm_place,8.567,50.120,5.330,8.347,38,43,51,13,79.000,9.833,7.437,9.000,8.000,-1.000,-0.008,0.136,4.373,1.000,False,False,False,,,False
+centre,FFM-STT-39,Zeilsheim,district,06412000,12798,osm_place,8.495,50.096,5.388,13.532,47,53,57,10,98.000,10.400,6.100,10.000,22.000,12.000,0.100,22.710,5.096,1.000,False,False,False,,,False
+centre,FFM-STT-36,Höchst,district,06412000,15993,osm_townhall,8.543,50.102,5.539,10.047,30,37,41,11,79.000,10.225,8.981,11.000,4.500,-6.500,-0.054,-15.588,3.619,0.000,False,False,False,,,False
+centre,06434010,Steinbach (Taunus),commune,,10856,osm_townhall,8.576,50.168,5.937,9.876,44,50,57,13,94.000,12.638,7.125,12.000,18.000,6.000,0.050,9.902,3.956,1.000,False,False,False,,,False
+centre,06436009,Kriftel,commune,,11356,osm_townhall,8.471,50.085,6.894,15.428,51,58,65,14,115.000,10.880,7.132,13.000,28.500,15.500,0.129,17.683,5.331,1.000,False,False,False,10.000,,False
+centre,FFM-STT-37,Nied,district,06412000,20022,osm_place,8.572,50.101,6.950,7.965,45,50,55,10,104.000,14.135,8.340,14.000,18.000,4.000,0.033,1.014,3.537,1.000,False,False,False,,,False
+centre,FFM-STT-38,Sindlingen,district,06412000,8777,osm_place,8.518,50.080,7.204,12.284,43,49,56,13,,13.650,8.822,15.000,15.000,0.000,0.000,-2.893,3.590,1.000,False,False,False,,,False
+centre,06436007,Hofheim am Taunus,commune,,39259,osm_townhall,8.448,50.085,7.598,17.046,35,46,54,19,117.000,12.712,9.910,16.000,11.500,-4.500,-0.037,-11.399,3.619,0.000,False,False,False,,,False
+centre,FFM-STT-20,Rödelheim,district,06412000,19839,osm_place,8.613,50.125,8.190,5.238,35,42,50,15,,12.817,11.700,17.000,7.000,-10.000,-0.083,-22.290,3.277,0.000,False,False,False,,,False
+centre,06436005,Hattersheim am Main,commune,,28467,osm_townhall,8.483,50.070,8.311,14.988,63,67,75,12,,11.408,7.443,18.000,47.500,29.500,0.246,22.997,5.873,1.000,False,False,False,4.000,,False
+centre,06434008,Oberursel (Taunus),commune,,46736,osm_townhall,8.580,50.201,8.448,12.357,45,50,56,11,,15.925,10.137,19.000,18.000,-1.000,-0.008,-9.010,3.140,1.000,False,False,False,,,False
+centre,FFM-STT-22,Praunheim,district,06412000,16636,osm_place,8.622,50.151,8.592,6.220,51,58,66,15,,15.493,8.888,20.000,28.500,8.500,0.071,4.596,3.744,1.000,False,False,False,,,False
+centre,FFM-STT-18,Schwanheim,district,06412000,20586,osm_place,8.584,50.085,8.751,7.621,59,64,69,10,,16.497,8.204,21.000,41.000,20.000,0.167,14.286,3.880,2.000,False,False,False,6.000,,False
+centre,FFM-STT-25,Niederursel,district,06412000,17585,osm_place,8.619,50.169,8.826,7.907,58,63,68,10,,20.643,8.406,22.000,39.000,17.000,0.142,11.991,3.052,2.000,False,False,False,7.000,,False
+centre,FFM-STT-21,Hausen,district,06412000,7381,osm_place,8.624,50.132,8.860,4.772,45,52,60,15,,14.273,10.223,23.000,21.000,-2.000,-0.017,-7.751,3.643,1.000,False,False,False,,,False
+centre,06436002,Eppstein,commune,,13070,osm_townhall,8.376,50.149,9.037,22.346,67,75,81,14,,21.065,7.230,24.000,63.500,39.500,0.329,31.643,3.560,2.000,False,False,False,1.000,,False
+centre,06433007,Kelsterbach,commune,,16622,osm_townhall,8.532,50.060,9.525,12.112,68,72,79,11,,17.077,7.937,25.000,57.500,32.500,0.271,22.873,4.216,2.000,False,False,False,3.000,,False
+centre,FFM-STT-19,Griesheim,district,06412000,23166,osm_place,8.608,50.091,9.564,5.757,55,62,69,14,,18.582,9.256,26.000,37.000,11.000,0.092,5.573,3.337,1.000,False,False,False,,,False
+centre,FFM-STT-24,Heddernheim,district,06412000,17343,osm_place,8.647,50.160,10.499,5.996,54,61,68,14,,19.400,10.327,27.000,34.000,7.000,0.058,-1.188,3.144,1.000,False,False,False,,,False
+centre,FFM-STT-12,Bockenheim,district,06412000,45051,osm_place,8.646,50.123,10.563,2.946,41,48,56,15,,16.112,13.203,28.000,14.000,-14.000,-0.117,-22.499,2.979,0.000,False,False,False,,,False
+centre,FFM-STT-26,Ginnheim,district,06412000,17439,osm_place,8.650,50.143,10.584,4.273,54,61,69,15,,16.875,10.410,29.000,34.000,5.000,0.042,-1.614,3.615,1.000,False,False,False,,,False
+centre,FFM-STT-43,Kalbach-Riedberg,district,06412000,23435,representative_point,8.639,50.186,10.887,8.943,69,76,82,13,,20.213,8.595,30.000,65.000,35.000,0.292,20.740,3.760,2.000,False,False,False,2.000,,False
+centre,FFM-STT-11,Gallus,district,06412000,44976,osm_place,8.643,50.104,11.039,2.921,39,46,54,15,,17.013,14.398,31.000,11.500,-19.500,-0.163,-27.461,2.704,0.000,False,False,False,,,False
+centre,FFM-STT-28,Eschersheim,district,06412000,15497,osm_place,8.656,50.158,11.152,5.588,43,50,58,15,,21.342,13.382,32.000,18.000,-14.000,-0.117,-21.582,2.343,1.000,False,False,False,,,False
+centre,FFM-STT-17,Niederrad,district,06412000,30834,osm_place,8.643,50.088,11.819,3.794,61,68,76,15,,17.738,10.428,33.000,49.000,16.000,0.133,3.381,3.834,1.000,False,False,False,9.000,,False
+centre,FFM-STT-4,Westend-Süd,district,06412000,19575,osm_place,8.662,50.115,11.905,1.522,51,58,66,15,,16.973,12.316,34.000,28.500,-5.500,-0.046,-12.166,3.417,0.000,False,False,False,,,False
+centre,FFM-STT-5,Westend-Nord,district,06412000,10179,osm_place,8.668,50.126,12.034,2.010,54,62,69,15,,18.657,11.646,35.000,37.000,2.000,0.017,-6.647,3.323,1.000,False,False,False,,,False
+centre,FFM-STT-31,Bonames,district,06412000,6331,osm_place,8.663,50.181,12.274,7.956,61,69,77,16,,21.032,10.673,36.000,51.000,15.000,0.125,2.798,3.281,2.000,False,False,False,,,False
+centre,FFM-STT-10,Gutleutviertel,district,06412000,6900,osm_place,8.661,50.102,12.279,1.869,49,55,63,14,,17.463,13.396,37.000,25.000,-12.000,-0.100,-18.077,3.149,1.000,False,False,False,,,False
+centre,06434001,Bad Homburg v.d.Höhe,commune,,56688,osm_townhall,8.622,50.224,12.376,13.272,50,56,63,13,,19.602,13.260,38.000,26.000,-12.000,-0.100,-16.938,2.857,1.000,False,False,False,,,False
+centre,FFM-STT-27,Dornbusch,district,06412000,18803,osm_place,8.675,50.139,12.412,3.174,58,65,73,15,,16.360,11.457,39.000,43.000,4.000,0.033,-3.737,3.973,1.000,False,False,False,,,False
+centre,FFM-STT-3,Bahnhofsviertel,district,06412000,3907,osm_place,8.668,50.108,12.530,1.058,44,50,58,14,,16.690,15.036,40.000,18.000,-22.000,-0.183,-26.325,2.996,1.000,False,False,False,,,False
+centre,06434003,Glashütten,commune,,5311,osm_townhall,8.403,50.237,12.537,24.391,59,66,71,12,,18.922,11.397,41.000,45.000,4.000,0.033,-2.778,3.488,2.000,False,False,False,,,False
+centre,FFM-STT-47,Frankfurter Berg,district,06412000,8252,osm_place,8.676,50.168,12.715,6.374,52,59,67,15,,21.650,12.931,42.000,31.500,-10.500,-0.087,-13.746,2.725,1.000,False,False,False,,,False
+centre,FFM-STT-29,Eckenheim,district,06412000,14110,osm_place,8.680,50.152,12.749,4.546,65,72,80,15,,19.695,10.624,43.000,57.500,14.500,0.121,5.109,3.656,2.000,False,False,False,,,False
+centre,FFM-STT-6,Nordend-West,district,06412000,32052,osm_place,8.678,50.125,12.768,1.594,55,62,70,15,,16.870,12.356,44.000,37.000,-7.000,-0.058,-9.560,3.675,1.000,False,False,False,,,False
+centre,06439011,Niedernhausen,commune,,14345,osm_townhall,8.317,50.162,13.338,26.712,68,74,80,12,,22.880,10.814,45.000,61.000,16.000,0.133,5.451,3.234,1.000,False,False,False,8.000,,False
+centre,FFM-STT-13,Sachsenhausen-Nord,district,06412000,32568,representative_point,8.675,50.099,13.354,1.478,53,58,66,13,,19.357,13.815,46.000,28.500,-17.500,-0.146,-17.405,2.996,2.000,False,False,False,,,False
+centre,FFM-STT-30,Preungesheim,district,06412000,15784,osm_place,8.688,50.157,13.370,5.093,66,71,79,13,,22.007,11.299,47.000,54.500,7.500,0.062,1.043,3.226,2.000,False,False,False,,,False
+centre,FFM-STT-1,Altstadt,district,06412000,4212,osm_townhall,8.682,50.110,13.385,0.072,48,54,62,14,,19.217,14.872,48.000,23.500,-24.500,-0.204,-23.195,2.810,2.000,False,False,False,,7.000,False
+centre,FFM-STT-2,Innenstadt,district,06412000,6895,osm_place,8.684,50.115,13.399,0.417,47,54,62,15,,19.318,14.888,49.000,23.500,-25.500,-0.212,-23.240,2.795,0.000,False,False,False,,6.000,False
+centre,FFM-STT-45,Nieder-Eschbach,district,06412000,12200,osm_townhall,8.671,50.199,13.566,9.802,62,69,77,15,,20.718,11.796,50.000,51.000,1.000,0.008,-2.564,3.330,2.000,False,False,False,,,False
+centre,FFM-STT-7,Nordend-Ost,district,06412000,22875,osm_place,8.692,50.125,13.782,1.714,54,61,69,15,,17.710,13.556,51.000,34.000,-17.000,-0.142,-14.587,3.444,1.000,False,False,False,,,False
+centre,FFM-STT-44,Harheim,district,06412000,5254,osm_townhall,8.692,50.182,14.264,7.953,64,71,79,15,,24.515,12.054,52.000,54.500,2.500,0.021,-2.399,2.896,1.000,False,False,False,,,False
+centre,FFM-STT-32,Berkersheim,district,06412000,3866,osm_place,8.697,50.173,14.351,7.023,57,64,72,15,,24.720,13.454,53.000,41.000,-12.000,-0.100,-12.307,2.589,1.000,False,False,False,,,False
+centre,FFM-STT-8,Ostend,district,06412000,31635,osm_place,8.700,50.112,14.595,1.265,52,59,67,15,,21.592,14.842,54.000,31.500,-22.500,-0.188,-19.883,2.733,0.000,False,False,False,,10.000,False
+centre,06434009,Schmitten im Taunus,commune,,9323,osm_townhall,8.442,50.271,14.726,24.690,80,88,95,15,,23.585,10.040,55.000,82.000,27.000,0.225,18.924,3.731,1.000,False,False,False,5.000,,False
+centre,FFM-STT-9,Bornheim,district,06412000,30897,osm_place,8.711,50.130,15.010,2.908,57,64,72,15,,21.007,14.072,56.000,41.000,-15.000,-0.125,-14.390,3.047,1.000,False,False,False,,,False
+centre,06436004,Flörsheim am Main,commune,,21344,osm_townhall,8.431,50.015,15.251,20.969,79,85,92,13,,22.082,10.765,57.000,77.000,20.000,0.167,12.736,3.849,2.000,False,False,False,,,False
+centre,FFM-STT-14,Sachsenhausen-Süd (inkl. Flughafen),district,06412000,30063,representative_point,8.685,50.071,15.436,4.455,64,67,74,10,,24.345,13.823,58.000,47.500,-10.500,-0.087,-11.710,2.752,2.000,False,False,False,,,False
+centre,06433010,Raunheim,commune,,15297,osm_townhall,8.450,50.009,15.486,20.155,78,85,92,14,,24.990,10.932,59.000,77.000,18.000,0.150,11.814,3.401,1.000,False,False,False,,,False
+centre,06434002,Friedrichsdorf,commune,,25871,osm_townhall,8.639,50.255,15.776,16.307,70,75,84,14,,27.123,12.621,60.000,63.500,3.500,0.029,-2.314,2.765,1.000,False,False,False,,,False
+centre,FFM-STT-34,Seckbach,district,06412000,10569,osm_place,8.726,50.143,16.018,4.771,65,72,80,15,,24.733,13.348,61.000,57.500,-3.500,-0.029,-6.984,2.911,2.000,False,False,False,,,False
+centre,FFM-STT-42,Nieder-Erlenbach,district,06412000,4841,osm_townhall,8.709,50.203,16.219,10.462,67,74,82,15,,26.857,13.150,62.000,61.000,-1.000,-0.008,-5.035,2.755,2.000,False,False,False,,,False
+centre,FFM-STT-16,Oberrad,district,06412000,13755,osm_place,8.723,50.100,16.555,3.150,64,72,78,14,,24.847,13.796,63.000,57.500,-5.500,-0.046,-8.611,2.898,1.000,False,False,False,,,False
+centre,06434007,Neu-Anspach,commune,,14342,osm_townhall,8.510,50.293,16.574,23.667,87,98,105,18,,29.288,10.147,64.000,91.500,27.500,0.229,24.316,3.346,1.000,False,False,False,,,False
+centre,FFM-STT-33,Riederwald,district,06412000,4899,osm_place,8.733,50.129,16.622,4.139,59,66,74,15,,25.153,15.111,65.000,45.000,-20.000,-0.167,-16.407,2.624,1.000,False,False,False,,,False
+centre,06438009,Neu-Isenburg,commune,,37926,osm_townhall,8.695,50.055,16.987,6.286,67,70,77,10,,24.577,14.560,66.000,53.000,-13.000,-0.108,-12.366,2.848,2.000,False,False,False,,,False
+centre,06433012,Rüsselsheim am Main,commune,,65627,osm_townhall,8.411,49.995,17.749,23.292,77,85,92,15,,25.395,12.529,67.000,77.000,10.000,0.083,3.939,3.347,1.000,False,False,False,,,False
+centre,06440003,Bad Vilbel,commune,,35961,osm_townhall,8.745,50.183,17.897,9.211,59,66,74,15,,25.392,16.270,68.000,45.000,-23.000,-0.192,-19.651,2.599,2.000,False,False,False,,9.000,False
+centre,06439016,Waldems,commune,,5288,osm_townhall,8.313,50.250,17.950,30.608,75,91,102,27,,24.365,11.835,69.000,85.000,16.000,0.133,10.609,3.735,2.000,False,False,False,,,False
+centre,FFM-STT-46,Bergen-Enkheim,district,06412000,18126,osm_place,8.756,50.154,18.170,7.060,78,85,92,14,,27.920,12.826,70.000,77.000,7.000,0.058,2.643,3.044,2.000,False,False,False,,,False
+centre,06434012,Wehrheim,commune,,9271,osm_townhall,8.570,50.303,18.388,22.869,99,105,112,13,,26.370,10.507,71.000,98.000,27.000,0.225,25.988,3.982,2.000,False,False,False,,,False
+centre,06436006,Hochheim am Main,commune,,18422,osm_townhall,8.351,50.010,18.410,26.276,83,89,95,12,,26.352,12.411,72.000,83.000,11.000,0.092,6.721,3.377,2.000,False,False,False,,,False
+centre,06439008,Idstein,commune,,25736,osm_townhall,8.269,50.221,18.706,31.965,75,83,91,16,,28.970,13.523,73.000,72.500,-0.500,-0.004,-1.321,2.865,2.000,False,False,False,,,False
+centre,06413000,Offenbach am Main,commune,,132746,osm_townhall,8.761,50.106,19.025,5.663,62,69,77,15,,26.950,16.543,74.000,51.000,-23.000,-0.192,-18.704,2.560,1.000,False,False,False,,8.000,False
+centre,FFM-STT-35,Fechenheim,district,06412000,17155,osm_townhall,8.769,50.124,19.259,6.405,73,80,88,15,,29.663,14.444,75.000,68.000,-7.000,-0.058,-6.360,2.697,1.000,False,False,False,,,False
+centre,06433008,Mörfelden-Walldorf,commune,,31638,osm_townhall,8.568,49.975,19.329,17.180,87,95,102,15,,21.718,12.208,76.000,88.000,12.000,0.100,10.983,4.374,1.000,False,False,False,,,False
+centre,06438002,Dreieich,commune,,41692,osm_townhall,8.696,50.018,19.711,10.337,78,84,91,13,,26.802,14.079,77.000,74.000,-3.000,-0.025,-2.890,3.134,4.000,True,False,False,,,False
+centre,06414000,Wiesbaden,commune,,288850,osm_townhall,8.241,50.082,19.880,31.747,76,83,89,13,,25.235,14.371,78.000,72.500,-5.500,-0.046,-4.484,3.289,2.000,False,False,False,,,False
+centre,06433002,Bischofsheim,commune,,12979,osm_townhall,8.359,49.990,19.983,26.835,83,90,97,14,,27.215,13.322,79.000,84.000,5.000,0.042,3.284,3.307,1.000,False,False,False,,,False
+centre,06438006,Langen (Hessen),commune,,38785,osm_townhall,8.667,49.987,21.031,13.784,77,81,85,8,,26.605,15.579,80.000,69.500,-10.500,-0.087,-9.554,3.045,3.000,False,False,False,,,False
+centre,06440012,Karben,commune,,22600,osm_townhall,8.763,50.233,21.125,14.776,71,78,86,15,,30.825,16.250,81.000,67.000,-14.000,-0.117,-13.112,2.530,1.000,False,False,False,,,False
+centre,06434011,Usingen,commune,,15683,osm_townhall,8.537,50.334,21.302,26.913,106,113,120,14,,31.077,11.311,82.000,110.000,28.000,0.233,25.316,3.636,2.000,False,False,False,,,False
+centre,06440023,Rosbach v.d.Höhe,commune,,13084,osm_townhall,8.688,50.299,21.790,20.948,92,99,107,15,,23.700,13.206,83.000,93.500,10.500,0.087,8.466,4.177,2.000,False,False,False,,,False
+centre,06435022,Niederdorfelden,commune,,4215,osm_townhall,8.804,50.195,22.351,12.769,92,99,106,14,,31.705,13.546,84.000,93.500,9.500,0.079,7.001,3.123,2.000,False,False,False,,,False
+centre,06433009,Nauheim,commune,,10496,osm_townhall,8.455,49.945,22.416,24.661,102,108,116,14,,28.920,12.453,85.000,101.000,16.000,0.133,16.547,3.734,3.000,False,False,False,,,False
+centre,06433005,Ginsheim-Gustavsburg,commune,,16488,osm_townhall,8.346,49.965,22.828,29.063,105,113,123,18,,30.158,12.121,86.000,110.000,24.000,0.200,20.760,3.747,3.000,False,False,False,,,False
+centre,07315000,Mainz,commune,,224684,osm_townhall,8.268,50.003,22.940,32.025,74,81,88,14,,27.952,16.993,87.000,69.500,-17.500,-0.146,-13.665,2.898,2.000,False,False,False,,,False
+centre,06438003,Egelsbach,commune,,10960,osm_townhall,8.664,49.965,23.063,16.304,90,96,104,14,,27.770,14.414,88.000,89.500,1.500,0.013,2.031,3.457,3.000,False,False,False,,,False
+centre,06435019,Maintal,commune,,38987,osm_townhall,8.831,50.152,23.529,11.530,92,98,107,15,,32.505,14.406,89.000,91.500,2.500,0.021,3.046,3.015,1.000,False,False,False,,,False
+centre,06432006,Erzhausen,commune,,7794,osm_townhall,8.634,49.950,23.556,18.219,96,104,111,15,,33.147,13.590,90.000,96.500,6.500,0.054,9.288,3.138,1.000,False,False,False,,,False
+centre,06438005,Heusenstamm,commune,,19312,osm_townhall,8.808,50.063,23.686,10.460,75,82,90,15,,29.423,17.331,91.000,71.000,-20.000,-0.167,-14.084,2.787,1.000,False,False,False,,,False
+centre,06533003,Bad Camberg,commune,,14268,osm_townhall,8.272,50.297,23.695,35.915,100,109,117,17,,34.025,13.043,92.000,102.500,10.500,0.087,14.181,3.204,2.000,False,False,False,,,False
+centre,06438008,Mühlheim am Main,commune,,29194,osm_townhall,8.833,50.120,23.805,10.785,77,85,92,15,,36.008,16.804,93.000,77.000,-16.000,-0.133,-11.180,2.361,2.000,False,False,False,,,False
+centre,06434013,Weilrod,commune,,6856,osm_townhall,8.383,50.346,23.992,33.740,105,116,133,28,,37.627,12.410,94.000,113.000,19.000,0.158,20.706,3.083,1.000,False,False,False,,,False
+centre,06440025,Wöllstadt,commune,,6593,osm_townhall,8.769,50.277,24.144,19.486,70,77,85,15,,30.600,18.814,95.000,66.000,-29.000,-0.242,-20.147,2.516,1.000,False,False,False,,5.000,False
+centre,06439015,Taunusstein,commune,,30145,osm_townhall,8.161,50.143,24.390,37.490,97,104,112,15,,37.695,14.071,96.000,96.500,0.500,0.004,7.271,2.759,2.000,False,False,False,,,False
+centre,06438001,Dietzenbach,commune,,35561,osm_townhall,8.783,50.019,24.432,12.485,80,87,95,15,,30.417,16.850,97.000,80.500,-16.500,-0.138,-10.348,2.860,1.000,False,False,False,,,False
+centre,06439007,Hünstetten,commune,,10380,osm_townhall,8.196,50.250,24.841,38.054,114,125,137,23,,34.252,11.924,98.000,117.000,19.000,0.158,27.671,3.649,2.000,False,False,False,,,False
+centre,06433014,Trebur,commune,,12799,osm_townhall,8.405,49.925,25.277,28.649,102,113,124,22,,30.883,13.421,99.000,110.000,11.000,0.092,14.345,3.659,3.000,False,False,False,,,False
+centre,06438010,Obertshausen,commune,,25316,osm_townhall,8.847,50.069,26.016,12.621,84,92,99,15,,27.223,16.967,100.000,86.000,-14.000,-0.117,-8.331,3.379,2.000,False,False,False,,,False
+centre,06435026,Schöneck,commune,,11837,osm_townhall,8.855,50.202,26.049,15.944,109,120,133,24,,35.577,13.024,101.000,115.000,14.000,0.117,19.488,3.373,1.000,False,False,False,,,False
+centre,06440017,Niddatal,commune,,9861,osm_townhall,8.803,50.280,26.269,20.661,92,103,121,29,,31.683,15.302,102.000,95.000,-7.000,-0.058,2.100,3.251,2.000,False,False,False,,,False
+centre,06433003,Büttelborn,commune,,14685,osm_townhall,8.514,49.903,26.848,26.146,100,107,114,14,,28.227,15.055,103.000,99.500,-3.500,-0.029,4.833,3.791,2.000,False,False,False,,,False
+centre,06434004,Grävenwiesbach,commune,,5376,osm_townhall,8.403,50.380,27.155,35.915,145,156,167,22,,41.553,10.444,104.000,120.000,16.000,0.133,51.913,3.754,3.000,False,False,False,,,False
+centre,06433006,Groß-Gerau,commune,,25388,osm_townhall,8.484,49.900,27.189,27.483,104,112,119,15,,30.463,14.566,105.000,107.500,2.500,0.021,8.992,3.677,2.000,False,False,False,,,False
+centre,06439017,Walluf,commune,,5407,osm_townhall,8.154,50.037,27.575,38.708,108,115,121,13,,29.185,14.387,106.000,112.000,6.000,0.050,11.071,3.940,2.000,False,False,False,,,False
+centre,07339009,Budenheim,commune,,8104,osm_townhall,8.166,50.022,27.596,38.271,118,124,132,14,,36.733,13.353,107.000,116.000,9.000,0.075,19.714,3.376,3.000,False,False,False,,,False
+centre,07339006,Bodenheim,commune,,7651,osm_townhall,8.307,49.930,27.605,33.629,103,111,118,15,,35.893,14.922,108.000,105.000,-3.000,-0.025,7.145,3.092,2.000,False,False,False,,,False
+centre,06440008,Friedberg (Hessen),commune,,30409,osm_townhall,8.756,50.333,27.752,25.226,68,74,81,13,,30.450,22.502,109.000,61.000,-48.000,-0.400,-28.773,2.430,1.000,False,False,False,,1.000,False
+centre,07339039,Nackenheim,commune,,5358,osm_townhall,8.342,49.915,27.892,32.690,109,117,124,15,,36.235,14.304,110.000,114.000,4.000,0.033,12.313,3.229,2.000,False,False,False,,,False
+centre,06435021,Nidderau,commune,,20119,osm_townhall,8.875,50.228,28.235,18.930,102,109,117,15,,40.157,15.542,111.000,102.500,-8.500,-0.071,3.951,2.714,2.000,False,False,False,,,False
+centre,06533014,Selters (Taunus),commune,,8158,osm_townhall,8.227,50.333,28.820,40.882,96,107,122,26,,40.232,16.161,112.000,99.500,-12.500,-0.104,0.930,2.660,2.000,False,False,False,,,False
+centre,06432012,Messel,commune,,4215,osm_townhall,8.744,49.937,28.865,19.894,101,112,124,23,,38.308,15.463,113.000,107.500,-5.500,-0.046,5.558,2.924,4.000,True,False,False,,,False
+centre,06432023,Weiterstadt,commune,,26583,osm_townhall,8.610,49.894,28.878,24.694,101,111,122,21,,27.258,15.610,114.000,105.000,-9.000,-0.075,4.589,4.072,3.000,False,False,False,,,False
+centre,06439014,Schlangenbad,commune,,5967,osm_townhall,8.102,50.093,29.161,41.587,125,136,141,16,,36.138,12.865,115.000,118.000,3.000,0.025,27.479,3.763,2.000,False,False,False,,,False
+centre,06440018,Ober-Mörlen,commune,,5706,osm_townhall,8.693,50.376,29.174,29.452,92,111,123,31,,28.507,15.770,116.000,105.000,-11.000,-0.092,4.019,3.894,2.000,False,False,False,,,False
+centre,06439006,Hohenstein,commune,,5829,osm_townhall,8.100,50.194,29.214,42.609,141,153,164,23,,44.675,11.457,117.000,119.000,2.000,0.017,43.273,3.425,3.000,False,False,False,,,False
+centre,06435014,Hanau,commune,,97956,osm_townhall,8.917,50.133,29.711,16.964,89,94,101,12,,37.827,18.964,118.000,87.000,-31.000,-0.258,-12.767,2.485,3.000,False,False,False,,3.000,False
+centre,06440002,Bad Nauheim,commune,,32894,osm_townhall,8.736,50.365,29.752,28.556,80,87,95,15,,34.498,20.519,119.000,80.500,-38.500,-0.321,-19.323,2.522,1.000,False,False,False,,2.000,False
+centre,06438012,Rödermark,commune,,28753,osm_townhall,8.828,49.977,29.802,18.143,91,96,104,13,,38.375,18.626,120.000,89.500,-30.500,-0.254,-11.057,2.502,4.000,True,False,False,,4.000,False
+gare,06436001,Bad Soden am Taunus,commune,,23103,osm_townhall,8.501,50.144,0.255,13.502,4,4,4,0,4.000,1.397,3.830,,,,,,2.864,0.000,False,True,False,,,True
+gare,06436012,Sulzbach (Taunus),commune,,8846,osm_townhall,8.528,50.132,2.070,11.320,20,24,30,10,31.000,5.800,5.176,1.000,2.000,1.000,0.008,-1.301,4.138,0.000,False,False,False,,,False
+gare,06436011,Schwalbach am Taunus,commune,,15443,osm_townhall,8.529,50.154,2.137,12.000,16,22,28,12,36.000,5.902,5.828,2.000,1.000,-1.000,-0.008,-11.082,3.728,0.000,False,False,False,,,False
+gare,06436010,Liederbach am Taunus,commune,,8887,osm_townhall,8.491,50.121,2.634,13.750,30,41,47,17,47.000,9.463,3.855,3.000,9.500,6.500,0.054,47.713,4.333,0.000,False,False,False,,,False
+gare,06436003,Eschborn,commune,,22403,osm_townhall,8.551,50.147,3.388,10.242,33,37,43,10,69.000,9.355,5.495,4.000,5.500,1.500,0.013,16.091,3.955,1.000,False,False,False,,,False
+gare,06436008,Kelkheim (Taunus),commune,,28175,osm_townhall,8.449,50.141,3.920,17.014,31,44,55,24,67.000,10.400,5.346,5.000,12.000,7.000,0.058,27.429,4.231,1.000,False,False,False,,,False
+gare,06434006,Kronberg im Taunus,commune,,18671,osm_townhall,8.508,50.178,3.954,14.570,41,46,53,12,63.000,10.758,5.157,6.000,14.500,8.500,0.071,32.607,4.276,1.000,False,False,False,,,False
+gare,FFM-STT-40,Unterliederbach,district,06412000,17284,osm_place,8.532,50.110,4.156,10.743,27,33,39,12,64.000,8.283,7.556,7.000,3.000,-4.000,-0.033,-7.438,3.984,0.000,False,False,False,,,False
+gare,FFM-STT-41,Sossenheim,district,06412000,16498,osm_place,8.567,50.120,5.158,8.347,35,40,48,13,78.000,10.223,7.737,8.000,8.000,0.000,0.000,-0.354,3.913,1.000,False,False,False,,,False
+gare,06434005,Königstein im Taunus,commune,,16680,osm_townhall,8.465,50.182,5.188,17.479,30,37,43,13,75.000,11.128,8.412,9.000,5.500,-3.500,-0.029,-8.120,3.325,0.000,False,False,False,,,False
+gare,FFM-STT-39,Zeilsheim,district,06412000,12798,osm_place,8.495,50.096,5.318,13.532,44,50,54,10,98.000,10.790,6.382,10.000,22.000,12.000,0.100,22.479,4.634,1.000,False,False,False,,,False
+gare,FFM-STT-36,Höchst,district,06412000,15993,osm_townhall,8.543,50.102,5.387,10.047,27,34,39,12,78.000,10.615,9.506,11.000,4.000,-7.000,-0.058,-17.298,3.203,0.000,False,False,False,,,False
+gare,06434010,Steinbach (Taunus),commune,,10856,osm_townhall,8.576,50.168,5.844,9.876,42,49,56,14,92.000,13.028,7.156,12.000,20.000,8.000,0.067,13.970,3.761,1.000,False,False,False,,,False
+gare,FFM-STT-37,Nied,district,06412000,20022,osm_place,8.572,50.101,6.782,7.965,42,48,52,10,104.000,14.525,8.478,13.000,18.000,5.000,0.042,2.880,3.305,1.000,False,False,False,,,False
+gare,06436009,Kriftel,commune,,11356,osm_townhall,8.471,50.085,6.863,15.428,48,54,62,14,115.000,11.270,7.625,14.000,27.000,13.000,0.108,14.993,4.791,1.000,False,False,False,,,False
+gare,FFM-STT-38,Sindlingen,district,06412000,8777,osm_place,8.518,50.080,7.096,12.284,40,46,53,13,,14.040,9.256,15.000,14.500,-0.500,-0.004,-3.827,3.276,1.000,False,False,False,,,False
+gare,06436007,Hofheim am Taunus,commune,,39259,osm_townhall,8.448,50.085,7.602,17.046,31,41,51,20,117.000,13.102,11.124,16.000,9.500,-6.500,-0.054,-17.458,3.129,0.000,False,False,False,,,False
+gare,FFM-STT-20,Rödelheim,district,06412000,19839,osm_place,8.613,50.125,8.024,5.238,32,39,47,15,,13.207,12.345,17.000,7.000,-10.000,-0.083,-23.782,2.953,0.000,False,False,False,,,False
+gare,06436005,Hattersheim am Main,commune,,28467,osm_townhall,8.483,50.070,8.252,14.988,60,64,72,12,,11.798,7.736,18.000,46.500,28.500,0.237,23.170,5.424,1.000,False,False,False,5.000,,False
+gare,06434008,Oberursel (Taunus),commune,,46736,osm_townhall,8.580,50.201,8.415,12.357,43,49,55,12,,16.358,10.304,19.000,20.000,1.000,0.008,-6.709,2.995,1.000,False,False,False,,,False
+gare,FFM-STT-22,Praunheim,district,06412000,16636,osm_place,8.622,50.151,8.452,6.220,48,55,63,15,,15.883,9.220,20.000,29.000,9.000,0.075,4.464,3.463,1.000,False,False,False,,,False
+gare,FFM-STT-18,Schwanheim,district,06412000,20586,osm_place,8.584,50.085,8.587,7.621,56,61,66,10,,16.887,8.447,21.000,40.500,19.500,0.163,14.852,3.612,2.000,False,False,False,6.000,,False
+gare,FFM-STT-21,Hausen,district,06412000,7381,osm_place,8.624,50.132,8.699,4.772,42,49,57,15,,14.663,10.652,22.000,20.000,-2.000,-0.017,-8.396,3.342,1.000,False,False,False,,,False
+gare,FFM-STT-25,Niederursel,district,06412000,17585,osm_place,8.619,50.169,8.713,7.907,56,61,66,10,,21.033,8.570,23.000,40.500,17.500,0.146,13.940,2.900,2.000,False,False,False,7.000,,False
+gare,06436002,Eppstein,commune,,13070,osm_townhall,8.376,50.149,9.192,22.346,63,73,79,16,,21.455,7.555,24.000,64.000,40.000,0.333,32.404,3.402,2.000,False,False,False,1.000,,False
+gare,FFM-STT-19,Griesheim,district,06412000,23166,osm_place,8.608,50.091,9.393,5.757,52,59,66,14,,18.972,9.552,25.000,37.000,12.000,0.100,5.749,3.110,1.000,False,False,False,,,False
+gare,06433007,Kelsterbach,commune,,16622,osm_townhall,8.532,50.060,9.407,12.112,65,69,76,11,,17.467,8.180,26.000,57.500,31.500,0.263,23.573,3.950,2.000,False,False,False,3.000,,False
+gare,FFM-STT-24,Heddernheim,district,06412000,17343,osm_place,8.647,50.160,10.367,5.996,51,58,65,14,,19.790,10.724,27.000,34.000,7.000,0.058,-1.525,2.931,1.000,False,False,False,,,False
+gare,FFM-STT-12,Bockenheim,district,06412000,45051,osm_place,8.646,50.123,10.398,2.946,38,45,53,15,,16.502,13.865,28.000,13.000,-15.000,-0.125,-23.724,2.727,0.000,False,False,False,,,False
+gare,FFM-STT-26,Ginnheim,district,06412000,17439,osm_place,8.650,50.143,10.434,4.273,51,58,66,15,,17.265,10.794,29.000,34.000,5.000,0.042,-1.875,3.359,1.000,False,False,False,,,False
+gare,FFM-STT-43,Kalbach-Riedberg,district,06412000,23435,representative_point,8.639,50.186,10.791,8.943,67,73,79,12,,20.603,8.869,30.000,64.000,34.000,0.283,21.243,3.543,2.000,False,False,False,2.000,,False
+gare,FFM-STT-11,Gallus,district,06412000,44976,osm_place,8.643,50.104,10.867,2.921,36,43,51,15,,17.403,15.164,31.000,11.000,-20.000,-0.167,-28.859,2.471,0.000,False,False,False,,,False
+gare,FFM-STT-28,Eschersheim,district,06412000,15497,osm_place,8.656,50.158,11.017,5.588,40,47,55,15,,21.732,14.064,32.000,16.500,-15.500,-0.129,-22.823,2.163,1.000,False,False,False,,,False
+gare,FFM-STT-17,Niederrad,district,06412000,30834,osm_place,8.643,50.088,11.646,3.794,58,65,73,15,,18.128,10.750,33.000,48.000,15.000,0.125,3.527,3.586,1.000,False,False,False,8.000,,False
+gare,FFM-STT-4,Westend-Süd,district,06412000,19575,osm_place,8.662,50.115,11.739,1.522,48,55,63,15,,17.363,12.806,34.000,29.000,-5.000,-0.042,-12.779,3.168,0.000,False,False,False,,,False
+gare,FFM-STT-5,Westend-Nord,district,06412000,10179,osm_place,8.668,50.126,11.873,2.010,51,59,66,15,,19.047,12.074,35.000,37.000,2.000,0.017,-7.019,3.098,1.000,False,False,False,,,False
+gare,FFM-STT-10,Gutleutviertel,district,06412000,6900,osm_place,8.661,50.102,12.109,1.869,46,52,60,14,,17.853,13.971,36.000,25.000,-11.000,-0.092,-18.930,2.913,1.000,False,False,False,,,False
+gare,FFM-STT-31,Bonames,district,06412000,6331,osm_place,8.663,50.181,12.165,7.956,57,66,74,17,,21.422,11.059,37.000,50.500,13.500,0.113,2.637,3.081,2.000,False,False,False,10.000,,False
+gare,FFM-STT-27,Dornbusch,district,06412000,18803,osm_place,8.675,50.139,12.260,3.174,55,62,70,15,,16.750,11.864,38.000,43.000,5.000,0.042,-3.995,3.701,1.000,False,False,False,,,False
+gare,06434001,Bad Homburg v.d.Höhe,commune,,56688,osm_townhall,8.622,50.224,12.336,13.272,48,53,60,12,,19.992,13.965,39.000,26.000,-13.000,-0.108,-18.211,2.651,1.000,False,False,False,,,False
+gare,FFM-STT-3,Bahnhofsviertel,district,06412000,3907,osm_place,8.668,50.108,12.361,1.058,41,47,55,14,,17.080,15.780,40.000,16.500,-23.500,-0.196,-27.550,2.752,1.000,False,False,False,,8.000,False
+gare,FFM-STT-47,Frankfurter Berg,district,06412000,8252,osm_place,8.676,50.168,12.589,6.374,49,56,64,15,,22.040,13.488,41.000,31.500,-9.500,-0.079,-14.538,2.541,1.000,False,False,False,,,False
+gare,FFM-STT-6,Nordend-West,district,06412000,32052,osm_place,8.678,50.125,12.607,1.594,52,59,67,15,,17.260,12.820,42.000,37.000,-5.000,-0.042,-10.031,3.418,1.000,False,False,False,,,False
+gare,FFM-STT-29,Eckenheim,district,06412000,14110,osm_place,8.680,50.152,12.607,4.546,62,69,77,15,,20.085,10.963,43.000,57.500,14.500,0.121,5.218,3.435,2.000,False,False,False,9.000,,False
+gare,06434003,Glashütten,commune,,5311,osm_townhall,8.403,50.237,12.692,24.391,59,66,71,12,,19.657,11.538,44.000,50.500,6.500,0.054,0.271,3.358,2.000,False,False,False,,,False
+gare,FFM-STT-13,Sachsenhausen-Nord,district,06412000,32568,representative_point,8.675,50.099,13.183,1.478,50,55,63,13,,19.747,14.382,45.000,29.000,-16.000,-0.133,-18.165,2.785,2.000,False,False,False,,,False
+gare,FFM-STT-1,Altstadt,district,06412000,4212,osm_townhall,8.682,50.110,13.217,0.072,45,51,59,14,,19.607,15.550,46.000,23.500,-22.500,-0.188,-24.224,2.601,2.000,False,False,False,,10.000,False
+gare,FFM-STT-30,Preungesheim,district,06412000,15784,osm_place,8.688,50.157,13.232,5.093,63,68,76,13,,22.397,11.675,47.000,54.500,7.500,0.062,0.974,3.036,2.000,False,False,False,,,False
+gare,FFM-STT-2,Innenstadt,district,06412000,6895,osm_place,8.684,50.115,13.234,0.417,44,51,59,15,,19.708,15.569,48.000,23.500,-24.500,-0.204,-24.276,2.588,0.000,False,False,False,,6.000,False
+gare,FFM-STT-45,Nieder-Eschbach,district,06412000,12200,osm_townhall,8.671,50.199,13.473,9.802,59,66,74,15,,21.108,12.248,49.000,50.500,1.500,0.013,-2.961,3.127,2.000,False,False,False,,,False
+gare,06439011,Niedernhausen,commune,,14345,osm_townhall,8.317,50.162,13.498,26.712,64,71,79,15,,23.270,11.407,50.000,60.500,10.500,0.087,4.281,3.051,1.000,False,False,False,,,False
+gare,FFM-STT-7,Nordend-Ost,district,06412000,22875,osm_place,8.692,50.125,13.622,1.714,51,58,66,15,,18.100,14.091,51.000,34.000,-17.000,-0.142,-15.237,3.204,1.000,False,False,False,,,False
+gare,FFM-STT-44,Harheim,district,06412000,5254,osm_townhall,8.692,50.182,14.148,7.953,61,68,76,15,,24.905,12.484,52.000,54.500,2.500,0.021,-2.673,2.730,1.000,False,False,False,,,False
+gare,FFM-STT-32,Berkersheim,district,06412000,3866,osm_place,8.697,50.173,14.226,7.023,54,61,69,15,,25.110,13.993,53.000,40.500,-12.500,-0.104,-12.955,2.429,1.000,False,False,False,,,False
+gare,FFM-STT-8,Ostend,district,06412000,31635,osm_place,8.700,50.112,14.429,1.265,49,56,64,15,,21.982,15.460,54.000,31.500,-22.500,-0.188,-20.708,2.548,0.000,False,False,False,,,False
+gare,06434009,Schmitten im Taunus,commune,,9323,osm_townhall,8.442,50.271,14.852,24.690,80,87,95,15,,24.320,10.243,55.000,83.500,28.500,0.237,21.245,3.577,1.000,False,False,False,4.000,,False
+gare,FFM-STT-9,Bornheim,district,06412000,30897,osm_place,8.711,50.130,14.853,2.908,54,61,69,15,,21.397,14.610,56.000,40.500,-15.500,-0.129,-14.991,2.851,1.000,False,False,False,,,False
+gare,06436004,Flörsheim am Main,commune,,21344,osm_townhall,8.431,50.015,15.220,20.969,76,82,89,13,,22.472,11.137,57.000,76.500,19.500,0.163,12.753,3.649,2.000,False,False,False,,,False
+gare,FFM-STT-14,Sachsenhausen-Süd (inkl. Flughafen),district,06412000,30063,representative_point,8.685,50.071,15.263,4.455,61,64,71,10,,24.735,14.310,58.000,46.500,-11.500,-0.096,-12.135,2.587,2.000,False,False,False,,,False
+gare,06433010,Raunheim,commune,,15297,osm_townhall,8.450,50.009,15.439,20.155,75,82,89,14,,25.380,11.297,59.000,76.500,17.500,0.146,11.872,3.231,1.000,False,False,False,,,False
+gare,06434002,Friedrichsdorf,commune,,25871,osm_townhall,8.639,50.255,15.752,16.307,67,73,81,14,,27.672,12.947,60.000,64.000,4.000,0.033,-1.498,2.638,1.000,False,False,False,,,False
+gare,FFM-STT-34,Seckbach,district,06412000,10569,osm_place,8.726,50.143,15.869,4.771,61,69,77,16,,25.123,13.799,61.000,57.500,-3.500,-0.029,-7.274,2.746,2.000,False,False,False,,,False
+gare,FFM-STT-42,Nieder-Erlenbach,district,06412000,4841,osm_townhall,8.709,50.203,16.119,10.462,64,71,79,15,,27.247,13.622,62.000,60.500,-1.500,-0.013,-5.401,2.606,2.000,False,False,False,,,False
+gare,FFM-STT-16,Oberrad,district,06412000,13755,osm_place,8.723,50.100,16.387,3.150,60,69,75,15,,25.237,14.250,63.000,57.500,-5.500,-0.046,-8.895,2.734,1.000,False,False,False,,,False
+gare,FFM-STT-33,Riederwald,district,06412000,4899,osm_place,8.733,50.129,16.465,4.139,56,63,71,15,,25.543,15.681,64.000,44.500,-19.500,-0.163,-17.034,2.466,1.000,False,False,False,,,False
+gare,06434007,Neu-Anspach,commune,,14342,osm_townhall,8.510,50.293,16.655,23.667,87,98,105,18,,30.023,10.197,65.000,94.000,29.000,0.242,28.247,3.264,1.000,False,False,False,,,False
+gare,06438009,Neu-Isenburg,commune,,37926,osm_townhall,8.695,50.055,16.815,6.286,64,67,74,10,,24.967,15.058,66.000,53.000,-13.000,-0.108,-12.779,2.684,2.000,False,False,False,,,False
+gare,06433012,Rüsselsheim am Main,commune,,65627,osm_townhall,8.411,49.995,17.724,23.292,73,82,89,16,,25.785,12.969,67.000,76.500,9.500,0.079,3.705,3.180,1.000,False,False,False,,,False
+gare,06440003,Bad Vilbel,commune,,35961,osm_townhall,8.745,50.183,17.774,9.211,56,63,71,15,,25.782,16.928,68.000,44.500,-23.500,-0.196,-20.448,2.444,2.000,False,False,False,,7.000,False
+gare,FFM-STT-46,Bergen-Enkheim,district,06412000,18126,osm_place,8.756,50.154,18.027,7.060,73,82,89,16,,28.310,13.191,69.000,76.500,7.500,0.062,2.745,2.897,2.000,False,False,False,,,False
+gare,06439016,Waldems,commune,,5288,osm_townhall,8.313,50.250,18.119,30.608,75,91,102,27,,25.100,11.946,70.000,86.500,16.500,0.138,13.704,3.625,2.000,False,False,False,,,False
+gare,06436006,Hochheim am Main,commune,,18422,osm_townhall,8.351,50.010,18.429,26.276,80,86,92,12,,26.742,12.857,71.000,82.000,11.000,0.092,6.460,3.216,2.000,False,False,False,,,False
+gare,06434012,Wehrheim,commune,,9271,osm_townhall,8.570,50.303,18.433,22.869,96,103,110,14,,27.105,10.738,72.000,98.000,26.000,0.217,27.488,3.800,2.000,False,False,False,,,False
+gare,06413000,Offenbach am Main,commune,,132746,osm_townhall,8.761,50.106,18.860,5.663,59,66,74,15,,27.340,17.146,73.000,50.500,-22.500,-0.188,-19.330,2.414,1.000,False,False,False,,9.000,False
+gare,06439008,Idstein,commune,,25736,osm_townhall,8.269,50.221,18.879,31.965,74,82,90,16,,29.360,13.814,74.000,76.500,2.500,0.021,0.173,2.793,2.000,False,False,False,,,False
+gare,FFM-STT-35,Fechenheim,district,06412000,17155,osm_townhall,8.769,50.124,19.102,6.405,70,77,85,15,,30.053,14.884,75.000,68.000,-7.000,-0.058,-6.540,2.562,1.000,False,False,False,,,False
+gare,06433008,Mörfelden-Walldorf,commune,,31638,osm_townhall,8.568,49.975,19.209,17.180,84,92,99,15,,22.108,12.528,76.000,88.000,12.000,0.100,11.324,4.161,1.000,False,False,False,,,False
+gare,06438002,Dreieich,commune,,41692,osm_townhall,8.696,50.018,19.544,10.337,75,81,87,12,,27.192,14.477,77.000,73.000,-4.000,-0.033,-2.913,2.979,4.000,True,False,False,,,False
+gare,06433002,Bischofsheim,commune,,12979,osm_townhall,8.359,49.990,19.986,26.835,78,87,94,16,,27.605,13.784,78.000,83.500,5.500,0.046,3.004,3.152,1.000,False,False,False,,,False
+gare,06414000,Wiesbaden,commune,,288850,osm_townhall,8.241,50.082,19.991,31.747,73,80,87,14,,25.625,14.993,79.000,72.000,-7.000,-0.058,-5.294,3.122,2.000,False,False,False,,,False
+gare,06438006,Langen (Hessen),commune,,38785,osm_townhall,8.667,49.987,20.876,13.784,74,78,82,8,,26.995,16.058,80.000,69.500,-10.500,-0.087,-9.833,2.889,3.000,False,False,False,,,False
+gare,06440012,Karben,commune,,22600,osm_townhall,8.763,50.233,21.036,14.776,68,75,83,15,,31.215,16.828,81.000,67.000,-14.000,-0.117,-13.663,2.403,1.000,False,False,False,,,False
+gare,06434011,Usingen,commune,,15683,osm_townhall,8.537,50.334,21.371,26.913,104,111,118,14,,31.812,11.552,82.000,111.000,29.000,0.242,26.672,3.489,2.000,False,False,False,,,False
+gare,06440023,Rosbach v.d.Höhe,commune,,13084,osm_townhall,8.688,50.299,21.769,20.948,90,96,104,14,,24.090,13.606,83.000,92.000,9.000,0.075,8.451,3.985,2.000,False,False,False,,,False
+gare,06435022,Niederdorfelden,commune,,4215,osm_townhall,8.804,50.195,22.229,12.769,91,97,103,12,,32.095,13.750,84.000,93.000,9.000,0.075,8.329,3.022,2.000,False,False,False,,,False
+gare,06433009,Nauheim,commune,,10496,osm_townhall,8.455,49.945,22.353,24.661,98,105,113,15,,29.310,12.773,85.000,101.000,16.000,0.133,16.906,3.582,3.000,False,False,False,,,False
+gare,06433005,Ginsheim-Gustavsburg,commune,,16488,osm_townhall,8.346,49.965,22.826,29.063,100,110,120,20,,30.548,12.450,86.000,109.000,23.000,0.192,21.073,3.601,3.000,False,False,False,,,False
+gare,06438003,Egelsbach,commune,,10960,osm_townhall,8.664,49.965,22.913,16.304,87,93,101,14,,28.160,14.782,87.000,89.500,2.500,0.021,2.148,3.303,3.000,False,False,False,,,False
+gare,07315000,Mainz,commune,,224684,osm_townhall,8.268,50.003,22.990,32.025,71,78,85,14,,28.342,17.685,88.000,69.500,-18.500,-0.154,-14.487,2.752,2.000,False,False,False,,,False
+gare,06435019,Maintal,commune,,38987,osm_townhall,8.831,50.152,23.384,11.530,89,95,104,15,,32.895,14.769,89.000,91.000,2.000,0.017,3.186,2.888,1.000,False,False,False,,,False
+gare,06432006,Erzhausen,commune,,7794,osm_townhall,8.634,49.950,23.417,18.219,92,101,108,16,,33.537,13.911,90.000,96.000,6.000,0.050,9.618,3.012,1.000,False,False,False,,,False
+gare,06438005,Heusenstamm,commune,,19312,osm_townhall,8.808,50.063,23.515,10.460,72,79,87,15,,29.813,17.859,91.000,71.000,-20.000,-0.167,-14.456,2.650,1.000,False,False,False,,,False
+gare,06438008,Mühlheim am Main,commune,,29194,osm_townhall,8.833,50.120,23.648,10.785,73,82,89,16,,36.398,17.303,92.000,76.500,-15.500,-0.129,-11.482,2.253,2.000,False,False,False,,,False
+gare,06533003,Bad Camberg,commune,,14268,osm_townhall,8.272,50.297,23.861,35.915,97,107,115,18,,34.760,13.380,93.000,104.500,11.500,0.096,14.937,3.078,2.000,False,False,False,,,False
+gare,06440025,Wöllstadt,commune,,6593,osm_townhall,8.769,50.277,24.080,19.486,67,74,82,15,,30.990,19.525,94.000,66.000,-28.000,-0.233,-20.910,2.388,1.000,False,False,False,,5.000,False
+gare,06434013,Weilrod,commune,,6856,osm_townhall,8.383,50.346,24.126,33.740,105,116,131,26,,38.362,12.479,95.000,114.000,19.000,0.158,23.850,3.024,1.000,False,False,False,,,False
+gare,06438001,Dietzenbach,commune,,35561,osm_townhall,8.783,50.019,24.260,12.485,77,84,92,15,,30.807,17.329,96.000,80.000,-16.000,-0.133,-10.588,2.727,1.000,False,False,False,,,False
+gare,06439015,Taunusstein,commune,,30145,osm_townhall,8.161,50.143,24.539,37.490,95,102,110,15,,38.085,14.435,97.000,97.000,0.000,0.000,7.892,2.678,2.000,False,False,False,,,False
+gare,06439007,Hünstetten,commune,,10380,osm_townhall,8.196,50.250,25.014,38.054,112,123,135,23,,34.642,12.202,98.000,117.000,19.000,0.158,28.744,3.551,2.000,False,False,False,,,False
+gare,06433014,Trebur,commune,,12799,osm_townhall,8.405,49.925,25.235,28.649,96,110,121,25,,31.273,13.765,99.000,109.000,10.000,0.083,14.582,3.517,3.000,False,False,False,,,False
+gare,06438010,Obertshausen,commune,,25316,osm_townhall,8.847,50.069,25.847,12.621,81,89,96,15,,27.613,17.425,100.000,85.000,-15.000,-0.125,-8.505,3.223,2.000,False,False,False,,,False
+gare,06435026,Schöneck,commune,,11837,osm_townhall,8.855,50.202,25.926,15.944,108,119,130,22,,35.967,13.072,101.000,115.000,14.000,0.117,22.131,3.309,1.000,False,False,False,,,False
+gare,06440017,Niddatal,commune,,9861,osm_townhall,8.803,50.280,26.198,20.661,88,99,110,22,,32.073,15.877,102.000,95.000,-7.000,-0.058,1.025,3.087,2.000,False,False,False,,,False
+gare,06433003,Büttelborn,commune,,14685,osm_townhall,8.514,49.903,26.757,26.146,97,104,111,14,,28.617,15.437,103.000,99.500,-3.500,-0.029,4.903,3.634,2.000,False,False,False,,,False
+gare,06433006,Groß-Gerau,commune,,25388,osm_townhall,8.484,49.900,27.110,27.483,100,109,116,16,,30.853,14.923,104.000,107.000,3.000,0.025,9.157,3.533,2.000,False,False,False,,,False
+gare,06434004,Grävenwiesbach,commune,,5376,osm_townhall,8.403,50.380,27.278,35.915,140,153,164,24,,42.288,10.697,105.000,120.000,15.000,0.125,52.704,3.618,3.000,False,False,False,,,False
+gare,07339006,Bodenheim,commune,,7651,osm_townhall,8.307,49.930,27.607,33.629,101,108,115,14,,36.283,15.337,106.000,106.000,0.000,0.000,7.083,2.977,2.000,False,False,False,,,False
+gare,06439017,Walluf,commune,,5407,osm_townhall,8.154,50.037,27.673,38.708,105,112,118,13,,29.575,14.825,107.000,112.000,5.000,0.042,10.903,3.787,2.000,False,False,False,,,False
+gare,07339009,Budenheim,commune,,8104,osm_townhall,8.166,50.022,27.684,38.271,114,121,129,15,,37.123,13.728,108.000,116.000,8.000,0.067,19.788,3.259,3.000,False,False,False,,,False
+gare,06440008,Friedberg (Hessen),commune,,30409,osm_townhall,8.756,50.333,27.721,25.226,66,72,78,12,,30.840,23.101,109.000,62.000,-47.000,-0.392,-28.773,2.335,1.000,False,False,False,,1.000,False
+gare,07339039,Nackenheim,commune,,5358,osm_townhall,8.342,49.915,27.875,32.690,107,114,121,14,,36.625,14.671,110.000,113.000,3.000,0.025,12.434,3.113,2.000,False,False,False,,,False
+gare,06435021,Nidderau,commune,,20119,osm_townhall,8.875,50.228,28.124,18.930,99,106,114,15,,40.547,15.919,111.000,102.500,-8.500,-0.071,4.035,2.614,2.000,False,False,False,,,False
+gare,06432012,Messel,commune,,4215,osm_townhall,8.744,49.937,28.706,19.894,96,107,120,24,,38.698,16.097,112.000,104.500,-7.500,-0.062,3.842,2.765,4.000,True,False,False,,,False
+gare,06432023,Weiterstadt,commune,,26583,osm_townhall,8.610,49.894,28.755,24.694,98,106,119,21,,27.648,16.276,113.000,102.500,-10.500,-0.087,2.774,3.834,3.000,False,False,False,,,False
+gare,06533014,Selters (Taunus),commune,,8158,osm_townhall,8.227,50.333,28.985,40.882,93,104,119,26,,40.622,16.722,114.000,99.500,-14.500,-0.121,0.396,2.560,2.000,False,False,False,,,False
+gare,06440018,Ober-Mörlen,commune,,5706,osm_townhall,8.693,50.376,29.182,29.452,89,110,121,32,,28.897,15.917,115.000,109.000,-6.000,-0.050,5.793,3.807,2.000,False,False,False,,,False
+gare,06439014,Schlangenbad,commune,,5967,osm_townhall,8.102,50.093,29.291,41.587,122,133,138,16,,36.528,13.214,116.000,118.000,2.000,0.017,27.652,3.641,2.000,False,False,False,,,False
+gare,06439006,Hohenstein,commune,,5829,osm_townhall,8.100,50.194,29.377,42.609,137,151,162,25,,45.065,11.673,117.000,119.000,2.000,0.017,44.694,3.351,3.000,False,False,False,,,False
+gare,06435014,Hanau,commune,,97956,osm_townhall,8.917,50.133,29.559,16.964,86,91,98,12,,38.217,19.489,118.000,86.500,-31.500,-0.263,-13.095,2.381,3.000,False,False,False,,3.000,False
+gare,06438012,Rödermark,commune,,28753,osm_townhall,8.828,49.977,29.631,18.143,87,93,101,14,,38.765,19.117,119.000,89.500,-29.500,-0.246,-11.304,2.399,4.000,True,False,False,,4.000,False
+gare,06440002,Bad Nauheim,commune,,32894,osm_townhall,8.736,50.365,29.741,28.556,77,85,93,16,,34.888,20.994,120.000,81.000,-39.000,-0.325,-19.098,2.436,1.000,False,False,False,,2.000,False
