@@ -71,6 +71,12 @@ URL réellement utilisée) des fichiers du dernier calcul.
 2. ~~Autres plages horaires~~ : fait (variantes `creuse`, `soir_pointe`, `soiree`, synthèse 14,
    `outputs/time_windows/`). Depuis la gare, médiane TC : Garches 75 / 80 / 74 / 84 min
    (07:30, 10:00, 17:30, 20:30), non atteintes 34 / 32 / 22 / 85 ; Kronberg 72,5 / 73,5 / 72,5 / 72
-   (0 / 0 / 0 / 5) ; Bad Soden 72 / 72 / 71,5 / 74 (0 / 0 / 0 / 4). Reste : autres jours.
-3. Temps voiture en heure de pointe (données de trafic ouvertes ?) pour un rapport TC/voiture moins majoré.
-4. Bad Soden : écart systématique de +9 min entre l'itinéraire de 08:15 et la médiane (cadencement S-Bahn ?).
+   (0 / 0 / 0 / 5) ; Bad Soden 72 / 72 / 71,5 / 74 (0 / 0 / 0 / 4).
+3. ~~Autres jours~~ : fait (variantes `jeudi`, `samedi`, `dimanche`, `vacances`, `autre_mardi`,
+   `14 --kind days`, `outputs/days/`). Jeudi = mardi (corrélation 1,000). Attention : le flux IDFM
+   « latest » n'a plus, à partir du 20/10, 149 lignes du jour d'analyse (T4, bus 177, 137 …),
+   y compris le 03/11 (jour d'école) ; les variantes FR `vacances` et `autre_mardi` mesurent
+   cette lacune. 14 compte désormais les lignes actives le jour de référence et absentes le
+   jour testé. Piste : même contrôle ligne par ligne dans 02 pour le jour d'analyse.
+4. Temps voiture en heure de pointe (données de trafic ouvertes ?) pour un rapport TC/voiture moins majoré.
+5. Bad Soden : écart systématique de +9 min entre l'itinéraire de 08:15 et la médiane (cadencement S-Bahn ?).

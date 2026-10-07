@@ -1,0 +1,1131 @@
+{
+  "n_origins": 2,
+  "n_destinations": 424,
+  "n_od": 848,
+  "n_nan_by_percentile": {
+    "p25": 132,
+    "p50": 137,
+    "p75": 141
+  },
+  "nan_od": [
+    {
+      "from_id": "centre",
+      "to_id": "78152",
+      "name": "Chavenay",
+      "dist_km": 14.82,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78233",
+      "name": "Feucherolles",
+      "dist_km": 16.06,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78406",
+      "name": "Milon-la-Chapelle",
+      "dist_km": 16.53,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78561",
+      "name": "Saint-Lambert",
+      "dist_km": 17.55,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78196",
+      "name": "Davron",
+      "dist_km": 18.04,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78160",
+      "name": "Chevreuse",
+      "dist_km": 18.45,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78189",
+      "name": "Crespières",
+      "dist_km": 19.82,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78615",
+      "name": "Thiverval-Grignon",
+      "dist_km": 19.83,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78548",
+      "name": "Saint-Forget",
+      "dist_km": 20.58,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91411",
+      "name": "Les Molières",
+      "dist_km": 20.86,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91093",
+      "name": "Boullay-les-Troux",
+      "dist_km": 20.99,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78550",
+      "name": "Saint-Germain-de-la-Grange",
+      "dist_km": 21.22,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78010",
+      "name": "Les Alluets-le-Roi",
+      "dist_km": 21.23,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78193",
+      "name": "Dampierre-en-Yvelines",
+      "dist_km": 21.38,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78162",
+      "name": "Choisel",
+      "dist_km": 21.46,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78321",
+      "name": "Jouars-Pontchartrain",
+      "dist_km": 21.57,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95489",
+      "name": "Piscop",
+      "dist_km": 21.94,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91319",
+      "name": "Janvry",
+      "dist_km": 22.0,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78334",
+      "name": "Lévis-Saint-Nom",
+      "dist_km": 22.21,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78590",
+      "name": "Senlisse",
+      "dist_km": 23.09,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78305",
+      "name": "Herbeville",
+      "dist_km": 23.14,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95091",
+      "name": "Bouffémont",
+      "dist_km": 23.66,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95061",
+      "name": "Béthemont-la-Forêt",
+      "dist_km": 23.74,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78623",
+      "name": "Le Tremblay-sur-Mauldre",
+      "dist_km": 24.08,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95151",
+      "name": "Chauvry",
+      "dist_km": 24.12,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78415",
+      "name": "Montainville",
+      "dist_km": 24.45,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78576",
+      "name": "Saint-Rémy-l'Honoré",
+      "dist_km": 24.49,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78128",
+      "name": "Cernay-la-Ville",
+      "dist_km": 24.73,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91111",
+      "name": "Briis-sous-Forges",
+      "dist_km": 24.77,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91249",
+      "name": "Forges-les-Bains",
+      "dist_km": 24.82,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91243",
+      "name": "Fontenay-lès-Briis",
+      "dist_km": 25.04,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78050",
+      "name": "Bazoches-sur-Guyonne",
+      "dist_km": 25.14,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78049",
+      "name": "Bazemont",
+      "dist_km": 25.44,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78366",
+      "name": "Mareil-le-Guyon",
+      "dist_km": 25.71,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78588",
+      "name": "Saulx-Marchais",
+      "dist_km": 25.79,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78653",
+      "name": "Vicq",
+      "dist_km": 26.12,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95211",
+      "name": "Ennery",
+      "dist_km": 26.54,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95094",
+      "name": "Bouqueval",
+      "dist_km": 26.56,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95492",
+      "name": "Le Plessis-Gassot",
+      "dist_km": 26.76,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78013",
+      "name": "Andelu",
+      "dist_km": 27.01,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78034",
+      "name": "Auteuil",
+      "dist_km": 27.09,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78364",
+      "name": "Marcq",
+      "dist_km": 27.12,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78030",
+      "name": "Auffargis",
+      "dist_km": 27.22,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91634",
+      "name": "Vaugrigneuse",
+      "dist_km": 27.24,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78398",
+      "name": "Les Mesnuls",
+      "dist_km": 27.45,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78087",
+      "name": "Bonnelles",
+      "dist_km": 27.66,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78389",
+      "name": "Méré",
+      "dist_km": 27.71,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95395",
+      "name": "Le Mesnil-Aubry",
+      "dist_km": 27.8,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91115",
+      "name": "Bruyères-le-Châtel",
+      "dist_km": 27.82,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91186",
+      "name": "Courson-Monteloup",
+      "dist_km": 28.04,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95445",
+      "name": "Nerville-la-Forêt",
+      "dist_km": 28.11,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78609",
+      "name": "Tessancourt-sur-Aubette",
+      "dist_km": 28.12,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78036",
+      "name": "Autouillet",
+      "dist_km": 28.2,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95170",
+      "name": "Condécourt",
+      "dist_km": 28.34,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78120",
+      "name": "Bullion",
+      "dist_km": 28.37,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78125",
+      "name": "La Celle-les-Bordes",
+      "dist_km": 28.38,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95535",
+      "name": "Sagy",
+      "dist_km": 28.72,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78420",
+      "name": "Montfort-l'Amaury",
+      "dist_km": 28.77,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78084",
+      "name": "Boissy-sans-Avoir",
+      "dist_km": 28.77,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95341",
+      "name": "Livilliers",
+      "dist_km": 28.81,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78616",
+      "name": "Thoiry",
+      "dist_km": 28.89,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95308",
+      "name": "Hérouville-en-Vexin",
+      "dist_km": 28.95,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78262",
+      "name": "Galluis",
+      "dist_km": 29.25,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95181",
+      "name": "Courcelles-sur-Viosne",
+      "dist_km": 29.29,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91017",
+      "name": "Angervilliers",
+      "dist_km": 29.46,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "95682",
+      "name": "Villiers-le-Sec",
+      "dist_km": 29.46,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "91568",
+      "name": "Saint-Maurice-Montcouronne",
+      "dist_km": 29.53,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78261",
+      "name": "Gaillon-sur-Montcient",
+      "dist_km": 29.54,
+      "walk_time": null
+    },
+    {
+      "from_id": "centre",
+      "to_id": "78655",
+      "name": "Vieille-Église-en-Yvelines",
+      "dist_km": 29.98,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78152",
+      "name": "Chavenay",
+      "dist_km": 14.79,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78406",
+      "name": "Milon-la-Chapelle",
+      "dist_km": 16.02,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78233",
+      "name": "Feucherolles",
+      "dist_km": 16.11,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78561",
+      "name": "Saint-Lambert",
+      "dist_km": 17.08,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78160",
+      "name": "Chevreuse",
+      "dist_km": 17.92,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78196",
+      "name": "Davron",
+      "dist_km": 18.03,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78615",
+      "name": "Thiverval-Grignon",
+      "dist_km": 19.77,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78189",
+      "name": "Crespières",
+      "dist_km": 19.87,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78548",
+      "name": "Saint-Forget",
+      "dist_km": 20.1,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91411",
+      "name": "Les Molières",
+      "dist_km": 20.3,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91093",
+      "name": "Boullay-les-Troux",
+      "dist_km": 20.45,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78193",
+      "name": "Dampierre-en-Yvelines",
+      "dist_km": 20.91,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78162",
+      "name": "Choisel",
+      "dist_km": 20.94,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78550",
+      "name": "Saint-Germain-de-la-Grange",
+      "dist_km": 21.11,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78010",
+      "name": "Les Alluets-le-Roi",
+      "dist_km": 21.37,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91319",
+      "name": "Janvry",
+      "dist_km": 21.41,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78334",
+      "name": "Lévis-Saint-Nom",
+      "dist_km": 21.8,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95489",
+      "name": "Piscop",
+      "dist_km": 22.48,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78590",
+      "name": "Senlisse",
+      "dist_km": 22.6,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78305",
+      "name": "Herbeville",
+      "dist_km": 23.23,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78623",
+      "name": "Le Tremblay-sur-Mauldre",
+      "dist_km": 23.83,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78576",
+      "name": "Saint-Rémy-l'Honoré",
+      "dist_km": 24.19,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91111",
+      "name": "Briis-sous-Forges",
+      "dist_km": 24.19,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95091",
+      "name": "Bouffémont",
+      "dist_km": 24.23,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78128",
+      "name": "Cernay-la-Ville",
+      "dist_km": 24.23,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91249",
+      "name": "Forges-les-Bains",
+      "dist_km": 24.24,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95061",
+      "name": "Béthemont-la-Forêt",
+      "dist_km": 24.32,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91243",
+      "name": "Fontenay-lès-Briis",
+      "dist_km": 24.46,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78415",
+      "name": "Montainville",
+      "dist_km": 24.48,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95151",
+      "name": "Chauvry",
+      "dist_km": 24.7,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78050",
+      "name": "Bazoches-sur-Guyonne",
+      "dist_km": 24.9,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78366",
+      "name": "Mareil-le-Guyon",
+      "dist_km": 25.49,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78049",
+      "name": "Bazemont",
+      "dist_km": 25.58,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78588",
+      "name": "Saulx-Marchais",
+      "dist_km": 25.7,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78653",
+      "name": "Vicq",
+      "dist_km": 25.97,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91634",
+      "name": "Vaugrigneuse",
+      "dist_km": 26.66,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78030",
+      "name": "Auffargis",
+      "dist_km": 26.82,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78034",
+      "name": "Auteuil",
+      "dist_km": 27.01,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78013",
+      "name": "Andelu",
+      "dist_km": 27.02,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95094",
+      "name": "Bouqueval",
+      "dist_km": 27.06,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78364",
+      "name": "Marcq",
+      "dist_km": 27.08,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95211",
+      "name": "Ennery",
+      "dist_km": 27.08,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78087",
+      "name": "Bonnelles",
+      "dist_km": 27.1,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78398",
+      "name": "Les Mesnuls",
+      "dist_km": 27.18,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91115",
+      "name": "Bruyères-le-Châtel",
+      "dist_km": 27.24,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95492",
+      "name": "Le Plessis-Gassot",
+      "dist_km": 27.28,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91186",
+      "name": "Courson-Monteloup",
+      "dist_km": 27.46,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78389",
+      "name": "Méré",
+      "dist_km": 27.5,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78120",
+      "name": "Bullion",
+      "dist_km": 27.82,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78125",
+      "name": "La Celle-les-Bordes",
+      "dist_km": 27.87,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78036",
+      "name": "Autouillet",
+      "dist_km": 28.14,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95395",
+      "name": "Le Mesnil-Aubry",
+      "dist_km": 28.33,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78609",
+      "name": "Tessancourt-sur-Aubette",
+      "dist_km": 28.47,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78420",
+      "name": "Montfort-l'Amaury",
+      "dist_km": 28.54,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78084",
+      "name": "Boissy-sans-Avoir",
+      "dist_km": 28.64,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95445",
+      "name": "Nerville-la-Forêt",
+      "dist_km": 28.69,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95170",
+      "name": "Condécourt",
+      "dist_km": 28.73,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78616",
+      "name": "Thoiry",
+      "dist_km": 28.86,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91017",
+      "name": "Angervilliers",
+      "dist_km": 28.88,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91568",
+      "name": "Saint-Maurice-Montcouronne",
+      "dist_km": 28.95,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78262",
+      "name": "Galluis",
+      "dist_km": 29.07,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95535",
+      "name": "Sagy",
+      "dist_km": 29.13,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95341",
+      "name": "Livilliers",
+      "dist_km": 29.35,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95308",
+      "name": "Hérouville-en-Vexin",
+      "dist_km": 29.5,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78655",
+      "name": "Vieille-Église-en-Yvelines",
+      "dist_km": 29.55,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95181",
+      "name": "Courcelles-sur-Viosne",
+      "dist_km": 29.76,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78261",
+      "name": "Gaillon-sur-Montcient",
+      "dist_km": 29.87,
+      "walk_time": null
+    },
+    {
+      "from_id": "gare",
+      "to_id": "95682",
+      "name": "Villiers-le-Sec",
+      "dist_km": 30.0,
+      "walk_time": null
+    }
+  ],
+  "p50_by_origin": {
+    "centre": {
+      "n_valid": 355,
+      "min": 0.0,
+      "median": 93.0,
+      "max": 178.0
+    },
+    "gare": {
+      "n_valid": 356,
+      "min": 9.0,
+      "median": 87.0,
+      "max": 178.0
+    }
+  },
+  "percentiles_monotone": true,
+  "p50_gt_walk": {
+    "n_od_with_both": 59,
+    "n_strict": 1,
+    "n_gt_1min": 1,
+    "max_excess_min": 4.0,
+    "examples": [
+      {
+        "from_id": "centre",
+        "to_id": "92077",
+        "name": "Ville-d'Avray",
+        "dist_km": 1.69,
+        "travel_time_p50": 39.0,
+        "walk_time": 35.0
+      }
+    ]
+  },
+  "walk_better_or_equal": 6,
+  "walk_only_nan_where_transit_ok": 652,
+  "speed_gt_threshold": {
+    "threshold_kmh": 60.0,
+    "n": 0,
+    "max_kmh": 22.7,
+    "examples": []
+  },
+  "origin": "garches",
+  "date": "2026-10-11",
+  "window": "07:30-09:00",
+  "percentiles": [
+    25,
+    50,
+    75
+  ],
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  },
+  "snapping": {
+    "origins": {
+      "n": 2,
+      "n_not_snapped": 0,
+      "median_m": 11.4,
+      "p90_m": 19.6,
+      "max_m": 21.7,
+      "n_gt_100m": 0,
+      "n_gt_500m": 0
+    },
+    "destinations": {
+      "n": 424,
+      "n_not_snapped": 0,
+      "median_m": 14.8,
+      "p90_m": 26.1,
+      "max_m": 62.8,
+      "n_gt_100m": 0,
+      "n_gt_500m": 0
+    }
+  },
+  "islands": {
+    "origins": {
+      "label": "origine",
+      "n": 2,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "1.0": 2
+      },
+      "isolated": []
+    },
+    "destinations": {
+      "label": "destination",
+      "n": 424,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "0.0": 1,
+        "0.5": 1,
+        "0.625": 3,
+        "0.75": 6,
+        "0.875": 17,
+        "1.0": 396
+      },
+      "isolated": [
+        {
+          "id": "78015",
+          "name": "Andrésy",
+          "share": 0.0,
+          "n_candidates": 160,
+          "moved": true,
+          "offset_m": 15.0,
+          "new_share": 0.875,
+          "lon": 2.060436,
+          "lat": 48.982321
+        }
+      ]
+    }
+  },
+  "r5_warnings": {
+    "transit": [],
+    "walk": []
+  },
+  "timings_s": {
+    "network": 31.1,
+    "transit_matrix": 1.6,
+    "walk_matrix": 0.6,
+    "total": 49.8
+  }
+}

@@ -1,0 +1,231 @@
+{
+  "variant": "dimanche",
+  "origin": "kronberg",
+  "config": "config/sensitivity/kronberg_dimanche.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 117,
+      "n_reached_ref": 118,
+      "n_reached_variant": 117,
+      "delta_t_tc_min": {
+        "median": 2.0,
+        "mean": 6.32,
+        "p90_abs": 17.8,
+        "max_abs": 60.0
+      },
+      "n_changed_gt_5min": 46,
+      "largest_changes": [
+        {
+          "name": "Glashütten",
+          "ref": 45.0,
+          "variant": 105.0
+        },
+        {
+          "name": "Waldems",
+          "ref": 78.0,
+          "variant": 120.0
+        },
+        {
+          "name": "Ober-Mörlen",
+          "ref": 118.0,
+          "variant": 156.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 121.0,
+          "variant": 155.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 83.0,
+          "variant": 115.0
+        },
+        {
+          "name": "Groß-Gerau",
+          "ref": 86.0,
+          "variant": 115.0
+        },
+        {
+          "name": "Mörfelden-Walldorf",
+          "ref": 72.0,
+          "variant": 98.0
+        },
+        {
+          "name": "Ginsheim-Gustavsburg",
+          "ref": 97.0,
+          "variant": 119.0
+        }
+      ],
+      "spearman_ref_variant": 0.9354,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.5,
+          "variant": 77.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 15.987,
+          "variant": 14.247
+        },
+        "spearman_dist_time": {
+          "ref": 0.813,
+          "variant": 0.741
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.458,
+          "variant": 0.436
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.899,
+          "variant": 3.084
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 4
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Hattersheim am Main",
+            "Zeilsheim"
+          ],
+          "in": [
+            "Glashütten",
+            "Schwanheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Mainz",
+            "Mörfelden-Walldorf"
+          ],
+          "in": [
+            "Offenbach am Main",
+            "Westend-Süd"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 117,
+      "n_reached_ref": 118,
+      "n_reached_variant": 117,
+      "delta_t_tc_min": {
+        "median": 3.0,
+        "mean": 7.25,
+        "p90_abs": 19.0,
+        "max_abs": 67.0
+      },
+      "n_changed_gt_5min": 45,
+      "largest_changes": [
+        {
+          "name": "Glashütten",
+          "ref": 40.0,
+          "variant": 107.0
+        },
+        {
+          "name": "Waldems",
+          "ref": 70.0,
+          "variant": 127.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 117.0,
+          "variant": 158.0
+        },
+        {
+          "name": "Ober-Mörlen",
+          "ref": 121.0,
+          "variant": 156.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 85.0,
+          "variant": 118.0
+        },
+        {
+          "name": "Idstein",
+          "ref": 77.0,
+          "variant": 110.0
+        },
+        {
+          "name": "Groß-Gerau",
+          "ref": 92.0,
+          "variant": 121.0
+        },
+        {
+          "name": "Mörfelden-Walldorf",
+          "ref": 78.0,
+          "variant": 104.0
+        }
+      ],
+      "spearman_ref_variant": 0.919,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 74.0,
+          "variant": 83.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.844,
+          "variant": 13.25
+        },
+        "spearman_dist_time": {
+          "ref": 0.84,
+          "variant": 0.745
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.432,
+          "variant": 0.427
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.152,
+          "variant": 3.336
+        }
+      },
+      "dead_zones": {
+        "ref": 3,
+        "variant": 7
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Hattersheim am Main",
+            "Wehrheim",
+            "Zeilsheim"
+          ],
+          "in": [
+            "Glashütten",
+            "Sulzbach (Taunus)",
+            "Unterliederbach"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Mainz",
+            "Nordend-Ost"
+          ],
+          "in": [
+            "Bornheim",
+            "Offenbach am Main"
+          ]
+        }
+      }
+    }
+  }
+}

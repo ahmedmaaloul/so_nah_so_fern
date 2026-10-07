@@ -66,10 +66,18 @@ stärker: tagsüber Median +4 Min., abends 85 statt 34 Ziele in 180 Min. nicht e
 (Rangkorrelation 0,890). Die Abendmediane gelten nur für erreichte Ziele und sind daher zu
 günstig.
 
+**Andere Tage (S3, `outputs/days/`).** Gleiches Fenster 07:30 bis 09:00. Donnerstag derselben
+Woche: identische Zeiten (Rangkorrelation 1,000). Samstag: Median +5 Min. (Garches), +2,5
+(Kronberg), −1 (Bad Soden); Sonntag +12 / +4,5 / +7 Min. mit bis zu 68 (Garches) unerreichten
+Zielen. Ein Dienstag in den Ferien oder drei Wochen später ändert in Rhein-Main wenig. In
+Île-de-France fehlen im „latest“-Feed ab dem 20.10. Linien, die am Stichtag fahren (149 Linien
+am Schultag 03.11., darunter Tram T4): diese Varianten messen die Lücke des Feeds, nicht das
+Angebot.
+
 **Phase 2 (P1).** Alle Einheiten ≤ 30 km von Paris (417) bzw. Frankfurt (133) untereinander:
 Median 95 / 82 Min., ÖV/Pkw 2,54 / 2,98, Rangkorrelation 0,78 / 0,84 (`outputs/phase2/`).
 
-**Grenzen.** Ein Stichtag, nur Fußweg als Zubringer; keine Tarif- oder
+**Grenzen.** Nur Fußweg als Zubringer; keine Tarif- oder
 Komfortgrößen; Pkw ohne Stau; GTFS-Qualität der Betreiber als gegeben.
 
 ---
@@ -133,9 +141,17 @@ davantage : médiane +4 min en heure creuse, et le soir 85 destinations non atte
 180 min au lieu de 34 (corrélation 0,890). Les médianes du soir ne portent que sur les
 destinations atteintes et sont donc flatteuses.
 
+**Autres jours (S3, `outputs/days/`).** Même fenêtre 07:30 à 09:00. Jeudi de la même semaine :
+temps identiques (corrélation de rang 1,000). Samedi : médiane +5 min (Garches), +2,5
+(Kronberg), −1 (Bad Soden) ; dimanche +12 / +4,5 / +7 min, avec jusqu'à 68 destinations non
+atteintes (Garches). Un mardi de vacances ou trois semaines plus tard change peu en Rhin-Main.
+En Île-de-France, le flux « latest » ne contient plus, à partir du 20/10, des lignes qui
+circulent le jour d'analyse (149 lignes le 03/11, jour d'école, dont le tram T4) : ces
+variantes mesurent la lacune du flux, pas l'offre.
+
 **Phase 2 (P1).** Toutes les unités à 30 km au plus de Paris (417) ou de Francfort (133), entre
 elles : médiane 95 / 82 min, TC/voiture 2,54 / 2,98, corrélation de rang 0,78 / 0,84
 (`outputs/phase2/`).
 
-**Limites.** Un seul jour, rabattement à pied seulement ; ni tarif ni
+**Limites.** Rabattement à pied seulement ; ni tarif ni
 confort ; voiture sans congestion ; qualité des GTFS des opérateurs prise telle quelle.

@@ -1,0 +1,88 @@
+{
+  "n_od": 242,
+  "n_od_with_time": 242,
+  "max_rides_tested": 4,
+  "tolerance_min": 1.0,
+  "transfers_by_origin": {
+    "centre": {
+      "0": 13,
+      "1": 52,
+      "2": 45,
+      "3": 8,
+      "4+": 3
+    },
+    "gare": {
+      "0": 15,
+      "1": 50,
+      "2": 45,
+      "3": 8,
+      "4+": 3
+    }
+  },
+  "n_walk_only": {
+    "centre": 1,
+    "gare": 1
+  },
+  "n_censored": 6,
+  "n_non_monotone_steps": 0,
+  "n_kmax_faster_than_unlimited": 0,
+  "censored_examples": [
+    {
+      "from_id": "gare",
+      "to_id": "06432012",
+      "name": "Messel",
+      "p50_unlimited": 110,
+      "p50_rides_4": 123
+    },
+    {
+      "from_id": "gare",
+      "to_id": "06438002",
+      "name": "Dreieich",
+      "p50_unlimited": 77,
+      "p50_rides_4": 86
+    },
+    {
+      "from_id": "gare",
+      "to_id": "06438006",
+      "name": "Langen (Hessen)",
+      "p50_unlimited": 78,
+      "p50_rides_4": 85
+    },
+    {
+      "from_id": "centre",
+      "to_id": "06432012",
+      "name": "Messel",
+      "p50_unlimited": 115,
+      "p50_rides_4": 128
+    },
+    {
+      "from_id": "centre",
+      "to_id": "06438002",
+      "name": "Dreieich",
+      "p50_unlimited": 81,
+      "p50_rides_4": 91
+    },
+    {
+      "from_id": "centre",
+      "to_id": "06438006",
+      "name": "Langen (Hessen)",
+      "p50_unlimited": 82,
+      "p50_rides_4": 88
+    }
+  ],
+  "timings_s": {
+    "rides_1": 0.4,
+    "rides_2": 0.5,
+    "rides_3": 0.9,
+    "rides_4": 1.0,
+    "total": 17.0
+  },
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  }
+}

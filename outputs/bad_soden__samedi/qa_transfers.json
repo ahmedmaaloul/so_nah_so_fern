@@ -1,0 +1,102 @@
+{
+  "n_od": 242,
+  "n_od_with_time": 242,
+  "max_rides_tested": 4,
+  "tolerance_min": 1.0,
+  "transfers_by_origin": {
+    "centre": {
+      "0": 13,
+      "1": 50,
+      "2": 41,
+      "3": 13,
+      "4+": 4
+    },
+    "gare": {
+      "0": 13,
+      "1": 51,
+      "2": 40,
+      "3": 13,
+      "4+": 4
+    }
+  },
+  "n_walk_only": {
+    "centre": 1,
+    "gare": 1
+  },
+  "n_censored": 8,
+  "n_non_monotone_steps": 0,
+  "n_kmax_faster_than_unlimited": 0,
+  "censored_examples": [
+    {
+      "from_id": "gare",
+      "to_id": "06433014",
+      "name": "Trebur",
+      "p50_unlimited": 98,
+      "p50_rides_4": 105
+    },
+    {
+      "from_id": "gare",
+      "to_id": "06438002",
+      "name": "Dreieich",
+      "p50_unlimited": 85,
+      "p50_rides_4": 90
+    },
+    {
+      "from_id": "gare",
+      "to_id": "06438006",
+      "name": "Langen (Hessen)",
+      "p50_unlimited": 85,
+      "p50_rides_4": 87
+    },
+    {
+      "from_id": "gare",
+      "to_id": "07339006",
+      "name": "Bodenheim",
+      "p50_unlimited": 110,
+      "p50_rides_4": 118
+    },
+    {
+      "from_id": "centre",
+      "to_id": "06433014",
+      "name": "Trebur",
+      "p50_unlimited": 101,
+      "p50_rides_4": 108
+    },
+    {
+      "from_id": "centre",
+      "to_id": "06438002",
+      "name": "Dreieich",
+      "p50_unlimited": 88,
+      "p50_rides_4": 93
+    },
+    {
+      "from_id": "centre",
+      "to_id": "06438006",
+      "name": "Langen (Hessen)",
+      "p50_unlimited": 89,
+      "p50_rides_4": 91
+    },
+    {
+      "from_id": "centre",
+      "to_id": "07339006",
+      "name": "Bodenheim",
+      "p50_unlimited": 112,
+      "p50_rides_4": 119
+    }
+  ],
+  "timings_s": {
+    "rides_1": 0.4,
+    "rides_2": 0.2,
+    "rides_3": 0.4,
+    "rides_4": 0.4,
+    "total": 10.9
+  },
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  }
+}

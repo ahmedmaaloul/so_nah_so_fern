@@ -1,0 +1,227 @@
+{
+  "variant": "vacances",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_vacances.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": -0.97,
+        "p90_abs": 12.1,
+        "max_abs": 28.0
+      },
+      "n_changed_gt_5min": 16,
+      "largest_changes": [
+        {
+          "name": "Flörsheim am Main",
+          "ref": 83.0,
+          "variant": 55.0
+        },
+        {
+          "name": "Budenheim",
+          "ref": 117.0,
+          "variant": 95.0
+        },
+        {
+          "name": "Ginsheim-Gustavsburg",
+          "ref": 109.0,
+          "variant": 89.0
+        },
+        {
+          "name": "Usingen",
+          "ref": 111.0,
+          "variant": 130.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 124.0,
+          "variant": 143.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 133.0,
+          "variant": 150.0
+        },
+        {
+          "name": "Hochheim am Main",
+          "ref": 84.0,
+          "variant": 67.0
+        },
+        {
+          "name": "Bischofsheim",
+          "ref": 88.0,
+          "variant": 72.0
+        }
+      ],
+      "spearman_ref_variant": 0.9785,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 69.5
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 15.096
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.897
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.483
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.08
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Hattersheim am Main"
+          ],
+          "in": [
+            "Kelkheim (Taunus)"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Dietzenbach",
+            "Heusenstamm",
+            "Rödermark"
+          ],
+          "in": [
+            "Bahnhofsviertel",
+            "Flörsheim am Main",
+            "Mainz"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": -0.99,
+        "p90_abs": 13.0,
+        "max_abs": 28.0
+      },
+      "n_changed_gt_5min": 15,
+      "largest_changes": [
+        {
+          "name": "Flörsheim am Main",
+          "ref": 86.0,
+          "variant": 58.0
+        },
+        {
+          "name": "Budenheim",
+          "ref": 120.0,
+          "variant": 98.0
+        },
+        {
+          "name": "Ginsheim-Gustavsburg",
+          "ref": 112.0,
+          "variant": 92.0
+        },
+        {
+          "name": "Usingen",
+          "ref": 113.0,
+          "variant": 131.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 135.0,
+          "variant": 152.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 126.0,
+          "variant": 143.0
+        },
+        {
+          "name": "Hochheim am Main",
+          "ref": 87.0,
+          "variant": 70.0
+        },
+        {
+          "name": "Bischofsheim",
+          "ref": 91.0,
+          "variant": 76.0
+        }
+      ],
+      "spearman_ref_variant": 0.978,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 72.5
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 14.429
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.896
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.483
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.251
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Hattersheim am Main"
+          ],
+          "in": [
+            "Eckenheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Heusenstamm",
+            "Innenstadt"
+          ],
+          "in": [
+            "Flörsheim am Main",
+            "Mainz"
+          ]
+        }
+      }
+    }
+  }
+}

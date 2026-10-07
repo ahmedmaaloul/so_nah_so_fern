@@ -1,0 +1,223 @@
+{
+  "variant": "vacances",
+  "origin": "garches",
+  "config": "config/sensitivity/garches_vacances.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 371,
+      "n_reached_ref": 389,
+      "n_reached_variant": 371,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.88,
+        "p90_abs": 4.0,
+        "max_abs": 13.0
+      },
+      "n_changed_gt_5min": 29,
+      "largest_changes": [
+        {
+          "name": "Gometz-la-Ville",
+          "ref": 112.0,
+          "variant": 125.0
+        },
+        {
+          "name": "Jouars-Pontchartrain",
+          "ref": 80.0,
+          "variant": 93.0
+        },
+        {
+          "name": "Gometz-le-Châtel",
+          "ref": 112.0,
+          "variant": 124.0
+        },
+        {
+          "name": "Neauphle-le-Château",
+          "ref": 79.0,
+          "variant": 91.0
+        },
+        {
+          "name": "Beynes",
+          "ref": 101.0,
+          "variant": 110.0
+        },
+        {
+          "name": "Montgeroult",
+          "ref": 117.0,
+          "variant": 125.0
+        },
+        {
+          "name": "Saint-Germain-lès-Arpajon",
+          "ref": 101.0,
+          "variant": 109.0
+        },
+        {
+          "name": "La Norville",
+          "ref": 104.0,
+          "variant": 112.0
+        }
+      ],
+      "spearman_ref_variant": 0.9961,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 16.092,
+          "variant": 15.849
+        },
+        "spearman_dist_time": {
+          "ref": 0.752,
+          "variant": 0.761
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.874,
+          "variant": 0.871
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.504,
+          "variant": 2.462
+        }
+      },
+      "dead_zones": {
+        "ref": 0,
+        "variant": 0
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Fontenay-aux-Roses"
+          ],
+          "in": [
+            "Le Plessis-Robinson"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Gagny"
+          ],
+          "in": [
+            "Saint-Maur-des-Fossés"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 371,
+      "n_reached_ref": 389,
+      "n_reached_variant": 371,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.64,
+        "p90_abs": 3.0,
+        "max_abs": 16.0
+      },
+      "n_changed_gt_5min": 17,
+      "largest_changes": [
+        {
+          "name": "Jouars-Pontchartrain",
+          "ref": 88.0,
+          "variant": 104.0
+        },
+        {
+          "name": "Montgeroult",
+          "ref": 129.0,
+          "variant": 143.0
+        },
+        {
+          "name": "Neauphle-le-Château",
+          "ref": 90.0,
+          "variant": 100.0
+        },
+        {
+          "name": "Gometz-le-Châtel",
+          "ref": 123.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Gometz-la-Ville",
+          "ref": 123.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Chelles",
+          "ref": 81.0,
+          "variant": 88.0
+        },
+        {
+          "name": "La Norville",
+          "ref": 114.0,
+          "variant": 121.0
+        },
+        {
+          "name": "Le Plessis-Pâté",
+          "ref": 109.0,
+          "variant": 116.0
+        }
+      ],
+      "spearman_ref_variant": 0.9965,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 84.0,
+          "variant": 83.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.783,
+          "variant": 13.687
+        },
+        "spearman_dist_time": {
+          "ref": 0.771,
+          "variant": 0.781
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.869,
+          "variant": 0.876
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.683,
+          "variant": 2.661
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Le Plessis-Robinson"
+          ],
+          "in": [
+            "Sceaux"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Gagny",
+            "Le Raincy"
+          ],
+          "in": [
+            "Le Plessis-Trévise",
+            "Rosny-sous-Bois"
+          ]
+        }
+      }
+    }
+  }
+}

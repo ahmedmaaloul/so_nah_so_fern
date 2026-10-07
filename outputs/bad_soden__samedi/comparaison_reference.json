@@ -1,0 +1,239 @@
+{
+  "variant": "samedi",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_samedi.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 1.0,
+        "mean": 1.63,
+        "p90_abs": 12.1,
+        "max_abs": 32.0
+      },
+      "n_changed_gt_5min": 33,
+      "largest_changes": [
+        {
+          "name": "Messel",
+          "ref": 110.0,
+          "variant": 142.0
+        },
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 146.0
+        },
+        {
+          "name": "Flörsheim am Main",
+          "ref": 83.0,
+          "variant": 55.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 86.0,
+          "variant": 113.0
+        },
+        {
+          "name": "Glashütten",
+          "ref": 55.0,
+          "variant": 77.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 124.0,
+          "variant": 143.0
+        },
+        {
+          "name": "Ginsheim-Gustavsburg",
+          "ref": 109.0,
+          "variant": 91.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 98.0,
+          "variant": 115.0
+        }
+      ],
+      "spearman_ref_variant": 0.9595,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 71.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 14.208
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.871
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.475
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.131
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 6,
+          "n": 10,
+          "out": [
+            "Eckenheim",
+            "Hattersheim am Main",
+            "Niederrad",
+            "Raunheim"
+          ],
+          "in": [
+            "Bad Homburg v.d.Höhe",
+            "Bonames",
+            "Glashütten",
+            "Steinbach (Taunus)"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Dietzenbach",
+            "Hanau",
+            "Heusenstamm"
+          ],
+          "in": [
+            "Flörsheim am Main",
+            "Innenstadt",
+            "Mainz"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 1.0,
+        "mean": 1.57,
+        "p90_abs": 13.0,
+        "max_abs": 31.0
+      },
+      "n_changed_gt_5min": 31,
+      "largest_changes": [
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 147.0
+        },
+        {
+          "name": "Messel",
+          "ref": 115.0,
+          "variant": 144.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 86.0,
+          "variant": 114.0
+        },
+        {
+          "name": "Flörsheim am Main",
+          "ref": 86.0,
+          "variant": 58.0
+        },
+        {
+          "name": "Glashütten",
+          "ref": 55.0,
+          "variant": 77.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 126.0,
+          "variant": 146.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 98.0,
+          "variant": 117.0
+        },
+        {
+          "name": "Ginsheim-Gustavsburg",
+          "ref": 112.0,
+          "variant": 94.0
+        }
+      ],
+      "spearman_ref_variant": 0.9601,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 13.648
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.873
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.483
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.316
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 6,
+          "n": 10,
+          "out": [
+            "Hattersheim am Main",
+            "Niedernhausen",
+            "Niederrad",
+            "Raunheim"
+          ],
+          "in": [
+            "Bad Homburg v.d.Höhe",
+            "Bonames",
+            "Glashütten",
+            "Steinbach (Taunus)"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Hanau",
+            "Heusenstamm"
+          ],
+          "in": [
+            "Flörsheim am Main",
+            "Mainz"
+          ]
+        }
+      }
+    }
+  }
+}

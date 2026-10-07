@@ -1,0 +1,198 @@
+{
+  "variant": "autre_mardi",
+  "origin": "garches",
+  "config": "config/sensitivity/garches_autre_mardi.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 371,
+      "n_reached_ref": 389,
+      "n_reached_variant": 371,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.22,
+        "p90_abs": 0.0,
+        "max_abs": 13.0
+      },
+      "n_changed_gt_5min": 7,
+      "largest_changes": [
+        {
+          "name": "Gometz-la-Ville",
+          "ref": 112.0,
+          "variant": 125.0
+        },
+        {
+          "name": "Jouars-Pontchartrain",
+          "ref": 80.0,
+          "variant": 93.0
+        },
+        {
+          "name": "Gometz-le-Châtel",
+          "ref": 112.0,
+          "variant": 124.0
+        },
+        {
+          "name": "Neauphle-le-Château",
+          "ref": 79.0,
+          "variant": 89.0
+        },
+        {
+          "name": "Beynes",
+          "ref": 101.0,
+          "variant": 110.0
+        },
+        {
+          "name": "Neauphle-le-Vieux",
+          "ref": 82.0,
+          "variant": 89.0
+        },
+        {
+          "name": "Les Essarts-le-Roi",
+          "ref": 89.0,
+          "variant": 96.0
+        }
+      ],
+      "spearman_ref_variant": 0.9981,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 73.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 16.092,
+          "variant": 16.065
+        },
+        "spearman_dist_time": {
+          "ref": 0.752,
+          "variant": 0.754
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.874,
+          "variant": 0.86
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.504,
+          "variant": 2.453
+        }
+      },
+      "dead_zones": {
+        "ref": 0,
+        "variant": 0
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Les Mureaux"
+          ],
+          "in": [
+            "Le Raincy"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 371,
+      "n_reached_ref": 389,
+      "n_reached_variant": 371,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.22,
+        "p90_abs": 0.0,
+        "max_abs": 17.0
+      },
+      "n_changed_gt_5min": 6,
+      "largest_changes": [
+        {
+          "name": "Jouars-Pontchartrain",
+          "ref": 88.0,
+          "variant": 105.0
+        },
+        {
+          "name": "Neauphle-le-Château",
+          "ref": 90.0,
+          "variant": 102.0
+        },
+        {
+          "name": "Gometz-la-Ville",
+          "ref": 123.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Gometz-le-Châtel",
+          "ref": 123.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Neauphle-le-Vieux",
+          "ref": 93.0,
+          "variant": 100.0
+        },
+        {
+          "name": "Beynes",
+          "ref": 109.0,
+          "variant": 115.0
+        }
+      ],
+      "spearman_ref_variant": 0.998,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 84.0,
+          "variant": 82.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.783,
+          "variant": 13.783
+        },
+        "spearman_dist_time": {
+          "ref": 0.771,
+          "variant": 0.772
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.869,
+          "variant": 0.86
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.683,
+          "variant": 2.649
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Goussainville"
+          ],
+          "in": [
+            "Rosny-sous-Bois"
+          ]
+        }
+      }
+    }
+  }
+}

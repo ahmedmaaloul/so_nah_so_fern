@@ -1,0 +1,154 @@
+{
+  "variant": "autre_mardi",
+  "origin": "kronberg",
+  "config": "config/sensitivity/kronberg_autre_mardi.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 118,
+      "n_reached_ref": 118,
+      "n_reached_variant": 118,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.31,
+        "p90_abs": 0.0,
+        "max_abs": 23.0
+      },
+      "n_changed_gt_5min": 2,
+      "largest_changes": [
+        {
+          "name": "Groß-Gerau",
+          "ref": 86.0,
+          "variant": 109.0
+        },
+        {
+          "name": "Mörfelden-Walldorf",
+          "ref": 72.0,
+          "variant": 93.0
+        }
+      ],
+      "spearman_ref_variant": 0.994,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.5,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 15.987,
+          "variant": 15.922
+        },
+        "spearman_dist_time": {
+          "ref": 0.813,
+          "variant": 0.82
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.458,
+          "variant": 0.441
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.899,
+          "variant": 2.915
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Mörfelden-Walldorf"
+          ],
+          "in": [
+            "Offenbach am Main"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 118,
+      "n_reached_ref": 118,
+      "n_reached_variant": 118,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.3,
+        "p90_abs": 0.0,
+        "max_abs": 22.0
+      },
+      "n_changed_gt_5min": 3,
+      "largest_changes": [
+        {
+          "name": "Groß-Gerau",
+          "ref": 92.0,
+          "variant": 114.0
+        },
+        {
+          "name": "Mörfelden-Walldorf",
+          "ref": 78.0,
+          "variant": 99.0
+        },
+        {
+          "name": "Obertshausen",
+          "ref": 102.0,
+          "variant": 96.0
+        }
+      ],
+      "spearman_ref_variant": 0.9945,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 74.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.844,
+          "variant": 14.722
+        },
+        "spearman_dist_time": {
+          "ref": 0.84,
+          "variant": 0.844
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.432,
+          "variant": 0.424
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.152,
+          "variant": 3.161
+        }
+      },
+      "dead_zones": {
+        "ref": 3,
+        "variant": 3
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        }
+      }
+    }
+  }
+}

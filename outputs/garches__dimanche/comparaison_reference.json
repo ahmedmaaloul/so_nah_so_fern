@@ -1,0 +1,253 @@
+{
+  "variant": "dimanche",
+  "origin": "garches",
+  "config": "config/sensitivity/garches_dimanche.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 355,
+      "n_reached_ref": 389,
+      "n_reached_variant": 355,
+      "delta_t_tc_min": {
+        "median": 13.0,
+        "mean": 17.54,
+        "p90_abs": 36.0,
+        "max_abs": 98.0
+      },
+      "n_changed_gt_5min": 322,
+      "largest_changes": [
+        {
+          "name": "Jouars-Pontchartrain",
+          "ref": 80.0,
+          "variant": 178.0
+        },
+        {
+          "name": "Neauphle-le-Château",
+          "ref": 79.0,
+          "variant": 176.0
+        },
+        {
+          "name": "Rennemoulin",
+          "ref": 64.0,
+          "variant": 146.0
+        },
+        {
+          "name": "Saint-Nom-la-Bretèche",
+          "ref": 67.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Nozay",
+          "ref": 92.0,
+          "variant": 148.0
+        },
+        {
+          "name": "Le Plessis-Pâté",
+          "ref": 99.0,
+          "variant": 154.0
+        },
+        {
+          "name": "Villejust",
+          "ref": 89.0,
+          "variant": 141.0
+        },
+        {
+          "name": "Bouafle",
+          "ref": 92.0,
+          "variant": 142.0
+        }
+      ],
+      "spearman_ref_variant": 0.9116,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 87.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 16.092,
+          "variant": 12.905
+        },
+        "spearman_dist_time": {
+          "ref": 0.752,
+          "variant": 0.683
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.874,
+          "variant": 0.741
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.504,
+          "variant": 2.949
+        }
+      },
+      "dead_zones": {
+        "ref": 0,
+        "variant": 5
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 5,
+          "n": 10,
+          "out": [
+            "Aigremont",
+            "Chavenay",
+            "Châtenay-Malabry",
+            "Fontenay-aux-Roses",
+            "Verrières-le-Buisson"
+          ],
+          "in": [
+            "Châteaufort",
+            "Le Mesnil-le-Roi",
+            "Rennemoulin",
+            "Saint-Nom-la-Bretèche",
+            "Toussus-le-Noble"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 5,
+          "n": 10,
+          "out": [
+            "Les Mureaux",
+            "Neuilly-sur-Marne",
+            "Noisy-le-Grand",
+            "Sevran",
+            "Villiers-sur-Marne"
+          ],
+          "in": [
+            "Brunoy",
+            "Coubron",
+            "Le Perray-en-Yvelines",
+            "Le Raincy",
+            "Montfermeil"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 354,
+      "n_reached_ref": 389,
+      "n_reached_variant": 354,
+      "delta_t_tc_min": {
+        "median": 11.0,
+        "mean": 13.92,
+        "p90_abs": 28.0,
+        "max_abs": 88.0
+      },
+      "n_changed_gt_5min": 303,
+      "largest_changes": [
+        {
+          "name": "Neauphle-le-Château",
+          "ref": 90.0,
+          "variant": 178.0
+        },
+        {
+          "name": "Rennemoulin",
+          "ref": 72.0,
+          "variant": 146.0
+        },
+        {
+          "name": "Saint-Nom-la-Bretèche",
+          "ref": 76.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Nozay",
+          "ref": 102.0,
+          "variant": 154.0
+        },
+        {
+          "name": "Villejust",
+          "ref": 99.0,
+          "variant": 150.0
+        },
+        {
+          "name": "Le Plessis-Pâté",
+          "ref": 109.0,
+          "variant": 156.0
+        },
+        {
+          "name": "Villiers-Adam",
+          "ref": 110.0,
+          "variant": 153.0
+        },
+        {
+          "name": "Bouafle",
+          "ref": 103.0,
+          "variant": 143.0
+        }
+      ],
+      "spearman_ref_variant": 0.9288,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 84.0,
+          "variant": 93.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.783,
+          "variant": 11.847
+        },
+        "spearman_dist_time": {
+          "ref": 0.771,
+          "variant": 0.708
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.869,
+          "variant": 0.799
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.683,
+          "variant": 2.996
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 8
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 5,
+          "n": 10,
+          "out": [
+            "Chavenay",
+            "Châtenay-Malabry",
+            "Fontenay-aux-Roses",
+            "Le Plessis-Robinson",
+            "Verrières-le-Buisson"
+          ],
+          "in": [
+            "Châteaufort",
+            "Le Mesnil-le-Roi",
+            "Rennemoulin",
+            "Saint-Nom-la-Bretèche",
+            "Toussus-le-Noble"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 5,
+          "n": 10,
+          "out": [
+            "Goussainville",
+            "Neuilly-sur-Marne",
+            "Noisy-le-Grand",
+            "Sevran",
+            "Villiers-sur-Marne"
+          ],
+          "in": [
+            "Brunoy",
+            "Coubron",
+            "Le Perray-en-Yvelines",
+            "Montfermeil",
+            "Rosny-sous-Bois"
+          ]
+        }
+      }
+    }
+  }
+}

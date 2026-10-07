@@ -1,0 +1,425 @@
+unit_id,name,point_source,dist_m,townhall_name
+75112,Paris 12e Arrondissement,ign_chef_lieu_arrondissement,729.5,Mairie provisoire du 12e arrondissement
+95308,Hérouville-en-Vexin,ign_chef_lieu,232.7,
+91482,Pecqueuse,ign_chef_lieu,49.1,Mairie de Pecqueuse
+92071,Sceaux,ign_chef_lieu,46.8,Mairie de Sceaux
+91425,Montlhéry,ign_chef_lieu,46.7,Mairie de Monthléry
+93051,Noisy-le-Grand,ign_chef_lieu,46.2,Mairie de Noisy-le-Grand
+91027,Athis-Mons,ign_chef_lieu,37.6,Hôtel de ville d'Athis-Mons
+91272,Gif-sur-Yvette,ign_chef_lieu,37.5,Mairie de Gif-sur-Yvette
+92007,Bagneux,ign_chef_lieu,35.0,Hôtel de Ville de Bagneux
+94076,Villejuif,ign_chef_lieu,33.0,Mairie de Villejuif
+94017,Champigny-sur-Marne,ign_chef_lieu,28.8,Hôtel de Ville
+93057,Les Pavillons-sous-Bois,ign_chef_lieu,28.3,Hôtel de ville
+78165,Les Clayes-sous-Bois,ign_chef_lieu,27.6,Mairie des Clayes-sous-Bois
+91689,Wissous,ign_chef_lieu,25.7,Mairie de Wissous
+75108,Paris 8e Arrondissement,ign_chef_lieu_arrondissement,24.7,Mairie du 8e Arrondissement
+95678,Villiers-Adam,ign_chef_lieu,22.3,Mairie de Villiers-Adam
+78518,Rennemoulin,ign_chef_lieu,21.6,Mairie de Rennemoulin
+94042,Joinville-le-Pont,ign_chef_lieu,21.6,Mairie de Joinville-le-Pont
+78120,Bullion,ign_chef_lieu,20.4,Mairie de Bullion
+94001,Ablon-sur-Seine,ign_chef_lieu,20.3,Mairie d'Ablon-sur-Seine
+78172,Conflans-Sainte-Honorine,ign_chef_lieu,19.7,Mairie de Conflans-Sainte-Honorine
+94037,Gentilly,ign_chef_lieu,19.5,Mairie de Gentilly
+93063,Romainville,ign_chef_lieu,19.3,Mairie de Romainville
+78034,Auteuil,ign_chef_lieu,18.3,Mairie d'Auteuil-le-Roi
+91201,Draveil,ign_chef_lieu,17.9,
+78208,Élancourt,ign_chef_lieu,17.8,Mairie d'Élancourt
+78143,Châteaufort,ign_chef_lieu,17.6,Mairie de Châteaufort
+91434,Morsang-sur-Orge,ign_chef_lieu,17.5,Mairie de Morsang-sur-Orge
+92023,Clamart,ign_chef_lieu,17.1,Mairie de Clamart
+94073,Thiais,ign_chef_lieu,16.2,Mairie de Thiais
+94033,Fontenay-sous-Bois,ign_chef_lieu,15.7,Hôtel de Ville de Fontenay-sous-Bois
+95176,Cormeilles-en-Parisis,ign_chef_lieu,15.7,Mairie de Cormeilles-en-Parisis
+78050,Bazoches-sur-Guyonne,ign_chef_lieu,15.6,Mairie de Bazoches-sur-Guyonne
+78262,Galluis,ign_chef_lieu,14.9,Mairie de Galluis
+91568,Saint-Maurice-Montcouronne,ign_chef_lieu,14.8,Mairie de Saint-Maurice-Montcouronne
+93047,Montfermeil,ign_chef_lieu,14.6,Mairie de Montfermeil
+91191,Crosne,ign_chef_lieu,14.4,Mairie de Crosne
+94055,Ormesson-sur-Marne,ign_chef_lieu,14.2,Mairie d'Ormesson-sur-Marne
+95257,La Frette-sur-Seine,ign_chef_lieu,14.1,Mairie de La Frette-sur-Seine
+78397,Le Mesnil-Saint-Denis,ign_chef_lieu,13.9,Mairie du Mesnil-Saint-Denis
+92036,Gennevilliers,ign_chef_lieu,13.8,Mairie de Gennevilliers
+91552,Saint-Germain-lès-Arpajon,ign_chef_lieu,13.7,Mairie de Saint-Germain-Les-Arpajon
+94069,Saint-Maurice,ign_chef_lieu,13.7,Mairie de Saint-Maurice
+75117,Paris 17e Arrondissement,ign_chef_lieu_arrondissement,13.3,Mairie du 17e arrondissement
+95181,Courcelles-sur-Viosne,ign_chef_lieu,13.3,Mairie de Courcelles-sur-Viosne
+91275,Gometz-le-Châtel,ign_chef_lieu,13.0,Mairie de Gometz-le-Châtel
+78125,La Celle-les-Bordes,ign_chef_lieu,12.9,Mairie de la Celle-les-Bordes
+78343,Les Loges-en-Josas,ign_chef_lieu,12.9,Mairie des Loges-en-Josas
+91521,Ris-Orangis,ign_chef_lieu,12.5,Mairie de Ris-Orangis
+95028,Attainville,ign_chef_lieu,12.5,
+95256,Frépillon,ign_chef_lieu,12.4,Mairie de Frépillon
+78322,Jouy-en-Josas,ign_chef_lieu,12.1,Mairie de Jouy-en-Josas
+91312,Igny,ign_chef_lieu,12.1,Mairie d'Igny
+95019,Arnouville,ign_chef_lieu,12.0,Mairie d'Arnouville
+91017,Angervilliers,ign_chef_lieu,11.9,Mairie d'Angervilliers
+91421,Montgeron,ign_chef_lieu,11.9,Mairie de Montgeron
+95637,Vauréal,ign_chef_lieu,11.9,Maire de Vauréal
+91538,Saint-Aubin,ign_chef_lieu,11.8,
+92032,Fontenay-aux-Roses,ign_chef_lieu,11.8,Hôtel de ville de Fontenay-aux-Roses
+95680,Villiers-le-Bel,ign_chef_lieu,11.5,Mairie de Villiers-le-Bel
+78372,Marly-le-Roi,ign_chef_lieu,11.4,Hôtel de Ville Marly-le-Roi
+78502,Le Port-Marly,ign_chef_lieu,11.4,Hôtel de Ville
+78158,Le Chesnay-Rocquencourt,ign_chef_lieu,11.3,Mairie du Chesnay-Rocquencourt
+78224,L'Étang-la-Ville,ign_chef_lieu,10.9,Mairie de l'Étang-la-Ville
+93030,Dugny,ign_chef_lieu,10.9,
+95450,Neuville-sur-Oise,ign_chef_lieu,10.4,Mairie de Neuville-sur-Oise
+78401,Meulan-en-Yvelines,ign_chef_lieu,10.3,Mairie de Meulan-en-Yvelines
+95510,Puiseux-Pontoise,ign_chef_lieu,10.3,Mairie de Puiseux-Pontoise
+95445,Nerville-la-Forêt,ign_chef_lieu,10.0,Mairie de Nerville-la-Forêt
+91363,Marcoussis,ign_chef_lieu,9.7,Mairie de Marcoussis
+95252,Franconville,ign_chef_lieu,9.2,Mairie de Franconville
+91645,Verrières-le-Buisson,ign_chef_lieu,9.1,Mairie de Verrières-le-Buisson
+92062,Puteaux,ign_chef_lieu,9.1,Mairie de Puteaux
+95127,Cergy,ign_chef_lieu,8.8,Hôtel de Ville
+78623,Le Tremblay-sur-Mauldre,ign_chef_lieu,8.7,Mairie du Tremblay-sur-Mauldre
+75116,Paris 16e Arrondissement,ign_chef_lieu_arrondissement,8.6,Mairie du 16e arrondissement
+91103,Brétigny-sur-Orge,ign_chef_lieu,8.5,Mairie de Brétigny-sur-Orge
+91457,La Norville,ign_chef_lieu,8.5,Mairie de La Norville
+95151,Chauvry,ign_chef_lieu,8.5,Mairie de Chauvry
+91333,Leuville-sur-Orge,ign_chef_lieu,8.4,Mairie de Leuville-sur-Orge
+91064,Bièvres,ign_chef_lieu,8.2,Mairie de Bievres
+92035,La Garenne-Colombes,ign_chef_lieu,8.2,Hôtel de Ville
+95660,Villaines-sous-Bois,ign_chef_lieu,8.2,Mairie de Villaines-sous-Bois
+95491,Le Plessis-Bouchard,ign_chef_lieu,8.1,Mairie du Plessis-Bouchard
+78140,Chapet,ign_chef_lieu,8.0,Mairie de Chapet
+78366,Mareil-le-Guyon,ign_chef_lieu,8.0,Mairie de Mareil-le-Guyon
+78033,Aulnay-sur-Mauldre,ign_chef_lieu,7.9,Mairie d'Aulnay-sur-Mauldre
+95353,Maffliers,ign_chef_lieu,7.9,Mairie de Maffliers
+91122,Bures-sur-Yvette,ign_chef_lieu,7.8,Mairie de Bures-sur-Yvette
+93046,Livry-Gargan,ign_chef_lieu,7.7,Mairie de Livry-Gargan
+94048,Marolles-en-Brie,ign_chef_lieu,7.7,Mairie de Marolles-en-Brie
+95306,Herblay-sur-Seine,ign_chef_lieu,7.6,Mairie d'Herblay-sur-Seine
+78686,Viroflay,ign_chef_lieu,7.5,Mairie de Viroflay
+78490,Plaisir,ign_chef_lieu,7.3,Mairie de Plaisir
+78297,Guyancourt,ign_chef_lieu,7.2,Mairie de Guyancourt
+91661,Villebon-sur-Yvette,ign_chef_lieu,7.0,Hôtel de Ville de Villebon-sur-Yvette
+95120,Butry-sur-Oise,ign_chef_lieu,7.0,
+78261,Gaillon-sur-Montcient,ign_chef_lieu,6.8,Mairie de Gaillon-sur-Montcient
+78364,Marcq,ign_chef_lieu,6.8,Mairie de Marcq
+78609,Tessancourt-sur-Aubette,ign_chef_lieu,6.8,Mairie de Tessancourt-sur-Aubette
+91634,Vaugrigneuse,ign_chef_lieu,6.8,Mairie de Vaugrigneuse
+92020,Châtillon,ign_chef_lieu,6.7,Mairie de Châtillon
+78233,Feucherolles,ign_chef_lieu,6.6,Mairie de Feucherolles
+78486,Le Perray-en-Yvelines,ign_chef_lieu,6.6,Mairie du Perray-en-Yvelines
+91560,Saint-Jean-de-Beauregard,ign_chef_lieu,6.5,Mairie de Saint-Jean-de-Beauregard
+91471,Orsay,ign_chef_lieu,6.4,Mairie d'Orsay
+91411,Les Molières,ign_chef_lieu,6.1,Mairie des Molières
+75119,Paris 19e Arrondissement,ign_chef_lieu_arrondissement,6.0,Mairie du 19e arrondissement
+78007,Aigremont,ign_chef_lieu,6.0,Mairie d'Aigremont
+75100,Paris Centre,ign_chef_lieu_arrondissement,5.8,Mairie de Paris Centre
+78586,Sartrouville,ign_chef_lieu,5.7,Mairie de Sartrouville
+91115,Bruyères-le-Châtel,ign_chef_lieu,5.7,Mairie de Bruyères-Le-Châtel
+93008,Bobigny,ign_chef_lieu,5.7,Hôtel de Ville de Bobigny
+78653,Vicq,ign_chef_lieu,5.6,Mairie de Vicq
+94075,Villecresnes,ign_chef_lieu,5.6,Mairie de Villecresnes
+78451,Nézel,ign_chef_lieu,5.5,Mairie de Nézel
+78548,Saint-Forget,ign_chef_lieu,5.5,Mairie de Saint-Forget
+91679,Villiers-le-Bâcle,ign_chef_lieu,5.5,Mairie de Villiers-Le-Bâcle
+91692,Les Ulis,ign_chef_lieu,5.3,Mairie des Ulis
+78396,Le Mesnil-le-Roi,ign_chef_lieu,5.2,Mairie du Mesnil-le-Roi
+95535,Sagy,ign_chef_lieu,5.2,Mairie de Sagy
+91286,Grigny,ign_chef_lieu,5.0,Mairie de Grigny
+91319,Janvry,ign_chef_lieu,5.0,Mairie de Janvry
+95170,Condécourt,ign_chef_lieu,5.0,
+95392,Mériel,ign_chef_lieu,4.9,
+75109,Paris 9e Arrondissement,ign_chef_lieu_arrondissement,4.8,Mairie du 9e
+78561,Saint-Lambert,ign_chef_lieu,4.8,Mairie de Saint-Lambert-des-Bois
+94060,La Queue-en-Brie,ign_chef_lieu,4.8,
+95211,Ennery,ign_chef_lieu,4.8,Mairie d'Ennery
+91600,Soisy-sur-Seine,ign_chef_lieu,4.7,Mairie de Soisy-sur-Seine
+95628,Valmondois,ign_chef_lieu,4.7,Mairie de Valmondois
+78644,La Verrière,ign_chef_lieu,4.6,Mairie de La Verrière
+95682,Villiers-le-Sec,ign_chef_lieu,4.6,Mairie de Villiers-le-Sec
+78415,Montainville,ign_chef_lieu,4.5,Mairie de Montainville
+78655,Vieille-Église-en-Yvelines,ign_chef_lieu,4.5,Mairie de Vieille-Église-en-Yvelines
+78406,Milon-la-Chapelle,ign_chef_lieu,4.4,Mairie de Milon-la-Chapelle
+93033,Gournay-sur-Marne,ign_chef_lieu,4.4,Mairie de Gournay-sur-Marne
+78227,Évecquemont,ign_chef_lieu,4.0,Mairie d'Évecquemont
+92040,Issy-les-Moulineaux,ign_chef_lieu,4.0,Hôtel de Ville
+95341,Livilliers,ign_chef_lieu,4.0,Mairie de Livilliers
+78073,Bois-d'Arcy,ign_chef_lieu,3.9,Mairie de Bois-d'Arcy
+91086,Bondoufle,ign_chef_lieu,3.9,Mairie de Bondoufle
+94077,Villeneuve-le-Roi,ign_chef_lieu,3.8,Mairie de Villeneuve-le-Roi
+78005,Achères,ign_chef_lieu,3.7,Mairie d'Achères
+78133,Chambourcy,ign_chef_lieu,3.7,Mairie de Chambourcy
+78230,La Falaise,ign_chef_lieu,3.7,Mairie de la Falaise
+78455,Noisy-le-Roi,ign_chef_lieu,3.7,Mairie de Noisy-le-Roi
+91666,Villejust,ign_chef_lieu,3.7,Mairie de Villejust
+78092,Bougival,ign_chef_lieu,3.6,Mairie de Bougival
+95063,Bezons,ign_chef_lieu,3.6,Hôtel de ville de Bezons
+78443,Neauphle-le-Vieux,ign_chef_lieu,3.5,Mairie de Neauphle-le-Vieux
+78590,Senlisse,ign_chef_lieu,3.5,Mairie de Senlisse
+91215,Épinay-sous-Sénart,ign_chef_lieu,3.5,Mairie d'Épinay-sous-Sénart
+78420,Montfort-l'Amaury,ign_chef_lieu,3.4,Mairie de Montfort-l'Amaury
+78575,Saint-Rémy-lès-Chevreuse,ign_chef_lieu,3.4,Mairie de Saint-Rémy-lés-Chevreuse
+78615,Thiverval-Grignon,ign_chef_lieu,3.4,Mairie de Thiverval-Grignon
+95409,Moisselles,ign_chef_lieu,3.4,
+78299,Hardricourt,ign_chef_lieu,3.3,Mairie d'Hardricourt
+91339,Linas,ign_chef_lieu,3.3,Mairie de Linas
+78049,Bazemont,ign_chef_lieu,3.2,Mairie de Bazemont
+78090,Bouafle,ign_chef_lieu,3.2,Mairie de Bouafle
+78576,Saint-Rémy-l'Honoré,ign_chef_lieu,3.2,Mairie de Saint-Rémy-l'Honoré
+91207,Égly,ign_chef_lieu,3.2,Mairie d'Égly
+78398,Les Mesnuls,ign_chef_lieu,3.1,Mairie des Mesnuls
+78588,Saulx-Marchais,ign_chef_lieu,3.1,Mairie de Saulx-Marchais
+91093,Boullay-les-Troux,ign_chef_lieu,3.1,Mairie de Boullay-les-Troux
+92072,Sèvres,ign_chef_lieu,3.1,Hôtel de Ville
+78418,Montesson,ign_chef_lieu,3.0,Mairie de Montesson
+92033,Garches,ign_chef_lieu,3.0,Mairie de Garches
+94028,Créteil,ign_chef_lieu,3.0,Hôtel de Ville
+78123,Carrières-sous-Poissy,ign_chef_lieu,2.8,Hôtel de ville de Carrières-sous-Poissy
+78193,Dampierre-en-Yvelines,ign_chef_lieu,2.8,Mairie de Dampierre-en-Yvelines
+78238,Flins-sur-Seine,ign_chef_lieu,2.8,Mairie de Flins-sur-Seine
+78367,Mareil-Marly,ign_chef_lieu,2.8,Mairie de Mareil-Marly
+78423,Montigny-le-Bretonneux,ign_chef_lieu,2.8,Mairie de Montigny-Le-Bretonneux
+78621,Trappes,ign_chef_lieu,2.8,Mairie de Trappes
+78168,Coignières,ign_chef_lieu,2.7,Mairie de Coignières
+94038,L'Haÿ-les-Roses,ign_chef_lieu,2.7,Mairie de l'Haÿ-les-Roses
+78036,Autouillet,ign_chef_lieu,2.6,Mairie d'Autouillet
+78126,La Celle-Saint-Cloud,ign_chef_lieu,2.6,Hôtel de Ville
+92047,Marnes-la-Coquette,ign_chef_lieu,2.6,Mairie de Marnes-la-Coquette
+95288,Groslay,ign_chef_lieu,2.6,
+78440,Les Mureaux,ign_chef_lieu,2.5,Mairie des Mureaux
+78620,Toussus-le-Noble,ign_chef_lieu,2.5,Mairie de Toussus-le-Noble
+93074,Vaujours,ign_chef_lieu,2.5,Mairie de Vaujours
+78551,Saint-Germain-en-Laye,ign_chef_lieu,2.4,Hôtel de ville
+95271,Génicourt,ign_chef_lieu,2.4,
+78643,Vernouillet,ign_chef_lieu,2.3,Mairie de Vernouillet
+95268,Garges-lès-Gonesse,ign_chef_lieu,2.3,Hôtel de Ville de Garges-lès-Gonesse
+75118,Paris 18e Arrondissement,ign_chef_lieu_arrondissement,2.2,Mairie du 18e
+78305,Herbeville,ign_chef_lieu,2.2,Mairie d'Herbeville
+78384,Médan,ign_chef_lieu,2.2,Mairie de Médan
+95014,Andilly,ign_chef_lieu,2.2,
+78138,Chanteloup-les-Vignes,ign_chef_lieu,2.1,Hôtel de ville de Chanteloup-les-Vignes
+92019,Châtenay-Malabry,ign_chef_lieu,2.1,Mairie de Châtenay-Malabry
+95394,Méry-sur-Oise,ign_chef_lieu,2.1,
+78029,Aubergenville,ign_chef_lieu,2.0,Mairie d'Aubergenville
+78498,Poissy,ign_chef_lieu,2.0,Hôtel de Ville
+78674,Villepreux,ign_chef_lieu,2.0,Mairie de Villepreux
+91377,Massy,ign_chef_lieu,2.0,Mairie de Massy
+92078,Villeneuve-la-Garenne,ign_chef_lieu,2.0,Mairie de Villeneuve-la-Garenne
+93010,Bondy,ign_chef_lieu,2.0,Mairie de Bondy
+93013,Le Bourget,ign_chef_lieu,2.0,Mairie du Bourget
+95039,Auvers-sur-Oise,ign_chef_lieu,2.0,Hôtel de ville
+95218,Éragny-sur-Oise,ign_chef_lieu,2.0,Mairie d'Éragny-sur-Oise
+95395,Le Mesnil-Aubry,ign_chef_lieu,2.0,
+78688,Voisins-le-Bretonneux,ign_chef_lieu,1.9,Mairie de Voisins-le-Bretonneux
+95633,Vaudherland,ign_chef_lieu,1.9,Mairie de Vaudherland
+78389,Méré,ign_chef_lieu,1.8,Mairie de Méré
+78616,Thoiry,ign_chef_lieu,1.8,Mairie de Thoiry
+91243,Fontenay-lès-Briis,ign_chef_lieu,1.8,Mairie de Fontenay-lès-Briis
+92026,Courbevoie,ign_chef_lieu,1.8,Hôtel de Ville de Courbevoie
+78242,Fontenay-le-Fleury,ign_chef_lieu,1.7,Hôtel de Ville
+78672,Villennes-sur-Seine,ign_chef_lieu,1.7,Mairie de Villennes-sur-Seine
+91432,Morangis,ign_chef_lieu,1.7,Mairie de Morangis
+91479,Paray-Vieille-Poste,ign_chef_lieu,1.7,Mairie de Paray-Vieille-Poste
+75111,Paris 11e Arrondissement,ign_chef_lieu_arrondissement,1.6,Mairie du 11e arrondissement
+78010,Les Alluets-le-Roi,ign_chef_lieu,1.6,Mairie des Alluets-le-Roi
+78013,Andelu,ign_chef_lieu,1.6,Mairie d'Andelu
+78030,Auffargis,ign_chef_lieu,1.6,Mairie d'Aufargis
+78350,Louveciennes,ign_chef_lieu,1.6,Mairie de Louveciennes
+78403,Mézy-sur-Seine,ign_chef_lieu,1.6,Mairie de Mézy-sur-Seine
+91186,Courson-Monteloup,ign_chef_lieu,1.6,
+92076,Vaucresson,ign_chef_lieu,1.6,Mairie de Vaucresson
+94054,Orly,ign_chef_lieu,1.6,Mairie d'Orly
+95205,Écouen,ign_chef_lieu,1.6,Mairie d'Écouen
+95280,Goussainville,ign_chef_lieu,1.6,Hôtel de Ville de Goussainville
+91667,Villemoisson-sur-Orge,ign_chef_lieu,1.5,Mairie de Villemoisson-sur-Orge
+92050,Nanterre,ign_chef_lieu,1.5,Hôtel de ville
+93078,Villepinte,ign_chef_lieu,1.5,Mairie de Villepinte
+94080,Vincennes,ign_chef_lieu,1.5,Mairie de Vincennes
+95430,Montsoult,ign_chef_lieu,1.5,
+75115,Paris 15e Arrondissement,ign_chef_lieu_arrondissement,1.4,Mairie du 15e Arrondissement
+91161,Chilly-Mazarin,ign_chef_lieu,1.4,Hôtel de Ville
+91326,Juvisy-sur-Orge,ign_chef_lieu,1.4,Mairie de Juvisy-sur-Orge
+91458,Nozay,ign_chef_lieu,1.4,Mairie de Nozay
+92009,Bois-Colombes,ign_chef_lieu,1.4,Mairie de Bois-Colombes
+92048,Meudon,ign_chef_lieu,1.4,Hôtel de Ville de Meudon
+92073,Suresnes,ign_chef_lieu,1.4,Mairie de Suresnes
+93029,Drancy,ign_chef_lieu,1.4,
+94043,Le Kremlin-Bicêtre,ign_chef_lieu,1.4,Mairie du Kremlin-Bicêtre
+95094,Bouqueval,ign_chef_lieu,1.4,
+95210,Enghien-les-Bains,ign_chef_lieu,1.4,Hôtel de ville d'Enghien
+95424,Montigny-lès-Cormeilles,ign_chef_lieu,1.4,Mairie de Montigny-lès-Cormeilles
+95492,Le Plessis-Gassot,ign_chef_lieu,1.4,Mairie du Plessis-Gassot
+95607,Taverny,ign_chef_lieu,1.4,Hôtel de Ville de Taverny
+78206,Ecquevilly,ign_chef_lieu,1.3,Mairie d'Ecquevilly
+78368,Mareil-sur-Mauldre,ign_chef_lieu,1.3,Mairie de Mareil-sur-Mauldre
+91111,Briis-sous-Forges,ign_chef_lieu,1.3,Mairie de Briis-sous-Forges
+93006,Bagnolet,ign_chef_lieu,1.3,Mairie de Bagnolet
+93032,Gagny,ign_chef_lieu,1.3,Mairie de Gagny
+95427,Montmagny,ign_chef_lieu,1.3,
+95585,Sarcelles,ign_chef_lieu,1.3,Mairie de Sarcelles
+78196,Davron,ign_chef_lieu,1.2,Mairie de Davron
+78334,Lévis-Saint-Nom,ign_chef_lieu,1.2,Mairie de Lévis-Saint-Nom
+78442,Neauphle-le-Château,ign_chef_lieu,1.2,Mairie de Neauphle-le-Château
+78545,Saint-Cyr-l'École,ign_chef_lieu,1.2,Mairie de Saint-Cyr l'École
+78640,Vélizy-Villacoublay,ign_chef_lieu,1.2,Hôtel de ville de Vélizy-Villacoublay
+91249,Forges-les-Bains,ign_chef_lieu,1.2,
+91477,Palaiseau,ign_chef_lieu,1.2,Hôtel de ville de Palaiseau
+93072,Stains,ign_chef_lieu,1.2,Mairie de Stains
+94015,Bry-sur-Marne,ign_chef_lieu,1.2,Hôtel de Ville
+95091,Bouffémont,ign_chef_lieu,1.2,Mairie de Bouffémont
+95229,Ézanville,ign_chef_lieu,1.2,Mairie d'Ézanville
+95388,Menucourt,ign_chef_lieu,1.2,
+78481,Le Pecq,ign_chef_lieu,1.1,Mairie du Pecq
+94046,Maisons-Alfort,ign_chef_lieu,1.1,Mairie de Maisons-Alfort
+95313,L'Isle-Adam,ign_chef_lieu,1.1,Mairie de L'Isle-Adam
+95422,Montgeroult,ign_chef_lieu,1.1,Mairie de Montgeroult
+95500,Pontoise,ign_chef_lieu,1.1,Hôtel de Ville
+78380,Maule,ign_chef_lieu,1.0,Hôtel de ville de Maule
+78383,Maurepas,ign_chef_lieu,1.0,Mairie de Maurepas
+78466,Orgeval,ign_chef_lieu,1.0,Mairie d'Orgeval
+78650,Le Vésinet,ign_chef_lieu,1.0,Mairie du Vésinet
+91021,Arpajon,ign_chef_lieu,1.0,Mairie d'Arpajon
+91345,Longjumeau,ign_chef_lieu,1.0,Mairie de Longjumeau
+91589,Savigny-sur-Orge,ign_chef_lieu,1.0,Mairie de Savigny-sur-Orge
+92004,Asnières-sur-Seine,ign_chef_lieu,1.0,Hôtel-de-Ville
+92012,Boulogne-Billancourt,ign_chef_lieu,1.0,Hôtel de ville de Boulogne-Billancourt
+92025,Colombes,ign_chef_lieu,1.0,Mairie de Colombes
+92044,Levallois-Perret,ign_chef_lieu,1.0,Hôtel de Ville
+92049,Montrouge,ign_chef_lieu,1.0,Mairie de Montrouge
+93014,Clichy-sous-Bois,ign_chef_lieu,1.0,
+93045,Les Lilas,ign_chef_lieu,1.0,Mairie des Lilas
+93061,Le Pré-Saint-Gervais,ign_chef_lieu,1.0,Mairie du Pré-Saint-Gervais
+93062,Le Raincy,ign_chef_lieu,1.0,Mairie du Raincy
+93066,Saint-Denis,ign_chef_lieu,1.0,Hôtel de ville de Saint-Denis
+93071,Sevran,ign_chef_lieu,1.0,Mairie de Sevran
+93079,Villetaneuse,ign_chef_lieu,1.0,Hôtel de Ville
+94004,Boissy-Saint-Léger,ign_chef_lieu,1.0,Mairie de Boissy-Saint-Léger
+94016,Cachan,ign_chef_lieu,1.0,Hôtel de Ville de Cachan
+94021,Chevilly-Larue,ign_chef_lieu,1.0,Mairie de Chevilly-Larue
+94044,Limeil-Brévannes,ign_chef_lieu,1.0,Mairie de Limeil-Brévannes
+94067,Saint-Mandé,ign_chef_lieu,1.0,Mairie de Saint-Mandé
+94074,Valenton,ign_chef_lieu,1.0,Hôtel de ville de Valenton
+95018,Argenteuil,ign_chef_lieu,1.0,Hôtel de Ville d'Argenteuil
+95183,Courdimanche,ign_chef_lieu,1.0,Mairie de Courdimanche
+95203,Eaubonne,ign_chef_lieu,1.0,Hôtel de Ville
+95426,Montlignon,ign_chef_lieu,1.0,
+95476,Osny,ign_chef_lieu,1.0,Château de Grouchy
+95489,Piscop,ign_chef_lieu,1.0,
+95555,Saint-Gratien,ign_chef_lieu,1.0,Mairie de Saint-Gratien
+78043,Bailly,ign_chef_lieu,0.9,Mairie de Bailly
+78124,Carrières-sur-Seine,ign_chef_lieu,0.9,Mairie de Carrières-sur-Seine
+78190,Croissy-sur-Seine,ign_chef_lieu,0.9,Hôtel de ville de Croissy-sur-seine
+78642,Verneuil-sur-Seine,ign_chef_lieu,0.9,Mairie de Verneuil-sur-Seine
+91549,Sainte-Geneviève-des-Bois,ign_chef_lieu,0.9,Mairie de Sainte-Geneviève-des-Bois
+91570,Saint-Michel-sur-Orge,ign_chef_lieu,0.9,Mairie de Saint-Michel-sur-Orge
+91685,Villiers-sur-Orge,ign_chef_lieu,0.9,Mairie de Villiers-sur-Orge
+91691,Yerres,ign_chef_lieu,0.9,Mairie de Yerres
+92024,Clichy,ign_chef_lieu,0.9,Mairie de Clichy-la-Garenne
+94078,Villeneuve-Saint-Georges,ign_chef_lieu,0.9,Hôtel de ville de Villeneuve-Saint-Georges
+95060,Bessancourt,ign_chef_lieu,0.9,Mairie de Bessancourt
+77108,Chelles,ign_chef_lieu,0.8,Mairie de Chelles
+91114,Brunoy,ign_chef_lieu,0.8,Mairie de Brunoy
+91635,Vauhallan,ign_chef_lieu,0.8,Mairie de Vauhallan
+92063,Rueil-Malmaison,ign_chef_lieu,0.8,Mairie de Rueil-Malmaison
+93039,L'Île-Saint-Denis,ign_chef_lieu,0.8,Mairie de l'Île-Saint-Denis
+94059,Le Plessis-Trévise,ign_chef_lieu,0.8,Hôtel de Ville
+95078,Boissy-l'Aillerie,ign_chef_lieu,0.8,Mairie de Boissy-l'Aillerie
+95219,Ermont,ign_chef_lieu,0.8,Mairie d'Ermont
+78084,Boissy-sans-Avoir,ign_chef_lieu,0.7,Mairie de Boissy-sans-Avoir
+78117,Buc,ign_chef_lieu,0.7,Mairie de Buc
+78128,Cernay-la-Ville,ign_chef_lieu,0.7,Mairie de Cernay-la-Ville
+78162,Choisel,ign_chef_lieu,0.7,Mairie de Choisel
+78189,Crespières,ign_chef_lieu,0.7,Mairie de Crespières
+78624,Triel-sur-Seine,ign_chef_lieu,0.7,Hôtel de ville
+78683,Villiers-Saint-Frédéric,ign_chef_lieu,0.7,Mairie de Villiers Saint-Frédéric
+91494,Le Plessis-Pâté,ign_chef_lieu,0.7,Mairie du Plessis-Pâté
+94003,Arcueil,ign_chef_lieu,0.7,Hôtel de Ville d'Arcueil
+94022,Choisy-le-Roi,ign_chef_lieu,0.7,Mairie de Choisy-le-Roi
+94079,Villiers-sur-Marne,ign_chef_lieu,0.7,Mairie de Villiers-sur-Marne
+75105,Paris 5e Arrondissement,ign_chef_lieu_arrondissement,0.6,Mairie du 5e arrondissement
+75106,Paris 6e Arrondissement,ign_chef_lieu_arrondissement,0.6,Mairie du 6e arrondissement
+78220,Les Essarts-le-Roi,ign_chef_lieu,0.6,Mairie des Essarts-le-Roi
+78550,Saint-Germain-de-la-Grange,ign_chef_lieu,0.6,Mairie de Saint-Germain-de-la-Grange
+91044,Ballainvilliers,ign_chef_lieu,0.6,Mairie de Ballainvilliers
+92022,Chaville,ign_chef_lieu,0.6,Mairie de Chaville
+92064,Saint-Cloud,ign_chef_lieu,0.6,Mairie de Saint-Cloud
+93027,La Courneuve,ign_chef_lieu,0.6,Hôtel de ville de La Courneuve
+93050,Neuilly-sur-Marne,ign_chef_lieu,0.6,Mairie de Neuilly-sur-Marne
+95042,Baillet-en-France,ign_chef_lieu,0.6,Mairie de Baillet-en-France
+95061,Béthemont-la-Forêt,ign_chef_lieu,0.6,Mairie de Béthemont-la-Forêt
+75114,Paris 14e Arrondissement,ign_chef_lieu_arrondissement,0.5,Mairie du 14ème arrondissement
+91235,Fleury-Mérogis,ign_chef_lieu,0.5,Mairie de Fleury-Merogis
+93015,Coubron,ign_chef_lieu,0.5,
+95199,Domont,ign_chef_lieu,0.5,Mairie de Domont
+95488,Pierrelaye,ign_chef_lieu,0.5,Mairie de Pierrelaye
+95582,Sannois,ign_chef_lieu,0.5,Hôtel de ville de Sannois
+75113,Paris 13e Arrondissement,ign_chef_lieu_arrondissement,0.4,Mairie du 13e arrondissement
+75120,Paris 20e Arrondissement,ign_chef_lieu_arrondissement,0.4,Mairie du 20e arrondissement
+78356,Magny-les-Hameaux,ign_chef_lieu,0.4,Mairie de Magny-les-Hameaux
+91136,Champlan,ign_chef_lieu,0.4,Mairie de Champlan
+92002,Antony,ign_chef_lieu,0.4,Hôtel de ville d'Antony
+92060,Le Plessis-Robinson,ign_chef_lieu,0.4,Mairie du Plessis-Robinson
+92077,Ville-d'Avray,ign_chef_lieu,0.4,Mairie de Ville-d'Avray
+93007,Le Blanc-Mesnil,ign_chef_lieu,0.4,Mairie du Blanc-Mesnil
+93031,Épinay-sur-Seine,ign_chef_lieu,0.4,Hôtel de Ville
+94081,Vitry-sur-Seine,ign_chef_lieu,0.4,Hôtel de Ville de Vitry-sur-Seine
+78321,Jouars-Pontchartrain,ign_chef_lieu,0.3,Mairie de Jouars-Pontchartrain
+78431,Morainvilliers,ign_chef_lieu,0.3,Marie de Morainvilliers
+78638,Vaux-sur-Seine,ign_chef_lieu,0.3,Mairie de Vaux-sur-Seine
+91534,Saclay,ign_chef_lieu,0.3,Mairie de Saclay
+95088,Bonneuil-en-France,ign_chef_lieu,0.3,
+95572,Saint-Ouen-l'Aumône,ign_chef_lieu,0.3,Mairie de Saint-Ouen-l'Aumône
+91274,Gometz-la-Ville,ign_chef_lieu,0.2,Mairie de Gometz-la-Ville
+91338,Limours,ign_chef_lieu,0.2,Mairie de Limours
+92046,Malakoff,ign_chef_lieu,0.2,Mairie de Malakoff
+93001,Aubervilliers,ign_chef_lieu,0.2,Mairie d'Aubervilliers
+94019,Chennevières-sur-Marne,ign_chef_lieu,0.2,Hotel de ville
+95074,Boisemont,ign_chef_lieu,0.2,Mairie de Boisemont
+95323,Jouy-le-Moutier,ign_chef_lieu,0.2,Mairie de Jouy-le-Moutier
+95574,Saint-Prix,ign_chef_lieu,0.2,Hôtel de Ville
+75107,Paris 7e Arrondissement,ign_chef_lieu_arrondissement,0.1,Mairie du 7e Arrondissement
+78015,Andrésy,ign_chef_lieu,0.1,Hôtel de ville d'Andrésy
+78062,Beynes,ign_chef_lieu,0.1,Mairie de Beynes
+78146,Chatou,ign_chef_lieu,0.1,Hôtel de ville de Chatou
+78160,Chevreuse,ign_chef_lieu,0.1,Mairie de Chevreuse
+78358,Maisons-Laffitte,ign_chef_lieu,0.1,Mairie de Maisons-Laffitte
+78382,Maurecourt,ign_chef_lieu,0.1,Mairie de Maurecourt
+91216,Épinay-sur-Orge,ign_chef_lieu,0.1,Hôtel de Ville
+91347,Longpont-sur-Orge,ign_chef_lieu,0.1,Mairie de Longpont-sur-Orge
+91657,Vigneux-sur-Seine,ign_chef_lieu,0.1,Mairie de Vigneux-sur-Seine
+91687,Viry-Châtillon,ign_chef_lieu,0.1,Mairie de Viry-Châtillon
+93049,Neuilly-Plaisance,ign_chef_lieu,0.1,Mairie de Neuilly-Plaisance
+93064,Rosny-sous-Bois,ign_chef_lieu,0.1,Mairie de Rosny-sous-Bois
+93070,Saint-Ouen-sur-Seine,ign_chef_lieu,0.1,Hôtel de ville de Saint-Ouen
+93077,Villemomble,ign_chef_lieu,0.1,Mairie de Villemomble
+94002,Alfortville,ign_chef_lieu,0.1,Mairie d'Alfortville
+94011,Bonneuil-sur-Marne,ign_chef_lieu,0.1,Hôtel de ville de Bonneuil-sur-Marne
+94052,Nogent-sur-Marne,ign_chef_lieu,0.1,Hôtel de ville
+94068,Saint-Maur-des-Fossés,ign_chef_lieu,0.1,Hôtel de ville de Saint-Maur-des-Fossés
+95197,Deuil-la-Barre,ign_chef_lieu,0.1,
+95369,Margency,ign_chef_lieu,0.1,Mairie de Margency
+95539,Saint-Brice-sous-Forêt,ign_chef_lieu,0.1,
+75110,Paris 10e Arrondissement,ign_chef_lieu_arrondissement,0.0,Mairie du 10e arrondissement
+78087,Bonnelles,ign_chef_lieu,0.0,Mairie de Bonnelles
+78152,Chavenay,ign_chef_lieu,0.0,Mairie de Chavenay
+78311,Houilles,ign_chef_lieu,0.0,Mairie de Houilles
+78571,Saint-Nom-la-Bretèche,ign_chef_lieu,0.0,Mairie de Saint-Nom-la-Bretèche
+78646,Versailles,ign_chef_lieu,0.0,Hôtel de Ville
+91461,Ollainville,ign_chef_lieu,0.0,Mairie d'Ollainville
+91587,Saulx-les-Chartreux,ign_chef_lieu,0.0,Mairie de Saulx-les-Chartreux
+91665,La Ville-du-Bois,ign_chef_lieu,0.0,Mairie de La Ville-du-Bois
+92014,Bourg-la-Reine,ign_chef_lieu,0.0,Mairie de Bourg-la-Reine
+92051,Neuilly-sur-Seine,ign_chef_lieu,0.0,Hôtel de Ville
+92075,Vanves,ign_chef_lieu,0.0,Hôtel de Ville de Vanves
+93005,Aulnay-sous-Bois,ign_chef_lieu,0.0,Mairie d'Aulnay-sous-Bois
+93048,Montreuil,ign_chef_lieu,0.0,Hôtel de Ville
+93053,Noisy-le-Sec,ign_chef_lieu,0.0,Mairie de Noisy-le-Sec
+93055,Pantin,ign_chef_lieu,0.0,Mairie de Pantin
+94018,Charenton-le-Pont,ign_chef_lieu,0.0,Mairie de Charenton-le-Pont
+94034,Fresnes,ign_chef_lieu,0.0,Mairie de Fresnes
+94041,Ivry-sur-Seine,ign_chef_lieu,0.0,Mairie d'Ivry-sur-Seine
+94053,Noiseau,ign_chef_lieu,0.0,
+94058,Le Perreux-sur-Marne,ign_chef_lieu,0.0,Mairie du Perreux-sur-Marne
+94065,Rungis,ign_chef_lieu,0.0,Mairie de Rungis
+94071,Sucy-en-Brie,ign_chef_lieu,0.0,Hôtel de ville de Sucy-en-Brie
+95051,Beauchamp,ign_chef_lieu,0.0,Mairie de Beauchamp
+95277,Gonesse,ign_chef_lieu,0.0,Hôtel de Ville de Gonesse
+95428,Montmorency,ign_chef_lieu,0.0,Mairie de Montmorency
+95563,Saint-Leu-la-Forêt,ign_chef_lieu,0.0,Hôtel de Ville
+95598,Soisy-sous-Montmorency,ign_chef_lieu,0.0,Hôtel de ville de Soisy-Sous-Montmorency
+95612,Le Thillay,ign_chef_lieu,0.0,

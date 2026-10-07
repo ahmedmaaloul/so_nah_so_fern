@@ -8,7 +8,10 @@ Rassemble, pour chaque origine (config/<slug>.yaml) et chaque variante de
 config/sensitivity/ qui ne change QUE la fenêtre de départ (analysis.window_start /
 window_end ; --kind windows) ou QUE la date (analysis.date ; --kind days), les chiffres
 de synthèse de 07, le nombre de trajets actifs ce jour-là dans le GTFS découpé (02,
-qa_gtfs_service_by_date.csv) et la comparaison de 11 avec la référence. Script global.
+qa_gtfs_service_by_date.csv), le nombre de lignes actives le jour de référence mais
+sans aucun trajet ce jour-là (trou de couverture du flux « latest » ou vraie
+suspension : à lire avec le calendrier) et la comparaison de 11 avec la référence.
+Script global.
 
 Sorties (outputs/time_windows/ ou outputs/days/) :
   <kind>.csv     une ligne par (origine, point, variante)
@@ -18,11 +21,13 @@ from __future__ import annotations
 
 import argparse
 import json
+import zipfile
+from functools import lru_cache
 
 import pandas as pd
 import yaml
 
-from common import CONFIG_DIR, ROOT, get_logger, load_config, log_assumption, outputs_dir
+from common import CONFIG_DIR, ROOT, get_logger, interim_dir, load_config, log_assumption, outputs_dir
 
 LOG = get_logger("14_time_windows")
 ORIGINS = ["garches", "kronberg", "bad_soden"]
@@ -59,6 +64,34 @@ def trips_on(ref: dict, date: str):
     return int(d.loc[date, "trips"]) if date in d.index else None
 
 
+@lru_cache(maxsize=None)
+def route_trips(zip_path: str, date: str) -> pd.Series:
+    """Trajets par ligne (route_id) actifs le jour `date` dans un GTFS (calendar + calendar_dates)."""
+    z = zipfile.ZipFile(zip_path)
+    rd = lambda n: pd.read_csv(z.open(n), dtype=str)            # noqa: E731
+    trips, cd = rd("trips.txt"), rd("calendar_dates.txt")
+    d, wd = date.replace("-", ""), pd.Timestamp(date).day_name().lower()
+    active = set()
+    if "calendar.txt" in z.namelist():
+        cal = rd("calendar.txt")
+        active = set(cal[(cal.start_date <= d) & (cal.end_date >= d) & (cal[wd] == "1")].service_id)
+    x = cd[cd.date == d]
+    active = (active | set(x[x.exception_type == "1"].service_id)) - set(x[x.exception_type == "2"].service_id)
+    return trips[trips.service_id.isin(active)].groupby("route_id").size()
+
+
+def routes_missing(ref: dict, ref_date: str, date: str) -> dict:
+    """Lignes actives le jour de référence mais sans aucun trajet le jour `date` (couverture du flux)."""
+    out = {"lines": 0, "trips_ref": 0, "share_trips_ref": 0.0}
+    for zp in sorted((interim_dir(ref) / "gtfs").glob("*.zip")):
+        a, b = route_trips(str(zp), ref_date), route_trips(str(zp), date)
+        gone = a[~a.index.isin(b.index)]
+        out["lines"] += int(len(gone))
+        out["trips_ref"] += int(gone.sum())
+        out["share_trips_ref"] = round(out["trips_ref"] / max(1, int(a.sum())), 4)
+    return out
+
+
 def main() -> None:
     parser = argparse.ArgumentParser(description="Synthèse des sensibilités temporelles.")
     parser.add_argument("--kind", choices=sorted(KINDS), default="windows")
@@ -82,8 +115,11 @@ def main() -> None:
                 oid = s["origin_id"]
                 c = cmp.get(oid, {})
                 day = str(cfg["analysis"]["date"])
+                gap = routes_missing(ref, str(ref["analysis"]["date"]), day)
                 rows.append({"origin": slug, "point": oid, "date": day,
                              "weekday": pd.Timestamp(day).day_name(), "trips_day": trips_on(ref, day),
+                             "lines_missing_vs_ref": gap["lines"], "ref_trips_on_missing_lines": gap["trips_ref"],
+                             "share_ref_trips_missing": gap["share_trips_ref"],
                              "window": "–".join(syn["window"]), "tag": tag,
                              **{k: s.get(k) for k in KEYS}, "dead_zones": s["dead_zones"]["n"],
                              "delta_median_min": (c.get("delta_t_tc_min") or {}).get("median"),
@@ -102,7 +138,7 @@ def main() -> None:
     df.to_csv(out / f"{kind['dir']}.csv", index=False, float_format="%.3f")
     (out / f"{kind['dir']}.json").write_text(json.dumps({"rows": df.to_dict("records"), "largest_increases": worst},
                                                       ensure_ascii=False, indent=2, default=str), encoding="utf-8")
-    show = df[df["point"] == "gare"][["origin", "tag", "date", "weekday", "trips_day", "window", "t_tc_median_min", "n_unreachable",
+    show = df[df["point"] == "gare"][["origin", "tag", "date", "weekday", "trips_day", "lines_missing_vs_ref", "share_ref_trips_missing", "window", "t_tc_median_min", "n_unreachable",
                                       "v_eff_popweighted_median_kmh", "share_2plus_transfers", "ratio_tc_car_median",
                                       "dead_zones", "delta_median_min", "spearman_vs_reference"]]
     LOG.info("Depuis la gare :\n%s", show.round(3).to_string(index=False))
@@ -113,7 +149,7 @@ def main() -> None:
         v = df[(df["origin"] == slug) & (df["point"] == "gare")]
         if len(v) < 2:
             continue
-        lab = (lambda r: r.window) if kind["dir"] == "time_windows" else (lambda r: f"{r.date} ({r.trips_day} trajets/Fahrten)")
+        lab = (lambda r: r.window) if kind["dir"] == "time_windows" else (lambda r: f"{r.date} ({r.trips_day} trajets/Fahrten, {r.lines_missing_vs_ref} lignes/Linien ohne Fahrt)")
         fr = "; ".join(f"{lab(r)} médiane {r.t_tc_median_min:g} min, {r.n_unreachable} non atteintes" for r in v.itertuples())
         de = "; ".join(f"{lab(r)} Median {r.t_tc_median_min:g} Min., {r.n_unreachable} nicht erreicht" for r in v.itertuples())
         log_assumption(

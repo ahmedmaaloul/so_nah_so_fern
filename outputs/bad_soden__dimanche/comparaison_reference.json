@@ -1,0 +1,243 @@
+{
+  "variant": "dimanche",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_dimanche.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 119,
+      "n_reached_ref": 120,
+      "n_reached_variant": 119,
+      "delta_t_tc_min": {
+        "median": 4.0,
+        "mean": 9.63,
+        "p90_abs": 26.8,
+        "max_abs": 67.0
+      },
+      "n_changed_gt_5min": 59,
+      "largest_changes": [
+        {
+          "name": "Glashütten",
+          "ref": 55.0,
+          "variant": 122.0
+        },
+        {
+          "name": "Kelkheim (Taunus)",
+          "ref": 42.0,
+          "variant": 86.0
+        },
+        {
+          "name": "Ober-Mörlen",
+          "ref": 113.0,
+          "variant": 156.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 124.0,
+          "variant": 165.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 98.0,
+          "variant": 137.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 86.0,
+          "variant": 125.0
+        },
+        {
+          "name": "Liederbach am Taunus",
+          "ref": 44.0,
+          "variant": 83.0
+        },
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 152.0
+        }
+      ],
+      "spearman_ref_variant": 0.8954,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 79.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 12.556
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.754
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.378
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.315
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 8
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 5,
+          "n": 10,
+          "out": [
+            "Eckenheim",
+            "Kelsterbach",
+            "Niederrad",
+            "Niederursel",
+            "Raunheim"
+          ],
+          "in": [
+            "Glashütten",
+            "Hofheim am Taunus",
+            "Kelkheim (Taunus)",
+            "Kriftel",
+            "Liederbach am Taunus"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Hanau",
+            "Rödermark"
+          ],
+          "in": [
+            "Niddatal",
+            "Ostend"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 119,
+      "n_reached_ref": 120,
+      "n_reached_variant": 119,
+      "delta_t_tc_min": {
+        "median": 4.0,
+        "mean": 9.49,
+        "p90_abs": 28.0,
+        "max_abs": 67.0
+      },
+      "n_changed_gt_5min": 57,
+      "largest_changes": [
+        {
+          "name": "Glashütten",
+          "ref": 55.0,
+          "variant": 122.0
+        },
+        {
+          "name": "Kelkheim (Taunus)",
+          "ref": 44.0,
+          "variant": 87.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 98.0,
+          "variant": 141.0
+        },
+        {
+          "name": "Ober-Mörlen",
+          "ref": 114.0,
+          "variant": 156.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 86.0,
+          "variant": 126.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 126.0,
+          "variant": 166.0
+        },
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 155.0
+        },
+        {
+          "name": "Liederbach am Taunus",
+          "ref": 47.0,
+          "variant": 83.0
+        }
+      ],
+      "spearman_ref_variant": 0.8995,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 82.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 12.14
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.758
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.378
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.499
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 7
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 5,
+          "n": 10,
+          "out": [
+            "Kelsterbach",
+            "Niedernhausen",
+            "Niederrad",
+            "Niederursel",
+            "Raunheim"
+          ],
+          "in": [
+            "Glashütten",
+            "Hofheim am Taunus",
+            "Kelkheim (Taunus)",
+            "Kriftel",
+            "Liederbach am Taunus"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Bad Vilbel",
+            "Hanau",
+            "Rödermark"
+          ],
+          "in": [
+            "Dietzenbach",
+            "Niddatal",
+            "Ostend"
+          ]
+        }
+      }
+    }
+  }
+}

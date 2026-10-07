@@ -1,0 +1,1794 @@
+{
+  "rows": [
+    {
+      "origin": "garches",
+      "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
+      "lines_missing_vs_ref": 0,
+      "ref_trips_on_missing_lines": 0,
+      "share_ref_trips_missing": 0.0,
+      "window": "07:30–09:00",
+      "tag": "reference",
+      "t_tc_median_min": 75.0,
+      "n_unreachable": 34,
+      "v_eff_popweighted_median_kmh": 16.09180333778113,
+      "spearman_dist_time": 0.7520613286417865,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8740359897172236,
+      "ratio_tc_car_median": 2.5036705045977903,
+      "dead_zones": 0,
+      "delta_median_min": NaN,
+      "delta_p90_abs_min": NaN,
+      "spearman_vs_reference": NaN
+    },
+    {
+      "origin": "garches",
+      "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
+      "lines_missing_vs_ref": 0,
+      "ref_trips_on_missing_lines": 0,
+      "share_ref_trips_missing": 0.0,
+      "window": "07:30–09:00",
+      "tag": "reference",
+      "t_tc_median_min": 84.0,
+      "n_unreachable": 34,
+      "v_eff_popweighted_median_kmh": 13.782560464988233,
+      "spearman_dist_time": 0.7713092784702931,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8688946015424165,
+      "ratio_tc_car_median": 2.682526661197703,
+      "dead_zones": 2,
+      "delta_median_min": NaN,
+      "delta_p90_abs_min": NaN,
+      "spearman_vs_reference": NaN
+    },
+    {
+      "origin": "garches",
+      "point": "gare",
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "trips_day": 134132,
+      "lines_missing_vs_ref": 149,
+      "ref_trips_on_missing_lines": 4350,
+      "share_ref_trips_missing": 0.0314,
+      "window": "07:30–09:00",
+      "tag": "autre_mardi",
+      "t_tc_median_min": 73.0,
+      "n_unreachable": 52,
+      "v_eff_popweighted_median_kmh": 16.065220747422686,
+      "spearman_dist_time": 0.7541622025507616,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8598382749326146,
+      "ratio_tc_car_median": 2.453416149068323,
+      "dead_zones": 0,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 0.9981
+    },
+    {
+      "origin": "garches",
+      "point": "centre",
+      "date": "2026-11-03",
+      "weekday": "Tuesday",
+      "trips_day": 134132,
+      "lines_missing_vs_ref": 149,
+      "ref_trips_on_missing_lines": 4350,
+      "share_ref_trips_missing": 0.0314,
+      "window": "07:30–09:00",
+      "tag": "autre_mardi",
+      "t_tc_median_min": 82.0,
+      "n_unreachable": 52,
+      "v_eff_popweighted_median_kmh": 13.782560464988233,
+      "spearman_dist_time": 0.771976394120272,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8598382749326146,
+      "ratio_tc_car_median": 2.6493506493506493,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 0.998
+    },
+    {
+      "origin": "garches",
+      "point": "gare",
+      "date": "2026-10-11",
+      "weekday": "Sunday",
+      "trips_day": 67271,
+      "lines_missing_vs_ref": 936,
+      "ref_trips_on_missing_lines": 23739,
+      "share_ref_trips_missing": 0.1716,
+      "window": "07:30–09:00",
+      "tag": "dimanche",
+      "t_tc_median_min": 87.0,
+      "n_unreachable": 68,
+      "v_eff_popweighted_median_kmh": 12.904554881180324,
+      "spearman_dist_time": 0.6827994849180791,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.7408450704225352,
+      "ratio_tc_car_median": 2.9490769846259357,
+      "dead_zones": 5,
+      "delta_median_min": 13.0,
+      "delta_p90_abs_min": 36.0,
+      "spearman_vs_reference": 0.9116
+    },
+    {
+      "origin": "garches",
+      "point": "centre",
+      "date": "2026-10-11",
+      "weekday": "Sunday",
+      "trips_day": 67271,
+      "lines_missing_vs_ref": 936,
+      "ref_trips_on_missing_lines": 23739,
+      "share_ref_trips_missing": 0.1716,
+      "window": "07:30–09:00",
+      "tag": "dimanche",
+      "t_tc_median_min": 93.0,
+      "n_unreachable": 69,
+      "v_eff_popweighted_median_kmh": 11.847160455126744,
+      "spearman_dist_time": 0.7078370654294908,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.7994350282485876,
+      "ratio_tc_car_median": 2.995637208460283,
+      "dead_zones": 8,
+      "delta_median_min": 11.0,
+      "delta_p90_abs_min": 28.0,
+      "spearman_vs_reference": 0.9288
+    },
+    {
+      "origin": "garches",
+      "point": "gare",
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "trips_day": 138184,
+      "lines_missing_vs_ref": 3,
+      "ref_trips_on_missing_lines": 112,
+      "share_ref_trips_missing": 0.0008,
+      "window": "07:30–09:00",
+      "tag": "jeudi",
+      "t_tc_median_min": 75.0,
+      "n_unreachable": 34,
+      "v_eff_popweighted_median_kmh": 16.09180333778113,
+      "spearman_dist_time": 0.7520265552389582,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8740359897172236,
+      "ratio_tc_car_median": 2.504118616144975,
+      "dead_zones": 0,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 1.0
+    },
+    {
+      "origin": "garches",
+      "point": "centre",
+      "date": "2026-10-15",
+      "weekday": "Thursday",
+      "trips_day": 138184,
+      "lines_missing_vs_ref": 3,
+      "ref_trips_on_missing_lines": 112,
+      "share_ref_trips_missing": 0.0008,
+      "window": "07:30–09:00",
+      "tag": "jeudi",
+      "t_tc_median_min": 84.0,
+      "n_unreachable": 34,
+      "v_eff_popweighted_median_kmh": 13.782560464988233,
+      "spearman_dist_time": 0.771415550984135,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8688946015424165,
+      "ratio_tc_car_median": 2.682526661197703,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 1.0
+    },
+    {
+      "origin": "garches",
+      "point": "gare",
+      "date": "2026-10-10",
+      "weekday": "Saturday",
+      "trips_day": 95772,
+      "lines_missing_vs_ref": 590,
+      "ref_trips_on_missing_lines": 9346,
+      "share_ref_trips_missing": 0.0676,
+      "window": "07:30–09:00",
+      "tag": "samedi",
+      "t_tc_median_min": 81.5,
+      "n_unreachable": 35,
+      "v_eff_popweighted_median_kmh": 14.6913069591223,
+      "spearman_dist_time": 0.7376592376482556,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8118556701030928,
+      "ratio_tc_car_median": 2.703255211990792,
+      "dead_zones": 0,
+      "delta_median_min": 5.0,
+      "delta_p90_abs_min": 20.0,
+      "spearman_vs_reference": 0.9595
+    },
+    {
+      "origin": "garches",
+      "point": "centre",
+      "date": "2026-10-10",
+      "weekday": "Saturday",
+      "trips_day": 95772,
+      "lines_missing_vs_ref": 590,
+      "ref_trips_on_missing_lines": 9346,
+      "share_ref_trips_missing": 0.0676,
+      "window": "07:30–09:00",
+      "tag": "samedi",
+      "t_tc_median_min": 89.0,
+      "n_unreachable": 39,
+      "v_eff_popweighted_median_kmh": 12.681907085016462,
+      "spearman_dist_time": 0.7668251488288246,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8125,
+      "ratio_tc_car_median": 2.855363388287203,
+      "dead_zones": 4,
+      "delta_median_min": 5.0,
+      "delta_p90_abs_min": 16.8,
+      "spearman_vs_reference": 0.96
+    },
+    {
+      "origin": "garches",
+      "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 127390,
+      "lines_missing_vs_ref": 486,
+      "ref_trips_on_missing_lines": 6451,
+      "share_ref_trips_missing": 0.0466,
+      "window": "07:30–09:00",
+      "tag": "vacances",
+      "t_tc_median_min": 74.0,
+      "n_unreachable": 52,
+      "v_eff_popweighted_median_kmh": 15.84868855774676,
+      "spearman_dist_time": 0.7605672546361767,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8706199460916442,
+      "ratio_tc_car_median": 2.462096669690294,
+      "dead_zones": 0,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 4.0,
+      "spearman_vs_reference": 0.9961
+    },
+    {
+      "origin": "garches",
+      "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 127390,
+      "lines_missing_vs_ref": 486,
+      "ref_trips_on_missing_lines": 6451,
+      "share_ref_trips_missing": 0.0466,
+      "window": "07:30–09:00",
+      "tag": "vacances",
+      "t_tc_median_min": 83.0,
+      "n_unreachable": 52,
+      "v_eff_popweighted_median_kmh": 13.687181315121682,
+      "spearman_dist_time": 0.7814922485455873,
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.876010781671159,
+      "ratio_tc_car_median": 2.661183016813838,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 3.0,
+      "spearman_vs_reference": 0.9965
+    },
+    {
+      "origin": "kronberg",
+      "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
+      "lines_missing_vs_ref": 0,
+      "ref_trips_on_missing_lines": 0,
+      "share_ref_trips_missing": 0.0,
+      "window": "07:30–09:00",
+      "tag": "reference",
+      "t_tc_median_min": 72.5,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 15.986916540299214,
+      "spearman_dist_time": 0.8134828809913278,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4576271186440678,
+      "ratio_tc_car_median": 2.8991586060333177,
+      "dead_zones": 2,
+      "delta_median_min": NaN,
+      "delta_p90_abs_min": NaN,
+      "spearman_vs_reference": NaN
+    },
+    {
+      "origin": "kronberg",
+      "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
+      "lines_missing_vs_ref": 0,
+      "ref_trips_on_missing_lines": 0,
+      "share_ref_trips_missing": 0.0,
+      "window": "07:30–09:00",
+      "tag": "reference",
+      "t_tc_median_min": 74.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.844378493005296,
+      "spearman_dist_time": 0.8398826177626156,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4322033898305085,
+      "ratio_tc_car_median": 3.1519085703277887,
+      "dead_zones": 3,
+      "delta_median_min": NaN,
+      "delta_p90_abs_min": NaN,
+      "spearman_vs_reference": NaN
+    },
+    {
+      "origin": "kronberg",
+      "point": "gare",
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "trips_day": 46358,
+      "lines_missing_vs_ref": 6,
+      "ref_trips_on_missing_lines": 70,
+      "share_ref_trips_missing": 0.0015,
+      "window": "07:30–09:00",
+      "tag": "autre_mardi",
+      "t_tc_median_min": 74.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 15.92226656791043,
+      "spearman_dist_time": 0.8195540031458781,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4406779661016949,
+      "ratio_tc_car_median": 2.914520292308931,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 0.994
+    },
+    {
+      "origin": "kronberg",
+      "point": "centre",
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "trips_day": 46358,
+      "lines_missing_vs_ref": 6,
+      "ref_trips_on_missing_lines": 70,
+      "share_ref_trips_missing": 0.0015,
+      "window": "07:30–09:00",
+      "tag": "autre_mardi",
+      "t_tc_median_min": 74.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.722331543831352,
+      "spearman_dist_time": 0.8443525761911117,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.423728813559322,
+      "ratio_tc_car_median": 3.1608202937613354,
+      "dead_zones": 3,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 0.9945
+    },
+    {
+      "origin": "kronberg",
+      "point": "gare",
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "trips_day": 21937,
+      "lines_missing_vs_ref": 342,
+      "ref_trips_on_missing_lines": 8746,
+      "share_ref_trips_missing": 0.188,
+      "window": "07:30–09:00",
+      "tag": "dimanche",
+      "t_tc_median_min": 77.0,
+      "n_unreachable": 1,
+      "v_eff_popweighted_median_kmh": 14.247026450490551,
+      "spearman_dist_time": 0.7414863142145655,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4358974358974359,
+      "ratio_tc_car_median": 3.0837858805275404,
+      "dead_zones": 4,
+      "delta_median_min": 2.0,
+      "delta_p90_abs_min": 17.8,
+      "spearman_vs_reference": 0.9354
+    },
+    {
+      "origin": "kronberg",
+      "point": "centre",
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "trips_day": 21937,
+      "lines_missing_vs_ref": 342,
+      "ref_trips_on_missing_lines": 8746,
+      "share_ref_trips_missing": 0.188,
+      "window": "07:30–09:00",
+      "tag": "dimanche",
+      "t_tc_median_min": 83.0,
+      "n_unreachable": 1,
+      "v_eff_popweighted_median_kmh": 13.249611878931915,
+      "spearman_dist_time": 0.7451282481460673,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.42735042735042733,
+      "ratio_tc_car_median": 3.3360323886639676,
+      "dead_zones": 7,
+      "delta_median_min": 3.0,
+      "delta_p90_abs_min": 19.0,
+      "spearman_vs_reference": 0.919
+    },
+    {
+      "origin": "kronberg",
+      "point": "gare",
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "trips_day": 46483,
+      "lines_missing_vs_ref": 3,
+      "ref_trips_on_missing_lines": 39,
+      "share_ref_trips_missing": 0.0008,
+      "window": "07:30–09:00",
+      "tag": "jeudi",
+      "t_tc_median_min": 72.5,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 15.986916540299214,
+      "spearman_dist_time": 0.8134828809913278,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4576271186440678,
+      "ratio_tc_car_median": 2.8991586060333177,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 1.0
+    },
+    {
+      "origin": "kronberg",
+      "point": "centre",
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "trips_day": 46483,
+      "lines_missing_vs_ref": 3,
+      "ref_trips_on_missing_lines": 39,
+      "share_ref_trips_missing": 0.0008,
+      "window": "07:30–09:00",
+      "tag": "jeudi",
+      "t_tc_median_min": 74.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.844378493005296,
+      "spearman_dist_time": 0.8398826177626156,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4322033898305085,
+      "ratio_tc_car_median": 3.1519085703277887,
+      "dead_zones": 3,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 1.0
+    },
+    {
+      "origin": "kronberg",
+      "point": "gare",
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "trips_day": 30419,
+      "lines_missing_vs_ref": 266,
+      "ref_trips_on_missing_lines": 5383,
+      "share_ref_trips_missing": 0.1157,
+      "window": "07:30–09:00",
+      "tag": "samedi",
+      "t_tc_median_min": 75.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.504616883940527,
+      "spearman_dist_time": 0.8207994865036372,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4322033898305085,
+      "ratio_tc_car_median": 2.9727367997938705,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 8.3,
+      "spearman_vs_reference": 0.9822
+    },
+    {
+      "origin": "kronberg",
+      "point": "centre",
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "trips_day": 30419,
+      "lines_missing_vs_ref": 266,
+      "ref_trips_on_missing_lines": 5383,
+      "share_ref_trips_missing": 0.1157,
+      "window": "07:30–09:00",
+      "tag": "samedi",
+      "t_tc_median_min": 77.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 13.445722875403472,
+      "spearman_dist_time": 0.8474329703760344,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4152542372881356,
+      "ratio_tc_car_median": 3.263104321263568,
+      "dead_zones": 4,
+      "delta_median_min": 1.0,
+      "delta_p90_abs_min": 7.3,
+      "spearman_vs_reference": 0.9836
+    },
+    {
+      "origin": "kronberg",
+      "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 42903,
+      "lines_missing_vs_ref": 120,
+      "ref_trips_on_missing_lines": 1590,
+      "share_ref_trips_missing": 0.0342,
+      "window": "07:30–09:00",
+      "tag": "vacances",
+      "t_tc_median_min": 73.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 15.986916540299214,
+      "spearman_dist_time": 0.8029777405503667,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.423728813559322,
+      "ratio_tc_car_median": 2.8944097746156587,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 1.3,
+      "spearman_vs_reference": 0.9972
+    },
+    {
+      "origin": "kronberg",
+      "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 42903,
+      "lines_missing_vs_ref": 120,
+      "ref_trips_on_missing_lines": 1590,
+      "share_ref_trips_missing": 0.0342,
+      "window": "07:30–09:00",
+      "tag": "vacances",
+      "t_tc_median_min": 73.0,
+      "n_unreachable": 1,
+      "v_eff_popweighted_median_kmh": 14.844378493005296,
+      "spearman_dist_time": 0.8230493133451222,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.39316239316239315,
+      "ratio_tc_car_median": 3.137436372049977,
+      "dead_zones": 3,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 2.0,
+      "spearman_vs_reference": 0.9965
+    },
+    {
+      "origin": "bad_soden",
+      "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
+      "lines_missing_vs_ref": 0,
+      "ref_trips_on_missing_lines": 0,
+      "share_ref_trips_missing": 0.0,
+      "window": "07:30–09:00",
+      "tag": "reference",
+      "t_tc_median_min": 72.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.381954965369301,
+      "spearman_dist_time": 0.8989776912896327,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4666666666666667,
+      "ratio_tc_car_median": 3.1061672674939755,
+      "dead_zones": 2,
+      "delta_median_min": NaN,
+      "delta_p90_abs_min": NaN,
+      "spearman_vs_reference": NaN
+    },
+    {
+      "origin": "bad_soden",
+      "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
+      "lines_missing_vs_ref": 0,
+      "ref_trips_on_missing_lines": 0,
+      "share_ref_trips_missing": 0.0,
+      "window": "07:30–09:00",
+      "tag": "reference",
+      "t_tc_median_min": 75.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 13.995176719295248,
+      "spearman_dist_time": 0.8983068671317167,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4666666666666667,
+      "ratio_tc_car_median": 3.323525217898294,
+      "dead_zones": 1,
+      "delta_median_min": NaN,
+      "delta_p90_abs_min": NaN,
+      "spearman_vs_reference": NaN
+    },
+    {
+      "origin": "bad_soden",
+      "point": "gare",
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "trips_day": 45721,
+      "lines_missing_vs_ref": 6,
+      "ref_trips_on_missing_lines": 70,
+      "share_ref_trips_missing": 0.0015,
+      "window": "07:30–09:00",
+      "tag": "autre_mardi",
+      "t_tc_median_min": 69.5,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 15.09596000342412,
+      "spearman_dist_time": 0.9014014230621015,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.49166666666666664,
+      "ratio_tc_car_median": 3.0859148169458335,
+      "dead_zones": 1,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 7.3,
+      "spearman_vs_reference": 0.9795
+    },
+    {
+      "origin": "bad_soden",
+      "point": "centre",
+      "date": "2026-10-27",
+      "weekday": "Tuesday",
+      "trips_day": 45721,
+      "lines_missing_vs_ref": 6,
+      "ref_trips_on_missing_lines": 70,
+      "share_ref_trips_missing": 0.0015,
+      "window": "07:30–09:00",
+      "tag": "autre_mardi",
+      "t_tc_median_min": 72.5,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.398387107848224,
+      "spearman_dist_time": 0.9018714508257037,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.49166666666666664,
+      "ratio_tc_car_median": 3.2788750960814035,
+      "dead_zones": 1,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 7.3,
+      "spearman_vs_reference": 0.9792
+    },
+    {
+      "origin": "bad_soden",
+      "point": "gare",
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "trips_day": 21811,
+      "lines_missing_vs_ref": 332,
+      "ref_trips_on_missing_lines": 8467,
+      "share_ref_trips_missing": 0.1846,
+      "window": "07:30–09:00",
+      "tag": "dimanche",
+      "t_tc_median_min": 79.0,
+      "n_unreachable": 1,
+      "v_eff_popweighted_median_kmh": 12.55567496976685,
+      "spearman_dist_time": 0.7540963845154955,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.37815126050420167,
+      "ratio_tc_car_median": 3.3153867951260985,
+      "dead_zones": 8,
+      "delta_median_min": 4.0,
+      "delta_p90_abs_min": 26.8,
+      "spearman_vs_reference": 0.8954
+    },
+    {
+      "origin": "bad_soden",
+      "point": "centre",
+      "date": "2026-10-25",
+      "weekday": "Sunday",
+      "trips_day": 21811,
+      "lines_missing_vs_ref": 332,
+      "ref_trips_on_missing_lines": 8467,
+      "share_ref_trips_missing": 0.1846,
+      "window": "07:30–09:00",
+      "tag": "dimanche",
+      "t_tc_median_min": 82.0,
+      "n_unreachable": 1,
+      "v_eff_popweighted_median_kmh": 12.140182562563238,
+      "spearman_dist_time": 0.7577383483502347,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.37815126050420167,
+      "ratio_tc_car_median": 3.498939715237807,
+      "dead_zones": 7,
+      "delta_median_min": 4.0,
+      "delta_p90_abs_min": 28.0,
+      "spearman_vs_reference": 0.8995
+    },
+    {
+      "origin": "bad_soden",
+      "point": "gare",
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "trips_day": 45846,
+      "lines_missing_vs_ref": 3,
+      "ref_trips_on_missing_lines": 39,
+      "share_ref_trips_missing": 0.0009,
+      "window": "07:30–09:00",
+      "tag": "jeudi",
+      "t_tc_median_min": 72.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.381954965369301,
+      "spearman_dist_time": 0.8989776912896327,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4666666666666667,
+      "ratio_tc_car_median": 3.1061672674939755,
+      "dead_zones": 2,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 1.0
+    },
+    {
+      "origin": "bad_soden",
+      "point": "centre",
+      "date": "2026-10-22",
+      "weekday": "Thursday",
+      "trips_day": 45846,
+      "lines_missing_vs_ref": 3,
+      "ref_trips_on_missing_lines": 39,
+      "share_ref_trips_missing": 0.0009,
+      "window": "07:30–09:00",
+      "tag": "jeudi",
+      "t_tc_median_min": 75.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 13.995176719295248,
+      "spearman_dist_time": 0.8983068671317167,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4666666666666667,
+      "ratio_tc_car_median": 3.323525217898294,
+      "dead_zones": 1,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 0.0,
+      "spearman_vs_reference": 1.0
+    },
+    {
+      "origin": "bad_soden",
+      "point": "gare",
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "trips_day": 30180,
+      "lines_missing_vs_ref": 263,
+      "ref_trips_on_missing_lines": 5323,
+      "share_ref_trips_missing": 0.116,
+      "window": "07:30–09:00",
+      "tag": "samedi",
+      "t_tc_median_min": 71.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.207962356163877,
+      "spearman_dist_time": 0.8713769597442809,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.475,
+      "ratio_tc_car_median": 3.1310676042422925,
+      "dead_zones": 1,
+      "delta_median_min": 1.0,
+      "delta_p90_abs_min": 12.1,
+      "spearman_vs_reference": 0.9595
+    },
+    {
+      "origin": "bad_soden",
+      "point": "centre",
+      "date": "2026-10-24",
+      "weekday": "Saturday",
+      "trips_day": 30180,
+      "lines_missing_vs_ref": 263,
+      "ref_trips_on_missing_lines": 5323,
+      "share_ref_trips_missing": 0.116,
+      "window": "07:30–09:00",
+      "tag": "samedi",
+      "t_tc_median_min": 74.0,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 13.648066541026102,
+      "spearman_dist_time": 0.8731924905721428,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.48333333333333334,
+      "ratio_tc_car_median": 3.3156500636019324,
+      "dead_zones": 1,
+      "delta_median_min": 1.0,
+      "delta_p90_abs_min": 13.0,
+      "spearman_vs_reference": 0.9601
+    },
+    {
+      "origin": "bad_soden",
+      "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 42356,
+      "lines_missing_vs_ref": 120,
+      "ref_trips_on_missing_lines": 1584,
+      "share_ref_trips_missing": 0.0345,
+      "window": "07:30–09:00",
+      "tag": "vacances",
+      "t_tc_median_min": 69.5,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 15.09596000342412,
+      "spearman_dist_time": 0.8969283932047368,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.48333333333333334,
+      "ratio_tc_car_median": 3.0799990043973287,
+      "dead_zones": 1,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 12.1,
+      "spearman_vs_reference": 0.9785
+    },
+    {
+      "origin": "bad_soden",
+      "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 42356,
+      "lines_missing_vs_ref": 120,
+      "ref_trips_on_missing_lines": 1584,
+      "share_ref_trips_missing": 0.0345,
+      "window": "07:30–09:00",
+      "tag": "vacances",
+      "t_tc_median_min": 72.5,
+      "n_unreachable": 0,
+      "v_eff_popweighted_median_kmh": 14.429468294046641,
+      "spearman_dist_time": 0.8961767604953397,
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.48333333333333334,
+      "ratio_tc_car_median": 3.250593193252943,
+      "dead_zones": 1,
+      "delta_median_min": 0.0,
+      "delta_p90_abs_min": 13.0,
+      "spearman_vs_reference": 0.978
+    }
+  ],
+  "largest_increases": {
+    "garches/gare/autre_mardi": [
+      {
+        "name": "Gometz-la-Ville",
+        "dist_km": 19.1,
+        "reference": 112.0,
+        "variant": 125.0
+      },
+      {
+        "name": "Jouars-Pontchartrain",
+        "dist_km": 21.4,
+        "reference": 80.0,
+        "variant": 93.0
+      },
+      {
+        "name": "Gometz-le-Châtel",
+        "dist_km": 18.1,
+        "reference": 112.0,
+        "variant": 124.0
+      },
+      {
+        "name": "Neauphle-le-Château",
+        "dist_km": 21.3,
+        "reference": 79.0,
+        "variant": 89.0
+      },
+      {
+        "name": "Beynes",
+        "dist_km": 22.9,
+        "reference": 101.0,
+        "variant": 110.0
+      }
+    ],
+    "garches/centre/autre_mardi": [
+      {
+        "name": "Jouars-Pontchartrain",
+        "dist_km": 21.6,
+        "reference": 88.0,
+        "variant": 105.0
+      },
+      {
+        "name": "Neauphle-le-Château",
+        "dist_km": 21.5,
+        "reference": 90.0,
+        "variant": 102.0
+      },
+      {
+        "name": "Gometz-le-Châtel",
+        "dist_km": 18.7,
+        "reference": 123.0,
+        "variant": 132.0
+      },
+      {
+        "name": "Gometz-la-Ville",
+        "dist_km": 19.7,
+        "reference": 123.0,
+        "variant": 132.0
+      },
+      {
+        "name": "Neauphle-le-Vieux",
+        "dist_km": 24.0,
+        "reference": 93.0,
+        "variant": 100.0
+      }
+    ],
+    "garches/gare/dimanche": [
+      {
+        "name": "Jouars-Pontchartrain",
+        "dist_km": 21.4,
+        "reference": 80.0,
+        "variant": 178.0
+      },
+      {
+        "name": "Neauphle-le-Château",
+        "dist_km": 21.3,
+        "reference": 79.0,
+        "variant": 176.0
+      },
+      {
+        "name": "Rennemoulin",
+        "dist_km": 10.6,
+        "reference": 64.0,
+        "variant": 146.0
+      },
+      {
+        "name": "Saint-Nom-la-Bretèche",
+        "dist_km": 12.4,
+        "reference": 67.0,
+        "variant": 132.0
+      },
+      {
+        "name": "Nozay",
+        "dist_km": 20.2,
+        "reference": 92.0,
+        "variant": 148.0
+      }
+    ],
+    "garches/centre/dimanche": [
+      {
+        "name": "Neauphle-le-Château",
+        "dist_km": 21.5,
+        "reference": 90.0,
+        "variant": 178.0
+      },
+      {
+        "name": "Rennemoulin",
+        "dist_km": 10.7,
+        "reference": 72.0,
+        "variant": 146.0
+      },
+      {
+        "name": "Saint-Nom-la-Bretèche",
+        "dist_km": 12.3,
+        "reference": 76.0,
+        "variant": 132.0
+      },
+      {
+        "name": "Nozay",
+        "dist_km": 20.8,
+        "reference": 102.0,
+        "variant": 154.0
+      },
+      {
+        "name": "Villejust",
+        "dist_km": 18.3,
+        "reference": 99.0,
+        "variant": 150.0
+      }
+    ],
+    "garches/gare/jeudi": [
+      {
+        "name": "Neuilly-sur-Seine",
+        "dist_km": 8.0,
+        "reference": 37.0,
+        "variant": 38.0
+      },
+      {
+        "name": "Linas",
+        "dist_km": 23.8,
+        "reference": 99.0,
+        "variant": 99.0
+      },
+      {
+        "name": "Limeil-Brévannes",
+        "dist_km": 23.8,
+        "reference": 82.0,
+        "variant": 82.0
+      },
+      {
+        "name": "Frépillon",
+        "dist_km": 23.7,
+        "reference": 88.0,
+        "variant": 88.0
+      },
+      {
+        "name": "Saint-Ouen-l'Aumône",
+        "dist_km": 23.7,
+        "reference": 79.0,
+        "variant": 79.0
+      }
+    ],
+    "garches/centre/jeudi": [
+      {
+        "name": "Neuilly-sur-Seine",
+        "dist_km": 7.6,
+        "reference": 45.0,
+        "variant": 46.0
+      },
+      {
+        "name": "Pontoise",
+        "dist_km": 23.9,
+        "reference": 87.0,
+        "variant": 87.0
+      },
+      {
+        "name": "Villemomble",
+        "dist_km": 23.9,
+        "reference": 77.0,
+        "variant": 77.0
+      },
+      {
+        "name": "Montlhéry",
+        "dist_km": 23.8,
+        "reference": 115.0,
+        "variant": 115.0
+      },
+      {
+        "name": "Longpont-sur-Orge",
+        "dist_km": 23.7,
+        "reference": 109.0,
+        "variant": 109.0
+      }
+    ],
+    "garches/gare/samedi": [
+      {
+        "name": "Galluis",
+        "dist_km": 29.1,
+        "reference": 86.0,
+        "variant": 147.0
+      },
+      {
+        "name": "Boissy-sans-Avoir",
+        "dist_km": 28.6,
+        "reference": 112.0,
+        "variant": 160.0
+      },
+      {
+        "name": "Vicq",
+        "dist_km": 26.0,
+        "reference": 97.0,
+        "variant": 141.0
+      },
+      {
+        "name": "Montfort-l'Amaury",
+        "dist_km": 28.5,
+        "reference": 109.0,
+        "variant": 152.0
+      },
+      {
+        "name": "Mareil-le-Guyon",
+        "dist_km": 25.5,
+        "reference": 119.0,
+        "variant": 156.0
+      }
+    ],
+    "garches/centre/samedi": [
+      {
+        "name": "Galluis",
+        "dist_km": 29.3,
+        "reference": 95.0,
+        "variant": 147.0
+      },
+      {
+        "name": "Rennemoulin",
+        "dist_km": 10.7,
+        "reference": 72.0,
+        "variant": 114.0
+      },
+      {
+        "name": "Boissy-sans-Avoir",
+        "dist_km": 28.8,
+        "reference": 118.0,
+        "variant": 160.0
+      },
+      {
+        "name": "Vicq",
+        "dist_km": 26.1,
+        "reference": 102.0,
+        "variant": 141.0
+      },
+      {
+        "name": "Arnouville",
+        "dist_km": 23.6,
+        "reference": 80.0,
+        "variant": 114.0
+      }
+    ],
+    "garches/gare/vacances": [
+      {
+        "name": "Jouars-Pontchartrain",
+        "dist_km": 21.4,
+        "reference": 80.0,
+        "variant": 93.0
+      },
+      {
+        "name": "Gometz-la-Ville",
+        "dist_km": 19.1,
+        "reference": 112.0,
+        "variant": 125.0
+      },
+      {
+        "name": "Neauphle-le-Château",
+        "dist_km": 21.3,
+        "reference": 79.0,
+        "variant": 91.0
+      },
+      {
+        "name": "Gometz-le-Châtel",
+        "dist_km": 18.1,
+        "reference": 112.0,
+        "variant": 124.0
+      },
+      {
+        "name": "Beynes",
+        "dist_km": 22.9,
+        "reference": 101.0,
+        "variant": 110.0
+      }
+    ],
+    "garches/centre/vacances": [
+      {
+        "name": "Jouars-Pontchartrain",
+        "dist_km": 21.6,
+        "reference": 88.0,
+        "variant": 104.0
+      },
+      {
+        "name": "Montgeroult",
+        "dist_km": 29.5,
+        "reference": 129.0,
+        "variant": 143.0
+      },
+      {
+        "name": "Neauphle-le-Château",
+        "dist_km": 21.5,
+        "reference": 90.0,
+        "variant": 100.0
+      },
+      {
+        "name": "Gometz-la-Ville",
+        "dist_km": 19.7,
+        "reference": 123.0,
+        "variant": 132.0
+      },
+      {
+        "name": "Gometz-le-Châtel",
+        "dist_km": 18.7,
+        "reference": 123.0,
+        "variant": 132.0
+      }
+    ],
+    "kronberg/gare/autre_mardi": [
+      {
+        "name": "Groß-Gerau",
+        "dist_km": 28.9,
+        "reference": 86.0,
+        "variant": 109.0
+      },
+      {
+        "name": "Mörfelden-Walldorf",
+        "dist_km": 23.1,
+        "reference": 72.0,
+        "variant": 93.0
+      },
+      {
+        "name": "Hochheim am Main",
+        "dist_km": 22.1,
+        "reference": 90.0,
+        "variant": 93.0
+      },
+      {
+        "name": "Bad Soden am Taunus",
+        "dist_km": 4.2,
+        "reference": 48.0,
+        "variant": 48.0
+      },
+      {
+        "name": "Königstein im Taunus",
+        "dist_km": 3.7,
+        "reference": 33.0,
+        "variant": 33.0
+      }
+    ],
+    "kronberg/centre/autre_mardi": [
+      {
+        "name": "Groß-Gerau",
+        "dist_km": 28.8,
+        "reference": 92.0,
+        "variant": 114.0
+      },
+      {
+        "name": "Mörfelden-Walldorf",
+        "dist_km": 23.1,
+        "reference": 78.0,
+        "variant": 99.0
+      },
+      {
+        "name": "Hochheim am Main",
+        "dist_km": 21.9,
+        "reference": 96.0,
+        "variant": 98.0
+      },
+      {
+        "name": "Hattersheim am Main",
+        "dist_km": 12.1,
+        "reference": 82.0,
+        "variant": 83.0
+      },
+      {
+        "name": "Bad Soden am Taunus",
+        "dist_km": 4.0,
+        "reference": 46.0,
+        "variant": 46.0
+      }
+    ],
+    "kronberg/gare/dimanche": [
+      {
+        "name": "Glashütten",
+        "dist_km": 9.0,
+        "reference": 45.0,
+        "variant": 105.0
+      },
+      {
+        "name": "Waldems",
+        "dist_km": 16.2,
+        "reference": 78.0,
+        "variant": 120.0
+      },
+      {
+        "name": "Ober-Mörlen",
+        "dist_km": 24.9,
+        "reference": 118.0,
+        "variant": 156.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 22.3,
+        "reference": 121.0,
+        "variant": 155.0
+      },
+      {
+        "name": "Schmitten im Taunus",
+        "dist_km": 11.2,
+        "reference": 83.0,
+        "variant": 115.0
+      }
+    ],
+    "kronberg/centre/dimanche": [
+      {
+        "name": "Glashütten",
+        "dist_km": 8.7,
+        "reference": 40.0,
+        "variant": 107.0
+      },
+      {
+        "name": "Waldems",
+        "dist_km": 15.9,
+        "reference": 70.0,
+        "variant": 127.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 22.0,
+        "reference": 117.0,
+        "variant": 158.0
+      },
+      {
+        "name": "Ober-Mörlen",
+        "dist_km": 25.2,
+        "reference": 121.0,
+        "variant": 156.0
+      },
+      {
+        "name": "Schmitten im Taunus",
+        "dist_km": 11.1,
+        "reference": 85.0,
+        "variant": 118.0
+      }
+    ],
+    "kronberg/gare/jeudi": [
+      {
+        "name": "Königstein im Taunus",
+        "dist_km": 3.7,
+        "reference": 33.0,
+        "variant": 33.0
+      },
+      {
+        "name": "Schwalbach am Taunus",
+        "dist_km": 3.8,
+        "reference": 36.0,
+        "variant": 36.0
+      },
+      {
+        "name": "Bad Soden am Taunus",
+        "dist_km": 4.2,
+        "reference": 48.0,
+        "variant": 48.0
+      },
+      {
+        "name": "Steinbach (Taunus)",
+        "dist_km": 4.2,
+        "reference": 32.0,
+        "variant": 32.0
+      },
+      {
+        "name": "Oberursel (Taunus)",
+        "dist_km": 5.2,
+        "reference": 33.0,
+        "variant": 33.0
+      }
+    ],
+    "kronberg/centre/jeudi": [
+      {
+        "name": "Königstein im Taunus",
+        "dist_km": 3.3,
+        "reference": 25.0,
+        "variant": 25.0
+      },
+      {
+        "name": "Schwalbach am Taunus",
+        "dist_km": 3.9,
+        "reference": 42.0,
+        "variant": 42.0
+      },
+      {
+        "name": "Bad Soden am Taunus",
+        "dist_km": 4.0,
+        "reference": 46.0,
+        "variant": 46.0
+      },
+      {
+        "name": "Steinbach (Taunus)",
+        "dist_km": 4.6,
+        "reference": 34.0,
+        "variant": 34.0
+      },
+      {
+        "name": "Sulzbach (Taunus)",
+        "dist_km": 5.3,
+        "reference": 54.0,
+        "variant": 54.0
+      }
+    ],
+    "kronberg/gare/samedi": [
+      {
+        "name": "Groß-Gerau",
+        "dist_km": 28.9,
+        "reference": 86.0,
+        "variant": 112.0
+      },
+      {
+        "name": "Weilrod",
+        "dist_km": 20.4,
+        "reference": 116.0,
+        "variant": 140.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 22.3,
+        "reference": 121.0,
+        "variant": 143.0
+      },
+      {
+        "name": "Mörfelden-Walldorf",
+        "dist_km": 23.1,
+        "reference": 72.0,
+        "variant": 93.0
+      },
+      {
+        "name": "Mühlheim am Main",
+        "dist_km": 23.7,
+        "reference": 75.0,
+        "variant": 93.0
+      }
+    ],
+    "kronberg/centre/samedi": [
+      {
+        "name": "Weilrod",
+        "dist_km": 20.3,
+        "reference": 118.0,
+        "variant": 145.0
+      },
+      {
+        "name": "Groß-Gerau",
+        "dist_km": 28.8,
+        "reference": 92.0,
+        "variant": 117.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 22.0,
+        "reference": 117.0,
+        "variant": 139.0
+      },
+      {
+        "name": "Mörfelden-Walldorf",
+        "dist_km": 23.1,
+        "reference": 78.0,
+        "variant": 99.0
+      },
+      {
+        "name": "Mühlheim am Main",
+        "dist_km": 24.1,
+        "reference": 81.0,
+        "variant": 99.0
+      }
+    ],
+    "kronberg/gare/vacances": [
+      {
+        "name": "Weilmünster",
+        "dist_km": 29.7,
+        "reference": 147.0,
+        "variant": 179.0
+      },
+      {
+        "name": "Usingen",
+        "dist_km": 17.1,
+        "reference": 93.0,
+        "variant": 118.0
+      },
+      {
+        "name": "Waldsolms",
+        "dist_km": 28.2,
+        "reference": 127.0,
+        "variant": 148.0
+      },
+      {
+        "name": "Grävenwiesbach",
+        "dist_km": 23.5,
+        "reference": 114.0,
+        "variant": 135.0
+      },
+      {
+        "name": "Wehrheim",
+        "dist_km": 14.1,
+        "reference": 84.0,
+        "variant": 96.0
+      }
+    ],
+    "kronberg/centre/vacances": [
+      {
+        "name": "Usingen",
+        "dist_km": 17.2,
+        "reference": 98.0,
+        "variant": 122.0
+      },
+      {
+        "name": "Grävenwiesbach",
+        "dist_km": 23.6,
+        "reference": 119.0,
+        "variant": 140.0
+      },
+      {
+        "name": "Waldsolms",
+        "dist_km": 28.3,
+        "reference": 134.0,
+        "variant": 155.0
+      },
+      {
+        "name": "Wehrheim",
+        "dist_km": 14.3,
+        "reference": 89.0,
+        "variant": 102.0
+      },
+      {
+        "name": "Kelkheim (Taunus)",
+        "dist_km": 6.6,
+        "reference": 61.0,
+        "variant": 64.0
+      }
+    ],
+    "bad_soden/gare/autre_mardi": [
+      {
+        "name": "Nackenheim",
+        "dist_km": 27.7,
+        "reference": 110.0,
+        "variant": 129.0
+      },
+      {
+        "name": "Bodenheim",
+        "dist_km": 27.7,
+        "reference": 107.0,
+        "variant": 122.0
+      },
+      {
+        "name": "Sulzbach (Taunus)",
+        "dist_km": 2.0,
+        "reference": 23.0,
+        "variant": 23.0
+      },
+      {
+        "name": "Schwalbach am Taunus",
+        "dist_km": 2.5,
+        "reference": 30.0,
+        "variant": 30.0
+      },
+      {
+        "name": "Kronberg im Taunus",
+        "dist_km": 4.1,
+        "reference": 43.0,
+        "variant": 43.0
+      }
+    ],
+    "bad_soden/centre/autre_mardi": [
+      {
+        "name": "Nackenheim",
+        "dist_km": 27.7,
+        "reference": 113.0,
+        "variant": 132.0
+      },
+      {
+        "name": "Bodenheim",
+        "dist_km": 27.7,
+        "reference": 110.0,
+        "variant": 125.0
+      },
+      {
+        "name": "Sulzbach (Taunus)",
+        "dist_km": 2.2,
+        "reference": 26.0,
+        "variant": 26.0
+      },
+      {
+        "name": "Schwalbach am Taunus",
+        "dist_km": 2.6,
+        "reference": 31.0,
+        "variant": 31.0
+      },
+      {
+        "name": "Kronberg im Taunus",
+        "dist_km": 4.0,
+        "reference": 43.0,
+        "variant": 43.0
+      }
+    ],
+    "bad_soden/gare/dimanche": [
+      {
+        "name": "Glashütten",
+        "dist_km": 10.9,
+        "reference": 55.0,
+        "variant": 122.0
+      },
+      {
+        "name": "Kelkheim (Taunus)",
+        "dist_km": 3.8,
+        "reference": 42.0,
+        "variant": 86.0
+      },
+      {
+        "name": "Ober-Mörlen",
+        "dist_km": 29.0,
+        "reference": 113.0,
+        "variant": 156.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 23.7,
+        "reference": 124.0,
+        "variant": 165.0
+      },
+      {
+        "name": "Neu-Anspach",
+        "dist_km": 16.5,
+        "reference": 98.0,
+        "variant": 137.0
+      }
+    ],
+    "bad_soden/centre/dimanche": [
+      {
+        "name": "Glashütten",
+        "dist_km": 10.7,
+        "reference": 55.0,
+        "variant": 122.0
+      },
+      {
+        "name": "Kelkheim (Taunus)",
+        "dist_km": 3.7,
+        "reference": 44.0,
+        "variant": 87.0
+      },
+      {
+        "name": "Neu-Anspach",
+        "dist_km": 16.5,
+        "reference": 98.0,
+        "variant": 141.0
+      },
+      {
+        "name": "Ober-Mörlen",
+        "dist_km": 29.0,
+        "reference": 114.0,
+        "variant": 156.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 23.6,
+        "reference": 126.0,
+        "variant": 166.0
+      }
+    ],
+    "bad_soden/gare/jeudi": [
+      {
+        "name": "Sulzbach (Taunus)",
+        "dist_km": 2.0,
+        "reference": 23.0,
+        "variant": 23.0
+      },
+      {
+        "name": "Schwalbach am Taunus",
+        "dist_km": 2.5,
+        "reference": 30.0,
+        "variant": 30.0
+      },
+      {
+        "name": "Liederbach am Taunus",
+        "dist_km": 3.0,
+        "reference": 44.0,
+        "variant": 44.0
+      },
+      {
+        "name": "Kelkheim (Taunus)",
+        "dist_km": 3.8,
+        "reference": 42.0,
+        "variant": 42.0
+      },
+      {
+        "name": "Kronberg im Taunus",
+        "dist_km": 4.1,
+        "reference": 43.0,
+        "variant": 43.0
+      }
+    ],
+    "bad_soden/centre/jeudi": [
+      {
+        "name": "Sulzbach (Taunus)",
+        "dist_km": 2.2,
+        "reference": 26.0,
+        "variant": 26.0
+      },
+      {
+        "name": "Schwalbach am Taunus",
+        "dist_km": 2.6,
+        "reference": 31.0,
+        "variant": 31.0
+      },
+      {
+        "name": "Liederbach am Taunus",
+        "dist_km": 3.0,
+        "reference": 47.0,
+        "variant": 47.0
+      },
+      {
+        "name": "Kelkheim (Taunus)",
+        "dist_km": 3.7,
+        "reference": 44.0,
+        "variant": 44.0
+      },
+      {
+        "name": "Kronberg im Taunus",
+        "dist_km": 4.0,
+        "reference": 43.0,
+        "variant": 43.0
+      }
+    ],
+    "bad_soden/gare/samedi": [
+      {
+        "name": "Messel",
+        "dist_km": 28.3,
+        "reference": 110.0,
+        "variant": 142.0
+      },
+      {
+        "name": "Weilrod",
+        "dist_km": 23.8,
+        "reference": 116.0,
+        "variant": 146.0
+      },
+      {
+        "name": "Schmitten im Taunus",
+        "dist_km": 14.8,
+        "reference": 86.0,
+        "variant": 113.0
+      },
+      {
+        "name": "Glashütten",
+        "dist_km": 10.9,
+        "reference": 55.0,
+        "variant": 77.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 23.7,
+        "reference": 124.0,
+        "variant": 143.0
+      }
+    ],
+    "bad_soden/centre/samedi": [
+      {
+        "name": "Weilrod",
+        "dist_km": 23.7,
+        "reference": 116.0,
+        "variant": 147.0
+      },
+      {
+        "name": "Messel",
+        "dist_km": 28.5,
+        "reference": 115.0,
+        "variant": 144.0
+      },
+      {
+        "name": "Schmitten im Taunus",
+        "dist_km": 14.6,
+        "reference": 86.0,
+        "variant": 114.0
+      },
+      {
+        "name": "Glashütten",
+        "dist_km": 10.7,
+        "reference": 55.0,
+        "variant": 77.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 23.6,
+        "reference": 126.0,
+        "variant": 146.0
+      }
+    ],
+    "bad_soden/gare/vacances": [
+      {
+        "name": "Hünstetten",
+        "dist_km": 23.7,
+        "reference": 124.0,
+        "variant": 143.0
+      },
+      {
+        "name": "Usingen",
+        "dist_km": 21.3,
+        "reference": 111.0,
+        "variant": 130.0
+      },
+      {
+        "name": "Grävenwiesbach",
+        "dist_km": 27.5,
+        "reference": 133.0,
+        "variant": 150.0
+      },
+      {
+        "name": "Wehrheim",
+        "dist_km": 18.4,
+        "reference": 102.0,
+        "variant": 115.0
+      },
+      {
+        "name": "Kelkheim (Taunus)",
+        "dist_km": 3.8,
+        "reference": 42.0,
+        "variant": 48.0
+      }
+    ],
+    "bad_soden/centre/vacances": [
+      {
+        "name": "Usingen",
+        "dist_km": 21.3,
+        "reference": 113.0,
+        "variant": 131.0
+      },
+      {
+        "name": "Hünstetten",
+        "dist_km": 23.6,
+        "reference": 126.0,
+        "variant": 143.0
+      },
+      {
+        "name": "Grävenwiesbach",
+        "dist_km": 27.4,
+        "reference": 135.0,
+        "variant": 152.0
+      },
+      {
+        "name": "Wehrheim",
+        "dist_km": 18.3,
+        "reference": 104.0,
+        "variant": 118.0
+      },
+      {
+        "name": "Steinbach (Taunus)",
+        "dist_km": 5.7,
+        "reference": 46.0,
+        "variant": 51.0
+      }
+    ]
+  }
+}

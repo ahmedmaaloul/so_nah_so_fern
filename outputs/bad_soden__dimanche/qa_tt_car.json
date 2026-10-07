@@ -1,0 +1,73 @@
+{
+  "origin": "bad_soden",
+  "osrm": "v5.27.1",
+  "image": "ghcr.io/project-osrm/osrm-backend:v5.27.1",
+  "build": {
+    "cached": true
+  },
+  "n_od": 242,
+  "n_nan": 0,
+  "car_time_by_origin": {
+    "centre": {
+      "n": 121,
+      "median": 24.3,
+      "p90": 35.7,
+      "max": 44.6
+    },
+    "gare": {
+      "n": 121,
+      "median": 24.7,
+      "p90": 36.1,
+      "max": 44.9
+    }
+  },
+  "snap_m": {
+    "origins": {
+      "n": 2,
+      "median": 3.4,
+      "p90": 4.5,
+      "max": 4.8
+    },
+    "destinations": {
+      "n": 121,
+      "median": 11.1,
+      "p90": 42.9,
+      "max": 314.1
+    },
+    "destinations_gt_200m": [
+      {
+        "id": "FFM-STT-14",
+        "role": "destination",
+        "snap_m": 314.0,
+        "name": "Sachsenhausen-Süd (inkl. Flughafen)"
+      }
+    ]
+  },
+  "route_speed_kmh": {
+    "n": 241,
+    "median": 58.3,
+    "p90": 77.6,
+    "max": 85.3
+  },
+  "speed_as_crow_flies_kmh": {
+    "n": 241,
+    "median": 39.6,
+    "p90": 49.9,
+    "max": 62.7
+  },
+  "detour_ratio": {
+    "n": 241,
+    "median": 1.5,
+    "p90": 1.9,
+    "max": 2.3
+  },
+  "route_speed_gt_threshold": {
+    "threshold_kmh": 130.0,
+    "n": 0
+  },
+  "timings_s": {
+    "build": 0.0,
+    "table": 0.1,
+    "total": 1.8
+  }
+}

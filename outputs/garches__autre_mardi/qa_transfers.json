@@ -1,0 +1,151 @@
+{
+  "n_od": 848,
+  "n_od_with_time": 744,
+  "max_rides_tested": 4,
+  "tolerance_min": 1.0,
+  "transfers_by_origin": {
+    "centre": {
+      "0": 15,
+      "1": 38,
+      "2": 157,
+      "3": 120,
+      "4+": 42
+    },
+    "gare": {
+      "0": 13,
+      "1": 40,
+      "2": 143,
+      "3": 136,
+      "4+": 40
+    }
+  },
+  "n_walk_only": {
+    "centre": 3,
+    "gare": 3
+  },
+  "n_censored": 82,
+  "n_non_monotone_steps": 0,
+  "n_kmax_faster_than_unlimited": 0,
+  "censored_examples": [
+    {
+      "from_id": "gare",
+      "to_id": "78227",
+      "name": "Évecquemont",
+      "p50_unlimited": 110.0,
+      "p50_rides_4": 122.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78403",
+      "name": "Mézy-sur-Seine",
+      "p50_unlimited": 98.0,
+      "p50_rides_4": 100.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91021",
+      "name": "Arpajon",
+      "p50_unlimited": 106.0,
+      "p50_rides_4": 110.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91027",
+      "name": "Athis-Mons",
+      "p50_unlimited": 86.0,
+      "p50_rides_4": 89.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91044",
+      "name": "Ballainvilliers",
+      "p50_unlimited": 99.0,
+      "p50_rides_4": 107.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91161",
+      "name": "Chilly-Mazarin",
+      "p50_unlimited": 94.0,
+      "p50_rides_4": 98.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91201",
+      "name": "Draveil",
+      "p50_unlimited": 83.0,
+      "p50_rides_4": 86.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91235",
+      "name": "Fleury-Mérogis",
+      "p50_unlimited": 99.0,
+      "p50_rides_4": 103.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91274",
+      "name": "Gometz-la-Ville",
+      "p50_unlimited": 125.0,
+      "p50_rides_4": 143.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91275",
+      "name": "Gometz-le-Châtel",
+      "p50_unlimited": 124.0,
+      "p50_rides_4": 141.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91333",
+      "name": "Leuville-sur-Orge",
+      "p50_unlimited": 102.0,
+      "p50_rides_4": 117.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91339",
+      "name": "Linas",
+      "p50_unlimited": 99.0,
+      "p50_rides_4": 111.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91345",
+      "name": "Longjumeau",
+      "p50_unlimited": 89.0,
+      "p50_rides_4": 93.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91363",
+      "name": "Marcoussis",
+      "p50_unlimited": 100.0,
+      "p50_rides_4": 107.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91425",
+      "name": "Montlhéry",
+      "p50_unlimited": 105.0,
+      "p50_rides_4": 115.0
+    }
+  ],
+  "timings_s": {
+    "rides_1": 1.0,
+    "rides_2": 0.7,
+    "rides_3": 0.9,
+    "rides_4": 2.0,
+    "total": 43.7
+  },
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  }
+}

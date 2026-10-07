@@ -1,0 +1,192 @@
+{
+  "variant": "vacances",
+  "origin": "kronberg",
+  "config": "config/sensitivity/kronberg_vacances.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 118,
+      "n_reached_ref": 118,
+      "n_reached_variant": 118,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.95,
+        "p90_abs": 1.3,
+        "max_abs": 32.0
+      },
+      "n_changed_gt_5min": 6,
+      "largest_changes": [
+        {
+          "name": "Weilmünster",
+          "ref": 147.0,
+          "variant": 179.0
+        },
+        {
+          "name": "Usingen",
+          "ref": 93.0,
+          "variant": 118.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 114.0,
+          "variant": 135.0
+        },
+        {
+          "name": "Waldsolms",
+          "ref": 127.0,
+          "variant": 148.0
+        },
+        {
+          "name": "Wehrheim",
+          "ref": 84.0,
+          "variant": 96.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 89.0,
+          "variant": 95.0
+        }
+      ],
+      "spearman_ref_variant": 0.9972,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.5,
+          "variant": 73.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 15.987,
+          "variant": 15.987
+        },
+        "spearman_dist_time": {
+          "ref": 0.813,
+          "variant": 0.803
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.458,
+          "variant": 0.424
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.899,
+          "variant": 2.894
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Sulzbach (Taunus)"
+          ],
+          "in": [
+            "Wehrheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Sachsenhausen-Nord"
+          ],
+          "in": [
+            "Offenbach am Main"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 117,
+      "n_reached_ref": 118,
+      "n_reached_variant": 117,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.69,
+        "p90_abs": 2.0,
+        "max_abs": 24.0
+      },
+      "n_changed_gt_5min": 5,
+      "largest_changes": [
+        {
+          "name": "Usingen",
+          "ref": 98.0,
+          "variant": 122.0
+        },
+        {
+          "name": "Waldsolms",
+          "ref": 134.0,
+          "variant": 155.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 119.0,
+          "variant": 140.0
+        },
+        {
+          "name": "Wehrheim",
+          "ref": 89.0,
+          "variant": 102.0
+        },
+        {
+          "name": "Obertshausen",
+          "ref": 102.0,
+          "variant": 96.0
+        }
+      ],
+      "spearman_ref_variant": 0.9965,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 74.0,
+          "variant": 73.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.844,
+          "variant": 14.844
+        },
+        "spearman_dist_time": {
+          "ref": 0.84,
+          "variant": 0.823
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.432,
+          "variant": 0.393
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.152,
+          "variant": 3.137
+        }
+      },
+      "dead_zones": {
+        "ref": 3,
+        "variant": 3
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Nordend-Ost"
+          ],
+          "in": [
+            "Offenbach am Main"
+          ]
+        }
+      }
+    }
+  }
+}

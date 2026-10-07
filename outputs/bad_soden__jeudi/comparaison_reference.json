@@ -1,0 +1,123 @@
+{
+  "variant": "jeudi",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_jeudi.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.0,
+        "p90_abs": 0.0,
+        "max_abs": 0.0
+      },
+      "n_changed_gt_5min": 0,
+      "largest_changes": [],
+      "spearman_ref_variant": 1.0,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 72.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 14.382
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.899
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.106
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.0,
+        "p90_abs": 0.0,
+        "max_abs": 0.0
+      },
+      "n_changed_gt_5min": 0,
+      "largest_changes": [],
+      "spearman_ref_variant": 1.0,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 75.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 13.995
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.898
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.324
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        }
+      }
+    }
+  }
+}
