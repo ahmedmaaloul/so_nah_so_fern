@@ -77,6 +77,7 @@ URL réellement utilisée) des fichiers du dernier calcul.
    « latest » n'a plus, à partir du 20/10, 149 lignes du jour d'analyse (T4, bus 177, 137 …),
    y compris le 03/11 (jour d'école) ; les variantes FR `vacances` et `autre_mardi` mesurent
    cette lacune. 14 compte désormais les lignes actives le jour de référence et absentes le
-   jour testé. Piste : même contrôle ligne par ligne dans 02 pour le jour d'analyse.
+   jour testé. Contrôle ligne par ligne ajouté à 02 (D2, `analysis.max_missing_route_share` = 1 %,
+   `02 --routes-check-only`) : 13/10 FR 0,01 %, 20/10 DE 0,16 % ; il rejette 03/11 FR (3,08 %).
 4. Temps voiture en heure de pointe (données de trafic ouvertes ?) pour un rapport TC/voiture moins majoré.
 5. Bad Soden : écart systématique de +9 min entre l'itinéraire de 08:15 et la médiane (cadencement S-Bahn ?).

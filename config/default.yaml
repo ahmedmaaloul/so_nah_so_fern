@@ -19,6 +19,11 @@ analysis:
   # 02_clip_osm_gtfs.py prüft / vérifie : Anzahl Fahrten am Stichtag ≥
   # min_service_ratio × Median der Schul-Werktage im Feed.
   min_service_ratio: 0.97
+  # Linienprüfung (02, D2): übliche Linien (≥ 1 Fahrt im Median der Referenztage) ohne
+  # jede Fahrt am Stichtag dürfen höchstens diesen Anteil der üblichen Fahrten tragen.
+  # Contrôle par ligne (02, D2) : les lignes habituelles sans aucun trajet le jour
+  # d'analyse ne doivent pas porter plus de cette part des trajets habituels.
+  max_missing_route_share: 0.01
   window_start: "07:30"               # erste Abfahrt / premier départ
   window_end: "09:00"                 # letzte Abfahrt / dernier départ
   departure_step_min: 1               # Reisezeitmatrix: jede Minute / chaque minute

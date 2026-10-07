@@ -1,0 +1,8 @@
+feed,route_id,route_name,median_reference_trips,trips_on_day
+de_gtfs,12650,N1366,1.0,0
+de_gtfs,13099,DRF,1.0,0
+de_gtfs,17640,X68,1.0,0
+de_gtfs,20661,RB44,1.0,0
+de_gtfs,23855,N116,1.0,0
+de_gtfs,4358,RE4,1.0,0
+de_gtfs,541,N33,1.0,0

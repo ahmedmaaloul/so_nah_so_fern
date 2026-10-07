@@ -27,6 +27,7 @@ Sorties, dans interim_dir(cfg) :
   gtfs/<id_source>.zip     GTFS découpé, fichiers standards uniquement
 et dans outputs_dir(cfg) :
   qa_gtfs_service_by_date.csv         trajets actifs par date du feed
+  qa_gtfs_routes_missing.csv          lignes habituelles sans trajet le jour d'analyse (D2)
   qa_gtfs_long_distance_excluded.csv  routes grandes lignes écartées
   assumptions.jsonl                   D1_analysis_date, G1_long_distance_excluded,
                                       G2_gtfs_clip, G3_osm_clip
@@ -58,6 +59,8 @@ LOG = get_logger("02_clip_osm_gtfs")
 # Constantes de format et conventions (PAS des paramètres d'analyse)
 # --------------------------------------------------------------------------- #
 WGS84 = "EPSG:4326"
+
+DEFAULT_MAX_MISSING_ROUTE_SHARE = 0.01   # analysis.max_missing_route_share (contrôle D2)
 
 # Fichiers GTFS écrits dans l'extrait, dans cet ordre. Volontairement PAS de
 # pathways, transfers, booking_rules ni extensions (object_codes, ticketing…) :
@@ -561,9 +564,12 @@ def clip_gtfs(cfg: dict, source_id: str, zone, out_dir: Path) -> dict:
 # --------------------------------------------------------------------------- #
 # 4. Contrôle du jour d'analyse
 # --------------------------------------------------------------------------- #
-def service_by_date(res: dict) -> pd.DataFrame:
+def service_by_date(res: dict, per_route: pd.DataFrame | None = None) -> pd.DataFrame:
     """Par date du feed (calendar + calendar_dates) : trajets actifs, trajets dont le
-    1er départ dans la zone tombe dans la fenêtre, départs (arrêts) dans la fenêtre."""
+    1er départ dans la zone tombe dans la fenêtre, départs (arrêts) dans la fenêtre.
+
+    Avec per_route (trips : trip_id, route_id, service_id) : renvoie plutôt une table
+    ligne (route_id) × date du nombre de trajets actifs."""
     cal, cd, trips = res["calendar"], res["calendar_dates"], res["trips"]
     parts = []
     if cal is not None and len(cal):
@@ -596,6 +602,15 @@ def service_by_date(res: dict) -> pd.DataFrame:
                 continue
             j = (pd.to_datetime(r.date, format="%Y%m%d") - d_min).days
             active[i, j] = (r.exception_type == "1")
+
+    if per_route is not None:
+        pr = per_route[per_route["service_id"].isin(sidx)]
+        rids = sorted(set(pr["route_id"]))
+        ridx = {r: i for i, r in enumerate(rids)}
+        m = np.zeros((len(rids), len(services)))
+        np.add.at(m, (pr["route_id"].map(ridx).to_numpy(), pr["service_id"].map(sidx).to_numpy()), 1)
+        out = pd.DataFrame((m @ active).astype(int), index=pd.Index(rids, name="route_id"), columns=dates)
+        return out
 
     stats = trips.merge(res["trip_stats"], on="trip_id", how="left")
     si = stats["service_id"].map(sidx).to_numpy()
@@ -754,6 +769,85 @@ def check_service(cfg: dict, results: dict, allow_low: bool) -> dict:
     return value
 
 
+def route_trips_by_date(zpath: Path) -> pd.DataFrame:
+    """Trajets actifs par ligne (route_id, lignes) et par date du feed (colonnes), GTFS découpé."""
+    with zipfile.ZipFile(zpath) as zf:
+        trips = read_table(zf, "trips")[["trip_id", "route_id", "service_id"]]
+        cal, cd = read_table(zf, "calendar"), read_table(zf, "calendar_dates")
+        routes = read_table(zf, "routes")
+    d = service_by_date({"calendar": cal, "calendar_dates": cd, "trips": trips[["trip_id", "service_id"]],
+                         "trip_stats": pd.DataFrame({"trip_id": [], "first_in_win": [], "n_win": []}),
+                         "source_id": zpath.name}, per_route=trips)
+    names = routes.set_index("route_id")
+    label = names["route_short_name"].where(names["route_short_name"].fillna("") != "", names.get("route_long_name"))
+    d.insert(0, "route_name", label.reindex(d.index).fillna(""))
+    return d
+
+
+def check_routes(cfg: dict, gtfs_dir: Path, allow_low: bool) -> dict:
+    """Contrôle ligne par ligne du jour d'analyse (D2_route_coverage).
+
+    Ligne « habituelle » : médiane ≥ 1 trajet sur les jours de référence (lun–ven hors
+    vacances et fériés, comme D1). Problème si les lignes habituelles sans AUCUN trajet le
+    jour d'analyse portent plus de analysis.max_missing_route_share des trajets habituels
+    (somme des médianes). Le contrôle global D1 ne voit pas ce cas quand d'autres lignes
+    compensent (flux « latest » incomplet pour certaines lignes, par ex.).
+    """
+    a = cfg["analysis"]
+    day = to_day(a["date"])
+    max_share = float(a.get("max_missing_route_share", DEFAULT_MAX_MISSING_ROUTE_SHARE))
+    rows, per_feed, problems = [], {}, []
+    for zpath in sorted(gtfs_dir.glob("*.zip")):
+        d = route_trips_by_date(zpath)
+        dates = pd.DatetimeIndex([c for c in d.columns if isinstance(c, pd.Timestamp)])
+        flags = flag_days(dates, cfg)
+        ref_cols = dates[(dates.weekday < 5) & ~flags["is_school_holiday"].to_numpy() & ~flags["is_public_holiday"].to_numpy()]
+        if day not in dates or not len(ref_cols):
+            problems.append(f"[{zpath.stem}] contrôle par ligne impossible (date hors feed ou aucun jour de référence)")
+            continue
+        med = d[ref_cols].median(axis=1)
+        usual = med >= 1
+        missing = usual & (d[day] == 0)
+        share = float(med[missing].sum() / med[usual].sum()) if usual.any() else 0.0
+        per_feed[zpath.stem] = {"n_usual_routes": int(usual.sum()), "n_missing_routes": int(missing.sum()),
+                                "usual_trips": float(med[usual].sum()), "missing_usual_trips": float(med[missing].sum()),
+                                "share_missing": round(share, 4), "n_reference_days": int(len(ref_cols))}
+        for rid in d.index[missing]:
+            rows.append({"feed": zpath.stem, "route_id": rid, "route_name": d.loc[rid, "route_name"],
+                         "median_reference_trips": float(med[rid]), "trips_on_day": 0})
+        LOG.info("Contrôle par ligne [%s] %s : %d lignes habituelles, %d sans aucun trajet ce jour (%.2f %% des "
+                 "trajets habituels ; seuil %.2f %%)", zpath.stem, day.date(), int(usual.sum()), int(missing.sum()),
+                 100 * share, 100 * max_share)
+        if share > max_share:
+            problems.append(f"[{zpath.stem}] {int(missing.sum())} lignes habituelles sans aucun trajet le {day.date()} "
+                            f"({100 * share:.2f} % des trajets habituels > {100 * max_share:.2f} %)")
+    out_csv = outputs_dir(cfg) / "qa_gtfs_routes_missing.csv"
+    pd.DataFrame(rows, columns=["feed", "route_id", "route_name", "median_reference_trips", "trips_on_day"]) \
+        .sort_values("median_reference_trips", ascending=False).to_csv(out_csv, index=False)
+    LOG.info("Écrit : %s", out_csv)
+    ok = not problems
+    txt = "; ".join(f"{k} : {v['n_missing_routes']} sur {v['n_usual_routes']} lignes habituelles sans trajet "
+                    f"({100 * v['share_missing']:.2f} % des trajets habituels)" for k, v in per_feed.items())
+    txt_de = "; ".join(f"{k}: {v['n_missing_routes']} von {v['n_usual_routes']} üblichen Linien ohne Fahrt "
+                       f"({100 * v['share_missing']:.2f} % der üblichen Fahrten)" for k, v in per_feed.items())
+    log_assumption(
+        cfg, "02", "D2_route_coverage",
+        f"Contrôle par ligne du jour d'analyse {day.date()} (ligne habituelle = au moins 1 trajet en médiane des jours "
+        f"de référence de D1 ; seuil {100 * max_share:.1f} % des trajets habituels sur des lignes absentes) : {txt}. "
+        f"{'Contrôle réussi.' if ok else 'Contrôle NON réussi : ' + ' ; '.join(problems)} Liste : qa_gtfs_routes_missing.csv.",
+        f"Linienprüfung des Stichtags {day.date()} (übliche Linie = mindestens 1 Fahrt im Median der Referenztage aus D1; "
+        f"Schwelle {100 * max_share:.1f} % der üblichen Fahrten auf fehlenden Linien): {txt_de}. "
+        f"{'Prüfung bestanden.' if ok else 'Prüfung NICHT bestanden: ' + ' ; '.join(problems)} Liste: qa_gtfs_routes_missing.csv.",
+        value={"date": day.date().isoformat(), "max_missing_route_share": max_share, "per_feed": per_feed, "ok": ok})
+    if problems:
+        for p in problems:
+            (LOG.warning if allow_low else LOG.error)("Contrôle par ligne : %s", p)
+        if not allow_low:
+            raise SystemExit("ERREUR : des lignes habituelles n'ont aucun trajet le jour d'analyse (voir ci-dessus ; "
+                             "--allow-low-service pour passer outre).\n" + "\n".join(problems))
+    return {"per_feed": per_feed, "ok": ok, "problems": problems}
+
+
 def log_gtfs_assumptions(cfg: dict, results: dict, zone_info: dict) -> None:
     """Hypothèses G1 (grandes lignes) et G2 (découpe GTFS)."""
     routing = cfg.get("routing", {})
@@ -832,12 +926,18 @@ def main() -> None:
     parser.add_argument("--clip-area", help="zone de découpe (GeoJSON) à utiliser à la place de celle calculée")
     parser.add_argument("--allow-low-service", action="store_true",
                         help="ne pas échouer si le jour d'analyse a un service faible / hors période")
+    parser.add_argument("--routes-check-only", action="store_true",
+                        help="refait seulement le contrôle par ligne (D2) sur le GTFS déjà découpé")
     parser.add_argument("--skip-osm", action="store_true",
                         help="ne pas refaire l'extrait OSM (mise au point du GTFS)")
     args = parser.parse_args()
     cfg = load_config(args.config)
     interim = interim_dir(cfg)
     LOG.info("Origine %s — région %s (%s)", cfg["origin"]["slug"], cfg["region"]["id"], cfg["region"]["country"])
+
+    if args.routes_check_only:
+        check_routes(cfg, interim / "gtfs", args.allow_low_service)
+        return
 
     zone, zone_info = build_clip_area(cfg, args.clip_area, interim / "clip_area.geojson")
 
@@ -853,6 +953,7 @@ def main() -> None:
     check_origin_stops(cfg, results)
     log_gtfs_assumptions(cfg, results, zone_info)
     check_service(cfg, results, args.allow_low_service)
+    check_routes(cfg, gtfs_dir, args.allow_low_service)
     LOG.info("Terminé. GTFS : %s", ", ".join(r["path"] for r in results.values()))
 
 

@@ -25,6 +25,8 @@ G0) und GTFS (IDFM, gtfs.de/DELFI), zugeschnitten auf die konvexe Hülle aller Z
 10 km. Fernverkehr (ICE, IC, EC, FLX …) ist ausgeschlossen: 1 286 Fahrten im Zuschnitt von Kronberg,
 keine in Île-de-France (G1). Stichtag ist ein Dienstag in der Schulzeit: 13.10.2026 (FR)
 und 20.10.2026 (DE), beide mit mindestens 97 % des üblichen Werktagsangebots (Verhältnis 1,001 bzw. 1,000).
+Zusätzlich je Linie (D2): übliche Linien ohne jede Fahrt am Stichtag tragen 0,01 % (FR)
+bzw. 0,16 % (DE) der üblichen Fahrten, Schwelle 1 %.
 
 **Reisezeit (R1 bis R4).** r5py 1.1.7 / R5 7.5.1: Abfahrt jede Minute von 07:30 bis 09:00
 (90 Abfahrten), Median (P50) als Hauptwert, P25 und P75 als Streuung. Tür zu Tür:
@@ -98,7 +100,8 @@ Francfort pour les Stadtteile (2,8 % au dessus de Destatis, U1b). Distances géo
 (IDFM, gtfs.de/DELFI), découpés sur l'enveloppe convexe des destinations plus 10 km. Grandes
 lignes exclues (ICE, IC, EC, FLX …) : 1 286 trajets dans la découpe de Kronberg, aucun en Île-de-France (G1).
 Jour : un mardi scolaire, 13/10/2026 (FR) et 20/10/2026 (DE), avec au moins 97 % de l'offre
-habituelle (ratios 1,001 et 1,000).
+habituelle (ratios 1,001 et 1,000). En plus, ligne par ligne (D2) : les lignes habituelles sans
+aucun trajet le jour d'analyse portent 0,01 % (FR) et 0,16 % (DE) des trajets habituels, seuil 1 %.
 
 **Temps de trajet (R1 à R4).** r5py 1.1.7 / R5 7.5.1 : un départ par minute de 07:30 à 09:00
 (90 départs), médiane (p50) comme valeur principale, p25 et p75 pour la dispersion. Porte à
