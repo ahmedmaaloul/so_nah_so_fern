@@ -33,29 +33,35 @@ macOS: Java z. B. über Temurin; osmium-tool über conda-forge in `.tools/osmium
 ## Pipeline
 
 ```bash
-uv run python pipeline/00_download.py                                   # alle Quellen (~1,7 GB) + MANIFEST.json
+uv run python pipeline/00_download.py                                   # alle Quellen (~5 GB) + MANIFEST.json (Spiegel, falls Geofabrik nicht erreichbar)
 uv run python pipeline/01_prepare_units.py --config config/garches.yaml # Gemeinden, Punkte, Einwohner, Distanzen
 uv run python pipeline/02_clip_osm_gtfs.py --config config/garches.yaml # OSM/GTFS-Zuschnitt, Prüfung des Stichtags
 uv run python pipeline/03_select_twin_city.py --config config/twin_selection.yaml
-uv run python pipeline/04_transit_times.py --config config/garches.yaml # Reisezeitmatrix (r5py)
-uv run python pipeline/05_transfers.py --config config/garches.yaml     # Umstiege (in Arbeit, s. u.)
+uv run python pipeline/04_transit_times.py --config config/garches.yaml # Reisezeitmatrix (r5py), Fußweg-Inseln
+uv run python pipeline/05_transfers.py --config config/garches.yaml     # Umstiege (Matrizen mit k Fahrzeugen)
+uv run python pipeline/06_car_times.py --config config/garches.yaml     # Pkw-Zeiten (OSRM in Docker)
 uv run python pipeline/07_indicators.py --config config/garches.yaml    # Kennzahlen, CSV, Synthese
+uv run python pipeline/05_transfers.py --config config/garches.yaml --itineraries  # Beispielrouten (Tops, tote Zonen)
+uv run python pipeline/08_isochrones.py --config config/garches.yaml    # Isochronen, Entfernungsringe
+uv run python pipeline/09_cartogram.py --config config/garches.yaml     # Zeitkartogramm
+uv run python pipeline/10_export_web.py --config config/garches.yaml    # web/data/<slug>.json
+uv run python pipeline/11_sensitivity.py --config config/sensitivity/garches_townhall.yaml  # nach 01, 04 bis 07 der Variante
+uv run python pipeline/12_all_pairs.py --config config/garches.yaml     # Phase 2: alle Einheiten untereinander
 ```
 
 Für eine andere Gemeinde: `config/garches.yaml` kopieren und `origin`, `core_city`, `analysis.date` anpassen. Die GTFS-Feeds decken nur ~1 Monat ab – das Stichdatum muss im Feed liegen (02 prüft das).
 
-CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Standard 2; auf einem dedizierten Rechner oder in der Cloud höher setzen).
+CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Konfiguration: 4; auf einem Laptop wegen Wärme ggf. senken).
 
-## Stand (06.10.2026)
+## Stand (07.10.2026)
 
-- [x] 00–03: Download, Gebietseinheiten, Zuschnitt, Wahl der Vergleichsgemeinde (`outputs/twin_selection/`)
-- [x] 04: Reisezeiten Garches (`data/processed/garches/tt_transit.parquet`, nicht versioniert)
-- [ ] 05: Umstiege – neue Methode: TravelTimeMatrix mit `max_public_transport_rides` = 1…4; Umstiege = kleinstes k mit Median ≤ unbeschränkter Median + `transfer_tolerance_min`, minus 1. Detaillierte Routen (DetailedItineraries) nur für hervorgehobene Ziele (Tops, tote Zonen) zu `itinerary_departure`. Die bisherige Variante (DetailedItineraries für alle OD) war zu langsam.
-- [ ] 04–07 für Kronberg und Bad Soden
-- [ ] 06: Autofahrzeiten (OSRM, Docker)
-- [ ] 08 Isochronen · 09 Zeitkartogramm · 10 Web-Export · `web/` (MapLibre + D3, DE/FR)
-- [ ] Phase 2: Matrix aller Gemeinden untereinander
-- [ ] Methodenpapier (1 Seite, DE/FR)
+- [x] 00 bis 12 für Garches, Kronberg und Bad Soden; Ergebnisse in `outputs/`, Kurzfassung in `docs/NEXT_STEPS.md`
+- [x] Web-Karte `web/` (MapLibre + D3, DE/FR, offline): `cd web && python3 -m http.server`
+- [x] Sensitivität Zielpunkt (Rathaus OSM, `config/sensitivity/`), Toleranz der Umstiege
+- [x] Phase 2: alle Gemeinden ≤ 30 km von Paris bzw. Frankfurt untereinander (`outputs/phase2/`)
+- [x] Methodenpapier DE/FR: `docs/methodologie.md`
+
+Docker-Daemon für 06 und 12 (OSRM): in einem Container ohne laufenden Dienst `dockerd &` starten.
 
 ## Lizenzen der Daten
 

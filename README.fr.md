@@ -33,29 +33,35 @@ macOS : Java via Temurin par exemple ; osmium-tool via conda-forge dans `.tools/
 ## Pipeline
 
 ```bash
-uv run python pipeline/00_download.py                                   # toutes les sources (~1,7 Go) + MANIFEST.json
+uv run python pipeline/00_download.py                                   # toutes les sources (~5 Go) + MANIFEST.json (miroirs si Geofabrik injoignable)
 uv run python pipeline/01_prepare_units.py --config config/garches.yaml # communes, points, populations, distances
 uv run python pipeline/02_clip_osm_gtfs.py --config config/garches.yaml # découpe OSM/GTFS, contrôle du jour
 uv run python pipeline/03_select_twin_city.py --config config/twin_selection.yaml
-uv run python pipeline/04_transit_times.py --config config/garches.yaml # matrice de temps (r5py)
-uv run python pipeline/05_transfers.py --config config/garches.yaml     # correspondances (en cours, voir plus bas)
+uv run python pipeline/04_transit_times.py --config config/garches.yaml # matrice de temps (r5py), îlots piétons
+uv run python pipeline/05_transfers.py --config config/garches.yaml     # correspondances (matrices à k véhicules)
+uv run python pipeline/06_car_times.py --config config/garches.yaml     # temps voiture (OSRM sous Docker)
 uv run python pipeline/07_indicators.py --config config/garches.yaml    # indicateurs, CSV, synthèse
+uv run python pipeline/05_transfers.py --config config/garches.yaml --itineraries  # itinéraires d'exemple (tops, zones mortes)
+uv run python pipeline/08_isochrones.py --config config/garches.yaml    # isochrones, cercles de distance
+uv run python pipeline/09_cartogram.py --config config/garches.yaml     # cartogramme temporel
+uv run python pipeline/10_export_web.py --config config/garches.yaml    # web/data/<slug>.json
+uv run python pipeline/11_sensitivity.py --config config/sensitivity/garches_townhall.yaml  # après 01, 04 à 07 de la variante
+uv run python pipeline/12_all_pairs.py --config config/garches.yaml     # phase 2 : toutes les unités entre elles
 ```
 
 Pour une autre commune : copier `config/garches.yaml` et adapter `origin`, `core_city`, `analysis.date`. Les GTFS ne couvrent qu'environ un mois : la date doit être dans le fichier (02 le vérifie).
 
-Charge CPU : `routing.jvm_active_processors` limite les cœurs utilisés par R5 (2 par défaut ; à augmenter sur une machine dédiée ou dans le cloud).
+Charge CPU : `routing.jvm_active_processors` limite les cœurs utilisés par R5 (configuré à 4 ; à réduire sur un portable si besoin).
 
-## État d'avancement (06/10/2026)
+## État (07/10/2026)
 
-- [x] 00–03 : téléchargement, unités spatiales, découpe, choix de la commune jumelle (`outputs/twin_selection/`)
-- [x] 04 : temps de trajet depuis Garches (`data/processed/garches/tt_transit.parquet`, non versionné)
-- [ ] 05 : correspondances. Nouvelle méthode : TravelTimeMatrix avec `max_public_transport_rides` = 1…4 ; correspondances = plus petit k dont la médiane ≤ médiane sans limite + `transfer_tolerance_min`, moins 1. Itinéraires détaillés (DetailedItineraries) seulement pour les destinations mises en avant (tops, zones mortes) à `itinerary_departure`. L'ancienne variante (DetailedItineraries pour toutes les OD) était trop lente.
-- [ ] 04–07 pour Kronberg et Bad Soden
-- [ ] 06 : temps en voiture (OSRM, Docker)
-- [ ] 08 isochrones · 09 cartogramme temporel · 10 export web · `web/` (MapLibre + D3, DE/FR)
-- [ ] Phase 2 : matrice de toutes les communes entre elles
-- [ ] Note méthodologique (1 page, DE/FR)
+- [x] 00 à 12 pour Garches, Kronberg et Bad Soden ; résultats dans `outputs/`, résumé dans `docs/NEXT_STEPS.md`
+- [x] Carte web `web/` (MapLibre + D3, DE/FR, hors ligne) : `cd web && python3 -m http.server`
+- [x] Sensibilité au point de destination (mairie OSM, `config/sensitivity/`), tolérance des correspondances
+- [x] Phase 2 : toutes les communes à 30 km au plus de Paris ou de Francfort, entre elles (`outputs/phase2/`)
+- [x] Note méthodologique DE/FR : `docs/methodologie.md`
+
+Démon Docker pour 06 et 12 (OSRM) : dans un conteneur sans service lancé, démarrer `dockerd &`.
 
 ## Licences des données
 

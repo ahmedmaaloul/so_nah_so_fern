@@ -50,16 +50,24 @@ URL réellement utilisée) des fichiers du dernier calcul.
 - Itinéraires 08:15 vs médiane : écart médian +2,8 min (Garches), −1,8 (Kronberg),
   +9,0 (Bad Soden, à expliquer : cadencement S-Bahn ?).
 
-## À faire
+## Fait le 07/10/2026 (cloud)
 
-1. Ville-d'Avray : 26 min pour 1,1 km (p25 = p50 = p75) → à vérifier (marche ?).
-2. Sensibilité de `transfer_tolerance_min` (1 → 3, 5 min) sur les OD censurées de Garches.
-3. Saclay : chaîne « L › L › 6132 › 4609 › 4609 » (même ligne deux fois de suite).
-4. 08 isochrones (`r5py.Isochrones`), 09 cartogramme temporel (angle conservé,
-   rayon = temps, polygones déformés), 10 export web, `web/` (MapLibre + D3, DE par
-   défaut, FR).
-5. Sensibilité : relancer 04 avec `analysis.destination_point: osm_townhall`
-   (surtout DE, où le point BKG est à 290 m en médiane de la mairie OSM).
-6. Phase 2 : matrice de toutes les communes entre elles (rayon 30 km autour de
-   Paris et de Francfort).
-7. Note méthodologique d'une page (DE/FR), à partir des `assumptions.jsonl`.
+- 06 voiture (OSRM), 08 isochrones (grille de 200 m ; `r5py.Isochrones` ne rend que des
+  contours simplifiés), 09 cartogramme temporel (temps des sommets interpolés entre les points
+  des communes ; une première version sur la grille de 08 était trop bruitée), 10 export web,
+  `web/` (MapLibre 4.7.1 + D3 7.9.0 vendorisés), 11 sensibilité (mairie OSM), 12 phase 2,
+  `docs/methodologie.md`.
+- Ville-d'Avray : pas d'anomalie, trajet à pied (26 min ≈ 1,95 km de cheminement pour 1,13 km
+  à vol d'oiseau) ; d'où p25 = p50 = p75.
+- Saclay : « L › L » et « 4609 › 4609 » sont de vrais changements de véhicule sur la même ligne.
+- Tolérance des correspondances (`05 --tolerance-sensitivity 1 3 5`) : part ≥ 2 correspondances
+  Garches 87 / 81 / 77 %, Kronberg 45 / 35 / 32 %, Bad Soden 46 / 41 / 30 %.
+- Variantes : fichier court avec `extends:` et `run_tag:` (ex. `config/sensitivity/*.yaml`),
+  sorties dans `<slug>__<run_tag>`, extraits OSM/GTFS partagés.
+
+## Pistes
+
+1. Intégrer la phase 2 au site (carte « depuis n'importe quelle commune »).
+2. Autres plages horaires (heure creuse, soir) et autres jours pour tester la stabilité.
+3. Temps voiture en heure de pointe (données de trafic ouvertes ?) pour un rapport TC/voiture moins majoré.
+4. Bad Soden : écart systématique de +9 min entre l'itinéraire de 08:15 et la médiane (cadencement S-Bahn ?).
