@@ -1,0 +1,8 @@
+# Zeitfenster-Sensitivität / sensibilité à la plage horaire : heure creuse / Nebenverkehrszeit
+# Gleicher Tag, gleiche Parameter, nur das Abfahrtsfenster ändert sich.
+# Même jour, mêmes paramètres, seule la fenêtre de départ change.
+extends: ../garches.yaml
+run_tag: creuse
+analysis:
+  window_start: "10:00"
+  window_end: "11:30"

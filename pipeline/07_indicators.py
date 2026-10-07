@@ -187,7 +187,8 @@ def scatter(cfg: dict, res: pd.DataFrame, path) -> None:
         ax.axvspan(0, th["dead_zone_max_km"], ymin=0, ymax=1, alpha=0.04, color="red")
         ax.axhline(th["dead_zone_min_min"], lw=0.6, color="red")
         ax.set_xlabel("Luftlinie (km)")
-        ax.set_ylabel("ÖV-Reisezeit, Median 07:30–09:00 (min)")
+        a = cfg["analysis"]
+        ax.set_ylabel(f"ÖV-Reisezeit, Median {a['window_start']}–{a['window_end']} (min)")
         ax.set_title(f"{cfg['origin']['name']} — {oid}")
         ax.set_ylim(bottom=0)
     fig.tight_layout()
