@@ -45,8 +45,8 @@ DEFAULT_ISO_MIN_PART_KM2 = 0.2           # web.isochrone_min_part_km2 (5 cellule
 WEB_DATA = ROOT / "web" / "data"
 
 RESULT_COLS = ["unit_id", "name", "level", "parent_id", "population", "lon", "lat", "dist_km", "dist_km_core",
-               "travel_time_p25", "t_tc", "travel_time_p75", "walk_time", "car_time", "v_eff_kmh", "rank_dist",
-               "rank_time", "paradox_index", "paradox_norm", "time_excess_pct", "ratio_tc_car", "transfers",
+               "travel_time_p25", "t_tc", "travel_time_p75", "walk_time", "car_time", "car_time_peak", "v_eff_kmh", "rank_dist",
+               "rank_time", "paradox_index", "paradox_norm", "time_excess_pct", "ratio_tc_car", "ratio_tc_car_peak", "transfers",
                "transfers_censored", "walk_only", "dead_zone", "top_nah_fern", "top_fern_nah", "is_origin_commune"]
 
 
@@ -168,6 +168,7 @@ def main() -> None:
         # Beispielrouten / itinéraires d'exemple : heure à laquelle la personne est prête ;
         # offset_min (itineraries.summary) = minutes entre cette heure et le départ de chez soi
         "itinerary_departure": cfg["analysis"]["itinerary_departure"],
+        "car_peak_source": ((cfg.get("car") or {}).get("peak") or {}).get("source"),
         "cartogram_speed_kmh": cfg["visuals"]["cartogram_speed_kmh"],
         "isochrones_min": cfg["visuals"]["isochrones_min"], "rings_km": cfg["visuals"]["distance_rings_km"],
         "origins": [{"id": p["id"], "de": p.get("label_de"), "fr": p.get("label_fr"),

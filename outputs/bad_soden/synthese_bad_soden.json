@@ -37,7 +37,9 @@
       },
       "median_transfers": 1.0,
       "share_2plus_transfers": 0.4666666666666667,
-      "ratio_tc_car_median": 3.1061672674939755
+      "ratio_tc_car_median": 3.1061672674939755,
+      "ratio_tc_car_peak_median": 2.0325908011982943,
+      "car_time_peak_median_min": 38.21114416666667
     },
     {
       "origin_id": "centre",
@@ -61,7 +63,9 @@
       },
       "median_transfers": 1.0,
       "share_2plus_transfers": 0.4666666666666667,
-      "ratio_tc_car_median": 3.323525217898294
+      "ratio_tc_car_median": 3.323525217898294,
+      "ratio_tc_car_peak_median": 2.1549772870739257,
+      "car_time_peak_median_min": 37.56998416666667
     }
   ]
 }

@@ -43,7 +43,10 @@ Karte: eine Abfahrt um 08:15; ihre Dauer kann vom Median abweichen (Bad Soden: S
 ab xx:11 und xx:41, um 08:15 also 26 statt im Median 14,5 Min. Warten).
 
 **Pkw (C1, C2).** OSRM 5.27.1, Profil „car“, **ohne Verkehr** und ohne Parkplatzsuche: die
-Pkw-Zeit ist eine Untergrenze, das Verhältnis ÖV/Pkw also eine Obergrenze.
+Pkw-Zeit ist eine Untergrenze, das Verhältnis ÖV/Pkw also eine Obergrenze. Variante Morgenspitze
+(C3): Freiflusszeit je Straßenklasse mal (1 + Stauniveau der Metropolregion um 8 Uhr, TomTom
+Traffic Index 2025): Paris Autobahnen +84,2 %, übrige +57,9 %; Frankfurt +36,9 % / +64,4 %.
+ÖV/Pkw ab Bahnhof dann 1,54 / 1,84 / 2,03 statt 2,50 / 2,90 / 3,11.
 
 **Kennzahlen (I1, I2).** Effektive Geschwindigkeit = Luftlinie / ÖV-Zeit; Paradoxie-Index =
 Rang nach Zeit minus Rang nach Entfernung; Abweichung von der Regression log(Zeit) ~ log(Entfernung);
@@ -119,7 +122,10 @@ départ à 08:15 ; leur durée peut s'écarter de la médiane (Bad Soden : S3 to
 xx:11 et xx:41, donc 26 min d'attente à 08:15 contre 14,5 min en médiane).
 
 **Voiture (C1, C2).** OSRM 5.27.1, profil « car », **sans trafic** ni recherche de stationnement :
-le temps voiture est un minorant, donc le rapport TC/voiture un majorant.
+le temps voiture est un minorant, donc le rapport TC/voiture un majorant. Variante pointe du matin
+(C3) : temps fluide par classe de route × (1 + congestion de la zone métropolitaine à 8 h,
+TomTom Traffic Index 2025) : Paris autoroutes +84,2 %, autres +57,9 % ; Francfort +36,9 % /
++64,4 %. TC/voiture depuis la gare : 1,54 / 1,84 / 2,03 au lieu de 2,50 / 2,90 / 3,11.
 
 **Indicateurs (I1, I2).** Vitesse effective = distance / temps TC ; indice de paradoxe = rang en
 temps moins rang en distance ; écart à la régression log(temps) ~ log(distance) ; zone morte =

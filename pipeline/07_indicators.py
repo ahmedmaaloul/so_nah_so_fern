@@ -15,6 +15,7 @@ destination du rayon :
                    (+50 % = moitié plus long qu'une destination typique
                    à la même distance) — indépendant du nombre de communes
   ratio_tc_car     temps TC / temps voiture (si 06 a tourné)
+  ratio_tc_car_peak  idem avec le temps voiture de pointe (06, car.peak)
   dead_zone        distance < seuil ET temps TC > seuil (config `thresholds`)
   top_nah_fern     top N « so nah, so fern » : paradox_index le plus élevé
                    parmi les destinations à ≤ near_max_km
@@ -76,7 +77,8 @@ def load_inputs(cfg: dict) -> tuple[pd.DataFrame, pd.DataFrame]:
     # Voiture (06) : facultatif
     car_path = pdir / "tt_car.parquet"
     if car_path.exists():
-        car = pd.read_parquet(car_path)[["from_id", "to_id", "car_time"]]
+        car = pd.read_parquet(car_path)
+        car = car[[c for c in ("from_id", "to_id", "car_time", "car_time_peak") if c in car.columns]]
         od = od.merge(car, on=["from_id", "to_id"], how="left")
     else:
         od["car_time"] = np.nan
@@ -98,6 +100,8 @@ def indicators_for_origin(cfg: dict, origin_id: str, dest: pd.DataFrame,
     df["t_tc_spread"] = df["travel_time_p75"] - df["travel_time_p25"]
     df["v_eff_kmh"] = df["dist_km"] / (df["t_tc"] / 60)
     df["ratio_tc_car"] = df["t_tc"] / df["car_time"]
+    # Pointe (06, car.peak) : temps voiture majoré par la congestion du matin
+    df["ratio_tc_car_peak"] = df["t_tc"] / df["car_time_peak"] if "car_time_peak" in df else np.nan
 
     # Ensemble de référence pour les rangs : destinations atteintes, hors
     # commune d'origine
@@ -155,6 +159,10 @@ def indicators_for_origin(cfg: dict, origin_id: str, dest: pd.DataFrame,
                                   if "transfers" in df else None),
         "ratio_tc_car_median": (float(df.loc[ref, "ratio_tc_car"].median())
                                 if df["ratio_tc_car"].notna().any() else None),
+        "ratio_tc_car_peak_median": (float(df.loc[ref, "ratio_tc_car_peak"].median())
+                                     if df["ratio_tc_car_peak"].notna().any() else None),
+        "car_time_peak_median_min": (float(df.loc[ref, "car_time_peak"].median())
+                                     if "car_time_peak" in df and df["car_time_peak"].notna().any() else None),
     }
     return df, summary
 
@@ -217,8 +225,8 @@ def main() -> None:
     cols = ["origin_id", "unit_id", "name", "level", "parent_id", "population",
             "point_source", "lon", "lat", "dist_km", "dist_km_core",
             "travel_time_p25", "t_tc", "travel_time_p75", "t_tc_spread", "walk_time",
-            "car_time", "v_eff_kmh", "rank_dist", "rank_time", "paradox_index",
-            "paradox_norm", "time_excess_pct", "ratio_tc_car", "transfers",
+            "car_time", "car_time_peak", "v_eff_kmh", "rank_dist", "rank_time", "paradox_index",
+            "paradox_norm", "time_excess_pct", "ratio_tc_car", "ratio_tc_car_peak", "transfers",
             "transfers_censored", "walk_only", "dead_zone", "top_nah_fern", "top_fern_nah",
             "is_origin_commune"]
     res = res[[c for c in cols if c in res.columns]].sort_values(["origin_id", "dist_km"])

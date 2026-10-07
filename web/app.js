@@ -123,7 +123,7 @@
   }
 
   /* ------------------------------------------------------------------ colour scales */
-  const IND_KEYS = ['t_tc', 'paradox_index', 'time_excess_pct', 'ratio_tc_car', 'transfers'];
+  const IND_KEYS = ['t_tc', 'paradox_index', 'time_excess_pct', 'ratio_tc_car', 'ratio_tc_car_peak', 'transfers'];
 
   function valueOf(ind, r, compare) {
     if (!r) return null;
@@ -132,6 +132,7 @@
       case 'paradox_index': return compare ? r.paradox_norm : r.paradox_index;
       case 'time_excess_pct': return r.time_excess_pct;
       case 'ratio_tc_car': return r.ratio_tc_car;
+      case 'ratio_tc_car_peak': return r.ratio_tc_car_peak;
       case 'transfers': return r.t_tc == null ? null : r.transfers;
       default: return null;
     }
@@ -165,7 +166,7 @@
       sc.clipLo = minV < -m;
       sc.fn = (v) => d3.interpolateRdBu(1 - (clamp(v, -m, m) + m) / (2 * m));
       sc.fmt = (v) => (ind === 'paradox_index' && compare ? signed(v, 2) : signed(v, 0)).replace('+', '+');
-    } else if (ind === 'ratio_tc_car') {
+    } else if (ind === 'ratio_tc_car' || ind === 'ratio_tc_car_peak') {
       const lo = Math.max(0, Math.floor(minV));
       let hi = Math.ceil(quantileAbs(vals, 0.98));
       if (hi <= lo) hi = lo + 1;
@@ -202,7 +203,8 @@
       case 't_tc': return num(v, 1) + ' ' + T('unit_min');
       case 'paradox_index': return sc.compare ? signed(v, 2) : signed(v, 1);
       case 'time_excess_pct': return signed(v, 1) + ' ' + T('unit_pct');
-      case 'ratio_tc_car': return num(v, 1) + '×';
+      case 'ratio_tc_car':
+      case 'ratio_tc_car_peak': return num(v, 1) + '×';
       case 'transfers': return r.transfers >= 4 && r.transfers_censored ? T('legend_trans_4') : String(r.transfers);
       default: return String(v);
     }
@@ -708,7 +710,7 @@
       stat(T('sum_veff'), esc(num(s.v_eff_popweighted_median_kmh, 1)) + ' <small>' + T('unit_kmh') + '</small>', T('sum_veff_sub', { v: num(s.v_eff_median_kmh, 1) })) +
       stat(T('sum_spearman'), esc(num(s.spearman_dist_time, 2, 2)), T('sum_spearman_sub')) +
       stat(T('sum_transfers'), esc(pct(s.share_2plus_transfers, 0)), T('sum_transfers_sub', { n: num(s.median_transfers, 1) })) +
-      stat(T('sum_ratio'), esc(num(s.ratio_tc_car_median, 1)) + '<small>×</small>', T('sum_ratio_sub')) +
+      stat(T('sum_ratio'), esc(num(s.ratio_tc_car_median, 1)) + '<small>×</small>', finite(s.ratio_tc_car_peak_median) ? T('sum_ratio_sub_peak', { p: num(s.ratio_tc_car_peak_median, 1) }) : T('sum_ratio_sub')) +
       stat(T('sum_dead'), esc(num(s.dead_zones.n, 0)), T('sum_dead_sub', { pop: num(s.dead_zones.population, 0) })) +
       '</div>';
   }
@@ -793,6 +795,7 @@
       row(T('d_walk'), finite(r.walk_time) ? esc(num(r.walk_time, 0)) + ' ' + T('unit_min') : '–') +
       row(T('d_car'), finite(r.car_time) ? esc(num(r.car_time, 1)) + ' ' + T('unit_min') : '–') +
       row(T('d_ratio'), finite(r.ratio_tc_car) ? esc(num(r.ratio_tc_car, 1)) + '×' : '–') +
+      (finite(r.car_time_peak) ? row(T('d_car_peak'), esc(num(r.car_time_peak, 1)) + ' ' + T('unit_min')) + row(T('d_ratio_peak'), finite(r.ratio_tc_car_peak) ? esc(num(r.ratio_tc_car_peak, 1)) + '×' : '–') : '') +
       row(T('d_veff'), finite(r.v_eff_kmh) ? esc(num(r.v_eff_kmh, 1)) + ' ' + T('unit_kmh') : '–') +
       row(T('d_transfers'), trans) +
       row(T('d_rank'), finite(r.rank_dist) ? esc(T('d_rank_val', { a: num(r.rank_dist, 1), b: num(r.rank_time, 1), n })) : '–') +
@@ -969,6 +972,7 @@
       cmpRow(T('cmp_share2'), ...f((s) => esc(pct(s.share_2plus_transfers, 0)))) +
       cmpRow(T('cmp_transfers'), ...f((s) => esc(num(s.median_transfers, 1)))) +
       cmpRow(T('cmp_ratio'), ...f((s) => esc(num(s.ratio_tc_car_median, 1)) + '×')) +
+      cmpRow(T('cmp_ratio_peak'), ...f((s) => finite(s.ratio_tc_car_peak_median) ? esc(num(s.ratio_tc_car_peak_median, 1)) + '×' : '–')) +
       cmpRow(T('cmp_dead'), ...f((s) => esc(num(s.dead_zones.n, 0)))) +
       cmpRow(T('cmp_unreach'), ...f((s) => esc(num(s.n_unreachable, 0)))) + '</tbody>';
     $('#hint').textContent = T('hint_' + state.ind);

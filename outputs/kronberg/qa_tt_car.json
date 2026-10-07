@@ -3,12 +3,7 @@
   "osrm": "v5.27.1",
   "image": "ghcr.io/project-osrm/osrm-backend:v5.27.1",
   "build": {
-    "cached": false,
-    "timings_s": {
-      "extract": 37.7,
-      "partition": 5.5,
-      "customize": 2.1
-    }
+    "cached": true
   },
   "n_od": 238,
   "n_nan": 0,
@@ -71,8 +66,49 @@
     "n": 0
   },
   "timings_s": {
-    "build": 45.2,
-    "table": 0.1,
-    "total": 52.0
+    "build": 0.0,
+    "table": 0.2,
+    "total": 14.1
+  },
+  "peak": {
+    "source": "TomTom Traffic Index 2025, metro, am (8 h), consulté le 2026-10-07",
+    "congestion_pct": {
+      "motorway": 36.9,
+      "other": 64.4
+    },
+    "car_time_peak_by_origin": {
+      "centre": {
+        "n": 119,
+        "median": 36.3,
+        "p90": 55.8,
+        "max": 76.6
+      },
+      "gare": {
+        "n": 119,
+        "median": 37.3,
+        "p90": 56.5,
+        "max": 78.4
+      }
+    },
+    "motorway_share_by_origin": {
+      "centre": {
+        "n": 119,
+        "median": 28.8,
+        "p90": 52.1,
+        "max": 65.7
+      },
+      "gare": {
+        "n": 119,
+        "median": 28.3,
+        "p90": 51.0,
+        "max": 63.6
+      }
+    },
+    "route_vs_table_rel_diff": {
+      "n": 237,
+      "median": 0.0,
+      "p90": 0.0,
+      "max": 0.0
+    }
   }
 }

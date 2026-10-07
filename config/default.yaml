@@ -63,6 +63,19 @@ car:
   engine: osrm                        # lokaler Docker-Container, Profil "car"
   # ACHTUNG: Freifluss-Fahrzeiten ohne Verkehr → Verhältnis ÖV/Auto ist eine
   # obere Schranke. ATTENTION : temps sans trafic → ratio TC/voiture majoré.
+  # Hauptverkehrszeit (06, Variante „peak“): Freifluss-Zeit je Straßenklasse × (1 + Stau-
+  # niveau/100). Heure de pointe : temps fluide par classe de route × (1 + congestion/100).
+  # Quelle / source : TomTom Traffic Index 2025, Zone „metro“, Morgenspitze 8 Uhr (am),
+  # Werte „highways“ / „nonHighways“, abgerufen / consulté le 07/10/2026 :
+  #   https://www.tomtom.com/traffic-index/paris-traffic/
+  #   https://www.tomtom.com/traffic-index/frankfurt-am-main-traffic/
+  # Stauniveau = zusätzliche Fahrzeit gegenüber Freifluss (geprüft: Paris 43,1/26,5 km/h → +62,6 %,
+  # veröffentlicht +62,4 %). Congestion = temps en plus par rapport au trafic fluide.
+  peak:
+    source: "TomTom Traffic Index 2025, metro, am (8 h), consulté le 2026-10-07"
+    congestion_pct:                   # je Region / par région (region.id)
+      idf: {motorway: 84.2, other: 57.9}          # Paris metro
+      rhein_main: {motorway: 36.9, other: 64.4}   # Frankfurt am Main metro
 
 thresholds:
   dead_zone_max_km: 8                 # "Tote Zone": näher als … / plus proche que …

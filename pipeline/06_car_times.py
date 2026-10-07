@@ -20,8 +20,9 @@ Paramètres de CONTRÔLE (repli ici, surchargeables dans la config) :
 
 Sorties :
   processed_dir/tt_car.parquet   from_id, to_id, car_time (min), car_distance_km
+                                 [+ car_time_peak (min), motorway_share si car.peak est défini]
   outputs_dir/qa_tt_car.json     contrôles qualité
-  outputs_dir/assumptions.jsonl  C1_car_engine, C2_car_snapping
+  outputs_dir/assumptions.jsonl  C1_car_engine, C2_car_snapping, C3_car_peak
 """
 from __future__ import annotations
 
@@ -138,6 +139,36 @@ def table(port: int, origins, dest) -> tuple[pd.DataFrame, pd.DataFrame]:
     return od, snap
 
 
+def motorway_split(port: int, origins, dest) -> pd.DataFrame:
+    """Par OD : durée de l'itinéraire OSRM (/route) et part passée sur autoroute.
+
+    Une étape (step) compte comme autoroute si l'une de ses intersections porte la
+    classe « motorway » (highway=motorway et bretelles, profil car d'OSRM).
+    """
+    rows = []
+    with requests.Session() as sess:
+        for _, o in origins.iterrows():
+            for _, d in dest.iterrows():
+                url = (f"http://127.0.0.1:{port}/route/v1/driving/{o.geometry.x:.6f},{o.geometry.y:.6f};"
+                       f"{d.geometry.x:.6f},{d.geometry.y:.6f}?steps=true&overview=false")
+                js = sess.get(url, timeout=60).json()
+                if js.get("code") != "Ok" or not js.get("routes"):
+                    rows.append((o["id"], d["id"], np.nan, np.nan))
+                    continue
+                r = js["routes"][0]
+                mw = sum(st["duration"] for leg in r["legs"] for st in leg["steps"]
+                         if any("motorway" in it.get("classes", []) for it in st["intersections"]))
+                rows.append((o["id"], d["id"], r["duration"], mw))
+    return pd.DataFrame(rows, columns=["from_id", "to_id", "route_s", "motorway_s"])
+
+
+def peak_params(cfg: dict):
+    """(source, {motorway, other}) en % pour la région de l'origine, ou None."""
+    peak = (cfg.get("car") or {}).get("peak") or {}
+    c = (peak.get("congestion_pct") or {}).get(cfg["region"]["id"])
+    return (peak.get("source"), c) if c else None
+
+
 def stats(x: pd.Series) -> dict:
     x = x.dropna()
     return {"n": int(len(x)), "median": round(float(x.median()), 1), "p90": round(float(x.quantile(0.9)), 1),
@@ -166,16 +197,26 @@ def main() -> None:
     build, t_build = build_graph(cfg, image, args.rebuild)
 
     name = start_server(cfg, image, port, len(origins) + len(dest))
+    peak = peak_params(cfg)
     try:
         t0 = time.time()
         od, snap = table(port, origins, dest)
         t_table = time.time() - t0
+        split = motorway_split(port, origins, dest) if peak else None
     finally:
         docker("rm", "-f", name, check=False)
 
     od["car_time"] = od["dur_s"] / 60.0
     od["car_distance_km"] = od["dist_m"] / 1000.0
-    out = od[["from_id", "to_id", "car_time", "car_distance_km"]]
+    cols = ["from_id", "to_id", "car_time", "car_distance_km"]
+    if peak:
+        # Heure de pointe : part autoroute / hors autoroute du temps fluide (/route), appliquée au temps de /table
+        od = od.merge(split, on=["from_id", "to_id"], how="left")
+        od["motorway_share"] = (od["motorway_s"] / od["route_s"]).where(od["route_s"] > 0, 0.0)
+        cm, co = float(peak[1]["motorway"]) / 100, float(peak[1]["other"]) / 100
+        od["car_time_peak"] = od["car_time"] * (od["motorway_share"] * (1 + cm) + (1 - od["motorway_share"]) * (1 + co))
+        cols += ["car_time_peak", "motorway_share"]
+    out = od[cols]
     pdir = processed_dir(cfg)
     out.to_parquet(pdir / "tt_car.parquet", index=False)
     LOG.info("Écrit : %s (%d OD, %d sans temps) — matrice en %.1f s", pdir / "tt_car.parquet", len(out),
@@ -206,6 +247,15 @@ def main() -> None:
         "route_speed_gt_threshold": {"threshold_kmh": vmax, "n": int(len(fast))},
         "timings_s": {"build": round(t_build, 1), "table": round(t_table, 1), "total": round(time.time() - t_start, 1)},
     }
+    if peak:
+        dev = (od["route_s"] - od["dur_s"]).abs() / od["dur_s"].replace(0, np.nan)
+        qa["peak"] = {"source": peak[0], "congestion_pct": peak[1],
+                      "car_time_peak_by_origin": {o: stats(g["car_time_peak"]) for o, g in od.groupby("from_id")},
+                      "motorway_share_by_origin": {o: stats(100 * g["motorway_share"]) for o, g in od.groupby("from_id")},
+                      "route_vs_table_rel_diff": stats(100 * dev)}
+        LOG.info("Pointe (%s) : voiture %s ; part autoroute %% %s ; écart /route vs /table %% %s", peak[0],
+                 qa["peak"]["car_time_peak_by_origin"], qa["peak"]["motorway_share_by_origin"],
+                 qa["peak"]["route_vs_table_rel_diff"])
     (outputs_dir(cfg) / "qa_tt_car.json").write_text(json.dumps(qa, ensure_ascii=False, indent=2), encoding="utf-8")
     LOG.info("Voiture par origine : %s", qa["car_time_by_origin"])
     LOG.info("Accrochage destinations : %s ; > 200 m : %d", qa["snap_m"]["destinations"],
@@ -233,6 +283,21 @@ def main() -> None:
          f"Straße ein. Abstand der Ziele: {qa['snap_m']['destinations']} m; "
          f"{len(qa['snap_m']['destinations_gt_200m'])} mit mehr als 200 m."),
         qa["snap_m"])
+    if peak:
+        cm, co = peak[1]["motorway"], peak[1]["other"]
+        log_assumption(
+            cfg, "06", "C3_car_peak",
+            (f"Voiture en heure de pointe du matin : temps fluide OSRM multiplié, par classe de route, par (1 + niveau "
+             f"de congestion) ; autoroutes (classe OSRM « motorway ») +{cm} %, autres routes +{co} % ({peak[0]} ; "
+             f"niveau de congestion = temps en plus par rapport au trafic fluide, moyenne de la zone métropolitaine à "
+             f"8 h). Même facteur partout dans la zone (pas de variation locale) ; ni stationnement ni marche jusqu'au "
+             f"véhicule. Part autoroute des trajets (gare) : {qa['peak']['motorway_share_by_origin'].get('gare')} %."),
+            (f"Pkw in der Morgenspitze: OSRM-Freiflusszeit je Straßenklasse mal (1 + Stauniveau); Autobahnen "
+             f"(OSRM-Klasse „motorway“) +{cm} %, übrige Straßen +{co} % ({peak[0]}; Stauniveau = zusätzliche Fahrzeit "
+             f"gegenüber Freifluss, Mittel der Metropolregion um 8 Uhr). Gleicher Faktor im ganzen Gebiet (keine lokale "
+             f"Variation); ohne Parkplatzsuche und Fußweg zum Fahrzeug. Autobahnanteil der Fahrten (Bahnhof): "
+             f"{qa['peak']['motorway_share_by_origin'].get('gare')} %."),
+            qa["peak"])
     LOG.info("Terminé en %.0f s.", time.time() - t_start)
 
 
