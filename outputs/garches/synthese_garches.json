@@ -37,7 +37,7 @@
       },
       "median_transfers": 2.0,
       "share_2plus_transfers": 0.8740359897172236,
-      "ratio_tc_car_median": null
+      "ratio_tc_car_median": 2.5036705045977903
     },
     {
       "origin_id": "centre",
@@ -61,7 +61,7 @@
       },
       "median_transfers": 2.0,
       "share_2plus_transfers": 0.8688946015424165,
-      "ratio_tc_car_median": null
+      "ratio_tc_car_median": 2.682526661197703
     }
   ]
 }

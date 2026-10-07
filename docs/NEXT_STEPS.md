@@ -25,7 +25,10 @@ URL réellement utilisée) des fichiers du dernier calcul.
 5. **Îlots piétons** : 04 et 05 déplacent les points accrochés à un morceau de réseau
    déconnecté (`fix_islands`, hypothèse `R4_islands`, paramètres `routing.islands`).
    Seul cas actuel : Andrésy (78015), déplacé de 15 m. À réutiliser dans 06/08.
-6. **Durée de 05 `--itineraries`** : ~33 min par origine en IDF (≈ 20 destinations),
+6. **06 voiture** : OSRM v5.27.1 via Docker (`ghcr.io/project-osrm/osrm-backend`). Dans le
+   conteneur cloud, le démon n'est pas lancé : `dockerd > /tmp/dockerd.log 2>&1 &` avant 06.
+   Graphe en cache dans `data/interim/<slug>/osrm/` (construction 45 à 90 s).
+7. **Durée de 05 `--itineraries`** : ~33 min par origine en IDF (≈ 20 destinations),
    5 à 7 min en Rhin-Main. Ne relancer que si les destinations mises en avant
    changent.
 
@@ -38,6 +41,8 @@ URL réellement utilisée) des fichiers du dernier calcul.
 | p50 gare : min / médiane / max | 9 / 75 / 148 | 7 / 72 / 152 | 3 / 72 / 150 |
 | v_eff médiane pondérée pop. (gare) | 16,1 km/h | 16,0 km/h | 14,4 km/h |
 | Part ≥ 2 correspondances (gare) | 87 % | 46 % | 47 % |
+| Voiture médiane (gare, sans trafic) | 31,5 min | 23,8 min | 24,7 min |
+| Ratio TC/voiture médian (gare) | 2,50 | 2,90 | 3,11 |
 
 - Garches identique au premier calcul local hormis Andrésy (désormais 67 min depuis la gare).
 - 05 : 0 étape non monotone, 0 cas « k max plus rapide que sans limite » ; 86 OD
@@ -50,8 +55,7 @@ URL réellement utilisée) des fichiers du dernier calcul.
 1. Ville-d'Avray : 26 min pour 1,1 km (p25 = p50 = p75) → à vérifier (marche ?).
 2. Sensibilité de `transfer_tolerance_min` (1 → 3, 5 min) sur les OD censurées de Garches.
 3. Saclay : chaîne « L › L › 6132 › 4609 › 4609 » (même ligne deux fois de suite).
-4. 06 voiture (OSRM via Docker, à défaut mode CAR de r5py signalé comme hypothèse),
-   08 isochrones (`r5py.Isochrones`), 09 cartogramme temporel (angle conservé,
+4. 08 isochrones (`r5py.Isochrones`), 09 cartogramme temporel (angle conservé,
    rayon = temps, polygones déformés), 10 export web, `web/` (MapLibre + D3, DE par
    défaut, FR).
 5. Sensibilité : relancer 04 avec `analysis.destination_point: osm_townhall`
