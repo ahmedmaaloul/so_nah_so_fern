@@ -33,5 +33,27 @@
       },
       "file": "garches.json"
     }
+  ],
+  "phase2": [
+    {
+      "region": {
+        "id": "rhein_main",
+        "de": "Rhein-Main",
+        "fr": "Rhin-Main"
+      },
+      "country": "DE",
+      "core_city": "Frankfurt am Main",
+      "file": "phase2_rhein_main.json"
+    },
+    {
+      "region": {
+        "id": "idf",
+        "de": "Île-de-France",
+        "fr": "Île-de-France"
+      },
+      "country": "FR",
+      "core_city": "Paris",
+      "file": "phase2_idf.json"
+    }
   ]
 }
