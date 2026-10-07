@@ -1,0 +1,74 @@
+{
+  "1": {
+    "centre": {
+      "distribution": {
+        "0": 13,
+        "1": 55,
+        "2": 45,
+        "3": 6
+      },
+      "median": 1.0,
+      "share_2plus": 0.429,
+      "n_censored": 0
+    },
+    "gare": {
+      "distribution": {
+        "0": 11,
+        "1": 54,
+        "2": 46,
+        "3": 8
+      },
+      "median": 1.0,
+      "share_2plus": 0.454,
+      "n_censored": 0
+    }
+  },
+  "3": {
+    "centre": {
+      "distribution": {
+        "0": 13,
+        "1": 66,
+        "2": 37,
+        "3": 3
+      },
+      "median": 1.0,
+      "share_2plus": 0.336,
+      "n_censored": 0
+    },
+    "gare": {
+      "distribution": {
+        "0": 13,
+        "1": 64,
+        "2": 35,
+        "3": 7
+      },
+      "median": 1.0,
+      "share_2plus": 0.353,
+      "n_censored": 0
+    }
+  },
+  "5": {
+    "centre": {
+      "distribution": {
+        "0": 17,
+        "1": 67,
+        "2": 33,
+        "3": 2
+      },
+      "median": 1.0,
+      "share_2plus": 0.294,
+      "n_censored": 0
+    },
+    "gare": {
+      "distribution": {
+        "0": 17,
+        "1": 64,
+        "2": 35,
+        "3": 3
+      },
+      "median": 1.0,
+      "share_2plus": 0.319,
+      "n_censored": 0
+    }
+  }
+}

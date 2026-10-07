@@ -985,8 +985,10 @@ def main() -> None:
         qa = run_qa(cfg, units, pts, metric)
         log_assumptions(cfg, data, units, origins, qa)
     else:
-        # sensibilité : sous-dossier dédié, sorties officielles et journal officiel non écrasés
-        write_outputs(cfg, units, pts, origins, processed_dir(cfg) / f"sensitivity_{mode}")
+        # sensibilité : sorties officielles et journal officiel non écrasés — dossier de la variante
+        # (run_tag, ex. config/sensitivity/*.yaml) ou, à défaut, sous-dossier dédié
+        out = processed_dir(cfg) if cfg.get("run_tag") else processed_dir(cfg) / f"sensitivity_{mode}"
+        write_outputs(cfg, units, pts, origins, out)
         report_osm_townhall_mode(cfg, units, shift, mode)
 
     LOG.info("Unités : %d (dont %d districts) ; in_radius : %d ; in_core_radius : %d ; population in_radius : %s",

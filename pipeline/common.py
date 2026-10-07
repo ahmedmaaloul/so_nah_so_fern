@@ -54,8 +54,7 @@ def load_config(origin_cfg: str | Path) -> dict:
         origin_cfg = ROOT / origin_cfg
     with open(CONFIG_DIR / "default.yaml", encoding="utf-8") as f:
         cfg = yaml.safe_load(f)
-    with open(origin_cfg, encoding="utf-8") as f:
-        cfg = _deep_merge(cfg, yaml.safe_load(f))
+    cfg = _deep_merge(cfg, _load_origin_file(origin_cfg))
     cfg["sources"] = load_sources()
     # Chemin relatif au repo si possible (lisible dans les sorties), sinon absolu
     try:
@@ -63,6 +62,26 @@ def load_config(origin_cfg: str | Path) -> dict:
     except ValueError:
         cfg["_config_path"] = str(origin_cfg)
     return cfg
+
+
+def _load_origin_file(path: Path) -> dict:
+    """Fichier d'origine ; `extends: autre.yaml` (relatif au fichier) charge d'abord le parent.
+
+    Sert aux variantes (analyses de sensibilité) : un fichier court qui reprend une
+    origine, change quelques paramètres et fixe `run_tag` (dossiers de sortie distincts).
+    """
+    with open(path, encoding="utf-8") as f:
+        own = yaml.safe_load(f) or {}
+    parent = own.pop("extends", None)
+    if parent is None:
+        return own
+    return _deep_merge(_load_origin_file((path.parent / parent).resolve()), own)
+
+
+def run_name(cfg: dict) -> str:
+    """slug, ou slug__run_tag pour une variante (dossiers processed/ et outputs/)."""
+    tag = cfg.get("run_tag")
+    return f"{cfg['origin']['slug']}__{tag}" if tag else cfg["origin"]["slug"]
 
 
 def load_sources() -> dict:
@@ -80,18 +99,18 @@ def source_path(cfg: dict, source_id: str) -> Path:
 # Dossiers de travail
 # --------------------------------------------------------------------------- #
 def interim_dir(cfg: dict) -> Path:
-    """Extraits découpés (OSM, GTFS) propres à une origine."""
+    """Extraits découpés (OSM, GTFS) propres à une origine (partagés par ses variantes)."""
     return _mkdir(ROOT / "data" / "interim" / cfg["origin"]["slug"])
 
 
 def processed_dir(cfg: dict) -> Path:
     """Tables intermédiaires calculées (parquet/geoparquet)."""
-    return _mkdir(ROOT / "data" / "processed" / cfg["origin"]["slug"])
+    return _mkdir(ROOT / "data" / "processed" / run_name(cfg))
 
 
 def outputs_dir(cfg: dict) -> Path:
     """Livrables publiables (CSV, figures, journal des hypothèses)."""
-    return _mkdir(ROOT / "outputs" / cfg["origin"]["slug"])
+    return _mkdir(ROOT / "outputs" / run_name(cfg))
 
 
 def _mkdir(p: Path) -> Path:

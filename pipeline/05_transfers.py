@@ -92,10 +92,11 @@ def rides_matrices(r5py, network, cfg: dict, origins, dest) -> tuple[pd.DataFram
     return out, timings
 
 
-def classify(cfg: dict, wide: pd.DataFrame) -> pd.DataFrame:
+def classify(cfg: dict, wide: pd.DataFrame, tol: float | None = None) -> pd.DataFrame:
     """Applique la règle k* (voir docstring du module) à chaque OD."""
     a = cfg["analysis"]
-    kmax, tol = int(a["max_rides_tested"]), float(a["transfer_tolerance_min"])
+    kmax = int(a["max_rides_tested"])
+    tol = float(a["transfer_tolerance_min"]) if tol is None else float(tol)
     pdir = processed_dir(cfg)
     tt = pd.read_parquet(pdir / "tt_transit.parquet")[["from_id", "to_id", "travel_time_p50"]]
     walk = pd.read_parquet(pdir / "tt_walk.parquet")[["from_id", "to_id", "walk_time"]]
@@ -275,14 +276,39 @@ def log_t2(cfg: dict, n: int) -> None:
         {"departure": a["itinerary_departure"], "window_min": w, "n_od": n})
 
 
+def tolerance_sensitivity(cfg: dict, tolerances: list[float]) -> None:
+    """Distribution des correspondances selon la tolérance, à partir des matrices déjà calculées."""
+    kmax = int(cfg["analysis"]["max_rides_tested"])
+    wide = pd.read_parquet(processed_dir(cfg) / "transfers.parquet")
+    wide = wide[["from_id", "to_id"] + [f"p50_rides_{k}" for k in range(1, kmax + 1)]]
+    out = {}
+    for tol in tolerances:
+        df = classify(cfg, wide, tol)
+        out[f"{tol:g}"] = {o: {"distribution": {str(int(k)) + ("+" if int(k) == kmax else ""): int(v)
+                                                for k, v in g["transfers"].dropna().value_counts().sort_index().items()},
+                               "median": float(g["transfers"].median()),
+                               "share_2plus": round(float((g["transfers"].dropna() >= 2).mean()), 3),
+                               "n_censored": int(g["transfers_censored"].sum())}
+                           for o, g in df.groupby("from_id")}
+        LOG.info("Tolérance %g min : %s", tol, {o: (v["distribution"], v["share_2plus"]) for o, v in out[f"{tol:g}"].items()})
+    path = outputs_dir(cfg) / "qa_transfers_tolerance.json"
+    path.write_text(json.dumps(out, ensure_ascii=False, indent=2), encoding="utf-8")
+    LOG.info("Écrit : %s", path)
+
+
 # --------------------------------------------------------------------------- #
 def main() -> None:
     parser = cli("Étape 05 : correspondances (matrices r5py à nombre de véhicules limité).")
     parser.add_argument("--itineraries", action="store_true",
                         help="itinéraires détaillés des destinations mises en avant (après 07)")
+    parser.add_argument("--tolerance-sensitivity", nargs="+", type=float, metavar="MIN",
+                        help="reclasse transfers.parquet avec ces tolérances (sans recalcul R5)")
     args = parser.parse_args()
     cfg = load_config(args.config)
     t_start = time.time()
+    if args.tolerance_sensitivity:
+        tolerance_sensitivity(cfg, args.tolerance_sensitivity)
+        return
     origins, dest = t04.load_od(cfg)
     r5py, jvm = t04.start_r5(cfg)
     network = t04.build_network(r5py, cfg)

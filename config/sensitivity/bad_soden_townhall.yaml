@@ -1,0 +1,6 @@
+# Sensitivität / sensibilité : Zielpunkt = Rathaus (OSM) statt amtlicher Punkt.
+# Point de destination = mairie OSM au lieu du point officiel (IGN / BKG).
+extends: ../bad_soden.yaml
+run_tag: townhall
+analysis:
+  destination_point: osm_townhall

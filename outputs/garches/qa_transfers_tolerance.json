@@ -1,0 +1,80 @@
+{
+  "1": {
+    "centre": {
+      "distribution": {
+        "0": 15,
+        "1": 37,
+        "2": 161,
+        "3": 133,
+        "4+": 44
+      },
+      "median": 2.0,
+      "share_2plus": 0.867,
+      "n_censored": 44
+    },
+    "gare": {
+      "distribution": {
+        "0": 13,
+        "1": 37,
+        "2": 154,
+        "3": 144,
+        "4+": 42
+      },
+      "median": 2.0,
+      "share_2plus": 0.872,
+      "n_censored": 42
+    }
+  },
+  "3": {
+    "centre": {
+      "distribution": {
+        "0": 17,
+        "1": 54,
+        "2": 192,
+        "3": 103,
+        "4+": 24
+      },
+      "median": 2.0,
+      "share_2plus": 0.818,
+      "n_censored": 24
+    },
+    "gare": {
+      "distribution": {
+        "0": 16,
+        "1": 57,
+        "2": 176,
+        "3": 116,
+        "4+": 25
+      },
+      "median": 2.0,
+      "share_2plus": 0.813,
+      "n_censored": 25
+    }
+  },
+  "5": {
+    "centre": {
+      "distribution": {
+        "0": 18,
+        "1": 72,
+        "2": 191,
+        "3": 93,
+        "4+": 16
+      },
+      "median": 2.0,
+      "share_2plus": 0.769,
+      "n_censored": 16
+    },
+    "gare": {
+      "distribution": {
+        "0": 16,
+        "1": 73,
+        "2": 186,
+        "3": 101,
+        "4+": 14
+      },
+      "median": 2.0,
+      "share_2plus": 0.772,
+      "n_censored": 14
+    }
+  }
+}
