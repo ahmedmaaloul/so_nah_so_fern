@@ -1,0 +1,23 @@
+{
+  "origin": "kronberg",
+  "speed_kmh": 15.0,
+  "n_units": 119,
+  "n_vertices": 13439,
+  "by_origin": {
+    "gare": {
+      "n_control_points": 120,
+      "units_unreached": 0,
+      "invalid_warped_polygons": 75,
+      "scale_factor_median": 1.1
+    },
+    "centre": {
+      "n_control_points": 120,
+      "units_unreached": 0,
+      "invalid_warped_polygons": 68,
+      "scale_factor_median": 1.149
+    }
+  },
+  "timings_s": {
+    "total": 0.3
+  }
+}

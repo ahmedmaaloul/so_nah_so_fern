@@ -1,0 +1,23 @@
+{
+  "origin": "bad_soden",
+  "speed_kmh": 15.0,
+  "n_units": 121,
+  "n_vertices": 13335,
+  "by_origin": {
+    "gare": {
+      "n_control_points": 122,
+      "units_unreached": 0,
+      "invalid_warped_polygons": 67,
+      "scale_factor_median": 1.139
+    },
+    "centre": {
+      "n_control_points": 122,
+      "units_unreached": 0,
+      "invalid_warped_polygons": 67,
+      "scale_factor_median": 1.173
+    }
+  },
+  "timings_s": {
+    "total": 0.6
+  }
+}

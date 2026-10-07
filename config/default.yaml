@@ -70,6 +70,16 @@ visuals:
   isochrones_min: [15, 30, 45, 60]
   distance_rings_km: [5, 10, 15]
   isochrone_grid_m: 200               # Rasterweite für Isochronen / pas de grille
+  # Zeitkartogramm (09): Winkel bleibt, Radius = ÖV-Zeit × Referenzgeschwindigkeit.
+  # Gleicher Maßstab für alle Ursprünge (Vergleich nebeneinander). 15 km/h liegt im
+  # Bereich der gemessenen medianen Effektivgeschwindigkeiten (13–16 km/h, Schritt 07).
+  # Cartogramme temporel (09) : angle conservé, rayon = temps TC × vitesse de référence.
+  # Même échelle pour toutes les origines. 15 km/h : dans la plage des vitesses
+  # effectives médianes mesurées (13 à 16 km/h, étape 07).
+  cartogram_speed_kmh: 15
+  cartogram_max_time_min: 180         # Zeitfeld bis … / champ de temps jusqu'à …
+  cartogram_simplify_m: 100           # Vereinfachung der Gemeindegrenzen / simplification
+  cartogram_segment_m: 300            # max. Abstand der Stützpunkte / pas de densification
 
 crs:
   metric_fr: "EPSG:2154"              # Lambert-93 (Distanzen / distances)

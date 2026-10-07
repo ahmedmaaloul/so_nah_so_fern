@@ -1,0 +1,23 @@
+{
+  "origin": "garches",
+  "speed_kmh": 15.0,
+  "n_units": 424,
+  "n_vertices": 25394,
+  "by_origin": {
+    "gare": {
+      "n_control_points": 391,
+      "units_unreached": 34,
+      "invalid_warped_polygons": 265,
+      "scale_factor_median": 0.986
+    },
+    "centre": {
+      "n_control_points": 391,
+      "units_unreached": 34,
+      "invalid_warped_polygons": 270,
+      "scale_factor_median": 1.104
+    }
+  },
+  "timings_s": {
+    "total": 0.5
+  }
+}
