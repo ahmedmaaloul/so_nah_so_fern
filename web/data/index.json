@@ -1,0 +1,37 @@
+{
+  "origins": [
+    {
+      "slug": "bad_soden",
+      "name": "Bad Soden am Taunus",
+      "country": "DE",
+      "region": {
+        "id": "rhein_main",
+        "de": "Rhein-Main",
+        "fr": "Rhin-Main"
+      },
+      "file": "bad_soden.json"
+    },
+    {
+      "slug": "kronberg",
+      "name": "Kronberg im Taunus",
+      "country": "DE",
+      "region": {
+        "id": "rhein_main",
+        "de": "Rhein-Main",
+        "fr": "Rhin-Main"
+      },
+      "file": "kronberg.json"
+    },
+    {
+      "slug": "garches",
+      "name": "Garches",
+      "country": "FR",
+      "region": {
+        "id": "idf",
+        "de": "Île-de-France",
+        "fr": "Île-de-France"
+      },
+      "file": "garches.json"
+    }
+  ]
+}
