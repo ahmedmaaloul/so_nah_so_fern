@@ -1,0 +1,146 @@
+{
+  "n_origins": 2,
+  "n_destinations": 121,
+  "n_od": 242,
+  "n_nan_by_percentile": {
+    "p25": 0,
+    "p50": 0,
+    "p75": 0
+  },
+  "nan_od": [],
+  "p50_by_origin": {
+    "centre": {
+      "n_valid": 121,
+      "min": 0.0,
+      "median": 73.0,
+      "max": 152.0
+    },
+    "gare": {
+      "n_valid": 121,
+      "min": 3.0,
+      "median": 71.0,
+      "max": 150.0
+    }
+  },
+  "percentiles_monotone": true,
+  "p50_gt_walk": {
+    "n_od_with_both": 32,
+    "n_strict": 0,
+    "n_gt_1min": 0,
+    "max_excess_min": null,
+    "examples": []
+  },
+  "walk_better_or_equal": 2,
+  "walk_only_nan_where_transit_ok": 210,
+  "speed_gt_threshold": {
+    "threshold_kmh": 60.0,
+    "n": 0,
+    "max_kmh": 21.9,
+    "examples": []
+  },
+  "origin": "bad_soden",
+  "date": "2026-10-20",
+  "window": "17:30-19:00",
+  "percentiles": [
+    25,
+    50,
+    75
+  ],
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  },
+  "snapping": {
+    "origins": {
+      "n": 2,
+      "n_not_snapped": 0,
+      "median_m": 1.1,
+      "p90_m": 1.9,
+      "max_m": 2.1,
+      "n_gt_100m": 0,
+      "n_gt_500m": 0
+    },
+    "destinations": {
+      "n": 121,
+      "n_not_snapped": 0,
+      "median_m": 6.6,
+      "p90_m": 29.9,
+      "max_m": 60.5,
+      "n_gt_100m": 0,
+      "n_gt_500m": 0
+    }
+  },
+  "islands": {
+    "origins": {
+      "label": "origine",
+      "n": 2,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "1.0": 2
+      },
+      "isolated": []
+    },
+    "destinations": {
+      "label": "destination",
+      "n": 121,
+      "params": {
+        "probe_radius_m": 300,
+        "probe_n": 8,
+        "probe_walk_min": 15,
+        "isolated_below": 0.25,
+        "connected_from": 0.5,
+        "search_rings_m": [
+          15,
+          30,
+          50,
+          75,
+          100,
+          150,
+          200,
+          300,
+          400,
+          500
+        ],
+        "search_directions": 16
+      },
+      "share_distribution": {
+        "0.875": 3,
+        "1.0": 118
+      },
+      "isolated": []
+    }
+  },
+  "r5_warnings": {
+    "transit": [],
+    "walk": []
+  },
+  "timings_s": {
+    "network": 10.1,
+    "transit_matrix": 0.9,
+    "walk_matrix": 0.2,
+    "total": 14.6
+  }
+}

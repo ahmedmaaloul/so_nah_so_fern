@@ -1,0 +1,209 @@
+{
+  "variant": "soir_pointe",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_soir_pointe.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": -0.53,
+        "p90_abs": 5.0,
+        "max_abs": 19.0
+      },
+      "n_changed_gt_5min": 9,
+      "largest_changes": [
+        {
+          "name": "Hünstetten",
+          "ref": 124.0,
+          "variant": 143.0
+        },
+        {
+          "name": "Messel",
+          "ref": 110.0,
+          "variant": 123.0
+        },
+        {
+          "name": "Griesheim",
+          "ref": 59.0,
+          "variant": 47.0
+        },
+        {
+          "name": "Schöneck",
+          "ref": 116.0,
+          "variant": 105.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 133.0,
+          "variant": 123.0
+        },
+        {
+          "name": "Wehrheim",
+          "ref": 102.0,
+          "variant": 94.0
+        },
+        {
+          "name": "Bad Camberg",
+          "ref": 101.0,
+          "variant": 93.0
+        },
+        {
+          "name": "Mühlheim am Main",
+          "ref": 85.0,
+          "variant": 79.0
+        }
+      ],
+      "spearman_ref_variant": 0.9953,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 71.5
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 14.208
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.901
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.097
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": -0.42,
+        "p90_abs": 4.0,
+        "max_abs": 17.0
+      },
+      "n_changed_gt_5min": 9,
+      "largest_changes": [
+        {
+          "name": "Hünstetten",
+          "ref": 126.0,
+          "variant": 143.0
+        },
+        {
+          "name": "Messel",
+          "ref": 115.0,
+          "variant": 129.0
+        },
+        {
+          "name": "Griesheim",
+          "ref": 62.0,
+          "variant": 50.0
+        },
+        {
+          "name": "Schöneck",
+          "ref": 117.0,
+          "variant": 108.0
+        },
+        {
+          "name": "Grävenwiesbach",
+          "ref": 135.0,
+          "variant": 126.0
+        },
+        {
+          "name": "Wehrheim",
+          "ref": 104.0,
+          "variant": 96.0
+        },
+        {
+          "name": "Bad Camberg",
+          "ref": 104.0,
+          "variant": 96.0
+        },
+        {
+          "name": "Mühlheim am Main",
+          "ref": 88.0,
+          "variant": 82.0
+        }
+      ],
+      "spearman_ref_variant": 0.9949,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 13.648
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.899
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.282
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Niedernhausen"
+          ],
+          "in": [
+            "Eckenheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        }
+      }
+    }
+  }
+}

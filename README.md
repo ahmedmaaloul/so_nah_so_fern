@@ -48,6 +48,7 @@ uv run python pipeline/10_export_web.py --config config/garches.yaml    # web/da
 uv run python pipeline/11_sensitivity.py --config config/sensitivity/garches_townhall.yaml  # nach 01, 04 bis 07 der Variante
 uv run python pipeline/12_all_pairs.py --config config/garches.yaml     # Phase 2: alle Einheiten untereinander
 uv run python pipeline/13_export_phase2_web.py --config config/garches.yaml  # Phase 2 für die Web-Karte (web/data/phase2_<region>.json)
+uv run python pipeline/14_time_windows.py                               # Zeitfenster-Sensitivität (nach den Varianten in config/sensitivity/)
 ```
 
 Für eine andere Gemeinde: `config/garches.yaml` kopieren und `origin`, `core_city`, `analysis.date` anpassen. Die GTFS-Feeds decken nur ~1 Monat ab – das Stichdatum muss im Feed liegen (02 prüft das).

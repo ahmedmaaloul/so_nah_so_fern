@@ -1,0 +1,67 @@
+{
+  "origin": "Kronberg im Taunus",
+  "date": "2026-10-20",
+  "window": [
+    "17:30",
+    "19:00"
+  ],
+  "radius_km": 30,
+  "thresholds": {
+    "dead_zone_max_km": 8,
+    "dead_zone_min_min": 60,
+    "near_max_km": 15,
+    "far_min_km": 10,
+    "top_n": 10
+  },
+  "walk_speed_kmh": 4.5,
+  "origins": [
+    {
+      "origin_id": "gare",
+      "n_destinations": 119,
+      "n_reference": 118,
+      "n_unreachable": 0,
+      "population_reference": 2849405,
+      "t_tc_median_min": 72.5,
+      "v_eff_median_kmh": 13.771103081122968,
+      "v_eff_popweighted_median_kmh": 15.441908021879923,
+      "loglog_fit": {
+        "a": 2.7710862191794288,
+        "b": 0.5408964865853075,
+        "r2": 0.6564135210442952
+      },
+      "spearman_dist_time": 0.8180747418932179,
+      "dead_zones": {
+        "n": 2,
+        "n_candidates_below_dist": 12,
+        "population": 37062
+      },
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4322033898305085,
+      "ratio_tc_car_median": 2.792567156493993
+    },
+    {
+      "origin_id": "centre",
+      "n_destinations": 119,
+      "n_reference": 118,
+      "n_unreachable": 0,
+      "population_reference": 2849405,
+      "t_tc_median_min": 74.0,
+      "v_eff_median_kmh": 13.084212229567427,
+      "v_eff_popweighted_median_kmh": 14.365527573876093,
+      "loglog_fit": {
+        "a": 2.812003759352533,
+        "b": 0.5464860515064273,
+        "r2": 0.7140293050840985
+      },
+      "spearman_dist_time": 0.8437425449978714,
+      "dead_zones": {
+        "n": 2,
+        "n_candidates_below_dist": 12,
+        "population": 26171
+      },
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.423728813559322,
+      "ratio_tc_car_median": 3.1117743889401437
+    }
+  ]
+}

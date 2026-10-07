@@ -1,0 +1,66 @@
+{
+  "origin": "garches",
+  "osrm": "v5.27.1",
+  "image": "ghcr.io/project-osrm/osrm-backend:v5.27.1",
+  "build": {
+    "cached": true
+  },
+  "n_od": 848,
+  "n_nan": 0,
+  "car_time_by_origin": {
+    "centre": {
+      "n": 424,
+      "median": 33.0,
+      "p90": 43.9,
+      "max": 50.7
+    },
+    "gare": {
+      "n": 424,
+      "median": 31.5,
+      "p90": 42.5,
+      "max": 49.2
+    }
+  },
+  "snap_m": {
+    "origins": {
+      "n": 2,
+      "median": 17.0,
+      "p90": 27.1,
+      "max": 29.7
+    },
+    "destinations": {
+      "n": 424,
+      "median": 19.6,
+      "p90": 37.9,
+      "max": 76.8
+    },
+    "destinations_gt_200m": []
+  },
+  "route_speed_kmh": {
+    "n": 847,
+    "median": 50.8,
+    "p90": 64.0,
+    "max": 79.9
+  },
+  "speed_as_crow_flies_kmh": {
+    "n": 847,
+    "median": 35.9,
+    "p90": 49.1,
+    "max": 66.0
+  },
+  "detour_ratio": {
+    "n": 847,
+    "median": 1.4,
+    "p90": 1.6,
+    "max": 3.3
+  },
+  "route_speed_gt_threshold": {
+    "threshold_kmh": 130.0,
+    "n": 0
+  },
+  "timings_s": {
+    "build": 0.0,
+    "table": 0.8,
+    "total": 2.6
+  }
+}

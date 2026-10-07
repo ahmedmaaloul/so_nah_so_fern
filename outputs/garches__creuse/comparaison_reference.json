@@ -1,0 +1,235 @@
+{
+  "variant": "creuse",
+  "origin": "garches",
+  "config": "config/sensitivity/garches_creuse.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 388,
+      "n_reached_ref": 389,
+      "n_reached_variant": 391,
+      "delta_t_tc_min": {
+        "median": 4.0,
+        "mean": 4.59,
+        "p90_abs": 12.0,
+        "max_abs": 38.0
+      },
+      "n_changed_gt_5min": 146,
+      "largest_changes": [
+        {
+          "name": "Galluis",
+          "ref": 86.0,
+          "variant": 124.0
+        },
+        {
+          "name": "Saint-Nom-la-Bretèche",
+          "ref": 67.0,
+          "variant": 96.0
+        },
+        {
+          "name": "Piscop",
+          "ref": 95.0,
+          "variant": 117.0
+        },
+        {
+          "name": "Marcq",
+          "ref": 137.0,
+          "variant": 157.0
+        },
+        {
+          "name": "Autouillet",
+          "ref": 115.0,
+          "variant": 135.0
+        },
+        {
+          "name": "Auteuil",
+          "ref": 111.0,
+          "variant": 131.0
+        },
+        {
+          "name": "Toussus-le-Noble",
+          "ref": 69.0,
+          "variant": 88.0
+        },
+        {
+          "name": "Saulx-Marchais",
+          "ref": 107.0,
+          "variant": 126.0
+        }
+      ],
+      "spearman_ref_variant": 0.975,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 80.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 16.092,
+          "variant": 14.931
+        },
+        "spearman_dist_time": {
+          "ref": 0.752,
+          "variant": 0.731
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.874,
+          "variant": 0.847
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.504,
+          "variant": 2.62
+        }
+      },
+      "dead_zones": {
+        "ref": 0,
+        "variant": 0
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Châtenay-Malabry",
+            "Fontenay-aux-Roses",
+            "Saint-Aubin"
+          ],
+          "in": [
+            "Châteaufort",
+            "Saint-Nom-la-Bretèche",
+            "Toussus-le-Noble"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Rosny-sous-Bois",
+            "Sevran"
+          ],
+          "in": [
+            "Brunoy",
+            "Le Raincy"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 388,
+      "n_reached_ref": 389,
+      "n_reached_variant": 391,
+      "delta_t_tc_min": {
+        "median": 2.0,
+        "mean": 3.11,
+        "p90_abs": 11.0,
+        "max_abs": 35.0
+      },
+      "n_changed_gt_5min": 106,
+      "largest_changes": [
+        {
+          "name": "Galluis",
+          "ref": 95.0,
+          "variant": 130.0
+        },
+        {
+          "name": "Saint-Nom-la-Bretèche",
+          "ref": 76.0,
+          "variant": 102.0
+        },
+        {
+          "name": "Villaines-sous-Bois",
+          "ref": 104.0,
+          "variant": 126.0
+        },
+        {
+          "name": "Chavenay",
+          "ref": 156.0,
+          "variant": 134.0
+        },
+        {
+          "name": "Piscop",
+          "ref": 105.0,
+          "variant": 126.0
+        },
+        {
+          "name": "Saint-Germain-de-la-Grange",
+          "ref": 148.0,
+          "variant": 130.0
+        },
+        {
+          "name": "Toussus-le-Noble",
+          "ref": 79.0,
+          "variant": 96.0
+        },
+        {
+          "name": "Châteaufort",
+          "ref": 82.0,
+          "variant": 99.0
+        }
+      ],
+      "spearman_ref_variant": 0.9765,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 84.0,
+          "variant": 88.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.783,
+          "variant": 13.552
+        },
+        "spearman_dist_time": {
+          "ref": 0.771,
+          "variant": 0.747
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.869,
+          "variant": 0.857
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.683,
+          "variant": 2.75
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 3
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 6,
+          "n": 10,
+          "out": [
+            "Châtenay-Malabry",
+            "Fontenay-aux-Roses",
+            "Le Plessis-Robinson",
+            "Saint-Aubin"
+          ],
+          "in": [
+            "Châteaufort",
+            "Saint-Nom-la-Bretèche",
+            "Toussus-le-Noble",
+            "Villepreux"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Goussainville",
+            "Sevran"
+          ],
+          "in": [
+            "Brunoy",
+            "Les Mureaux"
+          ]
+        }
+      }
+    }
+  }
+}

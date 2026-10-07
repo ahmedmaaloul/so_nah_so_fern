@@ -1,0 +1,67 @@
+{
+  "origin": "Bad Soden am Taunus",
+  "date": "2026-10-20",
+  "window": [
+    "10:00",
+    "11:30"
+  ],
+  "radius_km": 30,
+  "thresholds": {
+    "dead_zone_max_km": 8,
+    "dead_zone_min_min": 60,
+    "near_max_km": 15,
+    "far_min_km": 10,
+    "top_n": 10
+  },
+  "walk_speed_kmh": 4.5,
+  "origins": [
+    {
+      "origin_id": "gare",
+      "n_destinations": 121,
+      "n_reference": 120,
+      "n_unreachable": 0,
+      "population_reference": 2885427,
+      "t_tc_median_min": 72.0,
+      "v_eff_median_kmh": 13.156079108878131,
+      "v_eff_popweighted_median_kmh": 14.471729939079342,
+      "loglog_fit": {
+        "a": 2.8104574758022896,
+        "b": 0.5437869651987597,
+        "r2": 0.7833580502138697
+      },
+      "spearman_dist_time": 0.8936468841076216,
+      "dead_zones": {
+        "n": 2,
+        "n_candidates_below_dist": 18,
+        "population": 41537
+      },
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4666666666666667,
+      "ratio_tc_car_median": 3.0978807976543408
+    },
+    {
+      "origin_id": "centre",
+      "n_destinations": 121,
+      "n_reference": 120,
+      "n_unreachable": 0,
+      "population_reference": 2885427,
+      "t_tc_median_min": 75.0,
+      "v_eff_median_kmh": 12.768606789960385,
+      "v_eff_popweighted_median_kmh": 14.071976401373743,
+      "loglog_fit": {
+        "a": 2.8744410287997457,
+        "b": 0.5325124551158928,
+        "r2": 0.78896615949758
+      },
+      "spearman_dist_time": 0.8952907963020892,
+      "dead_zones": {
+        "n": 1,
+        "n_candidates_below_dist": 17,
+        "population": 13070
+      },
+      "median_transfers": 1.0,
+      "share_2plus_transfers": 0.4666666666666667,
+      "ratio_tc_car_median": 3.264507807626841
+    }
+  ]
+}

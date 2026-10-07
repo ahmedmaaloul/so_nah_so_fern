@@ -1,0 +1,217 @@
+{
+  "variant": "creuse",
+  "origin": "kronberg",
+  "config": "config/sensitivity/kronberg_creuse.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 118,
+      "n_reached_ref": 118,
+      "n_reached_variant": 118,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.71,
+        "p90_abs": 8.3,
+        "max_abs": 30.0
+      },
+      "n_changed_gt_5min": 17,
+      "largest_changes": [
+        {
+          "name": "Hünfelden",
+          "ref": 137.0,
+          "variant": 167.0
+        },
+        {
+          "name": "Florstadt",
+          "ref": 113.0,
+          "variant": 95.0
+        },
+        {
+          "name": "Bad Camberg",
+          "ref": 112.0,
+          "variant": 126.0
+        },
+        {
+          "name": "Niddatal",
+          "ref": 114.0,
+          "variant": 100.0
+        },
+        {
+          "name": "Selters (Taunus)",
+          "ref": 115.0,
+          "variant": 128.0
+        },
+        {
+          "name": "Schöneck",
+          "ref": 106.0,
+          "variant": 93.0
+        },
+        {
+          "name": "Ober-Mörlen",
+          "ref": 118.0,
+          "variant": 106.0
+        },
+        {
+          "name": "Hohenstein",
+          "ref": 152.0,
+          "variant": 142.0
+        }
+      ],
+      "spearman_ref_variant": 0.9905,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.5,
+          "variant": 73.5
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 15.987,
+          "variant": 16.177
+        },
+        "spearman_dist_time": {
+          "ref": 0.813,
+          "variant": 0.806
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.458,
+          "variant": 0.407
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.899,
+          "variant": 2.857
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 3
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Hanau",
+            "Mörfelden-Walldorf"
+          ],
+          "in": [
+            "Friedberg (Hessen)",
+            "Westend-Süd"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 118,
+      "n_reached_ref": 118,
+      "n_reached_variant": 118,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.75,
+        "p90_abs": 8.0,
+        "max_abs": 28.0
+      },
+      "n_changed_gt_5min": 18,
+      "largest_changes": [
+        {
+          "name": "Hünfelden",
+          "ref": 142.0,
+          "variant": 170.0
+        },
+        {
+          "name": "Florstadt",
+          "ref": 117.0,
+          "variant": 101.0
+        },
+        {
+          "name": "Bad Camberg",
+          "ref": 117.0,
+          "variant": 128.0
+        },
+        {
+          "name": "Waldems",
+          "ref": 70.0,
+          "variant": 81.0
+        },
+        {
+          "name": "Idstein",
+          "ref": 77.0,
+          "variant": 88.0
+        },
+        {
+          "name": "Hohenstein",
+          "ref": 156.0,
+          "variant": 146.0
+        },
+        {
+          "name": "Selters (Taunus)",
+          "ref": 120.0,
+          "variant": 130.0
+        },
+        {
+          "name": "Steinbach (Taunus)",
+          "ref": 34.0,
+          "variant": 43.0
+        }
+      ],
+      "spearman_ref_variant": 0.9911,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 74.0,
+          "variant": 76.5
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.844,
+          "variant": 14.912
+        },
+        "spearman_dist_time": {
+          "ref": 0.84,
+          "variant": 0.835
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.432,
+          "variant": 0.39
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.152,
+          "variant": 3.168
+        }
+      },
+      "dead_zones": {
+        "ref": 3,
+        "variant": 3
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Hanau",
+            "Nordend-Ost"
+          ],
+          "in": [
+            "Mörfelden-Walldorf",
+            "Mühlheim am Main"
+          ]
+        }
+      }
+    }
+  }
+}

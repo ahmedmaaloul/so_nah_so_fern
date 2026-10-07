@@ -1,0 +1,233 @@
+{
+  "variant": "soir_pointe",
+  "origin": "garches",
+  "config": "config/sensitivity/garches_soir_pointe.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 388,
+      "n_reached_ref": 389,
+      "n_reached_variant": 401,
+      "delta_t_tc_min": {
+        "median": -1.0,
+        "mean": -2.84,
+        "p90_abs": 10.0,
+        "max_abs": 88.0
+      },
+      "n_changed_gt_5min": 75,
+      "largest_changes": [
+        {
+          "name": "Chavenay",
+          "ref": 148.0,
+          "variant": 60.0
+        },
+        {
+          "name": "Saint-Germain-de-la-Grange",
+          "ref": 140.0,
+          "variant": 97.0
+        },
+        {
+          "name": "Aulnay-sur-Mauldre",
+          "ref": 133.0,
+          "variant": 94.0
+        },
+        {
+          "name": "La Falaise",
+          "ref": 132.0,
+          "variant": 97.0
+        },
+        {
+          "name": "Mareil-sur-Mauldre",
+          "ref": 115.0,
+          "variant": 81.0
+        },
+        {
+          "name": "Maule",
+          "ref": 122.0,
+          "variant": 88.0
+        },
+        {
+          "name": "Thiverval-Grignon",
+          "ref": 104.0,
+          "variant": 73.0
+        },
+        {
+          "name": "Nézel",
+          "ref": 123.0,
+          "variant": 93.0
+        }
+      ],
+      "spearman_ref_variant": 0.9655,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 16.092,
+          "variant": 16.008
+        },
+        "spearman_dist_time": {
+          "ref": 0.752,
+          "variant": 0.745
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.874,
+          "variant": 0.858
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.504,
+          "variant": 2.44
+        }
+      },
+      "dead_zones": {
+        "ref": 0,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Chavenay"
+          ],
+          "in": [
+            "Le Plessis-Robinson"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Neuilly-sur-Marne",
+            "Noisy-le-Grand",
+            "Rosny-sous-Bois"
+          ],
+          "in": [
+            "Goussainville",
+            "Le Perray-en-Yvelines",
+            "Villepinte"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 388,
+      "n_reached_ref": 389,
+      "n_reached_variant": 400,
+      "delta_t_tc_min": {
+        "median": -1.0,
+        "mean": -3.22,
+        "p90_abs": 12.0,
+        "max_abs": 88.0
+      },
+      "n_changed_gt_5min": 87,
+      "largest_changes": [
+        {
+          "name": "Chavenay",
+          "ref": 156.0,
+          "variant": 68.0
+        },
+        {
+          "name": "Saint-Germain-de-la-Grange",
+          "ref": 148.0,
+          "variant": 108.0
+        },
+        {
+          "name": "La Falaise",
+          "ref": 137.0,
+          "variant": 104.0
+        },
+        {
+          "name": "Aulnay-sur-Mauldre",
+          "ref": 138.0,
+          "variant": 107.0
+        },
+        {
+          "name": "Thiverval-Grignon",
+          "ref": 112.0,
+          "variant": 81.0
+        },
+        {
+          "name": "Maule",
+          "ref": 126.0,
+          "variant": 96.0
+        },
+        {
+          "name": "Mareil-sur-Mauldre",
+          "ref": 120.0,
+          "variant": 90.0
+        },
+        {
+          "name": "Nézel",
+          "ref": 130.0,
+          "variant": 101.0
+        }
+      ],
+      "spearman_ref_variant": 0.9638,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 84.0,
+          "variant": 83.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.783,
+          "variant": 14.061
+        },
+        "spearman_dist_time": {
+          "ref": 0.771,
+          "variant": 0.766
+        },
+        "median_transfers": {
+          "ref": 2.0,
+          "variant": 2.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.869,
+          "variant": 0.858
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.683,
+          "variant": 2.624
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 3
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Chavenay",
+            "Le Plessis-Robinson"
+          ],
+          "in": [
+            "Châtillon",
+            "Sceaux"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 6,
+          "n": 10,
+          "out": [
+            "Le Raincy",
+            "Neuilly-sur-Marne",
+            "Noisy-le-Grand",
+            "Sevran"
+          ],
+          "in": [
+            "Le Perray-en-Yvelines",
+            "Le Plessis-Trévise",
+            "Les Mureaux",
+            "Villepinte"
+          ]
+        }
+      }
+    }
+  }
+}

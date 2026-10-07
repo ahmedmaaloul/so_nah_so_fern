@@ -1,0 +1,229 @@
+{
+  "variant": "creuse",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_creuse.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.73,
+        "p90_abs": 7.0,
+        "max_abs": 17.0
+      },
+      "n_changed_gt_5min": 16,
+      "largest_changes": [
+        {
+          "name": "Bad Camberg",
+          "ref": 101.0,
+          "variant": 118.0
+        },
+        {
+          "name": "Selters (Taunus)",
+          "ref": 103.0,
+          "variant": 120.0
+        },
+        {
+          "name": "Ober-Mörlen",
+          "ref": 113.0,
+          "variant": 129.0
+        },
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 101.0
+        },
+        {
+          "name": "Hohenstein",
+          "ref": 150.0,
+          "variant": 138.0
+        },
+        {
+          "name": "Bad Nauheim",
+          "ref": 87.0,
+          "variant": 98.0
+        },
+        {
+          "name": "Schöneck",
+          "ref": 116.0,
+          "variant": 126.0
+        },
+        {
+          "name": "Hünstetten",
+          "ref": 124.0,
+          "variant": 115.0
+        }
+      ],
+      "spearman_ref_variant": 0.9911,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 72.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 14.472
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.894
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.098
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 2
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Eckenheim",
+            "Niederrad",
+            "Niederursel"
+          ],
+          "in": [
+            "Bonames",
+            "Kriftel",
+            "Liederbach am Taunus"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Bad Vilbel"
+          ],
+          "in": [
+            "Innenstadt"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 120,
+      "n_reached_ref": 120,
+      "n_reached_variant": 120,
+      "delta_t_tc_min": {
+        "median": 0.0,
+        "mean": 0.61,
+        "p90_abs": 7.0,
+        "max_abs": 18.0
+      },
+      "n_changed_gt_5min": 14,
+      "largest_changes": [
+        {
+          "name": "Ober-Mörlen",
+          "ref": 114.0,
+          "variant": 132.0
+        },
+        {
+          "name": "Bad Camberg",
+          "ref": 104.0,
+          "variant": 121.0
+        },
+        {
+          "name": "Selters (Taunus)",
+          "ref": 106.0,
+          "variant": 123.0
+        },
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 101.0
+        },
+        {
+          "name": "Bad Nauheim",
+          "ref": 89.0,
+          "variant": 102.0
+        },
+        {
+          "name": "Schöneck",
+          "ref": 117.0,
+          "variant": 130.0
+        },
+        {
+          "name": "Weiterstadt",
+          "ref": 116.0,
+          "variant": 104.0
+        },
+        {
+          "name": "Hohenstein",
+          "ref": 152.0,
+          "variant": 141.0
+        }
+      ],
+      "spearman_ref_variant": 0.9911,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 75.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 14.072
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.895
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.467
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.265
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 1
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Niederrad",
+            "Niederursel"
+          ],
+          "in": [
+            "Bonames",
+            "Kriftel"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Bad Nauheim",
+            "Innenstadt"
+          ],
+          "in": [
+            "Dietzenbach",
+            "Mainz"
+          ]
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,67 @@
+{
+  "origin": "Garches",
+  "date": "2026-10-13",
+  "window": [
+    "10:00",
+    "11:30"
+  ],
+  "radius_km": 30,
+  "thresholds": {
+    "dead_zone_max_km": 8,
+    "dead_zone_min_min": 60,
+    "near_max_km": 15,
+    "far_min_km": 10,
+    "top_n": 10
+  },
+  "walk_speed_kmh": 4.5,
+  "origins": [
+    {
+      "origin_id": "gare",
+      "n_destinations": 424,
+      "n_reference": 391,
+      "n_unreachable": 32,
+      "population_reference": 10094530,
+      "t_tc_median_min": 80.0,
+      "v_eff_median_kmh": 14.494680827417307,
+      "v_eff_popweighted_median_kmh": 14.930998314720588,
+      "loglog_fit": {
+        "a": 2.7646614448563147,
+        "b": 0.5502818957861555,
+        "r2": 0.6701780356408507
+      },
+      "spearman_dist_time": 0.7312691337267037,
+      "dead_zones": {
+        "n": 0,
+        "n_candidates_below_dist": 31,
+        "population": 0
+      },
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8465473145780051,
+      "ratio_tc_car_median": 2.619581176106947
+    },
+    {
+      "origin_id": "centre",
+      "n_destinations": 424,
+      "n_reference": 391,
+      "n_unreachable": 32,
+      "population_reference": 10094530,
+      "t_tc_median_min": 88.0,
+      "v_eff_median_kmh": 13.265327301117305,
+      "v_eff_popweighted_median_kmh": 13.551792333624782,
+      "loglog_fit": {
+        "a": 2.9930073762190843,
+        "b": 0.5047628247432565,
+        "r2": 0.6899574999298888
+      },
+      "spearman_dist_time": 0.7470038001319697,
+      "dead_zones": {
+        "n": 3,
+        "n_candidates_below_dist": 32,
+        "population": 87916
+      },
+      "median_transfers": 2.0,
+      "share_2plus_transfers": 0.8567774936061381,
+      "ratio_tc_car_median": 2.7497389488339716
+    }
+  ]
+}

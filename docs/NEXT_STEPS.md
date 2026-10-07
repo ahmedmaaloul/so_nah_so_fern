@@ -68,6 +68,9 @@ URL réellement utilisée) des fichiers du dernier calcul.
 ## Pistes
 
 1. ~~Intégrer la phase 2 au site~~ : fait (13, vue « Alle Gemeinden / Toutes les communes »).
-2. Autres plages horaires (heure creuse, soir) et autres jours pour tester la stabilité.
+2. ~~Autres plages horaires~~ : fait (variantes `creuse`, `soir_pointe`, `soiree`, synthèse 14,
+   `outputs/time_windows/`). Depuis la gare, médiane TC : Garches 75 / 80 / 74 / 84 min
+   (07:30, 10:00, 17:30, 20:30), non atteintes 34 / 32 / 22 / 85 ; Kronberg 72,5 / 73,5 / 72,5 / 72
+   (0 / 0 / 0 / 5) ; Bad Soden 72 / 72 / 71,5 / 74 (0 / 0 / 0 / 4). Reste : autres jours.
 3. Temps voiture en heure de pointe (données de trafic ouvertes ?) pour un rapport TC/voiture moins majoré.
 4. Bad Soden : écart systématique de +9 min entre l'itinéraire de 08:15 et la médiane (cadencement S-Bahn ?).

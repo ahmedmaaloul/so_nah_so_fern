@@ -1,0 +1,221 @@
+{
+  "variant": "soiree",
+  "origin": "kronberg",
+  "config": "config/sensitivity/kronberg_soiree.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 113,
+      "n_reached_ref": 118,
+      "n_reached_variant": 113,
+      "delta_t_tc_min": {
+        "median": 2.0,
+        "mean": 4.88,
+        "p90_abs": 14.8,
+        "max_abs": 46.0
+      },
+      "n_changed_gt_5min": 33,
+      "largest_changes": [
+        {
+          "name": "Weilrod",
+          "ref": 116.0,
+          "variant": 162.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 83.0,
+          "variant": 117.0
+        },
+        {
+          "name": "Walluf",
+          "ref": 109.0,
+          "variant": 135.0
+        },
+        {
+          "name": "Mainz",
+          "ref": 79.0,
+          "variant": 102.0
+        },
+        {
+          "name": "Flörsheim am Main",
+          "ref": 95.0,
+          "variant": 118.0
+        },
+        {
+          "name": "Wiesbaden",
+          "ref": 85.0,
+          "variant": 106.0
+        },
+        {
+          "name": "Hochheim am Main",
+          "ref": 90.0,
+          "variant": 111.0
+        },
+        {
+          "name": "Ginsheim-Gustavsburg",
+          "ref": 97.0,
+          "variant": 115.0
+        }
+      ],
+      "spearman_ref_variant": 0.978,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.5,
+          "variant": 72.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 15.987,
+          "variant": 14.162
+        },
+        "spearman_dist_time": {
+          "ref": 0.813,
+          "variant": 0.753
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.458,
+          "variant": 0.416
+        },
+        "ratio_tc_car_median": {
+          "ref": 2.899,
+          "variant": 3.009
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 4
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 10,
+          "n": 10,
+          "out": [],
+          "in": []
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Mainz",
+            "Sachsenhausen-Nord"
+          ],
+          "in": [
+            "Groß-Gerau",
+            "Offenbach am Main"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 113,
+      "n_reached_ref": 118,
+      "n_reached_variant": 113,
+      "delta_t_tc_min": {
+        "median": 2.0,
+        "mean": 5.01,
+        "p90_abs": 14.8,
+        "max_abs": 50.0
+      },
+      "n_changed_gt_5min": 37,
+      "largest_changes": [
+        {
+          "name": "Weilrod",
+          "ref": 118.0,
+          "variant": 168.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 85.0,
+          "variant": 114.0
+        },
+        {
+          "name": "Walluf",
+          "ref": 114.0,
+          "variant": 138.0
+        },
+        {
+          "name": "Flörsheim am Main",
+          "ref": 100.0,
+          "variant": 121.0
+        },
+        {
+          "name": "Mainz",
+          "ref": 85.0,
+          "variant": 105.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 91.0,
+          "variant": 111.0
+        },
+        {
+          "name": "Wiesbaden",
+          "ref": 90.0,
+          "variant": 109.0
+        },
+        {
+          "name": "Hochheim am Main",
+          "ref": 96.0,
+          "variant": 114.0
+        }
+      ],
+      "spearman_ref_variant": 0.9761,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 74.0,
+          "variant": 75.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.844,
+          "variant": 13.451
+        },
+        "spearman_dist_time": {
+          "ref": 0.84,
+          "variant": 0.766
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.432,
+          "variant": 0.407
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.152,
+          "variant": 3.274
+        }
+      },
+      "dead_zones": {
+        "ref": 3,
+        "variant": 6
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Wehrheim"
+          ],
+          "in": [
+            "Sulzbach (Taunus)"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Mainz",
+            "Nordend-Ost"
+          ],
+          "in": [
+            "Groß-Gerau",
+            "Offenbach am Main"
+          ]
+        }
+      }
+    }
+  }
+}

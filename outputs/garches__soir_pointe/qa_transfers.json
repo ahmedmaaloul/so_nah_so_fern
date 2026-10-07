@@ -1,0 +1,151 @@
+{
+  "n_od": 848,
+  "n_od_with_time": 803,
+  "max_rides_tested": 4,
+  "tolerance_min": 1.0,
+  "transfers_by_origin": {
+    "centre": {
+      "0": 16,
+      "1": 42,
+      "2": 169,
+      "3": 129,
+      "4+": 45
+    },
+    "gare": {
+      "0": 14,
+      "1": 44,
+      "2": 157,
+      "3": 139,
+      "4+": 48
+    }
+  },
+  "n_walk_only": {
+    "centre": 2,
+    "gare": 3
+  },
+  "n_censored": 93,
+  "n_non_monotone_steps": 0,
+  "n_kmax_faster_than_unlimited": 0,
+  "censored_examples": [
+    {
+      "from_id": "gare",
+      "to_id": "78050",
+      "name": "Bazoches-sur-Guyonne",
+      "p50_unlimited": 94.0,
+      "p50_rides_4": 97.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78366",
+      "name": "Mareil-le-Guyon",
+      "p50_unlimited": 112.0,
+      "p50_rides_4": 115.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78398",
+      "name": "Les Mesnuls",
+      "p50_unlimited": 105.0,
+      "p50_rides_4": 112.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78403",
+      "name": "Mézy-sur-Seine",
+      "p50_unlimited": 98.0,
+      "p50_rides_4": 100.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "78623",
+      "name": "Le Tremblay-sur-Mauldre",
+      "p50_unlimited": 93.0,
+      "p50_rides_4": 95.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91027",
+      "name": "Athis-Mons",
+      "p50_unlimited": 83.0,
+      "p50_rides_4": 88.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91044",
+      "name": "Ballainvilliers",
+      "p50_unlimited": 96.0,
+      "p50_rides_4": 100.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91086",
+      "name": "Bondoufle",
+      "p50_unlimited": 94.0,
+      "p50_rides_4": 105.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91115",
+      "name": "Bruyères-le-Châtel",
+      "p50_unlimited": 121.0,
+      "p50_rides_4": NaN
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91161",
+      "name": "Chilly-Mazarin",
+      "p50_unlimited": 90.0,
+      "p50_rides_4": 94.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91201",
+      "name": "Draveil",
+      "p50_unlimited": 78.0,
+      "p50_rides_4": 84.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91216",
+      "name": "Épinay-sur-Orge",
+      "p50_unlimited": 85.0,
+      "p50_rides_4": 87.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91235",
+      "name": "Fleury-Mérogis",
+      "p50_unlimited": 97.0,
+      "p50_rides_4": 102.0
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91249",
+      "name": "Forges-les-Bains",
+      "p50_unlimited": 130.0,
+      "p50_rides_4": NaN
+    },
+    {
+      "from_id": "gare",
+      "to_id": "91286",
+      "name": "Grigny",
+      "p50_unlimited": 87.0,
+      "p50_rides_4": 92.0
+    }
+  ],
+  "timings_s": {
+    "rides_1": 1.6,
+    "rides_2": 0.9,
+    "rides_3": 1.6,
+    "rides_4": 1.7,
+    "total": 49.4
+  },
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  }
+}

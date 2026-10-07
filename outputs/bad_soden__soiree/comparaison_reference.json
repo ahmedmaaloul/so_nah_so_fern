@@ -1,0 +1,233 @@
+{
+  "variant": "soiree",
+  "origin": "bad_soden",
+  "config": "config/sensitivity/bad_soden_soiree.yaml",
+  "by_origin": {
+    "gare": {
+      "n_compared": 116,
+      "n_reached_ref": 120,
+      "n_reached_variant": 116,
+      "delta_t_tc_min": {
+        "median": 4.0,
+        "mean": 8.51,
+        "p90_abs": 23.5,
+        "max_abs": 41.0
+      },
+      "n_changed_gt_5min": 48,
+      "largest_changes": [
+        {
+          "name": "Trebur",
+          "ref": 110.0,
+          "variant": 151.0
+        },
+        {
+          "name": "Neu-Anspach",
+          "ref": 98.0,
+          "variant": 137.0
+        },
+        {
+          "name": "Messel",
+          "ref": 110.0,
+          "variant": 149.0
+        },
+        {
+          "name": "Nackenheim",
+          "ref": 110.0,
+          "variant": 147.0
+        },
+        {
+          "name": "Bodenheim",
+          "ref": 107.0,
+          "variant": 144.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 86.0,
+          "variant": 122.0
+        },
+        {
+          "name": "Wiesbaden",
+          "ref": 82.0,
+          "variant": 110.0
+        },
+        {
+          "name": "Hochheim am Main",
+          "ref": 84.0,
+          "variant": 111.0
+        }
+      ],
+      "spearman_ref_variant": 0.9591,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 72.0,
+          "variant": 74.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 14.382,
+          "variant": 12.806
+        },
+        "spearman_dist_time": {
+          "ref": 0.899,
+          "variant": 0.842
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.379
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.106,
+          "variant": 3.344
+        }
+      },
+      "dead_zones": {
+        "ref": 2,
+        "variant": 4
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 6,
+          "n": 10,
+          "out": [
+            "Eckenheim",
+            "Niederrad",
+            "Niederursel",
+            "Raunheim"
+          ],
+          "in": [
+            "Glashütten",
+            "Niedernhausen",
+            "Sindlingen",
+            "Zeilsheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 8,
+          "n": 10,
+          "out": [
+            "Dietzenbach",
+            "Rödermark"
+          ],
+          "in": [
+            "Innenstadt",
+            "Ostend"
+          ]
+        }
+      }
+    },
+    "centre": {
+      "n_compared": 116,
+      "n_reached_ref": 120,
+      "n_reached_variant": 116,
+      "delta_t_tc_min": {
+        "median": 4.0,
+        "mean": 8.24,
+        "p90_abs": 24.0,
+        "max_abs": 43.0
+      },
+      "n_changed_gt_5min": 47,
+      "largest_changes": [
+        {
+          "name": "Neu-Anspach",
+          "ref": 98.0,
+          "variant": 141.0
+        },
+        {
+          "name": "Trebur",
+          "ref": 114.0,
+          "variant": 155.0
+        },
+        {
+          "name": "Nackenheim",
+          "ref": 113.0,
+          "variant": 153.0
+        },
+        {
+          "name": "Bodenheim",
+          "ref": 110.0,
+          "variant": 150.0
+        },
+        {
+          "name": "Messel",
+          "ref": 115.0,
+          "variant": 152.0
+        },
+        {
+          "name": "Schmitten im Taunus",
+          "ref": 86.0,
+          "variant": 122.0
+        },
+        {
+          "name": "Usingen",
+          "ref": 113.0,
+          "variant": 142.0
+        },
+        {
+          "name": "Wiesbaden",
+          "ref": 85.0,
+          "variant": 112.0
+        }
+      ],
+      "spearman_ref_variant": 0.9608,
+      "summary": {
+        "t_tc_median_min": {
+          "ref": 75.0,
+          "variant": 77.0
+        },
+        "v_eff_popweighted_median_kmh": {
+          "ref": 13.995,
+          "variant": 12.356
+        },
+        "spearman_dist_time": {
+          "ref": 0.898,
+          "variant": 0.844
+        },
+        "median_transfers": {
+          "ref": 1.0,
+          "variant": 1.0
+        },
+        "share_2plus_transfers": {
+          "ref": 0.467,
+          "variant": 0.388
+        },
+        "ratio_tc_car_median": {
+          "ref": 3.324,
+          "variant": 3.513
+        }
+      },
+      "dead_zones": {
+        "ref": 1,
+        "variant": 5
+      },
+      "tops": {
+        "top_nah_fern": {
+          "common": 7,
+          "n": 10,
+          "out": [
+            "Niederrad",
+            "Niederursel",
+            "Raunheim"
+          ],
+          "in": [
+            "Sindlingen",
+            "Steinbach (Taunus)",
+            "Zeilsheim"
+          ]
+        },
+        "top_fern_nah": {
+          "common": 9,
+          "n": 10,
+          "out": [
+            "Rödermark"
+          ],
+          "in": [
+            "Ostend"
+          ]
+        }
+      }
+    }
+  }
+}

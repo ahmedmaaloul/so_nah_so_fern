@@ -59,10 +59,17 @@ sind gewollt: sie zeigen ferne, aber schnell erreichbare Orte.
 0,9998 (Garches), 0,990 (Kronberg), 0,994 (Bad Soden); höchstens 20 Min. Abweichung; 8 bis 10
 der 10 Tops bleiben gleich (`comparaison_reference.json`).
 
+**Zeitfenster (S2, `outputs/time_windows/`).** Gleicher Tag, Fenster 10:00 bis 11:30,
+17:30 bis 19:00 und 20:30 bis 22:00 statt 07:30 bis 09:00. Kronberg und Bad Soden ändern
+sich bis 19:00 kaum (Median gleich, Rangkorrelation der Zeiten ≥ 0,990). Garches reagiert
+stärker: tagsüber Median +4 Min., abends 85 statt 34 Ziele in 180 Min. nicht erreichbar
+(Rangkorrelation 0,890). Die Abendmediane gelten nur für erreichte Ziele und sind daher zu
+günstig.
+
 **Phase 2 (P1).** Alle Einheiten ≤ 30 km von Paris (417) bzw. Frankfurt (133) untereinander:
 Median 95 / 82 Min., ÖV/Pkw 2,54 / 2,98, Rangkorrelation 0,78 / 0,84 (`outputs/phase2/`).
 
-**Grenzen.** Ein Stichtag, eine Zeitspanne, nur Fußweg als Zubringer; keine Tarif- oder
+**Grenzen.** Ein Stichtag, nur Fußweg als Zubringer; keine Tarif- oder
 Komfortgrößen; Pkw ohne Stau; GTFS-Qualität der Betreiber als gegeben.
 
 ---
@@ -119,9 +126,16 @@ cartogramme sont voulus : ils montrent les lieux lointains mais vite atteints.
 0,9998 (Garches), 0,990 (Kronberg), 0,994 (Bad Soden) ; écart maximal 20 min ; 8 à 10 des
 10 tops inchangés (`comparaison_reference.json`).
 
+**Plages horaires (S2, `outputs/time_windows/`).** Même jour, fenêtres 10:00 à 11:30,
+17:30 à 19:00 et 20:30 à 22:00 au lieu de 07:30 à 09:00. Kronberg et Bad Soden changent peu
+jusqu'à 19:00 (médiane identique, corrélation de rang des temps ≥ 0,990). Garches réagit
+davantage : médiane +4 min en heure creuse, et le soir 85 destinations non atteintes en
+180 min au lieu de 34 (corrélation 0,890). Les médianes du soir ne portent que sur les
+destinations atteintes et sont donc flatteuses.
+
 **Phase 2 (P1).** Toutes les unités à 30 km au plus de Paris (417) ou de Francfort (133), entre
 elles : médiane 95 / 82 min, TC/voiture 2,54 / 2,98, corrélation de rang 0,78 / 0,84
 (`outputs/phase2/`).
 
-**Limites.** Un seul jour, une seule plage horaire, rabattement à pied seulement ; ni tarif ni
+**Limites.** Un seul jour, rabattement à pied seulement ; ni tarif ni
 confort ; voiture sans congestion ; qualité des GTFS des opérateurs prise telle quelle.
