@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>So nah, so fern</title>
+<meta name="description" content="So nah, so fern: Luftlinie gegen echte Reisezeit im ÖV / distance à vol d’oiseau contre temps de trajet en TC.">
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="vendor/maplibre-gl.css">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<a class="skip" id="skip" href="#main"></a>
+
+<header class="top">
+  <div class="brand">
+    <h1 id="h-title">So nah, so fern</h1>
+    <p id="h-sub"></p>
+  </div>
+  <div class="seg" role="group" id="lang-group">
+    <button type="button" data-lang="de" aria-pressed="true">DE</button>
+    <button type="button" data-lang="fr" aria-pressed="false">FR</button>
+  </div>
+</header>
+
+<section class="controls" id="controls">
+  <div class="ctl">
+    <span class="ctl-label" id="l-mode"></span>
+    <div class="seg" role="group" id="mode-group" aria-labelledby="l-mode">
+      <button type="button" data-mode="single" aria-pressed="true"></button>
+      <button type="button" data-mode="compare" aria-pressed="false"></button>
+    </div>
+  </div>
+
+  <div class="ctl" id="ctl-origin">
+    <label class="ctl-label" for="sel-origin" id="l-origin"></label>
+    <select id="sel-origin"></select>
+  </div>
+  <div class="ctl" id="ctl-cmp" hidden>
+    <label class="ctl-label" for="sel-cmp-fr" id="l-cmp-fr"></label>
+    <select id="sel-cmp-fr"></select>
+  </div>
+  <div class="ctl" id="ctl-cmp2" hidden>
+    <label class="ctl-label" for="sel-cmp-de" id="l-cmp-de"></label>
+    <select id="sel-cmp-de"></select>
+  </div>
+
+  <div class="ctl">
+    <span class="ctl-label" id="l-point"></span>
+    <div class="seg" role="group" id="point-group" aria-labelledby="l-point">
+      <button type="button" data-point="gare" aria-pressed="true"></button>
+      <button type="button" data-point="centre" aria-pressed="false"></button>
+    </div>
+  </div>
+
+  <div class="ctl">
+    <label class="ctl-label" for="sel-ind" id="l-ind"></label>
+    <select id="sel-ind"></select>
+  </div>
+
+  <div class="ctl">
+    <span class="ctl-label" id="l-view"></span>
+    <div class="seg" role="group" id="view-group" aria-labelledby="l-view">
+      <button type="button" data-view="geo" aria-pressed="true"></button>
+      <button type="button" data-view="time" aria-pressed="false"></button>
+    </div>
+  </div>
+
+  <fieldset class="ctl ovs">
+    <legend class="ctl-label" id="l-ov"></legend>
+    <div class="ovrow">
+      <label><input type="checkbox" id="ov-iso"> <span id="t-ov-iso"></span></label>
+      <label><input type="checkbox" id="ov-rings" checked> <span id="t-ov-rings"></span></label>
+      <label><input type="checkbox" id="ov-origin" checked> <span id="t-ov-origin"></span></label>
+    </div>
+  </fieldset>
+</section>
+
+<main id="main" tabindex="-1">
+  <!-- ============ Einzelansicht ============ -->
+  <div id="single">
+    <section class="summary" id="summary" aria-live="polite"></section>
+
+    <div class="grid">
+      <section class="card mapcard" aria-labelledby="h-title">
+        <div class="mapwrap">
+          <div id="map" class="map" role="application"></div>
+          <div class="legend legend-over" id="legend"></div>
+          <button type="button" class="reset" id="reset-single"></button>
+          <div class="loading" id="loading" hidden></div>
+        </div>
+        <p class="hint" id="hint"></p>
+        <p class="hint warn" id="hint-itin" hidden></p>
+      </section>
+
+      <aside class="side">
+        <section class="card">
+          <div class="card-head">
+            <h2 id="t-scatter"></h2>
+            <div class="search">
+              <label for="search" id="l-search"></label>
+              <input id="search" type="search" list="dl-units" autocomplete="off">
+              <datalist id="dl-units"></datalist>
+            </div>
+          </div>
+          <div id="scatter" class="scatter"></div>
+          <p class="caption" id="scatter-note"></p>
+        </section>
+        <section class="card" id="detail" aria-live="polite"></section>
+      </aside>
+    </div>
+
+    <div class="lists">
+      <section class="card list" id="list-nf"></section>
+      <section class="card list" id="list-fn"></section>
+      <section class="card list" id="list-dz"></section>
+    </div>
+  </div>
+
+  <!-- ============ Vergleich ============ -->
+  <div id="compare" hidden>
+    <section class="card cmp-head">
+      <h2 id="t-cmp"></h2>
+      <p class="caption" id="cmp-note"></p>
+      <div class="legend" id="legend-cmp"></div>
+    </section>
+    <div class="cmp-maps">
+      <section class="card cmp-card">
+        <h3 id="cmp-cap-a"></h3>
+        <div class="mapwrap"><div id="map-a" class="map" role="application"></div></div>
+      </section>
+      <section class="card cmp-card">
+        <h3 id="cmp-cap-b"></h3>
+        <div class="mapwrap"><div id="map-b" class="map" role="application"></div></div>
+      </section>
+    </div>
+    <div class="cmp-tools"><button type="button" class="reset-btn" id="reset-cmp"></button></div>
+    <section class="card">
+      <h2 id="t-cmp-table"></h2>
+      <div class="tablewrap"><table class="cmp-table" id="cmp-table"></table></div>
+    </section>
+  </div>
+</main>
+
+<div class="tooltip" id="tooltip" role="tooltip" hidden></div>
+<div class="sr-only" id="announce" aria-live="polite"></div>
+
+<footer class="foot" id="footer"></footer>
+
+<script src="vendor/d3.min.js"></script>
+<script src="vendor/maplibre-gl.js"></script>
+<script src="i18n.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
