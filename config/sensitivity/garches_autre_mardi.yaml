@@ -1,0 +1,7 @@
+# Tages-Sensitivität / sensibilité au jour : autre mardi scolaire / anderer Schul-Dienstag
+# Gleiches Zeitfenster und gleiche Parameter, nur das Datum ändert sich.
+# Même fenêtre et mêmes paramètres, seule la date change.
+extends: ../garches.yaml
+run_tag: autre_mardi
+analysis:
+  date: 2026-11-03

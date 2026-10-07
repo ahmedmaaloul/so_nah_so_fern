@@ -3,6 +3,9 @@
     {
       "origin": "garches",
       "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "07:30–09:00",
       "tag": "reference",
       "t_tc_median_min": 75.0,
@@ -20,6 +23,9 @@
     {
       "origin": "garches",
       "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "07:30–09:00",
       "tag": "reference",
       "t_tc_median_min": 84.0,
@@ -37,6 +43,9 @@
     {
       "origin": "garches",
       "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "10:00–11:30",
       "tag": "creuse",
       "t_tc_median_min": 80.0,
@@ -54,6 +63,9 @@
     {
       "origin": "garches",
       "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "10:00–11:30",
       "tag": "creuse",
       "t_tc_median_min": 88.0,
@@ -71,6 +83,9 @@
     {
       "origin": "garches",
       "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "17:30–19:00",
       "tag": "soir_pointe",
       "t_tc_median_min": 74.0,
@@ -88,6 +103,9 @@
     {
       "origin": "garches",
       "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "17:30–19:00",
       "tag": "soir_pointe",
       "t_tc_median_min": 83.0,
@@ -105,6 +123,9 @@
     {
       "origin": "garches",
       "point": "gare",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "20:30–22:00",
       "tag": "soiree",
       "t_tc_median_min": 84.0,
@@ -122,6 +143,9 @@
     {
       "origin": "garches",
       "point": "centre",
+      "date": "2026-10-13",
+      "weekday": "Tuesday",
+      "trips_day": 138342,
       "window": "20:30–22:00",
       "tag": "soiree",
       "t_tc_median_min": 93.5,
@@ -139,6 +163,9 @@
     {
       "origin": "kronberg",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "07:30–09:00",
       "tag": "reference",
       "t_tc_median_min": 72.5,
@@ -156,6 +183,9 @@
     {
       "origin": "kronberg",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "07:30–09:00",
       "tag": "reference",
       "t_tc_median_min": 74.0,
@@ -173,6 +203,9 @@
     {
       "origin": "kronberg",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "10:00–11:30",
       "tag": "creuse",
       "t_tc_median_min": 73.5,
@@ -190,6 +223,9 @@
     {
       "origin": "kronberg",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "10:00–11:30",
       "tag": "creuse",
       "t_tc_median_min": 76.5,
@@ -207,6 +243,9 @@
     {
       "origin": "kronberg",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "17:30–19:00",
       "tag": "soir_pointe",
       "t_tc_median_min": 72.5,
@@ -224,6 +263,9 @@
     {
       "origin": "kronberg",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "17:30–19:00",
       "tag": "soir_pointe",
       "t_tc_median_min": 74.0,
@@ -241,6 +283,9 @@
     {
       "origin": "kronberg",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "20:30–22:00",
       "tag": "soiree",
       "t_tc_median_min": 72.0,
@@ -258,6 +303,9 @@
     {
       "origin": "kronberg",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 46513,
       "window": "20:30–22:00",
       "tag": "soiree",
       "t_tc_median_min": 75.0,
@@ -275,6 +323,9 @@
     {
       "origin": "bad_soden",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "07:30–09:00",
       "tag": "reference",
       "t_tc_median_min": 72.0,
@@ -292,6 +343,9 @@
     {
       "origin": "bad_soden",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "07:30–09:00",
       "tag": "reference",
       "t_tc_median_min": 75.0,
@@ -309,6 +363,9 @@
     {
       "origin": "bad_soden",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "10:00–11:30",
       "tag": "creuse",
       "t_tc_median_min": 72.0,
@@ -326,6 +383,9 @@
     {
       "origin": "bad_soden",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "10:00–11:30",
       "tag": "creuse",
       "t_tc_median_min": 75.0,
@@ -343,6 +403,9 @@
     {
       "origin": "bad_soden",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "17:30–19:00",
       "tag": "soir_pointe",
       "t_tc_median_min": 71.5,
@@ -360,6 +423,9 @@
     {
       "origin": "bad_soden",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "17:30–19:00",
       "tag": "soir_pointe",
       "t_tc_median_min": 74.0,
@@ -377,6 +443,9 @@
     {
       "origin": "bad_soden",
       "point": "gare",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "20:30–22:00",
       "tag": "soiree",
       "t_tc_median_min": 74.0,
@@ -394,6 +463,9 @@
     {
       "origin": "bad_soden",
       "point": "centre",
+      "date": "2026-10-20",
+      "weekday": "Tuesday",
+      "trips_day": 45876,
       "window": "20:30–22:00",
       "tag": "soiree",
       "t_tc_median_min": 77.0,

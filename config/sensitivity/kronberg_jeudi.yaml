@@ -1,0 +1,7 @@
+# Tages-Sensitivität / sensibilité au jour : jeudi scolaire / Schul-Donnerstag
+# Gleiches Zeitfenster und gleiche Parameter, nur das Datum ändert sich.
+# Même fenêtre et mêmes paramètres, seule la date change.
+extends: ../kronberg.yaml
+run_tag: jeudi
+analysis:
+  date: 2026-10-22

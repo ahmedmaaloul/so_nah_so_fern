@@ -1,0 +1,7 @@
+# Tages-Sensitivität / sensibilité au jour : mardi des vacances d'automne de Hesse / Dienstag in den hessischen Herbstferien
+# Gleiches Zeitfenster und gleiche Parameter, nur das Datum ändert sich.
+# Même fenêtre et mêmes paramètres, seule la date change.
+extends: ../bad_soden.yaml
+run_tag: vacances
+analysis:
+  date: 2026-10-13

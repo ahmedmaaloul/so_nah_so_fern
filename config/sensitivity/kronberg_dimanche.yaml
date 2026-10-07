@@ -1,0 +1,7 @@
+# Tages-Sensitivität / sensibilité au jour : dimanche / Sonntag
+# Gleiches Zeitfenster und gleiche Parameter, nur das Datum ändert sich.
+# Même fenêtre et mêmes paramètres, seule la date change.
+extends: ../kronberg.yaml
+run_tag: dimanche
+analysis:
+  date: 2026-10-25

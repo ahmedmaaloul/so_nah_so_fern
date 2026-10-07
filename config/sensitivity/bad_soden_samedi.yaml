@@ -1,0 +1,7 @@
+# Tages-Sensitivität / sensibilité au jour : samedi / Samstag
+# Gleiches Zeitfenster und gleiche Parameter, nur das Datum ändert sich.
+# Même fenêtre et mêmes paramètres, seule la date change.
+extends: ../bad_soden.yaml
+run_tag: samedi
+analysis:
+  date: 2026-10-24
