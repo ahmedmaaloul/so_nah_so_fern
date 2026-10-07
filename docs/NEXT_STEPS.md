@@ -92,3 +92,24 @@ URL réellement utilisée) des fichiers du dernier calcul.
    +11,5 min. Observé : +9,0 min (24 itinéraires commençant par la S3), dont 7,3 min d'attente
    avant le départ. 08:15 n'est pas changé (pas de choix d'heure par origine) ; le site affiche
    désormais l'attente avant le départ (`offset_min`, `meta.itinerary_departure`).
+
+## Refonte de l'interface (prévue)
+
+Préparé le 07/10/2026 :
+
+- **shadcn/ui** : serveur MCP à déclarer localement (`npx shadcn@latest mcp init`), non versionné.
+- **impeccable** (Paul Bakaus, Apache 2.0, https://github.com/pbakaus/impeccable) : à installer
+  localement (`npx impeccable install`), non versionné ; puis `/impeccable init` et `/impeccable critique`.
+- **Plan** :
+  1. `/impeccable critique` et `audit` du site actuel (captures desktop + mobile) : liste des défauts.
+  2. Nouveau front dans `web/` : Vite + React + TypeScript + Tailwind + composants shadcn (via le MCP),
+     MapLibre et D3 conservés pour la carte et les graphiques ; mêmes fichiers `web/data/*.json`,
+     mêmes vues (carte, carte-temps, comparaison FR/DE, toutes les communes), DE par défaut + FR.
+  3. Build statique (`vite build`, `base: './'`) ; le workflow Pages ajoute alors `npm ci && npm run build`
+     et publie `web/dist` au lieu de `web/`.
+  4. Reprendre les tests Playwright (vues, valeurs contre les JSON, pas d'erreur console, pas de requête
+     externe), puis `/impeccable polish`.
+- **GitHub Pages** : workflow `.github/workflows/pages.yml` (publie `web/` à chaque push sur `main`).
+  Le dépôt est privé : Pages exige un compte GitHub payant ou un dépôt public, puis
+  Settings > Pages > Source = « GitHub Actions ». URL attendue :
+  https://ahmedmaaloul.github.io/so_nah_so_fern/
