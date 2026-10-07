@@ -27,7 +27,7 @@ sudo apt-get install -y openjdk-21-jdk-headless osmium-tool
 uv sync
 ```
 
-macOS: Java z. B. über Temurin; osmium-tool über conda-forge in `.tools/osmium` (Homebrew schlägt auf macOS 27 fehl):
+Alternativ osmium-tool über conda-forge in `.tools/osmium` (wird von der Pipeline bevorzugt):
 `conda create -p ./.tools/osmium -c conda-forge osmium-tool`
 
 ## Pipeline
@@ -53,7 +53,7 @@ uv run python pipeline/14_time_windows.py                               # Zeitfe
 
 Für eine andere Gemeinde: `config/garches.yaml` kopieren und `origin`, `core_city`, `analysis.date` anpassen. Die GTFS-Feeds decken nur ~1 Monat ab – das Stichdatum muss im Feed liegen (02 prüft das).
 
-CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Konfiguration: 4; auf einem Laptop wegen Wärme ggf. senken).
+CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Standard: 4).
 
 ## Stand (07.10.2026)
 
@@ -63,7 +63,7 @@ CPU-Last: `routing.jvm_active_processors` begrenzt die Kerne von R5 (Konfigurati
 - [x] Phase 2: alle Gemeinden ≤ 30 km von Paris bzw. Frankfurt untereinander (`outputs/phase2/`)
 - [x] Methodenpapier DE/FR: `docs/methodologie.md`
 
-Docker-Daemon für 06 und 12 (OSRM): in einem Container ohne laufenden Dienst `dockerd &` starten.
+06 und 12 (OSRM) brauchen einen laufenden Docker-Daemon.
 
 ## Lizenzen der Daten
 

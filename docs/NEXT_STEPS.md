@@ -25,14 +25,14 @@ URL réellement utilisée) des fichiers du dernier calcul.
 5. **Îlots piétons** : 04 et 05 déplacent les points accrochés à un morceau de réseau
    déconnecté (`fix_islands`, hypothèse `R4_islands`, paramètres `routing.islands`).
    Seul cas actuel : Andrésy (78015), déplacé de 15 m. À réutiliser dans 06/08.
-6. **06 voiture** : OSRM v5.27.1 via Docker (`ghcr.io/project-osrm/osrm-backend`). Dans le
-   conteneur cloud, le démon n'est pas lancé : `dockerd > /tmp/dockerd.log 2>&1 &` avant 06.
+6. **06 voiture** : OSRM v5.27.1 via Docker (`ghcr.io/project-osrm/osrm-backend`) ; le démon
+   Docker doit être lancé avant 06 et 12.
    Graphe en cache dans `data/interim/<slug>/osrm/` (construction 45 à 90 s).
 7. **Durée de 05 `--itineraries`** : ~33 min par origine en IDF (≈ 20 destinations),
    5 à 7 min en Rhin-Main. Ne relancer que si les destinations mises en avant
    changent.
 
-## Résultats (calcul cloud du 06–07/10/2026)
+## Résultats (calcul du 06–07/10/2026)
 
 | | Garches | Kronberg | Bad Soden |
 |---|---|---|---|
@@ -44,13 +44,13 @@ URL réellement utilisée) des fichiers du dernier calcul.
 | Voiture médiane (gare, sans trafic) | 31,5 min | 23,8 min | 24,7 min |
 | Ratio TC/voiture médian (gare) | 2,50 | 2,90 | 3,11 |
 
-- Garches identique au premier calcul local hormis Andrésy (désormais 67 min depuis la gare).
+- Garches identique au premier calcul hormis Andrésy (désormais 67 min depuis la gare).
 - 05 : 0 étape non monotone, 0 cas « k max plus rapide que sans limite » ; 86 OD
   censurées (≥ 4 correspondances) à Garches, 0 à Kronberg, 6 à Bad Soden.
 - Itinéraires 08:15 vs médiane : écart médian +2,8 min (Garches), −1,8 (Kronberg),
   +9,0 (Bad Soden, à expliquer : cadencement S-Bahn ?).
 
-## Fait le 07/10/2026 (cloud)
+## Fait le 07/10/2026
 
 - 06 voiture (OSRM), 08 isochrones (grille de 200 m ; `r5py.Isochrones` ne rend que des
   contours simplifiés), 09 cartogramme temporel (temps des sommets interpolés entre les points
