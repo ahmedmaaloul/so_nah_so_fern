@@ -29,6 +29,7 @@
     <div class="seg" role="group" id="mode-group" aria-labelledby="l-mode">
       <button type="button" data-mode="single" aria-pressed="true"></button>
       <button type="button" data-mode="compare" aria-pressed="false"></button>
+      <button type="button" data-mode="all" aria-pressed="false"></button>
     </div>
   </div>
 
@@ -45,7 +46,12 @@
     <select id="sel-cmp-de"></select>
   </div>
 
-  <div class="ctl">
+  <div class="ctl" id="ctl-region" hidden>
+    <label class="ctl-label" for="sel-region" id="l-region"></label>
+    <select id="sel-region"></select>
+  </div>
+
+  <div class="ctl" id="ctl-point">
     <span class="ctl-label" id="l-point"></span>
     <div class="seg" role="group" id="point-group" aria-labelledby="l-point">
       <button type="button" data-point="gare" aria-pressed="true"></button>
@@ -53,12 +59,12 @@
     </div>
   </div>
 
-  <div class="ctl">
+  <div class="ctl" id="ctl-ind">
     <label class="ctl-label" for="sel-ind" id="l-ind"></label>
     <select id="sel-ind"></select>
   </div>
 
-  <div class="ctl">
+  <div class="ctl" id="ctl-view">
     <span class="ctl-label" id="l-view"></span>
     <div class="seg" role="group" id="view-group" aria-labelledby="l-view">
       <button type="button" data-view="geo" aria-pressed="true"></button>
@@ -66,7 +72,7 @@
     </div>
   </div>
 
-  <fieldset class="ctl ovs">
+  <fieldset class="ctl ovs" id="ctl-ov">
     <legend class="ctl-label" id="l-ov"></legend>
     <div class="ovrow">
       <label><input type="checkbox" id="ov-iso"> <span id="t-ov-iso"></span></label>
@@ -115,6 +121,57 @@
       <section class="card list" id="list-fn"></section>
       <section class="card list" id="list-dz"></section>
     </div>
+  </div>
+
+  <!-- ============ Alle Gemeinden ============ -->
+  <div id="all" hidden>
+    <section class="summary" id="all-summary" aria-live="polite"></section>
+    <div class="grid">
+      <section class="card mapcard" aria-labelledby="t-all-map">
+        <h2 class="sr-only" id="t-all-map"></h2>
+        <div class="all-toolbar">
+          <div class="ctl" id="ctl-all-ind">
+            <label class="ctl-label" for="sel-all-ind" id="l-all-ind"></label>
+            <select id="sel-all-ind"></select>
+          </div>
+          <div class="ctl" id="ctl-dir" hidden>
+            <span class="ctl-label" id="l-dir"></span>
+            <div class="seg" role="group" id="dir-group" aria-labelledby="l-dir">
+              <button type="button" data-dir="von" aria-pressed="true"></button>
+              <button type="button" data-dir="nach" aria-pressed="false"></button>
+            </div>
+          </div>
+          <div class="ctl">
+            <label class="ctl-label" for="all-search" id="l-all-search"></label>
+            <input id="all-search" type="search" list="dl-all" autocomplete="off">
+            <datalist id="dl-all"></datalist>
+          </div>
+          <div class="ctl">
+            <span class="ctl-label">&nbsp;</span>
+            <button type="button" class="reset-btn" id="all-clear" hidden></button>
+          </div>
+        </div>
+        <div class="mapwrap">
+          <div id="map-all" class="map" role="application"></div>
+          <div class="legend legend-over" id="legend-all"></div>
+          <div class="loading" id="loading-all" hidden></div>
+        </div>
+        <p class="hint" id="hint-all"></p>
+      </section>
+      <aside class="side">
+        <section class="card">
+          <div class="card-head"><h2 id="t-all-scatter"></h2></div>
+          <div id="scatter-all" class="scatter"></div>
+          <p class="caption" id="all-scatter-note"></p>
+        </section>
+        <section class="card" id="all-detail" aria-live="polite"></section>
+      </aside>
+    </div>
+    <section class="card" id="all-pairs"></section>
+    <section class="card all-table">
+      <h2 id="t-all-table"></h2>
+      <div class="tablewrap" id="all-table"></div>
+    </section>
   </div>
 
   <!-- ============ Vergleich ============ -->

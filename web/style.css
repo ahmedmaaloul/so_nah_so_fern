@@ -240,3 +240,44 @@ main { max-width: 1500px; margin: 0 auto; padding: 10px 16px 8px; outline: none;
 @media (prefers-reduced-motion: reduce) {
   * { scroll-behavior: auto !important; }
 }
+
+/* phase 2: all communes ------------------------------------------------ */
+.all-toolbar { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: flex-end; padding: 2px 4px 10px; }
+.all-toolbar input[type="search"] { min-width: 210px; }
+#all .card + .card, #all .grid + .card { margin-top: 12px; }
+#all .grid { margin-bottom: 12px; }
+.pad { padding: 14px 4px; }
+.linkbtn {
+  font: inherit; font-size: 0.85rem; color: var(--accent); background: transparent; border: 0; padding: 2px 0;
+  text-decoration: underline; cursor: pointer; margin-left: auto;
+}
+.linkbtn:hover { color: #0a3f4d; }
+.sw.origin { border: 2px solid #111827; background: #f1f3f5; }
+.sw.dest { border: 2px solid #f59e0b; background: #f1f3f5; }
+.scatter .dot.dest { stroke: #f59e0b; stroke-width: 3.5; fill-opacity: 1; }
+.maplbl.sel.d { background: #b45309; }
+.tabs { display: flex; gap: 4px; margin: 8px 0 4px; border-bottom: 1px solid var(--line); }
+.tab {
+  font: inherit; font-size: 0.9rem; padding: 7px 14px; min-height: 36px; border: 1px solid var(--line); border-bottom: 0;
+  border-radius: 7px 7px 0 0; background: #f3f0e8; color: var(--ink); cursor: pointer; margin-bottom: -1px;
+}
+.tab.on { background: #fff; font-weight: 650; border-bottom: 1px solid #fff; color: var(--accent); }
+.pairlist { list-style: none; margin: 8px 0 0; padding: 0; columns: 2 380px; column-gap: 20px; }
+.pairlist li { break-inside: avoid; }
+.pairbtn {
+  width: 100%; display: grid; grid-template-columns: 26px 1fr auto; gap: 8px; align-items: baseline; text-align: left;
+  font: inherit; font-size: 0.87rem; background: transparent; border: 0; border-bottom: 1px solid #eeece6; padding: 6px 4px; cursor: pointer; color: var(--ink);
+}
+.pairbtn:hover { background: #f3f7f8; }
+.pairbtn .rk { color: var(--muted); text-align: right; font-variant-numeric: tabular-nums; }
+.pairbtn .mt { color: var(--muted); font-size: 0.8rem; white-space: nowrap; font-variant-numeric: tabular-nums; }
+.all-table h3 { margin: 16px 0 6px; font-size: 0.95rem; }
+.cmp-table th.grp { text-align: center; border-left: 1px solid var(--line); }
+.cmp-table th.sub { font-weight: 500; font-size: 0.78rem; color: var(--muted); border-bottom: 1px solid var(--line); }
+.cmp-table.bands td:nth-child(2), .cmp-table.bands td:nth-child(6) { border-left: 1px solid var(--line); }
+#all-pair-dl { margin: 6px 0 8px; }
+#all-detail dl { margin: 8px 0 0; }
+#all-detail .row { display: flex; justify-content: space-between; gap: 12px; padding: 4px 0; border-bottom: 1px solid #eeece6; font-size: 0.88rem; }
+#all-detail dt { color: var(--muted); }
+#all-detail dd { margin: 0; text-align: right; font-variant-numeric: tabular-nums; }
+@media (max-width: 600px) { .tab { padding: 7px 8px; font-size: 0.82rem; } .all-toolbar input[type="search"] { min-width: 150px; } }

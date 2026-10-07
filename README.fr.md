@@ -47,6 +47,7 @@ uv run python pipeline/09_cartogram.py --config config/garches.yaml     # cartog
 uv run python pipeline/10_export_web.py --config config/garches.yaml    # web/data/<slug>.json
 uv run python pipeline/11_sensitivity.py --config config/sensitivity/garches_townhall.yaml  # après 01, 04 à 07 de la variante
 uv run python pipeline/12_all_pairs.py --config config/garches.yaml     # phase 2 : toutes les unités entre elles
+uv run python pipeline/13_export_phase2_web.py --config config/garches.yaml  # phase 2 pour le site (web/data/phase2_<région>.json)
 ```
 
 Pour une autre commune : copier `config/garches.yaml` et adapter `origin`, `core_city`, `analysis.date`. Les GTFS ne couvrent qu'environ un mois : la date doit être dans le fichier (02 le vérifie).

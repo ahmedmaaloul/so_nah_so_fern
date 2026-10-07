@@ -30,7 +30,8 @@
     view: 'geo',
     overlays: { iso: false, rings: true, origin: true },
     sel: null,
-    cmp: { fr: 'garches', de: 'kronberg' }
+    cmp: { fr: 'garches', de: 'kronberg' },
+    all: { region: null, origin: null, dir: 'von', dest: null, ind: 'v_eff_popweighted_kmh', tab: 'nah_fern' }
   };
   let progress = 0; // 0 = geographic map, 1 = time cartogram
   let INDEX = null;
@@ -207,9 +208,10 @@
     }
   }
 
-  function legendHTML(sc, results) {
-    const anyUn = results.some((r) => r && r.t_tc == null);
-    const anyNa = results.some((r) => r && r.t_tc != null && !finite(valueOf(sc.ind, r, sc.compare)));
+  function legendHTML(sc, results, opts) {
+    opts = opts || {};
+    const anyUn = opts.unreach != null ? opts.unreach : results.some((r) => r && r.t_tc == null);
+    const anyNa = opts.na != null ? opts.na : results.some((r) => r && r.t_tc != null && !finite(valueOf(sc.ind, r, sc.compare)));
     let body = '';
     if (sc.type === 'ord') {
       body = '<div class="lg-ord">' + sc.classes.map((c) => '<span class="lg-chip"><i style="background:' + sc.fn(c) + '"></i>' + esc(c >= 4 ? T('legend_trans_4') : c) + '</span>').join('') + '</div>';
@@ -231,11 +233,14 @@
     let extra = '';
     if (anyUn) extra += '<span class="lg-item"><i class="sw hatch"></i>' + esc(T('legend_unreach')) + '</span>';
     if (anyNa) extra += '<span class="lg-item"><i class="sw na"></i>' + esc(T('legend_na')) + '</span>';
-    extra += '<span class="lg-item"><i class="dot" style="background:' + TAG_COLORS.nf + '"></i>' + esc(T('list_nf_title')) + '</span>';
-    extra += '<span class="lg-item"><i class="dot" style="background:' + TAG_COLORS.fn + '"></i>' + esc(T('list_fn_title')) + '</span>';
+    if (opts.tags !== false) {
+      extra += '<span class="lg-item"><i class="dot" style="background:' + TAG_COLORS.nf + '"></i>' + esc(T('list_nf_title')) + '</span>';
+      extra += '<span class="lg-item"><i class="dot" style="background:' + TAG_COLORS.fn + '"></i>' + esc(T('list_fn_title')) + '</span>';
+    }
+    if (opts.extra) extra += opts.extra;
     const clip = sc.clipHi || sc.clipLo ? ' ' + T('clamp_note') : '';
     const norm = sc.ind === 'paradox_index' && sc.compare ? ' ' + T('cmp_norm_note') : '';
-    return '<div class="lg-title">' + esc(T(sc.legendKey)) + '</div><div class="lg-main">' + body + '</div><div class="lg-extra">' + extra + '</div>' +
+    return '<div class="lg-title">' + esc(T(sc.legendKey, sc.legendParams)) + '</div><div class="lg-main">' + body + '</div><div class="lg-extra">' + extra + '</div>' +
       (clip || norm ? '<div class="lg-note">' + esc((clip + norm).trim()) + '</div>' : '');
   }
 
@@ -605,6 +610,7 @@
     ['skip', 'skip'], ['h-sub', 'subtitle'], ['l-mode', 'mode_label'], ['l-origin', 'origin_label'], ['l-cmp-fr', 'cmp_fr_label'], ['l-cmp-de', 'cmp_de_label'],
     ['l-point', 'point_label'], ['l-ind', 'indicator_label'], ['l-view', 'view_label'], ['l-ov', 'overlays_label'],
     ['t-ov-iso', 'ov_iso'], ['t-ov-rings', 'ov_rings'], ['t-ov-origin', 'ov_origin'], ['t-scatter', 'scatter_title'], ['l-search', 'search_label'],
+    ['l-region', 'region_label'], ['t-all-map', 'all_map_title'], ['l-all-ind', 'all_ind_label'], ['l-dir', 'all_dir_label'], ['l-all-search', 'all_search_label'], ['all-clear', 'all_clear'], ['t-all-scatter', 'all_scatter_title'], ['t-all-table', 'all_table_title'],
     ['t-cmp', 'cmp_title'], ['cmp-note', 'cmp_note'], ['t-cmp-table', 'cmp_table_title'], ['reset-single', 'reset_view'], ['reset-cmp', 'reset_view']
   ];
 
@@ -617,7 +623,7 @@
     $('#loading').textContent = T('loading');
     $('#lang-group').setAttribute('aria-label', T('lang_label'));
     $$('#lang-group button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.lang === state.lang)));
-    const lab = { single: 'mode_single', compare: 'mode_compare' };
+    const lab = { single: 'mode_single', compare: 'mode_compare', all: 'mode_all' };
     $$('#mode-group button').forEach((b) => { b.textContent = T(lab[b.dataset.mode]); b.setAttribute('aria-pressed', String(b.dataset.mode === state.mode)); });
     $$('#point-group button').forEach((b) => { b.textContent = T('point_' + b.dataset.point); b.setAttribute('aria-pressed', String(b.dataset.point === state.point)); });
     $$('#view-group button').forEach((b) => { b.textContent = T('view_' + b.dataset.view); b.setAttribute('aria-pressed', String(b.dataset.view === state.view)); });
@@ -631,7 +637,12 @@
     $('#map-a').setAttribute('aria-label', T('map_aria'));
     $('#map-b').setAttribute('aria-label', T('map_aria'));
     $('#scatter').setAttribute('aria-label', T('scatter_aria'));
+    $('#all-search').placeholder = T('all_search_ph');
+    $('#loading-all').textContent = T('loading');
+    $('#map-all').setAttribute('aria-label', T('all_map_title'));
+    $$('#dir-group button').forEach((b) => { b.textContent = T('all_dir_' + b.dataset.dir); b.setAttribute('aria-pressed', String(b.dataset.dir === state.all.dir)); });
     fillOriginSelects();
+    fillAllControls();
   }
 
   function originLabelFor(slug) {
@@ -655,7 +666,7 @@
     const speed = m0.cartogram_speed_kmh;
     $('#footer').innerHTML =
       '<p class="foot-note">' + esc(T('foot_note', { w1: m0.window[0], w2: m0.window[1], date: dates })) + '</p>' +
-      '<p class="foot-note">' + esc(T('foot_scale', { v: num(speed, 1) })) + '</p>' +
+      (finite(speed) ? '<p class="foot-note">' + esc(T('foot_scale', { v: num(speed, 1) })) + '</p>' : '') +
       '<h2>' + esc(T('foot_sources')) + '</h2><ul>' + items.map((s) => '<li>' + esc(s.attribution) + ' <span class="lic">(' + esc(s.licence) + ')</span></li>').join('') + '</ul>' +
       (gen ? '<p class="foot-gen">' + esc(T('foot_generated')) + ' ' + esc(gen) + '</p>' : '');
   }
@@ -690,7 +701,8 @@
     const o = ds.origin[state.point];
     const stat = (k, v, sub) => '<div class="stat"><div class="k">' + esc(k) + '</div><div class="v">' + v + '</div><div class="s">' + esc(sub || '') + '</div></div>';
     const head = '<div class="sum-head"><h2>' + esc(ds.meta.name) + '</h2><p>' + esc(o[state.lang] || o.de) + ' · ' + esc(T('sum_core')) + ': ' + esc(ds.meta.core_city) + ' · ' + esc(T('sum_core_sub', { r: num(ds.meta.radius_km, 0) })) + '</p></div>';
-    $('#summary').innerHTML = head + '<div class="stats">' +
+    const link = INDEX.phase2 ? '<button type="button" class="linkbtn" id="to-all">' + esc(T('link_all')) + '</button>' : '';
+    $('#summary').innerHTML = head.replace(/<\/div>$/, link + '</div>') + '<div class="stats">' +
       stat(T('sum_n'), esc(num(s.n_destinations, 0)), T('sum_n_sub', { n: num(s.n_unreachable, 0) })) +
       stat(T('sum_median'), esc(num(s.t_tc_median_min, 1)) + ' <small>' + T('unit_min') + '</small>', '') +
       stat(T('sum_veff'), esc(num(s.v_eff_popweighted_median_kmh, 1)) + ' <small>' + T('unit_kmh') + '</small>', T('sum_veff_sub', { v: num(s.v_eff_median_kmh, 1) })) +
@@ -788,24 +800,23 @@
       '</dl>' + itin;
   }
 
-  function drawScatter(ds, sc) {
-    const el = $('#scatter');
+  /** generic scatter: rows = [{id, dist, t, pop, color, cls, data}] */
+  function scatterCore(el, rows, o) {
     el.innerHTML = '';
-    const rs = ds.raw.results[state.point].filter((r) => r.t_tc != null && finite(r.dist_km));
     const W = Math.max(260, el.clientWidth || 360);
     const H = clamp(Math.round(W * 0.78), 250, 360);
     const m = { l: 44, r: 16, t: 10, b: 40 };
     const iw = W - m.l - m.r, ih = H - m.t - m.b;
-    const xmax = Math.max(5, Math.ceil(d3.max(rs, (r) => r.dist_km) / 5) * 5);
-    const ymax = Math.max(30, Math.ceil(d3.max(rs, (r) => r.t_tc) / 30) * 30);
+    const xmax = Math.max(5, Math.ceil((d3.max(rows, (r) => r.dist) || 5) / 5) * 5);
+    const ymax = Math.max(30, Math.ceil((d3.max(rows, (r) => r.t) || 30) / 30) * 30);
     const x = d3.scaleLinear([0, xmax], [0, iw]);
     const y = d3.scaleLinear([0, ymax], [ih, 0]);
-    const rad = d3.scaleSqrt([0, ds.maxPop], [2.2, 13]);
-    const th = ds.meta.thresholds;
+    const rad = d3.scaleSqrt([0, o.maxPop], [2.2, 13]);
+    const th = o.th;
     const svg = d3.select(el).append('svg').attr('width', W).attr('height', H).attr('viewBox', [0, 0, W, H]).attr('role', 'img').attr('aria-label', T('scatter_aria'));
     const g = svg.append('g').attr('transform', 'translate(' + m.l + ',' + m.t + ')');
     // dead zone
-    const dzx = x(Math.min(th.dead_zone_max_km, xmax)), dzy = y(Math.min(ymax, ymax));
+    const dzx = x(Math.min(th.dead_zone_max_km, xmax));
     g.append('rect').attr('class', 'sc-dead').attr('x', 0).attr('y', 0).attr('width', dzx).attr('height', y(th.dead_zone_min_min));
     g.append('text').attr('class', 'sc-dead-lbl').attr('x', 4).attr('y', 12).text(T('scatter_dead'));
     // grid + axes
@@ -822,15 +833,25 @@
       g.append('text').attr('class', 'sc-ref-lbl').attr('x', x(x2) - 3).attr('y', y(y2) + 11).attr('text-anchor', 'end').text(v + ' ' + T('unit_kmh'));
     }
     // dots, biggest first
-    const dots = rs.slice().sort((a, b) => b.population - a.population);
+    const dots = rows.slice().sort((a, b) => b.pop - a.pop);
     g.append('g').selectAll('circle').data(dots).join('circle')
-      .attr('class', (r) => 'dot' + (r.unit_id === state.sel ? ' sel' : '') + (r.top_nah_fern ? ' nf' : r.top_fern_nah ? ' fn' : ''))
-      .attr('cx', (r) => x(r.dist_km)).attr('cy', (r) => y(r.t_tc)).attr('r', (r) => rad(r.population))
-      .attr('fill', (r) => classify(sc, r).c)
-      .on('click', (e, r) => selectUnit(r.unit_id, true))
-      .on('mousemove', (e, r) => showTip(tipHTML(sc, r), e))
+      .attr('class', (r) => 'dot' + (r.id === o.selId ? ' sel' : '') + (r.id === o.destId ? ' dest' : '') + (r.cls ? ' ' + r.cls : ''))
+      .attr('cx', (r) => x(r.dist)).attr('cy', (r) => y(r.t)).attr('r', (r) => rad(r.pop))
+      .attr('fill', (r) => r.color)
+      .on('click', (e, r) => o.onClick(r))
+      .on('mousemove', (e, r) => o.tip(r, e))
       .on('mouseleave', () => showTip(null));
     g.selectAll('circle.sel').raise();
+    g.selectAll('circle.dest').raise();
+  }
+
+  function drawScatter(ds, sc) {
+    const rs = ds.raw.results[state.point].filter((r) => r.t_tc != null && finite(r.dist_km));
+    scatterCore($('#scatter'), rs.map((r) => ({ id: r.unit_id, dist: r.dist_km, t: r.t_tc, pop: r.population, color: classify(sc, r).c, cls: r.top_nah_fern ? 'nf' : r.top_fern_nah ? 'fn' : '', data: r })), {
+      maxPop: ds.maxPop, th: ds.meta.thresholds, selId: state.sel,
+      onClick: (row) => selectUnit(row.id, true),
+      tip: (row, e) => showTip(tipHTML(sc, row.data), e)
+    });
   }
 
   /* ------------------------------------------------------------------ selection */
@@ -965,10 +986,404 @@
     cmpB.map.jumpTo({ center: cmpB.originLL, zoom: z + Math.log2(Math.cos((cmpB.originLL[1] * Math.PI) / 180) / Math.cos((cmpA.originLL[1] * Math.PI) / 180)) });
   }
 
+  /* ------------------------------------------------------------------ phase 2: all communes of a region */
+  const P2_INDS = ['v_eff_popweighted_kmh', 't_p50_median', 'ratio_tc_car_median'];
+  const p2cache = new Map();
+  let allView = null;
+  let allCur = null; // {p2, sc, o, d}
+  let tableToken = 0;
+
+  function preparePhase2(raw) {
+    const ids = raw.matrix.ids;
+    const N = ids.length;
+    const feats = raw.units.features;
+    const props = feats.map((f) => f.properties);
+    let x0 = Infinity, y0 = Infinity, x1 = -Infinity, y1 = -Infinity;
+    for (const f of feats) for (const poly of f.geometry.coordinates) for (const ring of poly) for (const c of ring) {
+      if (c[0] < x0) x0 = c[0]; if (c[0] > x1) x1 = c[0]; if (c[1] < y0) y0 = c[1]; if (c[1] > y1) y1 = c[1];
+    }
+    return {
+      raw, meta: raw.meta, N, ids, feats, props,
+      idIdx: new Map(ids.map((id, i) => [id, i])),
+      T: raw.matrix.t_p50, C: raw.matrix.car, D: raw.matrix.dist,
+      bbox: [[x0, y0], [x1, y1]],
+      maxPop: d3.max(props, (p) => p.population) || 1
+    };
+  }
+
+  function loadPhase2(regionId) {
+    if (!p2cache.has(regionId)) {
+      const e = INDEX.phase2.find((x) => x.region.id === regionId);
+      p2cache.set(regionId, fetch('data/' + e.file).then((r) => {
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        return r.json();
+      }).then(preparePhase2));
+    }
+    return p2cache.get(regionId);
+  }
+
+  /** matrix values for origin o and destination d (indices); dir 'von' = row o, 'nach' = column o. -1 means no value. */
+  function pv(p2, o, d, dir) {
+    const k = dir === 'von' ? o * p2.N + d : d * p2.N + o;
+    const t = p2.T[k], c = p2.C[k], dist = p2.D[o * p2.N + d];
+    return { t: t < 0 ? null : t, car: c < 0 ? null : c, dist: dist < 0 ? null : dist };
+  }
+
+  function buildAllScale(ind, props) {
+    const vals = props.map((p) => p[ind]).filter(finite).sort(d3.ascending);
+    const q = (f) => d3.quantileSorted(vals, f);
+    const vmin = vals[0], vmax = vals[vals.length - 1];
+    let lo, hi, interp, fd = 0;
+    if (ind === 'v_eff_popweighted_kmh') {
+      lo = Math.floor(q(0.02)); hi = Math.ceil(q(0.98));
+      interp = (u) => d3.interpolateYlGnBu(0.08 + 0.92 * u);
+    } else if (ind === 't_p50_median') {
+      lo = Math.floor(q(0.02) / 10) * 10; hi = Math.ceil(q(0.98) / 10) * 10;
+      interp = (u) => d3.interpolateYlOrRd(0.07 + 0.93 * u);
+    } else {
+      lo = Math.floor(vmin); hi = Math.ceil(q(0.98));
+      interp = (u) => d3.interpolateBuPu(0.08 + 0.92 * u);
+    }
+    if (hi <= lo) hi = lo + 1;
+    if (hi - lo < 8) fd = 1;
+    const ticks = d3.range(5).map((k) => lo + ((hi - lo) * k) / 4);
+    return {
+      ind, type: 'seq', domain: [lo, hi], ticks, clipHi: vmax > hi, clipLo: vmin < lo,
+      fn: (v) => interp(clamp((v - lo) / (hi - lo), 0, 1)), fmt: (v) => num(v, fd), legendKey: 'legend_all_' + ind
+    };
+  }
+
+  function dirText(name) {
+    return T('all_dir_' + state.all.dir + '_txt', { name });
+  }
+
+  class AllView {
+    constructor(el) {
+      this.el = el;
+      this.p2 = null;
+      this.marks = [];
+      this.onClick = null;
+      this.onHover = null;
+      this.ready = new Promise((resolve) => {
+        this.map = new maplibregl.Map({
+          container: el,
+          style: { version: 8, sources: {}, layers: [{ id: 'bg', type: 'background', paint: { 'background-color': BG } }] },
+          center: [8.5, 50.1], zoom: 8, minZoom: 5, maxZoom: 13,
+          attributionControl: false, dragRotate: false, pitchWithRotate: false, renderWorldCopies: false, fadeDuration: 0
+        });
+        this.map.touchZoomRotate.disableRotation();
+        this.map.keyboard.disableRotation();
+        this.map.addControl(new maplibregl.NavigationControl({ showCompass: false }), 'top-right');
+        this.map.on('load', () => { this._init(); resolve(); });
+      });
+    }
+    _init() {
+      const map = this.map;
+      map.addImage('hatch', makeHatch(), { pixelRatio: 2 });
+      map.addSource('units', { type: 'geojson', data: { type: 'FeatureCollection', features: [] }, promoteId: 'i', tolerance: 0.2 });
+      map.addLayer({ id: 'fill', type: 'fill', source: 'units', paint: { 'fill-color': ['coalesce', ['feature-state', 'c'], NA_COLOR], 'fill-opacity': 0.88 } });
+      map.addLayer({ id: 'hatch', type: 'fill', source: 'units', paint: { 'fill-pattern': 'hatch', 'fill-opacity': ['case', ['==', ['feature-state', 'un'], true], 0.9, 0] } });
+      map.addLayer({ id: 'line', type: 'line', source: 'units', paint: { 'line-color': '#ffffff', 'line-width': 0.6, 'line-opacity': 0.85 } });
+      map.addLayer({ id: 'dest-line', type: 'line', source: 'units', filter: ['==', ['get', 'i'], -1], paint: { 'line-color': '#f59e0b', 'line-width': 4 } });
+      map.addLayer({ id: 'sel-line', type: 'line', source: 'units', filter: ['==', ['get', 'i'], -1], paint: { 'line-color': '#111827', 'line-width': 3 } });
+      map.on('click', (e) => {
+        const f = map.queryRenderedFeatures(e.point, { layers: ['fill'] })[0];
+        if (this.onClick) this.onClick(f ? f.properties.i : null);
+      });
+      map.on('mousemove', (e) => {
+        const f = map.queryRenderedFeatures(e.point, { layers: ['fill'] })[0];
+        map.getCanvas().style.cursor = f ? 'pointer' : '';
+        if (this.onHover) this.onHover(f ? f.properties.i : null, e.originalEvent);
+      });
+      map.on('mouseout', () => { if (this.onHover) this.onHover(null, null); });
+    }
+    fit(duration) {
+      if (!this.p2) return;
+      this.map.resize();
+      this.map.fitBounds(this.p2.bbox, { padding: 18, duration: duration || 0 });
+    }
+    setRegion(p2) {
+      this.p2 = p2;
+      this.map.removeFeatureState({ source: 'units' });
+      this.map.getSource('units').setData({ type: 'FeatureCollection', features: p2.feats });
+      this.fit(0);
+    }
+    paint(colors) {
+      const map = this.map;
+      for (let i = 0; i < colors.length; i++) map.setFeatureState({ source: 'units', id: i }, { c: colors[i].c, un: !!colors[i].un });
+    }
+    setSel(o, d) {
+      const f = (i) => ['==', ['get', 'i'], i == null ? -1 : i];
+      this.map.setFilter('sel-line', f(o));
+      this.map.setFilter('dest-line', f(d));
+      this.marks.forEach((m) => m.remove());
+      this.marks = [];
+      const add = (i, cls) => {
+        if (i == null) return;
+        const p = this.p2.props[i];
+        const el = document.createElement('div');
+        el.className = 'maplbl sel ' + cls;
+        el.textContent = p.name;
+        this.marks.push(new maplibregl.Marker({ element: el, anchor: 'bottom', offset: [0, -4] }).setLngLat([p.lon, p.lat]).addTo(this.map));
+      };
+      add(o, 'o');
+      if (d != null && d !== o) add(d, 'd');
+    }
+  }
+
+  function fillAllControls() {
+    if (!INDEX || !INDEX.phase2) return;
+    $('#sel-region').innerHTML = INDEX.phase2.map((e) => '<option value="' + e.region.id + '"' + (e.region.id === state.all.region ? ' selected' : '') + '>' + esc(e.region[state.lang] + ' (' + e.country + ')') + '</option>').join('');
+    $('#sel-all-ind').innerHTML = P2_INDS.map((k) => '<option value="' + k + '"' + (k === state.all.ind ? ' selected' : '') + '>' + esc(T('all_ind_' + k)) + '</option>').join('');
+  }
+
+  function levelTxt(p) { return T(p.level === 'district' ? 'd_level_district' : 'd_level_commune'); }
+
+  function allTipHTML(p2, i) {
+    const a = state.all;
+    const p = p2.props[i];
+    const lvl = p.level === 'district' ? ' <span class="lvl">' + esc(T('d_level_district')) + '</span>' : '';
+    const o = allCur ? allCur.o : null;
+    let body;
+    if (o == null) {
+      const v = p[a.ind];
+      const unit = a.ind === 'v_eff_popweighted_kmh' ? ' ' + T('unit_kmh') : a.ind === 't_p50_median' ? ' ' + T('unit_min') : '×';
+      body = '<div>' + esc(T('all_ind_' + a.ind)) + ': ' + esc(finite(v) ? num(v, 1) + unit : '–') + '</div><div>' + esc(num(p.population, 0)) + ' ' + esc(T('unit_persons')) + '</div>';
+    } else if (i === o) {
+      body = '<div>' + esc(T('d_origin_commune')) + '</div>';
+    } else {
+      const v = pv(p2, o, i, a.dir);
+      body = '<div>' + esc(T('tip_dist')) + ': ' + esc(num(v.dist, 1)) + ' ' + T('unit_km') + '</div>' +
+        '<div>' + esc(T('tip_time')) + ' ' + esc(T('tc')) + ': ' + esc(v.t == null ? T('a_no_value') : num(v.t, 0) + ' ' + T('unit_min')) + '</div>' +
+        '<div>' + esc(T('tip_car')) + ': ' + esc(v.car == null ? '–' : num(v.car, 1) + ' ' + T('unit_min')) + '</div>' +
+        '<div>' + esc(T('tip_ratio')) + ' ' + esc(T('tc')) + '/' + esc(T('tip_car')) + ': ' + esc(v.t != null && v.car ? num(v.t / v.car, 1) + '×' : '–') + '</div>' +
+        '<div class="muted">' + esc(dirText(p2.props[o].name)) + '</div>';
+    }
+    return '<strong>' + esc(p.name) + '</strong>' + lvl + body;
+  }
+
+  function renderAllSummary(p2) {
+    const m = p2.meta, s = m.summary;
+    const stat = (k, v, sub) => '<div class="stat"><div class="k">' + esc(k) + '</div><div class="v">' + v + '</div><div class="s">' + esc(sub || '') + '</div></div>';
+    $('#all-summary').innerHTML =
+      '<div class="sum-head"><h2>' + esc(m.region[state.lang]) + '</h2><p>' + esc(T('all_sum_sub_core', { c: m.core_city, r: num(m.radius_km, 0) })) + '</p></div><div class="stats">' +
+      stat(T('all_sum_n_units'), esc(num(s.n_units, 0)), '') +
+      stat(T('all_sum_n_pairs'), esc(num(s.n_pairs, 0)), T('all_sum_n_pairs_sub', { n: num(s.n_pairs_unreached, 0) })) +
+      stat(T('all_sum_t'), esc(num(s.t_p50_median, 1)) + ' <small>' + T('unit_min') + '</small>', '') +
+      stat(T('all_sum_v'), esc(num(s.v_eff_median_kmh, 1)) + ' <small>' + T('unit_kmh') + '</small>', '') +
+      stat(T('all_sum_spearman'), esc(num(s.spearman_dist_time, 2, 2)), T('sum_spearman_sub')) +
+      stat(T('all_sum_ratio'), esc(num(s.ratio_tc_car_median, 1)) + '<small>×</small>', T('sum_ratio_sub')) +
+      stat(T('all_sum_dead'), esc(pct(s.share_dead_zone_pairs_below_dist, 1)), T('all_sum_dead_sub', { d: num(m.thresholds.dead_zone_max_km, 0) })) +
+      '</div>';
+  }
+
+  function renderAllDetail(p2, o, d) {
+    const el = $('#all-detail');
+    if (o == null) {
+      el.innerHTML = '<h2>' + esc(T('all_card_title')) + '</h2><p class="caption">' + esc(T('all_card_empty')) + '</p>';
+      return;
+    }
+    const p = p2.props[o];
+    const row = (k, v) => '<div class="row"><dt>' + esc(k) + '</dt><dd>' + v + '</dd></div>';
+    let pair = '';
+    if (d != null && d !== o) {
+      const q = p2.props[d];
+      const v = pv(p2, o, d, state.all.dir);
+      pair = '<h3>' + esc(T('a_pair', { a: p.name, b: q.name })) + '</h3><p class="caption">' + esc(T('a_pair_dir_' + state.all.dir, { a: p.name, b: q.name })) + '</p><dl id="all-pair-dl">' +
+        row(T('a_dist'), '<span data-k="dist">' + esc(num(v.dist, 2)) + '</span> ' + T('unit_km')) +
+        row(T('a_time'), v.t == null ? esc(T('a_no_value')) : '<strong data-k="t">' + esc(num(v.t, 0)) + '</strong> ' + T('unit_min')) +
+        row(T('a_car'), v.car == null ? '–' : '<span data-k="car">' + esc(num(v.car, 1)) + '</span> ' + T('unit_min')) +
+        row(T('a_ratio_pair'), v.t != null && v.car ? esc(num(v.t / v.car, 1)) + '×' : '–') +
+        row(T('a_veff_pair'), v.t ? esc(num((v.dist / v.t) * 60, 1)) + ' ' + T('unit_kmh') : '–') +
+        '</dl><button type="button" class="reset-btn" id="all-clear-dest">' + esc(T('a_clear_dest')) + '</button>';
+    }
+    el.innerHTML =
+      '<div class="card-head"><h2>' + esc(p.name) + '</h2><button type="button" class="x" id="all-detail-close" aria-label="' + esc(T('all_clear')) + '" title="' + esc(T('all_clear')) + '">×</button></div>' +
+      '<p class="caption">' + esc(levelTxt(p)) + ' · ' + esc(num(p.population, 0)) + ' ' + esc(T('d_pop')) + '</p><dl>' +
+      row(T('a_n_reached'), esc(num(p.n_reached, 0))) +
+      row(T('a_n_unreached'), esc(num(p.n_unreached, 0))) +
+      row(T('a_t_median'), esc(num(p.t_p50_median, 0)) + ' ' + T('unit_min')) +
+      row(T('a_v_median'), esc(num(p.v_eff_median_kmh, 1)) + ' ' + T('unit_kmh')) +
+      row(T('a_v_pw'), esc(num(p.v_eff_popweighted_kmh, 1)) + ' ' + T('unit_kmh')) +
+      row(T('a_spearman'), finite(p.spearman_dist_time) ? esc(num(p.spearman_dist_time, 2, 2)) : '–') +
+      row(T('a_ratio'), esc(num(p.ratio_tc_car_median, 1)) + '×') +
+      row(T('a_dead'), esc(num(p.n_dead_zones, 0))) +
+      '</dl>' + pair;
+  }
+
+  function renderAllScatter(p2, o, sc) {
+    const el = $('#scatter-all');
+    const note = $('#all-scatter-note');
+    if (o == null) {
+      el.innerHTML = '<p class="caption pad">' + esc(T('all_scatter_empty')) + '</p>';
+      note.textContent = '';
+      return;
+    }
+    const a = state.all;
+    const rows = [];
+    let unr = 0;
+    for (let d = 0; d < p2.N; d++) {
+      if (d === o) continue;
+      const v = pv(p2, o, d, a.dir);
+      if (v.t == null || v.dist == null) { unr++; continue; }
+      rows.push({ id: d, dist: v.dist, t: v.t, pop: p2.props[d].population, color: sc.fn(v.t), cls: '', data: d });
+    }
+    note.textContent = T('all_scatter_note', { n: num(unr, 0) });
+    scatterCore(el, rows, {
+      maxPop: p2.maxPop, th: p2.meta.thresholds, selId: null, destId: a.dest != null ? a.dest : null,
+      onClick: (row) => setAllDest(row.id === state.all.dest ? null : row.id),
+      tip: (row, e) => showTip(allTipHTML(p2, row.data), e)
+    });
+  }
+
+  function renderAllPairs(p2) {
+    const a = state.all;
+    const rows = p2.raw.pairs_top.filter((r) => r.kind === a.tab);
+    const tab = (k) => '<button type="button" role="tab" data-tab="' + k + '" aria-selected="' + (a.tab === k) + '" class="tab' + (a.tab === k ? ' on' : '') + '">' + esc(T(k === 'nah_fern' ? 'pairs_nf' : 'pairs_fn')) + '</button>';
+    $('#all-pairs').innerHTML = '<h2>' + esc(T('pairs_title')) + '</h2><div class="tabs" role="tablist">' + tab('nah_fern') + tab('fern_nah') + '</div>' +
+      '<p class="caption">' + esc(T(a.tab === 'nah_fern' ? 'pairs_nf_sub' : 'pairs_fn_sub')) + '. ' + esc(T('pairs_hint')) + '</p>' +
+      '<ol class="pairlist">' + rows.map((r, i) =>
+        '<li><button type="button" class="pairbtn" data-from="' + esc(r.from_id) + '" data-to="' + esc(r.to_id) + '">' +
+        '<span class="rk">' + (i + 1) + '</span><span class="nm">' + esc(r.from_name) + ' → ' + esc(r.to_name) + '</span>' +
+        '<span class="mt">' + esc(num(r.dist_km, 1)) + ' ' + T('unit_km') + ' · ' + esc(num(r.t_p50, 0)) + ' ' + T('unit_min') + ' · ' + esc(num(r.v_eff_kmh, 1)) + ' ' + T('unit_kmh') + '</span></button></li>').join('') + '</ol>';
+  }
+
+  async function renderAllTable() {
+    const el = $('#all-table');
+    const my = ++tableToken;
+    el.innerHTML = '<p class="caption">' + esc(T('all_table_loading')) + '</p>';
+    let list;
+    try { list = await Promise.all(INDEX.phase2.map((e) => loadPhase2(e.region.id))); } catch (e) { console.error(e); return; }
+    if (my !== tableToken) return;
+    const rn = (p2) => esc(p2.meta.region[state.lang]);
+    const sumRow = (label, fn) => '<tr><th scope="row">' + esc(label) + '</th>' + list.map((p2) => '<td>' + fn(p2.meta.summary, p2.meta) + '</td>').join('') + '</tr>';
+    let h = '<table class="cmp-table"><thead><tr><th scope="col">' + esc(T('all_table_metric')) + '</th>' + list.map((p2) => '<th scope="col">' + rn(p2) + '</th>').join('') + '</tr></thead><tbody>' +
+      sumRow(T('all_sum_n_units'), (s) => esc(num(s.n_units, 0))) +
+      sumRow(T('all_sum_n_pairs'), (s) => esc(num(s.n_pairs, 0))) +
+      sumRow(T('a_n_unreached') + ' (' + T('all_sum_n_pairs') + ')', (s) => esc(num(s.n_pairs_unreached, 0))) +
+      sumRow(T('all_sum_t') + ' (' + T('unit_min') + ')', (s) => esc(num(s.t_p50_median, 1))) +
+      sumRow(T('all_sum_v') + ' (' + T('unit_kmh') + ')', (s) => esc(num(s.v_eff_median_kmh, 1))) +
+      sumRow(T('all_sum_spearman'), (s) => esc(num(s.spearman_dist_time, 2, 2))) +
+      sumRow(T('all_sum_ratio'), (s) => esc(num(s.ratio_tc_car_median, 1)) + '×') +
+      sumRow(T('all_sum_dead') + ' (' + T('all_sum_dead_sub', { d: num(list[0].meta.thresholds.dead_zone_max_km, 0) }) + ')', (s) => esc(pct(s.share_dead_zone_pairs_below_dist, 1))) +
+      '</tbody></table>';
+    // by distance band
+    const keys = [];
+    for (const p2 of list) for (const k of Object.keys(p2.raw.by_band)) if (!keys.includes(k)) keys.push(k);
+    const lo = (k) => { const m = /(\d+)/.exec(k); return m ? +m[1] : 0; };
+    keys.sort((x, y) => lo(x) - lo(y));
+    const label = (k) => { const m = /^\[(\d+),\s*(\d+)\)$/.exec(k); return m ? T('all_band_label', { a: m[1], b: m[2] }) : k; };
+    h += '<h3>' + esc(T('all_table_bands')) + '</h3><table class="cmp-table bands"><thead><tr><th rowspan="2" scope="col">' + esc(T('all_table_metric')) + '</th>' +
+      list.map((p2) => '<th colspan="4" scope="colgroup" class="grp">' + rn(p2) + '</th>').join('') + '</tr><tr>' +
+      list.map(() => ['n', 't', 'v', 'r'].map((c) => '<th scope="col" class="sub">' + esc(T('all_band_col_' + c)) + '</th>').join('')).join('') + '</tr></thead><tbody>' +
+      keys.map((k) => '<tr><th scope="row">' + esc(label(k)) + '</th>' + list.map((p2) => {
+        const b = p2.raw.by_band[k];
+        if (!b) return '<td>–</td><td>–</td><td>–</td><td>–</td>';
+        return '<td>' + esc(num(b.n, 0)) + '</td><td>' + esc(num(b.t_p50_median, 0)) + '</td><td>' + esc(num(b.v_eff_median, 1)) + '</td><td>' + esc(num(b.ratio_tc_car_median, 1)) + '×</td>';
+      }).join('') + '</tr>').join('') + '</tbody></table><p class="caption">' + esc(T('all_bands_note')) + '</p>';
+    el.innerHTML = h;
+    renderFooter(list);
+  }
+
+  async function renderAll(opts) {
+    opts = opts || {};
+    const my = ++token;
+    const a = state.all;
+    if (!a.region) a.region = INDEX.phase2[0].region.id;
+    const loading = $('#loading-all');
+    loading.hidden = false;
+    loading.textContent = T('loading');
+    let p2;
+    try { p2 = await loadPhase2(a.region); } catch (e) { loading.textContent = T('load_error') + ' ' + e.message; throw e; }
+    if (my !== token) return;
+    if (!allView) {
+      allView = new AllView($('#map-all'));
+      allView.onClick = (i) => {
+        if (i == null || !allCur) return;
+        const id = allCur.p2.ids[i];
+        if (state.all.origin === id) setAllOrigin(null); else setAllOrigin(id);
+      };
+      allView.onHover = (i, evt) => {
+        if (i == null || !evt || !allCur) return showTip(null);
+        showTip(allTipHTML(allCur.p2, i), evt);
+      };
+    }
+    await allView.ready;
+    if (my !== token) return;
+    loading.hidden = true;
+    if (allView.p2 !== p2) allView.setRegion(p2); else if (opts.camera) allView.fit(0);
+    const o = a.origin != null && p2.idIdx.has(a.origin) ? p2.idIdx.get(a.origin) : null;
+    if (o == null) { a.origin = null; a.dest = null; }
+    let d = o != null && a.dest != null && p2.idIdx.has(a.dest) ? p2.idIdx.get(a.dest) : null;
+    if (d == null) a.dest = null;
+    // colours
+    let sc, colors, anyUn = false;
+    if (o == null) {
+      sc = buildAllScale(a.ind, p2.props);
+      colors = p2.props.map((p) => (finite(p[a.ind]) ? { c: sc.fn(p[a.ind]) } : { c: NA_COLOR }));
+    } else {
+      sc = buildScale('t_tc', [{ t_tc: 180 }], false);
+      sc.legendKey = 'legend_all_time';
+      sc.legendParams = { dir: T('all_dir_' + a.dir + '_short') };
+      colors = new Array(p2.N);
+      for (let i = 0; i < p2.N; i++) {
+        if (i === o) { colors[i] = { c: NA_COLOR }; continue; }
+        const t = pv(p2, o, i, a.dir).t;
+        if (t == null) { colors[i] = { c: UNREACH_COLOR, un: true }; anyUn = true; } else colors[i] = { c: sc.fn(t) };
+      }
+    }
+    allCur = { p2, sc, o, d, colors };
+    showTip(null);
+    allView.paint(colors);
+    allView.setSel(o, d);
+    // legend, hint, controls
+    let extra = '';
+    if (o != null) extra += '<span class="lg-item"><i class="sw origin"></i>' + esc(T('legend_origin')) + '</span>';
+    if (d != null) extra += '<span class="lg-item"><i class="sw dest"></i>' + esc(T('legend_dest')) + '</span>';
+    $('#legend-all').innerHTML = legendHTML(sc, [], { unreach: anyUn, na: false, tags: false, extra });
+    $('#hint-all').textContent = o == null ? T('hint_all_' + a.ind) : T('hint_all_origin', { dir: dirText(p2.props[o].name) });
+    $('#ctl-all-ind').hidden = o != null;
+    $('#ctl-dir').hidden = o == null;
+    $('#all-clear').hidden = o == null;
+    $$('#dir-group button').forEach((b) => { b.textContent = T('all_dir_' + b.dataset.dir); b.setAttribute('aria-pressed', String(b.dataset.dir === a.dir)); });
+    $('#sel-all-ind').value = a.ind;
+    $('#sel-region').value = a.region;
+    $('#dl-all').innerHTML = p2.props.map((p) => '<option value="' + esc(p.name) + '"></option>').join('');
+    renderAllSummary(p2);
+    renderAllDetail(p2, o, d);
+    renderAllScatter(p2, o, sc);
+    renderAllPairs(p2);
+    $('#announce').textContent = o != null ? T('selected_announce', { name: p2.props[o].name }) : '';
+    writeUrl();
+    if (opts.table !== false) renderAllTable();
+  }
+
+  function setAllOrigin(id, dest, dir) {
+    state.all.origin = id;
+    state.all.dest = dest || null;
+    if (dir) state.all.dir = dir;
+    $('#all-search').value = '';
+    renderAll({ table: false });
+  }
+  function setAllDest(id) {
+    state.all.dest = id == null ? null : allCur.p2.ids[id];
+    renderAll({ table: false });
+  }
+
+  function openAll(regionId, unitId) {
+    const e = INDEX.phase2.find((x) => x.region.id === regionId) || INDEX.phase2[0];
+    state.all.region = e.region.id;
+    state.all.origin = unitId || null;
+    state.all.dest = null;
+    if (state.mode === 'all') renderAll(); else setMode('all');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
   /* ------------------------------------------------------------------ top-level actions */
   async function refresh(opts) {
     try {
       if (state.mode === 'single') await renderSingle(opts);
+      else if (state.mode === 'all') await renderAll(opts);
       else await renderCompare(opts);
     } catch (e) { console.error(e); }
     writeUrl();
@@ -997,17 +1412,20 @@
     if (state.mode === mode) return;
     state.mode = mode;
     $$('#mode-group button').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.mode === mode)));
-    const cmp = mode === 'compare';
-    $('#single').hidden = cmp;
-    $('#compare').hidden = !cmp;
-    $('#ctl-origin').hidden = cmp;
-    $('#ctl-cmp').hidden = !cmp;
-    $('#ctl-cmp2').hidden = !cmp;
+    const is = (k) => mode === k;
+    $('#single').hidden = !is('single');
+    $('#compare').hidden = !is('compare');
+    $('#all').hidden = !is('all');
+    $('#ctl-origin').hidden = !is('single');
+    $('#ctl-cmp').hidden = !is('compare');
+    $('#ctl-cmp2').hidden = !is('compare');
+    $('#ctl-region').hidden = !is('all');
+    for (const id of ['ctl-point', 'ctl-ind', 'ctl-view', 'ctl-ov']) $('#' + id).hidden = is('all');
     $('#tooltip').hidden = true;
-    if (cmp) ensureCompareViews();
+    if (is('compare')) ensureCompareViews();
     // views created before the mode switch keep the current progress
     refresh({ reload: true, camera: true });
-    if (!cmp) setTimeout(() => mainView.map.resize(), 0);
+    if (is('single')) setTimeout(() => mainView.map.resize(), 0);
   }
 
   function ensureCompareViews() {
@@ -1037,7 +1455,14 @@
       const q = new URLSearchParams();
       q.set('lang', state.lang);
       q.set('mode', state.mode);
-      if (state.mode === 'single') q.set('o', state.slug); else { q.set('fr', state.cmp.fr); q.set('de', state.cmp.de); }
+      if (state.mode === 'single') q.set('o', state.slug);
+      else if (state.mode === 'compare') { q.set('fr', state.cmp.fr); q.set('de', state.cmp.de); }
+      else {
+        q.set('reg', state.all.region || '');
+        if (state.all.origin) { q.set('u', state.all.origin); q.set('dir', state.all.dir); }
+        if (state.all.dest) q.set('d', state.all.dest);
+        q.set('aind', state.all.ind);
+      }
       q.set('p', state.point);
       q.set('ind', state.ind);
       q.set('view', state.view);
@@ -1060,6 +1485,15 @@
     if (IND_KEYS.includes(q.get('ind'))) state.ind = q.get('ind');
     if (q.get('view') === 'time') { state.view = 'time'; progress = 1; }
     if (q.get('mode') === 'compare') state.mode = 'compare';
+    if (q.get('mode') === 'all' && INDEX.phase2) state.mode = 'all';
+    if (INDEX.phase2) {
+      const rid = q.get('reg');
+      if (INDEX.phase2.some((e) => e.region.id === rid)) state.all.region = rid;
+      if (q.get('u')) state.all.origin = q.get('u');
+      if (q.get('d')) state.all.dest = q.get('d');
+      if (q.get('dir') === 'nach') state.all.dir = 'nach';
+      if (P2_INDS.includes(q.get('aind'))) state.all.ind = q.get('aind');
+    }
   }
 
   /* ------------------------------------------------------------------ events */
@@ -1117,14 +1551,51 @@
       if (!id || !evt || !cur) return showTip(null);
       showTip(tipHTML(cur.scale, cur.ds.res[state.point].get(id)), evt);
     };
+    $('#sel-region').addEventListener('change', (e) => { state.all.region = e.target.value; state.all.origin = null; state.all.dest = null; renderAll({ camera: true }); });
+    $('#sel-all-ind').addEventListener('change', (e) => { state.all.ind = e.target.value; renderAll({ table: false }); });
+    $$('#dir-group button').forEach((b) => b.addEventListener('click', () => { state.all.dir = b.dataset.dir; renderAll({ table: false }); }));
+    $('#all-clear').addEventListener('click', () => setAllOrigin(null));
+    $('#all-search').addEventListener('change', (e) => {
+      if (!allCur) return;
+      const v = e.target.value.trim().toLowerCase();
+      const hit = allCur.p2.props.find((p) => p.name.toLowerCase() === v);
+      if (hit) setAllOrigin(hit.unit_id);
+    });
+    document.addEventListener('click', (e) => {
+      const t = e.target.closest ? e.target : null;
+      if (!t) return;
+      const pb = t.closest('.pairbtn');
+      if (pb) {
+        setAllOrigin(pb.dataset.from, pb.dataset.to, 'von');
+        const r = $('#map-all').getBoundingClientRect();
+        if (r.top < 0 || r.bottom > window.innerHeight) $('#all .grid').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }
+      const tab = t.closest('#all-pairs .tab');
+      if (tab && allCur) { state.all.tab = tab.dataset.tab; renderAllPairs(allCur.p2); }
+      if (t.closest('#all-detail-close')) setAllOrigin(null);
+      if (t.closest('#all-clear-dest') && allCur) setAllDest(null);
+      if (t.closest('#to-all') && cur) {
+        const r = cur.ds.raw.results[state.point].find((x) => x.is_origin_commune);
+        openAll(cur.ds.meta.region.id, r ? r.unit_id : null);
+      }
+    });
     let rt = null;
     if (window.ResizeObserver) {
       new ResizeObserver(() => {
         clearTimeout(rt);
-        rt = setTimeout(() => { if (cur && state.mode === 'single') drawScatter(cur.ds, cur.scale); }, 120);
+        rt = setTimeout(() => {
+          if (cur && state.mode === 'single') drawScatter(cur.ds, cur.scale);
+          if (allCur && state.mode === 'all') renderAllScatter(allCur.p2, allCur.o, allCur.sc);
+        }, 120);
       }).observe($('#scatter'));
+    if (window.ResizeObserver) new ResizeObserver(() => { clearTimeout(rt); rt = setTimeout(() => { if (allCur && state.mode === 'all') renderAllScatter(allCur.p2, allCur.o, allCur.sc); }, 120); }).observe($('#scatter-all'));
     }
-    document.addEventListener('keydown', (e) => { if (e.key === 'Escape') { showTip(null); if (state.sel) selectUnit(null); } });
+    document.addEventListener('keydown', (e) => {
+      if (e.key !== 'Escape') return;
+      showTip(null);
+      if (state.mode === 'single' && state.sel) selectUnit(null);
+      else if (state.mode === 'all' && state.all.origin) setAllOrigin(null);
+    });
   }
 
   /* ------------------------------------------------------------------ boot */
@@ -1136,6 +1607,8 @@
       throw e;
     }
     // DE first, then FR
+    if (!INDEX.phase2) $('#mode-group button[data-mode=all]').hidden = true;
+    else state.all.region = INDEX.phase2[0].region.id;
     INDEX.origins.sort((a, b) => (a.country === b.country ? 0 : a.country === 'DE' ? -1 : 1));
     const k = INDEX.origins.find((o) => o.slug === 'kronberg');
     state.slug = k ? k.slug : INDEX.origins[0].slug;
@@ -1148,12 +1621,12 @@
     bind();
     const startMode = state.mode;
     state.mode = 'single';
-    if (startMode === 'compare') setMode('compare');
+    if (startMode !== 'single') setMode(startMode);
     else await refresh({ reload: true, camera: true });
     document.body.dataset.progress = String(progress);
     document.body.dataset.ready = '1';
   }
 
-  window.snf = { state, get progress() { return progress; }, get views() { return { mainView, cmpA, cmpB }; }, get cur() { return cur; }, buildScale, valueOf, geodesicCircle };
+  window.snf = { state, get all() { return { view: allView, cur: allCur, p2cache }; }, get progress() { return progress; }, get views() { return { mainView, cmpA, cmpB }; }, get cur() { return cur; }, buildScale, valueOf, geodesicCircle };
   boot().catch((e) => console.error(e));
 })();
