@@ -1,0 +1,51 @@
+kind,from_id,from_name,to_id,to_name,dist_km,t_p50,car_time,v_eff_kmh
+nah_fern,06433010,Raunheim,06436004,Flörsheim am Main,1.63,63.00,7.61,1.55
+nah_fern,09671114,Karlstein a.Main,06438013,Seligenstadt,2.60,78.00,7.41,2.00
+nah_fern,06435019,Maintal,06438008,Mühlheim am Main,1.94,53.00,17.63,2.20
+nah_fern,FFM-STT-32,Berkersheim,FFM-STT-44,Harheim,1.05,25.00,14.46,2.51
+nah_fern,06435013,Hammersbach,06435024,Ronneburg,4.17,90.00,5.32,2.78
+nah_fern,FFM-STT-38,Sindlingen,06433007,Kelsterbach,2.02,42.00,10.42,2.88
+nah_fern,09671114,Karlstein a.Main,06438007,Mainhausen,3.81,79.00,10.82,2.89
+nah_fern,06435026,Schöneck,06435021,Nidderau,2.76,57.00,5.49,2.90
+nah_fern,FFM-STT-39,Zeilsheim,06436010,Liederbach am Taunus,2.39,48.00,8.46,2.99
+nah_fern,06436002,Eppstein,06436008,Kelkheim (Taunus),4.01,80.00,8.71,3.01
+nah_fern,FFM-STT-17,Niederrad,FFM-STT-11,Gallus,1.73,34.00,9.54,3.05
+nah_fern,06436006,Hochheim am Main,06433002,Bischofsheim,2.46,48.00,9.51,3.07
+nah_fern,06435011,Großkrotzenburg,06438004,Hainburg,2.86,55.00,6.77,3.12
+nah_fern,06440002,Bad Nauheim,06440018,Ober-Mörlen,3.07,59.00,9.54,3.12
+nah_fern,06436012,Sulzbach (Taunus),06436010,Liederbach am Taunus,3.06,58.00,6.92,3.16
+nah_fern,06433012,Rüsselsheim am Main,06436004,Flörsheim am Main,2.48,44.00,7.17,3.38
+nah_fern,FFM-STT-6,Nordend-West,FFM-STT-5,Westend-Nord,0.73,13.00,6.09,3.39
+nah_fern,FFM-STT-13,Sachsenhausen-Nord,FFM-STT-10,Gutleutviertel,1.08,19.00,4.50,3.40
+nah_fern,FFM-STT-3,Bahnhofsviertel,FFM-STT-10,Gutleutviertel,0.92,16.00,2.89,3.46
+nah_fern,FFM-STT-4,Westend-Süd,FFM-STT-3,Bahnhofsviertel,0.87,15.00,4.50,3.48
+nah_fern,FFM-STT-19,Griesheim,FFM-STT-18,Schwanheim,1.86,32.00,11.04,3.49
+nah_fern,FFM-STT-28,Eschersheim,FFM-STT-24,Heddernheim,0.70,12.00,4.56,3.52
+nah_fern,FFM-STT-3,Bahnhofsviertel,FFM-STT-13,Sachsenhausen-Nord,1.20,20.00,3.90,3.59
+nah_fern,06436005,Hattersheim am Main,06433007,Kelsterbach,3.23,54.00,10.84,3.59
+nah_fern,FFM-STT-10,Gutleutviertel,FFM-STT-4,Westend-Süd,1.51,25.00,5.47,3.63
+fern_nah,06440008,Friedberg (Hessen),06411000,Darmstadt,52.27,93.00,46.86,33.73
+fern_nah,06440002,Bad Nauheim,06411000,Darmstadt,54.94,100.00,50.38,32.96
+fern_nah,06440008,Friedberg (Hessen),06433012,Rüsselsheim am Main,45.32,83.00,39.42,32.76
+fern_nah,06440008,Friedberg (Hessen),FFM-STT-11,Gallus,27.20,50.00,28.94,32.64
+fern_nah,06440008,Friedberg (Hessen),06433002,Bischofsheim,48.14,90.00,40.91,32.09
+fern_nah,06435015,Hasselroth,06433002,Bischofsheim,56.03,105.00,42.38,32.02
+fern_nah,06435015,Hasselroth,06433012,Rüsselsheim am Main,52.01,98.00,40.90,31.84
+fern_nah,FFM-STT-2,Innenstadt,06433002,Bischofsheim,27.36,52.00,26.68,31.57
+fern_nah,FFM-STT-2,Innenstadt,06433012,Rüsselsheim am Main,23.60,45.00,25.20,31.47
+fern_nah,06440008,Friedberg (Hessen),FFM-STT-12,Bockenheim,25.07,48.00,28.75,31.34
+fern_nah,FFM-STT-3,Bahnhofsviertel,06433002,Bischofsheim,26.06,50.00,24.93,31.27
+fern_nah,06411000,Darmstadt,FFM-STT-1,Altstadt,26.57,51.00,29.86,31.26
+fern_nah,06440008,Friedberg (Hessen),06432008,Griesheim,55.15,106.00,44.13,31.22
+fern_nah,FFM-STT-3,Bahnhofsviertel,06433012,Rüsselsheim am Main,22.30,43.00,23.45,31.12
+fern_nah,06411000,Darmstadt,FFM-STT-3,Bahnhofsviertel,26.29,51.00,28.25,30.93
+fern_nah,06440008,Friedberg (Hessen),06433003,Büttelborn,51.46,100.00,41.40,30.88
+fern_nah,06440008,Friedberg (Hessen),FFM-STT-3,Bahnhofsviertel,26.24,51.00,29.32,30.87
+fern_nah,06433002,Bischofsheim,06435023,Rodenbach,50.77,99.00,38.71,30.77
+fern_nah,FFM-STT-1,Altstadt,06433002,Bischofsheim,27.05,53.00,26.68,30.63
+fern_nah,06440002,Bad Nauheim,06432008,Griesheim,57.58,113.00,47.65,30.57
+fern_nah,FFM-STT-1,Altstadt,06433012,Rüsselsheim am Main,23.27,46.00,25.20,30.36
+fern_nah,06440008,Friedberg (Hessen),06433010,Raunheim,41.99,83.00,38.14,30.35
+fern_nah,06440008,Friedberg (Hessen),FFM-STT-1,Altstadt,25.80,51.00,30.44,30.35
+fern_nah,06411000,Darmstadt,06440025,Wöllstadt,46.03,91.00,42.10,30.35
+fern_nah,06435015,Hasselroth,06433010,Raunheim,48.50,96.00,39.61,30.31
