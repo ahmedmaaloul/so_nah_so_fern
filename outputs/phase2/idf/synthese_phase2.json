@@ -1,0 +1,68 @@
+{
+  "region": "idf",
+  "core_city": "Paris",
+  "radius_km": 30,
+  "date": "2026-10-13",
+  "window": [
+    "07:30",
+    "09:00"
+  ],
+  "n_units": 417,
+  "n_pairs": 173472,
+  "n_pairs_unreached": 8585,
+  "t_p50_median": 95.0,
+  "v_eff_median_kmh": 15.430834661080583,
+  "spearman_dist_time": 0.7787173744234772,
+  "ratio_tc_car_median": 2.53865538375385,
+  "share_dead_zone_pairs_below_dist": 0.18360490508987065,
+  "by_distance_band": {
+    "[0, 5)": {
+      "n": 4740.0,
+      "t_p50_median": 35.0,
+      "v_eff_median": 5.647,
+      "ratio_tc_car_median": 4.075
+    },
+    "[5, 10)": {
+      "n": 12965.0,
+      "t_p50_median": 55.0,
+      "v_eff_median": 8.3,
+      "ratio_tc_car_median": 3.481
+    },
+    "[10, 15)": {
+      "n": 19327.0,
+      "t_p50_median": 70.0,
+      "v_eff_median": 10.695,
+      "ratio_tc_car_median": 3.124
+    },
+    "[15, 20)": {
+      "n": 23328.0,
+      "t_p50_median": 81.0,
+      "v_eff_median": 12.936,
+      "ratio_tc_car_median": 2.828
+    },
+    "[20, 30)": {
+      "n": 48376.0,
+      "t_p50_median": 95.0,
+      "v_eff_median": 15.701,
+      "ratio_tc_car_median": 2.516
+    },
+    "[30, 60)": {
+      "n": 56151.0,
+      "t_p50_median": 120.0,
+      "v_eff_median": 19.329,
+      "ratio_tc_car_median": 2.241
+    }
+  },
+  "jvm": {
+    "r5py": "1.1.7",
+    "r5": "7.5.1",
+    "java": "21.0.12.1",
+    "jvm_max_memory_requested": "11G",
+    "jvm_max_heap_bytes": 11811160064,
+    "jvm_available_processors": 4
+  },
+  "timings_s": {
+    "transit_matrix": 376.5,
+    "total": 449.5
+  }
+}
