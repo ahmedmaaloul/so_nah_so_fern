@@ -85,7 +85,8 @@ URL réellement utilisée) des fichiers du dernier calcul.
    +57,9 % ; Francfort +36,9 % / +64,4 %. Part autoroute de chaque trajet par OSRM /route (classe
    « motorway »). Voiture en pointe (gare, médiane) : Garches 50,1 min, Kronberg 37,3, Bad Soden 38,2 ;
    TC/voiture 1,54 / 1,84 / 2,03 (fluide : 2,50 / 2,90 / 3,11). Limite : facteur moyen de la zone
-   métropolitaine, sans variation locale. Phase 2 (12) : voiture toujours sans trafic.
+   métropolitaine, sans variation locale. Phase 2 aussi (`12 --car-only`, 191 028 itinéraires /route,
+   18 min en IDF) : TC/voiture médian IDF 2,54 → 1,50, Rhin-Main 2,98 → 1,96.
 5. ~~Bad Soden, écart de +9 min~~ : expliqué. La S3 part du terminus de Bad Soden à xx:11 et xx:41 ;
    prêt à 08:15, on attend 26 min (08:41) contre 14,5 min en médiane sur 07:30 à 09:00, soit
    +11,5 min. Observé : +9,0 min (24 itinéraires commençant par la S3), dont 7,3 min d'attente

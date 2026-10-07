@@ -81,7 +81,8 @@ am Schultag 03.11., darunter Tram T4): diese Varianten messen die Lücke des Fee
 Angebot.
 
 **Phase 2 (P1).** Alle Einheiten ≤ 30 km von Paris (417) bzw. Frankfurt (133) untereinander:
-Median 95 / 82 Min., ÖV/Pkw 2,54 / 2,98, Rangkorrelation 0,78 / 0,84 (`outputs/phase2/`).
+Median 95 / 82 Min., ÖV/Pkw 2,54 / 2,98 (Morgenspitze 1,50 / 1,96), Rangkorrelation 0,78 / 0,84
+(`outputs/phase2/`).
 
 **Grenzen.** Nur Fußweg als Zubringer; keine Tarif- oder
 Komfortgrößen; Pkw ohne Stau; GTFS-Qualität der Betreiber als gegeben.
@@ -161,8 +162,8 @@ circulent le jour d'analyse (149 lignes le 03/11, jour d'école, dont le tram T4
 variantes mesurent la lacune du flux, pas l'offre.
 
 **Phase 2 (P1).** Toutes les unités à 30 km au plus de Paris (417) ou de Francfort (133), entre
-elles : médiane 95 / 82 min, TC/voiture 2,54 / 2,98, corrélation de rang 0,78 / 0,84
-(`outputs/phase2/`).
+elles : médiane 95 / 82 min, TC/voiture 2,54 / 2,98 (pointe du matin 1,50 / 1,96), corrélation de rang
+0,78 / 0,84 (`outputs/phase2/`).
 
 **Limites.** Rabattement à pied seulement ; ni tarif ni
 confort ; voiture sans congestion ; qualité des GTFS des opérateurs prise telle quelle.

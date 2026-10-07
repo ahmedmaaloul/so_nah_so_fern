@@ -14,43 +14,57 @@
   "v_eff_median_kmh": 15.430834661080583,
   "spearman_dist_time": 0.7787173744234772,
   "ratio_tc_car_median": 2.53865538375385,
+  "ratio_tc_car_peak_median": 1.5027598566826406,
+  "car_peak": {
+    "source": "TomTom Traffic Index 2025, metro, am (8 h), consulté le 2026-10-07",
+    "congestion_pct": {
+      "motorway": 84.2,
+      "other": 57.9
+    }
+  },
   "share_dead_zone_pairs_below_dist": 0.18360490508987065,
   "by_distance_band": {
     "[0, 5)": {
       "n": 4740.0,
       "t_p50_median": 35.0,
       "v_eff_median": 5.647,
-      "ratio_tc_car_median": 4.075
+      "ratio_tc_car_median": 4.075,
+      "ratio_tc_car_peak_median": 2.573
     },
     "[5, 10)": {
       "n": 12965.0,
       "t_p50_median": 55.0,
       "v_eff_median": 8.3,
-      "ratio_tc_car_median": 3.481
+      "ratio_tc_car_median": 3.481,
+      "ratio_tc_car_peak_median": 2.169
     },
     "[10, 15)": {
       "n": 19327.0,
       "t_p50_median": 70.0,
       "v_eff_median": 10.695,
-      "ratio_tc_car_median": 3.124
+      "ratio_tc_car_median": 3.124,
+      "ratio_tc_car_peak_median": 1.911
     },
     "[15, 20)": {
       "n": 23328.0,
       "t_p50_median": 81.0,
       "v_eff_median": 12.936,
-      "ratio_tc_car_median": 2.828
+      "ratio_tc_car_median": 2.828,
+      "ratio_tc_car_peak_median": 1.697
     },
     "[20, 30)": {
       "n": 48376.0,
       "t_p50_median": 95.0,
       "v_eff_median": 15.701,
-      "ratio_tc_car_median": 2.516
+      "ratio_tc_car_median": 2.516,
+      "ratio_tc_car_peak_median": 1.486
     },
     "[30, 60)": {
       "n": 56151.0,
       "t_p50_median": 120.0,
       "v_eff_median": 19.329,
-      "ratio_tc_car_median": 2.241
+      "ratio_tc_car_median": 2.241,
+      "ratio_tc_car_peak_median": 1.305
     }
   },
   "jvm": {
@@ -63,6 +77,6 @@
   },
   "timings_s": {
     "transit_matrix": 376.5,
-    "total": 449.5
+    "total": 1097.5
   }
 }
