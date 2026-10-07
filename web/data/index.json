@@ -55,5 +55,6 @@
       "core_city": "Paris",
       "file": "phase2_idf.json"
     }
-  ]
+  ],
+  "funding": "funding.json"
 }

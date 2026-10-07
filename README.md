@@ -51,6 +51,7 @@ uv run python pipeline/11_sensitivity.py --config config/sensitivity/garches_tow
 uv run python pipeline/12_all_pairs.py --config config/garches.yaml     # Phase 2: alle Einheiten untereinander
 uv run python pipeline/13_export_phase2_web.py --config config/garches.yaml  # Phase 2 für die Web-Karte (web/data/phase2_<region>.json)
 uv run python pipeline/14_time_windows.py                               # Zeitfenster-Sensitivität (nach den Varianten in config/sensitivity/)
+uv run python pipeline/15_export_funding.py                             # öffentliche Mittel für den ÖPNV (config/funding.yaml) für die Web-Karte
 ```
 
 Für eine andere Gemeinde: `config/garches.yaml` kopieren und `origin`, `core_city`, `analysis.date` anpassen. Die GTFS-Feeds decken nur ~1 Monat ab – das Stichdatum muss im Feed liegen (02 prüft das).

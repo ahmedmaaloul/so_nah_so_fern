@@ -35,6 +35,7 @@
   };
   let progress = 0; // 0 = geographic map, 1 = time cartogram
   let INDEX = null;
+  let FUNDING = null; // data/funding.json (step 15), optional
   const cache = new Map();
   let token = 0;
 
@@ -741,13 +742,57 @@
       '<p>' + esc(T(kind, p)) + '</p><p>' + esc(T('ctx_median', p)) + '</p><p>' + esc(T('ctx_access', p)) + '</p></details>';
   }
 
+  const regionName = (id) => {
+    const o = INDEX.origins.concat(INDEX.phase2 || []).find((x) => x.region.id === id);
+    return o ? o.region[state.lang] || o.region.de : id;
+  };
+
+  /** Public money for public transport (config/funding.yaml, step 15): sourced amounts, comparable only for major rail projects. */
+  function fundingHTML(first, open) {
+    if (!FUNDING || FUNDING.regions.length !== 2) return '';
+    const L = state.lang;
+    const eur = (m) => (m >= 1000 ? num(m / 1000, 2) + ' ' + T('unit_bn') : num(m, 0) + ' ' + T('unit_meur'));
+    const link = (s) => '<a href="' + esc(s.url) + '" target="_blank" rel="noopener">' + esc(s.publisher) + '</a>';
+    const regs = FUNDING.regions.slice().sort((a, b) => (a.id === first ? -1 : b.id === first ? 1 : 0));
+    const row = (it) => {
+      const sub = [];
+      if (it.per_year_meur) sub.push('≈ ' + eur(it.per_year_meur) + ' ' + T('fund_per_year'));
+      if (finite(it.eur_per_capita)) sub.push(num(it.eur_per_capita, 0) + ' ' + T('fund_per_cap') + (it.per_year ? ' ' + T('fund_per_year') : ''));
+      return '<tr><th scope="row">' + esc(it['label_' + L]) + '<small>' + esc(it['note_' + L]) + ' · ' + link(it.source) + '</small></th>' +
+        '<td>' + esc((it.lower_bound ? '> ' : '') + eur(it.amount_meur) + (it.per_year ? ' ' + T('fund_per_year') : '')) +
+        (sub.length ? '<small>' + esc(sub.join(' · ')) + '</small>' : '') + '</td></tr>';
+    };
+    const col = (r) => {
+      const pt = r.projects_total;
+      const groups = ['projects', 'invest', 'operating'].map((g) => {
+        const its = r.items.filter((i) => i.group === g);
+        if (!its.length) return '';
+        const total = g === 'projects' && its.length > 1 ? '<tr class="fund-total"><th scope="row">' + esc(T('fund_total')) + '</th><td>' +
+          esc((pt.lower_bound ? '> ' : '') + eur(pt.amount_meur)) + '<small>' + esc(num(pt.eur_per_capita, 0) + ' ' + T('fund_per_cap')) + '</small></td></tr>' : '';
+        return '<table class="fund"><caption>' + esc(T('fund_g_' + g)) + '</caption><tbody>' + its.map(row).join('') + total + '</tbody></table>';
+      }).join('');
+      return '<div class="fund-col"><h3>' + esc(regionName(r.id)) + '</h3><p class="muted">' +
+        esc(T('fund_pop', { pop: (r.population_approx ? '≈ ' : '') + mio(r.population), label: r['population_label_' + L] })) + ' · ' +
+        link({ url: r.population_source, publisher: T('fund_src') }) + '</p>' + groups + '</div>';
+    };
+    const [hi, lo] = FUNDING.regions.slice().sort((a, b) => b.projects_total.eur_per_capita - a.projects_total.eur_per_capita);
+    const p = {
+      a: regionName(hi.id), b: regionName(lo.id), pa: num(hi.projects_total.eur_per_capita, 0), pb: num(lo.projects_total.eur_per_capita, 0),
+      ta: (hi.projects_total.lower_bound ? '> ' : '') + eur(hi.projects_total.amount_meur), tb: (lo.projects_total.lower_bound ? '> ' : '') + eur(lo.projects_total.amount_meur),
+      x: num(hi.projects_total.eur_per_capita / lo.projects_total.eur_per_capita, 1)
+    };
+    return '<details class="context funding"' + (open ? ' open' : '') + '><summary>' + esc(T(open ? 'fund_title' : 'fund_summary', p)) + '</summary>' +
+      '<p class="fund-head">' + esc(T('fund_head', p)) + '</p><div class="fund-grid">' + regs.map(col).join('') + '</div>' +
+      '<p class="muted">' + esc(T('fund_bound')) + '</p><p class="muted">' + esc(T('fund_caveat', { d: fmtDate(FUNDING.accessed) })) + '</p></details>';
+  }
+
   function renderSummary(ds) {
     const s = ds.meta.summary[state.point];
     const o = ds.origin[state.point];
     const stat = (k, v, sub) => '<div class="stat"><div class="k">' + esc(k) + '</div><div class="v">' + v + '</div><div class="s">' + esc(sub || '') + '</div></div>';
     const head = '<div class="sum-head"><h2>' + esc(ds.meta.name) + '</h2><p>' + esc(o[state.lang] || o.de) + ' · ' + esc(T('sum_core')) + ': ' + esc(ds.meta.core_city) + ' · ' + esc(T('sum_core_sub', { r: num(ds.meta.radius_km, 0) })) + '</p></div>';
     const link = INDEX.phase2 ? '<button type="button" class="linkbtn" id="to-all">' + esc(T('link_all')) + '</button>' : '';
-    $('#summary').innerHTML = head.replace(/<\/div>$/, link + '</div>') + keyFactsHTML(s) + contextHTML(ds, s) + '<div class="stats">' +
+    $('#summary').innerHTML = head.replace(/<\/div>$/, link + '</div>') + keyFactsHTML(s) + contextHTML(ds, s) + fundingHTML(ds.meta.region.id, false) + '<div class="stats">' +
       stat(T('sum_n'), esc(num(s.n_destinations, 0)), T('sum_n_sub', { n: num(s.n_unreachable, 0) })) +
       stat(T('sum_median'), esc(num(s.t_tc_median_min, 1)) + ' <small>' + T('unit_min') + '</small>', '') +
       stat(T('sum_veff'), esc(num(s.v_eff_popweighted_median_kmh, 1)) + ' <small>' + T('unit_kmh') + '</small>', T('sum_veff_sub', { v: num(s.v_eff_median_kmh, 1) })) +
@@ -1025,6 +1070,8 @@
       cmpRow(T('cmp_dead'), ...f((s) => esc(num(s.dead_zones.n, 0)))) +
       cmpRow(T('cmp_unreach'), ...f((s) => esc(num(s.n_unreachable, 0)))) + '</tbody>' +
       (sa.population_radius && sb.population_radius ? '<caption class="cmp-context">' + esc(T('cmp_context', { a: dsA.meta.core_city, b: dsB.meta.core_city, pa: mio(sa.population_radius), pb: mio(sb.population_radius), r: num(dsA.meta.radius_km, 0) })) + '</caption>' : '');
+    $('#cmp-funding').innerHTML = fundingHTML(dsA.meta.region.id, true);
+    $('#cmp-funding').hidden = !FUNDING;
     $('#hint').textContent = T('hint_' + state.ind);
     renderFooter([dsA, dsB]);
     for (const v of [cmpA, cmpB]) v.select(v.sel);
@@ -1665,6 +1712,7 @@
       document.body.insertAdjacentHTML('afterbegin', '<p class="fatal">Daten / données : ' + esc(e.message) + '</p>');
       throw e;
     }
+    if (INDEX.funding) FUNDING = await fetch('data/' + INDEX.funding).then((r) => r.json()).catch(() => null);
     // DE first, then FR
     if (!INDEX.phase2) $('#mode-group button[data-mode=all]').hidden = true;
     else state.all.region = INDEX.phase2[0].region.id;

@@ -1,0 +1,144 @@
+# =============================================================================
+# So nah, so fern: Öffentliche Mittel für den ÖPNV / Argent public pour les TC
+# -----------------------------------------------------------------------------
+# DE: Von Hand erfasste Beträge aus öffentlichen Quellen (keine Pipeline-Daten).
+#     15_export_funding.py prüft sie, rechnet Euro je Einwohner und schreibt
+#     web/data/funding.json. Beträge in Mio. EUR, laufende Preise, außer `price_base`.
+# FR : Montants relevés à la main dans des sources publiques (pas de calcul du
+#     pipeline). 15_export_funding.py les contrôle, calcule les euros par habitant et
+#     écrit web/data/funding.json. Montants en M EUR courants, sauf `price_base`.
+#
+# Périmètres différents / Unterschiedliche Abgrenzung :
+#   IDFM organise et finance tout le réseau francilien (exploitation et matériel
+#   roulant) ; le Grand Paris Express est payé à part (Société des grands projets).
+#   In Hessen gibt es keine Gesamtsumme : Betrieb über RMV und lokale Nahverkehrs-
+#   organisationen, Infrastruktur über Bund, Land, DB und Kommunen, Projekt für Projekt.
+#   Seule comparaison retenue comme comparable : coût total des grands projets
+#   ferroviaires régionaux en cours, rapporté à la population de l'autorité.
+# Consulté le / abgerufen am 07/10/2026.
+# =============================================================================
+
+accessed: "2026-10-07"
+
+regions:
+
+  - id: idf
+    population: 12380964
+    population_label_de: "Île-de-France (INSEE, Referenzbevölkerung 1.1.2022)"
+    population_label_fr: "Île-de-France (Insee, population de référence au 1er janvier 2022)"
+    population_source: https://www.insee.fr/fr/statistiques/8307782
+    items:
+      - id: idfm_invest_2025
+        group: invest
+        amount_meur: 3310.4
+        per_year: true
+        year: "2025"
+        label_de: "IDFM, Investitionen im Haushalt 2025"
+        label_fr: "IDFM, investissements au budget 2025"
+        note_de: "ohne Schuldentilgung; davon 1,55 Mrd. € Schienenfahrzeuge, 0,51 Mrd. € Busse und Straßenbahnen"
+        note_fr: "hors remboursement de la dette ; dont 1 548 M€ de matériel roulant ferré, 507 M€ de matériel de surface"
+        per_capita: true
+        source:
+          publisher: Île-de-France Mobilités
+          title: "Rapport n° 20241211-218, Budget primitif 2025 et vote des autorisations de programme (11/12/2024)"
+          url: https://echanges.dila.gouv.fr/OPENDATA/AMF/523/2024/12/FC523564339_20241216.pdf
+      - id: idfm_operating_2025
+        group: operating
+        amount_meur: 10764.7
+        per_year: true
+        year: "2025"
+        label_de: "IDFM, Betrieb des gesamten Netzes 2025"
+        label_fr: "IDFM, exploitation de l'ensemble du réseau en 2025"
+        note_de: "brutto, vor Fahrgeldeinnahmen; alle Verkehrsmittel (Metro, RER, Tram, Bus)"
+        note_fr: "brut, avant recettes tarifaires ; tous modes (métro, RER, tram, bus)"
+        per_capita: false
+        source:
+          publisher: Île-de-France Mobilités
+          title: "Rapport n° 20241211-218, Budget primitif 2025 (11/12/2024)"
+          url: https://echanges.dila.gouv.fr/OPENDATA/AMF/523/2024/12/FC523564339_20241216.pdf
+      - id: gpe
+        group: projects
+        amount_meur: 36100
+        price_base: 2012
+        label_de: "Grand Paris Express (200 km, 68 Bahnhöfe), Zielkosten"
+        label_fr: "Grand Paris Express (200 km, 68 gares), coût objectif"
+        note_de: "Preisstand 2012, außerhalb des IDFM-Haushalts (Société des grands projets)"
+        note_fr: "aux conditions économiques de 2012, hors budget IDFM (Société des grands projets)"
+        per_capita: true
+        source:
+          publisher: Sénat
+          title: "Rapport général n° 128 (2023-2024), tome III, annexe 11, vol. 2 (23/11/2023)"
+          url: https://www.senat.fr/rap/l23-128-311-2/l23-128-311-27.html
+
+  - id: rhein_main
+    population: 5000000
+    population_approx: true
+    population_label_de: "RMV-Verbundgebiet (RMV: „rund 5 Millionen Menschen“)"
+    population_label_fr: "territoire du RMV (RMV : « environ 5 millions d'habitants »)"
+    population_source: https://www.rmv.de/c/de/ueber-uns/der-rmv
+    items:
+      - id: hessen_ops_2025_2027
+        group: operating
+        amount_meur: 3750
+        years: 3
+        year: "2025 bis 2027"
+        label_de: "Land Hessen an die Verkehrsverbünde, 2025 bis 2027"
+        label_fr: "Land de Hesse aux autorités de transport, 2025 à 2027"
+        note_de: "Betrieb; ganz Hessen (RMV, NVV, VRN), daher ohne Wert je Einwohner"
+        note_fr: "exploitation ; toute la Hesse (RMV, NVV, VRN), donc sans valeur par habitant"
+        per_capita: false
+        source:
+          publisher: RMV
+          title: "Finanzierungsvereinbarungen: Status quo bis 2027 gesichert"
+          url: https://www.rmv.de/c/de/ueber-uns/der-rmv/rmv-aktuell/finanzierungsvereinbarungen-status-quo-bis-2027-gesichert
+      - id: rmv_operating_2024
+        group: operating
+        amount_meur: 1119.0
+        per_year: true
+        year: "2024"
+        label_de: "RMV, Kosten der bestellten S-Bahn-, Regionalzug- und Regionalbusverkehre 2024"
+        label_fr: "RMV, coût des S-Bahn, trains régionaux et bus régionaux commandés en 2024"
+        note_de: "brutto (Grundanspruch 1.027,6 + 91,4 Mio. €); ohne Stadtverkehr (U-Bahn, Tram, Stadtbus)"
+        note_fr: "brut (1 027,6 + 91,4 M€) ; sans les réseaux urbains (U-Bahn, tram, bus urbains)"
+        per_capita: false
+        source:
+          publisher: RMV
+          title: "Gesamtbericht 2024 nach Art. 7 Abs. 1 VO (EG) 1370/2007"
+          url: https://www.rmv.de/c/fileadmin/documents/PDFs/_RMV_DE/Infomaterial/RMVintern/RMV-Gesamtbericht_2024.pdf
+      - id: nordmain
+        group: projects
+        amount_meur: 2000
+        lower_bound: true
+        label_de: "Nordmainische S-Bahn Frankfurt nach Hanau (19 km), im Bau"
+        label_fr: "S-Bahn nord du Main de Francfort à Hanau (19 km), en travaux"
+        note_de: "„mehr als zwei Milliarden Euro“, Fertigstellung Anfang der 2030er"
+        note_fr: "« plus de deux milliards d'euros », mise en service au début des années 2030"
+        per_capita: true
+        source:
+          publisher: t-online
+          title: "Bau neuer Rhein-Main S-Bahn gestartet (30/06/2025)"
+          url: https://frankfurt.t-online.de/region/frankfurt-am-main/id_100797068/frankfurt-bauarbeiten-fuer-nordmainische-s-bahn-nach-hanau-starten.html
+      - id: rtw
+        group: projects
+        amount_meur: 1800
+        label_de: "Regionaltangente West (52 km, über Bad Soden), im Bau"
+        label_fr: "Regionaltangente West (52 km, par Bad Soden), en travaux"
+        note_de: "Kostenrahmen ohne Fahrzeuge, Inbetriebnahme frühestens Ende 2029"
+        note_fr: "enveloppe hors matériel roulant, mise en service fin 2029 au plus tôt"
+        per_capita: true
+        source:
+          publisher: hessenschau
+          title: "300 Millionen Euro mehr: Regionaltangente West wird deutlich teurer (26/11/2024)"
+          url: https://www.hessenschau.de/wirtschaft/300-millionen-euro-mehr-regionaltangente-west-wird-deutlich-teurer-v1,kurz-regionaltangente-100.html
+      - id: s6
+        group: projects
+        amount_meur: 880
+        label_de: "S6 Frankfurt-West bis Bad Vilbel, viergleisiger Ausbau"
+        label_fr: "S6 de Francfort-Ouest à Bad Vilbel, mise à quatre voies"
+        note_de: "„rund 880 Millionen Euro“, Bau ab 12/2017, inzwischen in Betrieb"
+        note_fr: "« environ 880 millions d'euros », travaux à partir de 12/2017, désormais en service"
+        per_capita: true
+        source:
+          publisher: Journal Frankfurt
+          title: "Holpriger Start der S6 nach sechs Jahren Bauarbeiten (19/02/2024)"
+          url: https://www.journal-frankfurt.de/journal_news/Urbanes-Frankfurt-58/Neue-S6-Strecke-Frankfurt-Bad-Vilbel-Holpriger-Start-der-S6-nach-sechs-Jahren-Bauarbeiten-41987.html

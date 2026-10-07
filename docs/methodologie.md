@@ -60,6 +60,15 @@ unterscheidet sich stark: in 60 Min. 5,26 Mio. (52 %) gegenüber 0,81 Mio. (28 %
 der Kernstadt: 47 Min. für 13,2 km (Paris Centre) gegenüber 46 Min. für 14,2 km (Altstadt); über
 alle Bezirke 47 gegenüber 55 Min.; Ziele außerhalb der Kernstadt 77 gegenüber 85 Min.
 
+**Öffentliche Mittel (`config/funding.yaml`, Schritt 15).** Von Hand erfasste, verlinkte Beträge, keine
+Pipeline-Daten. Haushalte sind nicht vergleichbar: IDFM finanziert Betrieb und Fahrzeuge des ganzen
+Netzes (2025: 10,76 Mrd. € Betrieb, 3,31 Mrd. € Investitionen ohne Schuldentilgung), in Hessen verteilen
+sich Betrieb (RMV, lokale Organisationen; Land Hessen 3,75 Mrd. € für 2025 bis 2027 an alle Verbünde) und
+Infrastruktur (Bund, Land, DB, Kommunen) ohne Gesamtsumme. Vergleichbar ist nur die Summe der großen
+regionalen Schienenprojekte je Einwohner des Verbunds: Grand Paris Express 36,1 Mrd. € (Preisstand 2012)
+für 12,38 Mio., also 2.916 €; Nordmainische S-Bahn, Regionaltangente West und S6 zusammen mehr als
+4,68 Mrd. € für rund 5 Mio., also 936 €, etwa ein Drittel. Beide Summen sind Untergrenzen.
+
 **Ergebnisse ab Bahnhof** (`synthese_*.json`): Median 75 / 72,5 / 72 Min. (Garches / Kronberg /
 Bad Soden); bevölkerungsgewichtete effektive Geschwindigkeit 16,1 / 16,0 / 14,4 km/h;
 Rangkorrelation Entfernung/Zeit 0,75 / 0,81 / 0,90; ÖV/Pkw 2,5 / 2,9 / 3,1; in 60 Min.
@@ -147,6 +156,16 @@ temps par kilomètre ; ils sont donc proches (75 / 72,5 min, 16,1 / 16,0 km/h). 
 diffère fortement : en 60 min, 5,26 M (52 %) contre 0,81 M (28 %). Vers le centre de la ville
 centre : 47 min pour 13,2 km (Paris Centre) contre 46 min pour 14,2 km (Altstadt) ; sur tous les
 quartiers 47 contre 55 min ; destinations hors ville centre 77 contre 85 min.
+
+**Argent public (`config/funding.yaml`, étape 15).** Montants relevés à la main avec leur source, hors
+calcul du pipeline. Les budgets ne se comparent pas : IDFM finance l'exploitation et le matériel de tout le
+réseau (2025 : 10,76 Md€ d'exploitation, 3,31 Md€ d'investissement hors dette) ; en Hesse, l'exploitation
+(RMV, autorités locales ; Land de Hesse 3,75 Md€ pour 2025 à 2027, toutes autorités confondues) et
+l'infrastructure (État fédéral, Land, DB, communes) n'ont pas de total. Seule comparaison retenue : le coût
+des grands projets ferroviaires régionaux par habitant de l'autorité. Grand Paris Express 36,1 Md€ (aux
+prix de 2012) pour 12,38 M d'habitants, soit 2 916 € ; S-Bahn nord du Main, Regionaltangente West et S6,
+plus de 4,68 Md€ pour environ 5 M, soit 936 €, à peu près trois fois moins. Les deux totaux sont des
+bornes basses.
 
 **Résultats depuis la gare** (`synthese_*.json`) : médiane 75 / 72,5 / 72 min (Garches /
 Kronberg / Bad Soden) ; vitesse effective médiane pondérée par la population 16,1 / 16,0 /

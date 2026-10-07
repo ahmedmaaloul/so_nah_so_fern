@@ -51,6 +51,7 @@ uv run python pipeline/11_sensitivity.py --config config/sensitivity/garches_tow
 uv run python pipeline/12_all_pairs.py --config config/garches.yaml     # phase 2 : toutes les unités entre elles
 uv run python pipeline/13_export_phase2_web.py --config config/garches.yaml  # phase 2 pour le site (web/data/phase2_<région>.json)
 uv run python pipeline/14_time_windows.py                               # sensibilité à la plage horaire (après les variantes de config/sensitivity/)
+uv run python pipeline/15_export_funding.py                             # argent public pour les TC (config/funding.yaml) pour le site
 ```
 
 Pour une autre commune : copier `config/garches.yaml` et adapter `origin`, `core_city`, `analysis.date`. Les GTFS ne couvrent qu'environ un mois : la date doit être dans le fichier (02 le vérifie).

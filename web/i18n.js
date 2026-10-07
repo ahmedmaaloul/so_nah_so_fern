@@ -259,7 +259,22 @@ window.I18N = {
     cmp_pop_radius: 'Einwohner im Umkreis',
     cmp_access: 'In {m} min erreichbare Einwohner (Anteil)',
     cmp_context: '{a} ist Hauptstadt und Mittelpunkt eines strahlenförmigen Netzes, {b} eine Regionalmetropole: Im Umkreis von {r} km leben {pa} gegenüber {pb} Menschen. Gleiche Fahrzeiten je Kilometer bedeuten daher nicht gleich viele erreichbare Menschen.',
-    unit_persons: 'Einw.'
+    unit_persons: 'Einw.',
+    unit_bn: 'Mrd. €',
+    unit_meur: 'Mio. €',
+    fund_title: 'Öffentliche Mittel für Bus und Bahn',
+    fund_summary: 'Öffentliche Mittel für Bus und Bahn: große Schienenprojekte {pa} € je Einwohner in {a}, {pb} € in {b}',
+    fund_head: 'Vergleichbar ist nur eine Größe: die Gesamtkosten der großen regionalen Schienenprojekte im Bau, geteilt durch die Einwohner des Verkehrsverbunds. {a}: {ta}, also {pa} € je Einwohner; {b}: {tb}, also {pb} € je Einwohner, rund {x}-mal weniger.',
+    fund_pop: '{pop} Einwohner, {label}',
+    fund_g_projects: 'Große Schienenprojekte (Gesamtkosten)',
+    fund_g_invest: 'Investitionen der Aufgabenträger',
+    fund_g_operating: 'Betrieb',
+    fund_total: 'Summe',
+    fund_src: 'Quelle',
+    fund_per_year: 'pro Jahr',
+    fund_per_cap: '€ je Einw.',
+    fund_bound: 'Untergrenze: In Île-de-France zählt nur der Grand Paris Express (Preisstand 2012, ohne RER E nach Westen, Straßenbahnen, Metroverlängerungen); in Rhein-Main nur Nordmainische S-Bahn, Regionaltangente West und S6 (ohne U-Bahn, Straßenbahn und den geplanten Fernbahntunnel, 3,6 Mrd. € Stand 2018, überwiegend Fernverkehr).',
+    fund_caveat: 'Haushalte und Betriebskosten sind nicht direkt vergleichbar: IDFM bestellt und finanziert das gesamte Netz der Region (Betrieb und Fahrzeuge). In Hessen gibt es keine Gesamtsumme: Den Betrieb tragen RMV und lokale Nahverkehrsorganisationen (in Frankfurt traffiQ), die Infrastruktur Bund, Land, DB und Kommunen, Projekt für Projekt. Beträge in laufenden Euro, aus den verlinkten Quellen, abgerufen am {d}.'
   },
   fr: {
     locale: 'fr-FR',
@@ -520,6 +535,21 @@ window.I18N = {
     cmp_pop_radius: 'Habitants dans le rayon',
     cmp_access: 'Habitants atteints en {m} min (part)',
     cmp_context: '{a} est la capitale, au centre d’un réseau radial ; {b} est une métropole régionale : dans un rayon de {r} km vivent {pa} contre {pb} habitants. Des temps égaux par kilomètre ne donnent donc pas le même nombre d’habitants atteints.',
-    unit_persons: 'hab.'
+    unit_persons: 'hab.',
+    unit_bn: 'Md€',
+    unit_meur: 'M€',
+    fund_title: 'Argent public pour les transports en commun',
+    fund_summary: 'Argent public pour les transports en commun : grands projets ferroviaires {pa} € par habitant en {a}, {pb} € à {b}',
+    fund_head: 'Une seule grandeur est comparable : le coût total des grands projets ferroviaires régionaux en cours, divisé par la population de l’autorité de transport. {a} : {ta}, soit {pa} € par habitant ; {b} : {tb}, soit {pb} € par habitant, environ {x} fois moins.',
+    fund_pop: '{pop} habitants, {label}',
+    fund_g_projects: 'Grands projets ferroviaires (coût total)',
+    fund_g_invest: 'Investissements de l’autorité organisatrice',
+    fund_g_operating: 'Exploitation',
+    fund_total: 'Total',
+    fund_src: 'source',
+    fund_per_year: 'par an',
+    fund_per_cap: '€ par hab.',
+    fund_bound: 'Borne basse : en Île-de-France, seul le Grand Paris Express est compté (aux prix de 2012, sans le prolongement du RER E à l’ouest, les tramways ni les prolongements de métro) ; à Rhin-Main, seuls la S-Bahn nord du Main, la Regionaltangente West et la S6 (sans U-Bahn, tram ni le futur tunnel grandes lignes, 3,6 Md€ en 2018, surtout pour les trains longue distance).',
+    fund_caveat: 'Les budgets et les coûts d’exploitation ne se comparent pas directement : IDFM commande et finance tout le réseau régional (exploitation et matériel roulant). En Hesse, il n’existe pas de total : l’exploitation relève du RMV et des autorités locales (traffiQ à Francfort), les infrastructures de l’État fédéral, du Land, de la DB et des communes, projet par projet. Montants en euros courants, tirés des sources en lien, consultées le {d}.'
   }
 };
